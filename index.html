@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ben Hawes | Activate The Room</title>
+
+<title>Ben Hawes | Team Engagement & Activation Speaker</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -12,9 +13,9 @@
 :root{
   --black:#000000;
   --white:#ffffff;
+  --soft:rgba(255,255,255,0.82);
   --orange:#F94501;
-  --soft:rgba(255,255,255,0.85);
-  --panel:#121212;
+  --max:1200px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -23,196 +24,168 @@ body{
   background:var(--black);
   color:var(--white);
   font-family:'Inter',sans-serif;
-  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
 }
 
 .container{
-  max-width:1200px;
+  max-width:var(--max);
   margin:0 auto;
   padding:0 40px;
+}
+
+/* NAV */
+
+nav{
+  padding:40px 0;
+}
+
+.nav-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-family:'Poppins';
+  font-weight:900;
+  font-size:2rem;
+  letter-spacing:-1px;
+}
+
+.logo span{
+  color:var(--orange);
+}
+
+.nav-cta{
+  background:var(--orange);
+  padding:12px 28px;
+  border-radius:40px;
+  text-decoration:none;
+  color:white;
+  font-weight:700;
+  font-size:0.9rem;
 }
 
 /* HERO */
 
 .hero{
-  height:95vh;
-  display:flex;
+  padding:120px 0 160px 0;
+  position:relative;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:100px;
   align-items:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero img{
-  position:absolute;
-  right:0;
-  top:0;
-  height:100%;
-  width:auto;
-  opacity:0.35;
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:700px;
 }
 
 .hero h1{
   font-family:'Poppins';
-  font-size:5rem;
+  font-size:4.8rem;
   line-height:1.05;
-}
-
-.hero h1 span{
-  color:var(--orange);
-  display:block;
-}
-
-.hero p{
-  margin-top:40px;
-  font-size:1.3rem;
-  color:var(--soft);
-}
-
-.cta{
-  display:inline-block;
-  margin-top:60px;
-  background:var(--orange);
-  padding:24px 60px;
-  border-radius:80px;
-  font-weight:800;
-  font-size:1.1rem;
-  text-decoration:none;
-  color:white;
-  transition:0.3s ease;
-}
-
-.cta:hover{
-  transform:translateY(-6px);
-  box-shadow:0 40px 90px rgba(249,69,1,0.4);
-}
-
-/* BIG STATEMENT BAND */
-
-.statement{
-  padding:180px 40px;
-  background:var(--panel);
-  text-align:center;
-}
-
-.statement h2{
-  font-family:'Poppins';
-  font-size:3.5rem;
-  max-width:900px;
-  margin:0 auto;
-}
-
-.statement h2 span{
-  color:var(--orange);
-}
-
-/* SPLIT VISUAL */
-
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  min-height:600px;
-}
-
-.split-text{
-  padding:120px 80px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.split-text h3{
-  font-family:'Poppins';
-  font-size:2.5rem;
-  margin-bottom:30px;
-}
-
-.split-text p{
-  font-size:1.2rem;
-  color:var(--soft);
-  margin-bottom:20px;
-}
-
-.split-img{
-  background-size:cover;
-  background-position:center;
-}
-
-/* RESULT CARDS */
-
-.results{
-  padding:200px 0;
-}
-
-.card-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:50px;
-}
-
-.card{
-  border:2px solid rgba(255,255,255,0.1);
-  padding:60px 50px;
-  transition:0.3s ease;
-}
-
-.card:hover{
-  border-color:var(--orange);
-  transform:translateY(-10px);
-}
-
-.card h4{
-  font-family:'Poppins';
-  font-size:1.8rem;
-  margin-bottom:20px;
-}
-
-.card p{
-  font-size:1.1rem;
-  color:var(--soft);
-}
-
-/* FUTURE LOGOS PLACEHOLDER */
-
-.logos{
-  padding:140px 0;
-  text-align:center;
-  background:var(--panel);
-}
-
-.logos h3{
-  font-family:'Poppins';
-  font-size:2rem;
+  letter-spacing:-2px;
   margin-bottom:40px;
 }
 
-.logo-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-  gap:30px;
-  opacity:0.4;
+.hero h1 span{
+  display:block;
+  color:var(--orange);
 }
 
-.logo-placeholder{
-  border:1px solid rgba(255,255,255,0.2);
-  padding:40px;
+.hero-sub{
+  font-size:1.25rem;
+  color:var(--soft);
+  margin-bottom:60px;
+  max-width:650px;
+}
+
+.hero-title{
+  font-size:0.9rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:0.6;
+  margin-bottom:30px;
+}
+
+.hero img{
+  width:100%;
+  border-radius:18px;
+}
+
+/* SECTION */
+
+.section{
+  padding:180px 0;
+}
+
+/* INTRO */
+
+.intro{
+  max-width:800px;
+}
+
+.intro h2{
+  font-family:'Poppins';
+  font-size:2.6rem;
+  margin-bottom:30px;
+}
+
+.intro p{
+  font-size:1.2rem;
+  color:var(--soft);
+  margin-bottom:25px;
+}
+
+/* EXPECT */
+
+.expect-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:80px;
+}
+
+.expect-item h3{
+  font-family:'Poppins';
+  font-size:1.6rem;
+  margin-bottom:20px;
+}
+
+.expect-item p{
+  font-size:1.1rem;
+  color:var(--soft);
+}
+
+/* TESTIMONIAL PLACEHOLDER */
+
+.testimonial{
+  padding:200px 0;
+  text-align:center;
+}
+
+.testimonial blockquote{
+  font-family:'Poppins';
+  font-size:2rem;
+  line-height:1.4;
+  max-width:900px;
+  margin:0 auto 30px auto;
+}
+
+.testimonial cite{
+  font-size:0.95rem;
+  opacity:0.6;
 }
 
 /* FINAL CTA */
 
 .final{
-  padding:200px 40px;
+  padding:220px 0;
   text-align:center;
 }
 
 .final h2{
   font-family:'Poppins';
-  font-size:4rem;
+  font-size:3.8rem;
   margin-bottom:40px;
 }
 
@@ -221,41 +194,34 @@ body{
   display:block;
 }
 
-.final p{
-  font-size:1.2rem;
-  color:var(--soft);
-  margin-bottom:60px;
+.cta-large{
+  display:inline-block;
+  margin-top:40px;
+  background:var(--orange);
+  padding:22px 60px;
+  border-radius:60px;
+  text-decoration:none;
+  color:white;
+  font-weight:800;
 }
 
 footer{
-  padding:100px 0;
+  padding:120px 0;
   text-align:center;
-  font-size:0.9rem;
-  color:rgba(255,255,255,0.4);
+  font-size:0.85rem;
+  opacity:0.5;
 }
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
-.hero h1{
-  font-size:3rem;
-}
-
-.split{
+.hero-grid{
   grid-template-columns:1fr;
 }
 
-.split-text{
-  padding:80px 40px;
-}
-
-.statement h2{
-  font-size:2.4rem;
-}
-
-.final h2{
-  font-size:2.6rem;
+.hero h1{
+  font-size:3rem;
 }
 
 }
@@ -265,92 +231,124 @@ footer{
 
 <body>
 
+<div class="container">
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Ben <span>Hawes</span></div>
+    <a href="#" class="nav-cta">Enquire</a>
+  </div>
+</nav>
+</div>
+
 <section class="hero container">
 
-<img src="headshot.jpg" alt="Ben Hawes speaking">
+  <div class="hero-grid">
 
-<div class="hero-content">
-<h1>
-Strategy doesn’t go the distance.
-<span>People do.</span>
-</h1>
+    <div>
+      <div class="hero-title">Team Engagement & Activation Speaker</div>
 
-<p>
-A 120-person offsite is not about slides.
-It is about measurable motivation, stronger communication,
-and better results across the company.
-</p>
+      <h1>
+        Strategy doesn’t go the distance.
+        <span>People do.</span>
+      </h1>
 
-<a href="#" class="cta">Activate Your Team</a>
-</div>
+      <p class="hero-sub">
+        Ben Hawes works with companies during pivotal moments,
+        helping teams communicate motivation, increase activation,
+        and drive measurable results after the room clears.
+      </p>
 
-</section>
+      <a href="#" class="cta-large">Activate Your Team</a>
+    </div>
 
-<section class="statement">
-<h2>
-You are not looking for hype.
-You are looking for <span>results and a better vibe.</span>
-</h2>
-</section>
+    <div>
+      <img src="headshot.jpg" alt="Ben Hawes speaking at company offsite">
+    </div>
 
-<section class="split">
-<div class="split-text">
-<h3>Clarity in Motivation</h3>
-<p>Teams learn how to articulate what drives them.</p>
-<p>Managers gain language to measure engagement through behavior.</p>
-</div>
-<div class="split-img" style="background-image:url('room.jpg');"></div>
-</section>
-
-<section class="results container">
-<div class="card-grid">
-
-<div class="card">
-<h4>Clearer Communication</h4>
-<p>People leave knowing how to express what motivates them and how it connects to results.</p>
-</div>
-
-<div class="card">
-<h4>Measurable Engagement</h4>
-<p>Motivation becomes something leaders can identify and reinforce.</p>
-</div>
-
-<div class="card">
-<h4>Stronger Performance</h4>
-<p>The offsite becomes a pivot point for accountability and execution.</p>
-</div>
-
-</div>
-</section>
-
-<section class="logos">
-<h3>Companies & Teams</h3>
-
-<div class="logo-grid">
-<div class="logo-placeholder">LOGO</div>
-<div class="logo-placeholder">LOGO</div>
-<div class="logo-placeholder">LOGO</div>
-<div class="logo-placeholder">LOGO</div>
-</div>
+  </div>
 
 </section>
 
-<section class="final">
-<h2>
-Activate the room.
-<span>Change the year.</span>
-</h2>
+<section class="section container">
 
-<p>
-Design the moment that shifts communication,
-motivation, and measurable results.
-</p>
+  <div class="intro">
+    <h2>Why Ben</h2>
 
-<a href="#" class="cta">Activate Your Team</a>
+    <p>
+      Ben has led high-impact internal meetings for over fifteen years,
+      translating strategy into clarity and momentum.
+    </p>
+
+    <p>
+      He understands how to speak to engineers, creatives,
+      operators and executives without theatrics or fluff.
+    </p>
+
+    <p>
+      His sessions are direct, energising, and designed to create
+      measurable shifts in how teams communicate and perform.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="section container">
+
+  <div class="expect-grid">
+
+    <div class="expect-item">
+      <h3>Clarity in Motivation</h3>
+      <p>
+        Teams leave with shared language around what drives them
+        and how activation shows up in their role.
+      </p>
+    </div>
+
+    <div class="expect-item">
+      <h3>Measurable Engagement</h3>
+      <p>
+        Leaders gain tools to identify and reinforce motivation
+        through behaviour and execution.
+      </p>
+    </div>
+
+    <div class="expect-item">
+      <h3>Stronger Results</h3>
+      <p>
+        The offsite becomes a pivot point,
+        not just a memory.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="testimonial">
+
+  <blockquote>
+    “The session didn’t just energise the team.
+    It changed how we talk about ownership.”
+  </blockquote>
+
+  <cite>Future Client Name | Title</cite>
+
+</section>
+
+<section class="final container">
+
+  <h2>
+    Activate the room.
+    <span>Change the year.</span>
+  </h2>
+
+  <a href="#" class="cta-large">Enquire Now</a>
+
 </section>
 
 <footer>
-Powered by Ben Hawes
+© 2026 Ben Hawes
 </footer>
 
 </body>
