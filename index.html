@@ -6,7 +6,7 @@
 
 <title>Ben Hawes | Team Engagement & Activation Speaker</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
 
@@ -14,26 +14,19 @@
 
 :root{
   --black:#000;
-  --charcoal:#0c0c0c;
   --panel:#111;
   --white:#fff;
-  --soft:rgba(255,255,255,0.75);
   --orange:#F94501;
   --max:1200px;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
   font-family:'Open Sans',sans-serif;
-  background:var(--black);
-  color:var(--white);
+  background:#000;
+  color:#fff;
   line-height:1.7;
-  -webkit-font-smoothing:antialiased;
 }
 
 .container{
@@ -58,7 +51,6 @@ nav{
   font-family:'Poppins';
   font-weight:800;
   font-size:1.6rem;
-  letter-spacing:-1px;
 }
 
 .logo span{
@@ -72,7 +64,7 @@ nav{
   text-decoration:none;
   color:white;
   font-weight:600;
-  transition:0.25s ease;
+  transition:0.3s ease;
 }
 
 .nav-cta:hover{
@@ -96,7 +88,6 @@ nav{
   font-family:'Poppins';
   font-size:4.6rem;
   line-height:1.05;
-  letter-spacing:-2px;
   margin-bottom:36px;
 }
 
@@ -107,19 +98,8 @@ nav{
 
 .hero p{
   font-size:1.3rem;
-  color:var(--soft);
   margin-bottom:50px;
   max-width:620px;
-}
-
-.hero img{
-  width:100%;
-  border-radius:20px;
-  transition:0.4s ease;
-}
-
-.hero img:hover{
-  transform:translateY(-6px);
 }
 
 .cta-button{
@@ -137,6 +117,16 @@ nav{
   transform:translateY(-4px);
 }
 
+.hero img{
+  width:100%;
+  border-radius:20px;
+  transition:0.4s ease;
+}
+
+.hero img:hover{
+  transform:translateY(-6px);
+}
+
 /* SECTION */
 
 .section{
@@ -151,15 +141,14 @@ nav{
 
 .section p{
   font-size:1.25rem;
-  color:var(--soft);
   margin-bottom:30px;
 }
 
-/* IMPACT SECTION */
+/* IMPACT */
 
 .impact{
   padding:220px 0;
-  background:var(--charcoal);
+  background:#0c0c0c;
   text-align:center;
 }
 
@@ -176,17 +165,16 @@ nav{
 }
 
 .impact-card{
-  background:var(--panel);
+  background:#111;
   padding:50px 40px;
   border-radius:24px;
-  border:1px solid rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
   transition:0.3s ease;
 }
 
 .impact-card:hover{
   transform:translateY(-8px);
   border-color:var(--orange);
-  box-shadow:0 30px 60px rgba(0,0,0,0.5);
 }
 
 .counter{
@@ -198,60 +186,73 @@ nav{
 }
 
 .impact-text{
-  font-size:1.15rem;
-  color:var(--soft);
+  font-size:1.1rem;
   margin-bottom:30px;
 }
 
 .impact-source{
-  font-size:0.85rem;
-  color:rgba(255,255,255,0.45);
+  font-size:0.9rem;
+  font-style:italic;
 }
 
-/* STATEMENT */
+/* BELIEF SECTION */
 
-.statement{
+.beliefs{
   padding:200px 0;
-  text-align:center;
 }
 
-.statement h2{
+.belief-list{
   font-family:'Poppins';
-  font-size:3.8rem;
-  line-height:1.1;
+  font-size:2.4rem;
+  line-height:1.5;
 }
 
-.statement span{
-  display:block;
+.belief-list div{
+  margin-bottom:20px;
+}
+
+.highlight{
   color:var(--orange);
+  margin-top:60px;
+  font-size:1.5rem;
+  font-weight:700;
 }
 
 /* FOOTER */
 
 footer{
-  padding:120px 0 60px 0;
-  border-top:1px solid rgba(255,255,255,0.08);
-  text-align:center;
-  color:rgba(255,255,255,0.5);
-  font-size:0.85rem;
+  padding:140px 0 60px 0;
+  background:#0a0a0a;
 }
 
-/* MOBILE */
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:80px;
+  margin-bottom:60px;
+}
+
+.footer-grid h3{
+  font-family:'Poppins';
+  margin-bottom:20px;
+}
+
+.footer-grid a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  margin-bottom:12px;
+}
+
+.footer-bottom{
+  text-align:center;
+  font-size:0.9rem;
+}
 
 @media(max-width:1000px){
-
-.hero-grid{
-  grid-template-columns:1fr;
-}
-
-.hero h1{
-  font-size:3rem;
-}
-
-.statement h2{
-  font-size:2.6rem;
-}
-
+.hero-grid{grid-template-columns:1fr;}
+.hero h1{font-size:3rem;}
+.footer-grid{grid-template-columns:1fr;}
 }
 
 </style>
@@ -277,10 +278,11 @@ footer{
       </h1>
 
       <p>
-        I work with founders, CEOs, and HR leaders to activate engagement inside fast-moving teams — aligning motivation to vision so strategy actually reaches its destination.
+        I help founders, CEOs, and HR leaders activate motivation,
+        elevate engagement, and align daily work to the bigger company vision.
       </p>
 
-      <a href="#" class="cta-button">Activate Your Team</a>
+      <a href="#" class="cta-button">Activate Your Team ⚡️</a>
     </div>
 
     <div>
@@ -289,53 +291,71 @@ footer{
   </div>
 </section>
 
-<section class="section container">
-  <h2>The gap isn’t strategy.</h2>
-  <p>Most leadership teams can articulate their goals. Roadmaps are built. Metrics are defined.</p>
-  <p>If your people cannot clearly connect their daily work to the bigger vision, performance stalls.</p>
-  <p>Engagement is not happiness. Engagement is ownership. Effort. Commitment to outcomes.</p>
-</section>
-
 <section class="impact">
   <div class="container">
-    <h2>When engagement is activated, performance accelerates.</h2>
+    <h2>📊 When engagement is activated, performance accelerates.</h2>
 
     <div class="impact-grid">
 
       <div class="impact-card">
         <div class="counter" data-target="27">0%</div>
-        <p class="impact-text">Increase in clarity around company goals when employees understand how their role connects to strategy.</p>
-        <div class="impact-source">Source: Gallup Workplace Engagement Study</div>
+        <div class="impact-text"><strong>Increase in clarity</strong> around company goals.</div>
+        <div class="impact-source">Gallup Workplace Engagement Study</div>
       </div>
 
       <div class="impact-card">
         <div class="counter" data-target="21">0%</div>
-        <p class="impact-text">Higher profitability in companies with highly engaged teams.</p>
-        <div class="impact-source">Source: Gallup Meta-Analysis</div>
+        <div class="impact-text"><strong>Higher profitability</strong> in highly engaged teams.</div>
+        <div class="impact-source">Gallup Meta Analysis</div>
       </div>
 
       <div class="impact-card">
         <div class="counter" data-target="59">0%</div>
-        <p class="impact-text">Lower turnover in organizations with activated engagement.</p>
-        <div class="impact-source">Source: Deloitte Human Capital Trends</div>
+        <div class="impact-text"><strong>Lower turnover</strong> in activated organizations.</div>
+        <div class="impact-source">Deloitte Human Capital Trends</div>
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="statement">
-  <h2>
-    Activate the room.
-    <span>Change the year.</span>
-  </h2>
-  <div style="margin-top:50px;">
-    <a href="#" class="cta-button">Activate Your Team</a>
+<section class="beliefs container">
+
+  <div class="belief-list">
+    <div>People are capable.</div>
+    <div>People are tired.</div>
+    <div>People are unclear.</div>
+    <div>People want meaning.</div>
+    <div>People want to matter.</div>
   </div>
+
+  <div class="highlight">
+    ✨ Here’s the good news: when people understand how their work connects to the vision, they rise.
+  </div>
+
 </section>
 
 <footer>
-  © 2026 Ben Hawes ⚡️
+  <div class="container footer-grid">
+    <div>
+      <h3>Ben Hawes ⚡️</h3>
+      <p>Team Engagement & Activation Speaker helping companies turn strategy into momentum.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <a href="#">Speaking</a>
+      <a href="#">Consulting</a>
+      <a href="#">Contact</a>
+    </div>
+    <div>
+      <h3>Connect</h3>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Ben Hawes ⚡️
+  </div>
 </footer>
 
 <script>
@@ -347,7 +367,7 @@ const observer = new IntersectionObserver(entries => {
       counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
         let current = 0;
-        const increment = target / 100;
+        const increment = target / 150; // slower animation
 
         const updateCounter = () => {
           if(current < target){
