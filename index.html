@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ben Hawes | Employee Activation Speaker for Startups</title>
+<title>Ben Hawes | Employee Activation Speaker for Modern Teams</title>
 
-<meta name="description" content="Ben Hawes activates startup and modern teams through high impact keynotes and engagement consulting.">
+<meta name="description" content="Ben Hawes activates modern teams through keynote speaking and engagement consulting that increases ownership, initiative, and execution.">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
@@ -13,10 +13,19 @@
 
 <style>
 
+/* ============================= */
+/* DESIGN SYSTEM */
+/* ============================= */
+
 :root{
-  --orange:#F94501;
-  --black:#0E0E0E;
+  --black:#0B0B0B;
+  --charcoal:#121212;
+  --soft-charcoal:#181818;
   --white:#FFFFFF;
+  --muted:#BDBDBD;
+  --orange:#F94501;
+  --max-width:1200px;
+  --section-padding:180px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -26,38 +35,46 @@ body{
   background:var(--black);
   color:var(--white);
   line-height:1.6;
-  overflow-x:hidden;
 }
 
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 40px;
+}
+
+/* ============================= */
 /* NAV */
+/* ============================= */
 
 nav{
   position:fixed;
   width:100%;
-  padding:22px 40px;
+  background:rgba(11,11,11,0.9);
+  backdrop-filter:blur(10px);
+  padding:26px 0;
+  z-index:1000;
+}
+
+.nav-inner{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  z-index:1000;
-  background:rgba(14,14,14,0.9);
-  backdrop-filter:blur(8px);
 }
 
 .logo{
   font-family:'Poppins';
   font-weight:900;
-  font-size:1.8rem;
+  font-size:1.9rem;
 }
 
 .logo span{color:var(--orange);}
 
-.nav-links{
-  display:flex;
-  align-items:center;
-}
-
 .nav-links a{
-  margin-left:30px;
+  margin-left:36px;
   text-decoration:none;
   color:var(--white);
   font-weight:500;
@@ -75,58 +92,26 @@ nav{
   font-weight:700;
 }
 
-/* MOBILE MENU */
-
-.menu-toggle{
-  display:none;
-  font-size:28px;
-  cursor:pointer;
-}
-
-.mobile-menu{
-  position:fixed;
-  top:0;
-  right:-100%;
-  width:75%;
-  height:100vh;
-  background:var(--black);
-  padding:100px 40px;
-  transition:0.4s ease;
-  z-index:999;
-}
-
-.mobile-menu.active{
-  right:0;
-}
-
-.mobile-menu a{
-  display:block;
-  margin-bottom:30px;
-  font-size:1.4rem;
-  text-decoration:none;
-  color:var(--white);
-  font-weight:600;
-}
-
-.mobile-menu .nav-cta{
-  display:inline-block;
-  margin-top:20px;
-}
-
+/* ============================= */
 /* HERO */
+/* ============================= */
 
 .hero{
-  min-height:100vh;
+  padding-top:220px;
+  padding-bottom:var(--section-padding);
+  background:linear-gradient(to bottom, var(--black), var(--charcoal));
+}
+
+.hero-grid{
   display:grid;
   grid-template-columns:1.1fr 1fr;
+  gap:120px;
   align-items:center;
-  padding:160px 80px 120px 80px;
-  gap:100px;
 }
 
 .hero h1{
   font-family:'Poppins';
-  font-size:4.8rem;
+  font-size:5.2rem;
   font-weight:900;
   line-height:1.05;
   letter-spacing:-2px;
@@ -134,198 +119,185 @@ nav{
 
 .hero h1 span{
   color:var(--orange);
-  position:relative;
-}
-
-.hero h1 span::after{
-  content:"";
-  position:absolute;
-  bottom:-8px;
-  left:0;
-  width:100%;
-  height:6px;
-  background:var(--orange);
-  opacity:0.4;
+  display:block;
 }
 
 .hero p{
+  margin-top:40px;
   font-size:1.2rem;
-  margin:35px 0;
-  max-width:600px;
-  color:#cccccc;
+  color:var(--muted);
+  max-width:580px;
 }
 
 .cta{
+  display:inline-block;
+  margin-top:40px;
   background:var(--orange);
   color:var(--white);
   padding:18px 36px;
   border-radius:40px;
   font-weight:700;
   text-decoration:none;
-  display:inline-block;
   transition:0.3s;
 }
 
 .cta:hover{
-  transform:translateY(-4px);
-  box-shadow:0 20px 40px rgba(249,69,1,0.3);
+  transform:translateY(-6px);
+  box-shadow:0 25px 60px rgba(249,69,1,0.35);
 }
 
 .hero img{
   width:100%;
-  max-width:460px;
   border-radius:30px;
-  box-shadow:0 40px 80px rgba(0,0,0,0.5);
+  box-shadow:0 40px 100px rgba(0,0,0,0.6);
 }
 
+/* ============================= */
 /* STRIP */
+/* ============================= */
 
 .strip{
-  padding:70px 40px;
+  padding:100px 40px;
   text-align:center;
-  font-family:'Poppins';
-  font-size:2rem;
-  font-weight:800;
   background:var(--orange);
-  color:var(--white);
+  font-family:'Poppins';
+  font-size:2.2rem;
+  font-weight:800;
 }
 
+/* ============================= */
 /* SECTION */
+/* ============================= */
 
 .section{
-  padding:140px 80px;
+  padding:var(--section-padding) 0;
+  background:var(--charcoal);
+}
+
+.section-alt{
+  background:var(--soft-charcoal);
 }
 
 .section h2{
   font-family:'Poppins';
-  font-size:2.8rem;
-  margin-bottom:50px;
+  font-size:3.2rem;
+  margin-bottom:60px;
 }
 
 .section p{
   font-size:1.15rem;
-  max-width:800px;
-  margin-bottom:25px;
-  color:#cccccc;
+  color:var(--muted);
+  max-width:820px;
+  margin-bottom:28px;
 }
 
-/* GRID */
+/* ============================= */
+/* GRID CARDS */
+/* ============================= */
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:60px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:70px;
   margin-top:70px;
 }
 
 .card{
-  padding:45px 35px;
-  border:1px solid rgba(255,255,255,0.1);
-  border-radius:20px;
+  padding:60px 40px;
+  border-radius:24px;
+  background:var(--black);
+  border:1px solid rgba(255,255,255,0.08);
   transition:0.3s;
 }
 
 .card:hover{
+  transform:translateY(-10px);
   border-color:var(--orange);
-  transform:translateY(-8px);
 }
 
 .card h3{
   font-family:'Poppins';
-  font-size:1.5rem;
-  margin-bottom:15px;
+  font-size:1.6rem;
+  margin-bottom:18px;
   color:var(--orange);
 }
 
 .card p{
-  color:#cccccc;
+  color:var(--muted);
 }
 
+/* ============================= */
 /* FOOTER */
+/* ============================= */
 
 footer{
+  padding:120px 0;
   text-align:center;
-  padding:60px 40px;
-  border-top:1px solid rgba(255,255,255,0.1);
-  font-size:0.9rem;
+  background:var(--black);
+  border-top:1px solid rgba(255,255,255,0.08);
   color:#888;
 }
 
-/* RESPONSIVE */
+/* ============================= */
+/* MOBILE */
+/* ============================= */
 
-@media(max-width:950px){
+@media(max-width:960px){
 
-  .nav-links{
-    display:none;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-
-  .hero{
+  .hero-grid{
     grid-template-columns:1fr;
-    padding:140px 40px 100px 40px;
     text-align:center;
+    gap:60px;
   }
 
   .hero h1{
-    font-size:3rem;
+    font-size:3.2rem;
   }
 
-  .hero img{
-    margin-top:40px;
+  .container{
+    padding:0 24px;
   }
 
-  .section{
-    padding:100px 40px;
-  }
-
-  .strip{
-    font-size:1.5rem;
+  nav .nav-links{
+    display:none;
   }
 
 }
+
 </style>
 </head>
 
 <body>
 
 <nav>
-  <div class="logo">Ben<span>Hawes</span></div>
-
-  <div class="nav-links">
-    <a href="#">About</a>
-    <a href="#">Activation Journal</a>
-    <a href="#" class="nav-cta">Activate Your Team</a>
+  <div class="nav-inner">
+    <div class="logo">Ben<span>Hawes</span></div>
+    <div class="nav-links">
+      <a href="#">About</a>
+      <a href="#">Activation Journal</a>
+      <a href="#" class="nav-cta">Activate Your Team</a>
+    </div>
   </div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#">About</a>
-  <a href="#">Activation Journal</a>
-  <a href="#" class="nav-cta">Activate Your Team</a>
-</div>
-
 <section class="hero">
-  <div>
-    <h1>
-      Strategy does not go the distance.
-      <br>
-      <span>People do.</span>
-    </h1>
+  <div class="container hero-grid">
+    <div>
+      <h1>
+        Strategy doesn't go the distance.
+        <span>People do.</span>
+      </h1>
 
-    <p>
-      Ben Hawes activates startup and modern teams through high impact keynotes and consulting that increase ownership, initiative, and execution.
-    </p>
+      <p>
+        Ben Hawes activates modern teams through high impact keynote speaking and engagement consulting that increases ownership, initiative, and execution.
+      </p>
 
-    <a href="#" class="cta">Activate Your Team</a>
-  </div>
+      <a href="#" class="cta">Activate Your Team</a>
+    </div>
 
-  <div>
-    <img src="headshot.jpg" alt="Ben Hawes speaking">
+    <div>
+      <img src="headshot.jpg" alt="Ben Hawes speaking">
+    </div>
   </div>
 </section>
 
@@ -334,32 +306,38 @@ footer{
 </section>
 
 <section class="section">
-  <h2>Why Ben</h2>
-  <p>
-    Fifteen years inside high growth companies, live events, corporate training, and stage performance.
-  </p>
-  <p>
-    From ClassPass to Rocket Money, from leadership development to live keynote energy, Ben understands what shifts behavior and keeps teams activated year round.
-  </p>
+  <div class="container">
+    <h2>Why Ben</h2>
+    <p>
+      Fifteen years inside high growth startups, corporate training, live events, and stage performance.
+    </p>
+    <p>
+      From ClassPass to Rocket Money, from leadership development to keynote energy, Ben understands what shifts behavior and keeps teams activated year round.
+    </p>
+  </div>
 </section>
 
-<section class="section">
-  <h2>How Activation Changes Performance</h2>
+<section class="section section-alt">
+  <div class="container">
+    <h2>How Activation Changes Performance</h2>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Clarity</h3>
-      <p>Teams understand what ownership looks like and how to practice it daily.</p>
-    </div>
+    <div class="grid">
 
-    <div class="card">
-      <h3>Energy</h3>
-      <p>Participation rises. Initiative increases. Momentum builds.</p>
-    </div>
+      <div class="card">
+        <h3>Clarity</h3>
+        <p>Teams understand what ownership looks like and how to practice it daily.</p>
+      </div>
 
-    <div class="card">
-      <h3>Momentum</h3>
-      <p>Execution improves and results compound across the organization.</p>
+      <div class="card">
+        <h3>Energy</h3>
+        <p>Participation rises. Initiative increases. Momentum builds.</p>
+      </div>
+
+      <div class="card">
+        <h3>Momentum</h3>
+        <p>Execution improves and results compound across the organization.</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -367,12 +345,6 @@ footer{
 <footer>
   Activate your team. Build momentum. Go the distance.
 </footer>
-
-<script>
-function toggleMenu(){
-  document.getElementById("mobileMenu").classList.toggle("active");
-}
-</script>
 
 </body>
 </html>
