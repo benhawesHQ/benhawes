@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ben Hawes | Activating Modern Teams</title>
+
+<title>Ben Hawes | Activation Keynote for Modern Teams</title>
+<meta name="description" content="Ben Hawes delivers activation keynotes for company-wide offsites that increase ownership, clarity, and lasting momentum. Strategy doesn’t go the distance. People do.">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
@@ -11,12 +13,16 @@
 
 <style>
 
+/* ============================= */
+/* DESIGN SYSTEM */
+/* ============================= */
+
 :root{
-  --black:#0D0D0F;
+  --black:#0A0A0C;
   --white:#FFFFFF;
-  --muted:#C2C2C2;
+  --soft-white:rgba(255,255,255,0.85);
   --orange:#F94501;
-  --max-width:1100px;
+  --max-width:1200px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -26,28 +32,32 @@ body{
   background:var(--black);
   color:var(--white);
   line-height:1.75;
+  -webkit-font-smoothing:antialiased;
 }
 
 .container{
   max-width:var(--max-width);
   margin:0 auto;
-  padding:0 28px;
+  padding:0 32px;
 }
 
-/* NAV */
+/* ============================= */
+/* NAVIGATION */
+/* ============================= */
 
 nav{
   position:fixed;
   width:100%;
-  background:rgba(13,13,15,0.95);
-  padding:22px 0;
+  background:rgba(10,10,12,0.95);
+  padding:24px 0;
   z-index:1000;
+  backdrop-filter:blur(8px);
 }
 
 .nav-inner{
   max-width:var(--max-width);
   margin:0 auto;
-  padding:0 28px;
+  padding:0 32px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -56,17 +66,18 @@ nav{
 .logo{
   font-family:'Poppins';
   font-weight:800;
-  font-size:1.7rem;
+  font-size:1.8rem;
   letter-spacing:1px;
 }
 
-.logo .first{color:white;}
-.logo .last{color:var(--orange); margin-left:8px;}
+.logo span{
+  color:var(--orange);
+}
 
 .nav-links a{
-  margin-left:28px;
+  margin-left:32px;
   text-decoration:none;
-  color:white;
+  color:var(--white);
   font-weight:500;
 }
 
@@ -77,35 +88,39 @@ nav{
   font-weight:700;
 }
 
+/* ============================= */
 /* HERO */
+/* ============================= */
 
 .hero{
   padding-top:220px;
-  padding-bottom:180px;
+  padding-bottom:200px;
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.1fr 1fr;
+  grid-template-columns:1.05fr 1fr;
   gap:80px;
   align-items:center;
 }
 
 .hero h1{
   font-family:'Poppins';
-  font-size:3.6rem;
+  font-size:4rem;
   font-weight:900;
   line-height:1.15;
+  letter-spacing:-1px;
 }
 
 .hero h1 span{
   color:var(--orange);
+  display:block;
 }
 
 .hero p{
   margin-top:36px;
   font-size:1.15rem;
-  color:var(--muted);
+  color:var(--soft-white);
   max-width:640px;
 }
 
@@ -114,91 +129,116 @@ nav{
   margin-top:48px;
   background:var(--orange);
   color:white;
-  padding:16px 30px;
+  padding:16px 32px;
   border-radius:40px;
   font-weight:700;
   text-decoration:none;
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
 .cta:hover{
   transform:translateY(-4px);
+  box-shadow:0 25px 60px rgba(249,69,1,0.35);
 }
 
 .hero img{
   width:100%;
-  border-radius:26px;
-  box-shadow:0 40px 100px rgba(0,0,0,0.5);
+  border-radius:28px;
+  box-shadow:0 40px 120px rgba(0,0,0,0.6);
 }
 
+/* ============================= */
 /* SECTION */
+/* ============================= */
 
 .section{
-  padding:160px 0;
+  padding:180px 0;
 }
 
 .section h2{
   font-family:'Poppins';
-  font-size:2.4rem;
-  margin-bottom:30px;
+  font-size:2.8rem;
+  margin-bottom:40px;
 }
 
 .section p{
-  color:var(--muted);
-  max-width:720px;
-  margin-bottom:22px;
   font-size:1.1rem;
+  color:var(--soft-white);
+  max-width:760px;
+  margin-bottom:24px;
 }
 
-/* DIVIDER */
+/* ============================= */
+/* SPLIT SECTION */
+/* ============================= */
 
-.divider{
-  height:1px;
-  background:rgba(255,255,255,0.08);
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:100px;
 }
 
-/* FOOTER CTA */
+.split h3{
+  font-family:'Poppins';
+  font-size:2rem;
+  margin-bottom:24px;
+}
 
-.footer-cta{
-  padding:160px 0;
+/* ============================= */
+/* FINAL CTA */
+/* ============================= */
+
+.final-cta{
+  padding:200px 0;
   text-align:center;
 }
 
-.email-form{
-  margin-top:40px;
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
+.final-cta h2{
+  font-family:'Poppins';
+  font-size:3rem;
+  margin-bottom:30px;
 }
 
-.email-form input{
-  padding:14px 20px;
-  border-radius:30px;
-  border:none;
-  width:260px;
+.final-cta p{
+  font-size:1.15rem;
+  color:var(--soft-white);
+  margin-bottom:50px;
 }
 
-.email-form button{
-  padding:14px 26px;
-  border-radius:30px;
-  border:none;
-  background:var(--orange);
-  color:white;
-  font-weight:700;
-}
+/* ============================= */
+/* FOOTER */
+/* ============================= */
 
 footer{
-  padding:100px 0;
+  padding:120px 0;
   text-align:center;
-  color:#777;
   font-size:0.9rem;
+  color:rgba(255,255,255,0.5);
 }
 
-@media(max-width:900px){
-.hero-grid{grid-template-columns:1fr;}
-.hero h1{font-size:2.6rem;}
-.section{padding:120px 0;}
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media(max-width:960px){
+
+.hero-grid{
+  grid-template-columns:1fr;
+}
+
+.hero h1{
+  font-size:2.8rem;
+}
+
+.split{
+  grid-template-columns:1fr;
+  gap:60px;
+}
+
+.section{
+  padding:120px 0;
+}
+
 }
 
 </style>
@@ -208,10 +248,7 @@ footer{
 
 <nav>
   <div class="nav-inner">
-    <div class="logo">
-      <span class="first">Ben</span>
-      <span class="last">Hawes</span>
-    </div>
+    <div class="logo">Ben <span>Hawes</span></div>
     <div class="nav-links">
       <a href="#">About</a>
       <a href="#">Activation Journal</a>
@@ -220,87 +257,131 @@ footer{
   </div>
 </nav>
 
+<!-- HERO -->
+
 <section class="hero container">
   <div class="hero-grid">
+
     <div>
       <h1>
-        You do not need another strategy deck.
-        <span>You need people who care.</span>
+        Strategy doesn’t go the distance.
+        <span>People do.</span>
       </h1>
 
       <p>
-        When energy dips, ownership softens. Meetings happen. Metrics exist. But momentum fades.
+        At a 120-person offsite, the strategy is already built.
+        The slides are polished.
+        The goals are ambitious.
       </p>
 
       <p>
-        Ben Hawes helps modern teams rediscover activation. The moment when someone decides to show up fully, take initiative, and move the work forward.
+        What determines whether the next year accelerates or stalls
+        is whether the people in the room leave activated.
       </p>
 
       <a href="#" class="cta">Activate Your Team</a>
     </div>
 
     <div>
-      <img src="headshot.jpg" alt="Ben Hawes speaking">
+      <img src="headshot.jpg" alt="Ben Hawes speaking at company offsite">
     </div>
+
   </div>
 </section>
 
-<div class="divider"></div>
+<!-- LASTING IMPACT -->
 
 <section class="section container">
-  <h2>You Feel It Too</h2>
+
+  <h2>
+    This is not about a moment of motivation.
+  </h2>
 
   <p>
-    The strategy is clear.
-    The goals are ambitious.
-    The team is talented.
+    It is about lasting operational impact.
   </p>
 
   <p>
-    And yet something feels flat.
+    When teams leave Ben’s sessions, they understand how to identify their own activation.
+    They can articulate where they are fully owning outcomes and where they are drifting.
   </p>
 
   <p>
-    Activation is missing.
+    Managers gain language to ask better questions.
+    Individuals gain clarity around responsibility.
+    Momentum becomes visible.
   </p>
+
 </section>
 
-<div class="divider"></div>
+<!-- WHY HIM -->
 
 <section class="section container">
-  <h2>Why Ben</h2>
 
-  <p>
-    For fifteen years, Ben has worked at the intersection of leadership, live engagement, and performance.
-  </p>
+  <h2>
+    Why Ben.
+  </h2>
 
-  <p>
-    From training managers inside high growth startups to commanding rooms as a performer, he understands what shifts behavior.
-  </p>
+  <div class="split">
 
-  <p>
-    He does not teach strategy.
-    He activates the people responsible for executing it.
-  </p>
-</section>
+    <div>
+      <h3>
+        He understands rooms.
+      </h3>
 
-<div class="divider"></div>
+      <p>
+        For fifteen years, Ben has led high-stakes meetings inside growing companies.
+        Moments where clarity mattered.
+        Where attention was not automatic.
+      </p>
 
-<section class="footer-cta container">
-  <h2>The Activation Field Guide</h2>
+      <p>
+        He knows how to hold a room of engineers, creatives, operators, and founders
+        without theatrics.
+      </p>
+    </div>
 
-  <p>
-    A practical framework for increasing ownership and energy inside modern teams.
-  </p>
+    <div>
+      <h3>
+        He understands execution.
+      </h3>
 
-  <div class="email-form">
-    <input type="email" placeholder="Enter your email">
-    <button>Download Free Handbook</button>
+      <p>
+        From internal training at high-growth startups to company-wide resets,
+        he has worked at the intersection of performance and accountability.
+      </p>
+
+      <p>
+        His work bridges strategy and human behavior.
+        Not abstract inspiration.
+        Measurable activation.
+      </p>
+    </div>
+
   </div>
+
+</section>
+
+<!-- FINAL CTA -->
+
+<section class="final-cta container">
+
+  <h2>
+    Activate the room.
+    Change the year.
+  </h2>
+
+  <p>
+    If you are planning a company-wide offsite and want lasting impact,
+    let’s design the moment that shifts the trajectory.
+  </p>
+
+  <a href="#" class="cta">Activate Your Team</a>
+
 </section>
 
 <footer>
-  Activation is a choice. Momentum is built.<br><br>
+  Activation is a choice. Momentum is built. <br><br>
   Powered by Ben Hawes
 </footer>
 
