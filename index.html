@@ -8,457 +8,191 @@
 
 <title>Ben Hawes | Team Engagement & Activation Speaker</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
-<style>
+<link rel="stylesheet" href="styles.css">
 
-:root{
---orange:#F94501;
---black:#0f0f0f;
---gray:#f5f5f5;
---max:1100px;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:"Open Sans",sans-serif;
-color:var(--black);
-line-height:1.7;
-}
-
-h1,h2,h3{
-font-family:"Poppins",sans-serif;
-}
-
-.container{
-max-width:var(--max);
-margin:auto;
-padding:80px 24px;
-}
-
-/* HERO */
-
-.hero{
-
-background:var(--orange);
-color:white;
-
-padding:120px 24px 100px;
-
-display:flex;
-justify-content:center;
-}
-
-.hero-inner{
-
-max-width:1100px;
-
-display:grid;
-grid-template-columns:1fr;
-gap:40px;
-
-align-items:center;
-}
-
-.hero h1{
-font-size:48px;
-line-height:1.05;
-}
-
-.hero p{
-font-size:20px;
-opacity:.95;
-margin-top:20px;
-max-width:600px;
-}
-
-.hero img{
-
-width:100%;
-border-radius:12px;
-max-width:420px;
-}
-
-.hero-cta{
-
-margin-top:28px;
-
-display:inline-block;
-
-background:white;
-color:var(--orange);
-
-padding:14px 22px;
-
-border-radius:8px;
-
-font-weight:600;
-text-decoration:none;
-}
-
-.hero-grid{
-
-display:flex;
-flex-direction:column;
-gap:30px;
-
-}
-
-/* SECTION */
-
-.section-gray{
-background:var(--gray);
-}
-
-.section h2{
-font-size:36px;
-margin-bottom:20px;
-}
-
-.section p{
-max-width:700px;
-margin-bottom:20px;
-}
-
-/* FRAMEWORK */
-
-.framework{
-
-display:grid;
-grid-template-columns:1fr;
-gap:30px;
-margin-top:30px;
-}
-
-.framework-box{
-
-background:white;
-padding:30px;
-
-border-radius:12px;
-
-box-shadow:0 6px 20px rgba(0,0,0,.05);
-
-}
-
-.framework-box h3{
-margin-bottom:10px;
-}
-
-/* ACTIVATION SCORE */
-
-.score{
-
-font-size:42px;
-font-family:"Poppins";
-font-weight:700;
-
-margin-top:20px;
-}
-
-/* ACTIVATION BAR */
-
-.activation-bar{
-
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-
-background:var(--black);
-color:white;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-padding:16px 20px;
-
-z-index:999;
-
-box-shadow:0 -6px 20px rgba(0,0,0,.2);
-}
-
-.activation-btn{
-
-background:var(--orange);
-color:white;
-
-border:none;
-padding:12px 18px;
-
-font-weight:600;
-
-border-radius:8px;
-
-cursor:pointer;
-
-animation:pulse 3s infinite;
-}
-
-@keyframes pulse{
-
-0%{transform:scale(1)}
-50%{transform:scale(1.05)}
-100%{transform:scale(1)}
-
-}
-
-/* FORM */
-
-.activation-form{
-
-position:fixed;
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,.6);
-
-display:none;
-
-justify-content:center;
-align-items:center;
-
-z-index:1000;
-
-padding:20px;
-}
-
-.form-card{
-
-background:white;
-padding:40px;
-
-border-radius:16px;
-
-max-width:420px;
-width:100%;
-
-display:flex;
-flex-direction:column;
-gap:14px;
-
-}
-
-.form-card input,
-.form-card textarea{
-
-padding:12px;
-
-border-radius:8px;
-
-border:1px solid #ddd;
-
-font-family:"Open Sans";
-
-}
-
-.submit-btn{
-
-background:var(--orange);
-color:white;
-
-border:none;
-padding:14px;
-
-border-radius:8px;
-
-font-weight:600;
-
-cursor:pointer;
-
-}
-
-.close-btn{
-
-border:none;
-background:none;
-
-cursor:pointer;
-
-font-size:14px;
-opacity:.7;
-}
-
-/* DESKTOP */
-
-@media(min-width:900px){
-
-.hero-inner{
-grid-template-columns:1fr 420px;
-}
-
-.activation-bar{
-
-width:auto;
-
-left:auto;
-right:30px;
-
-bottom:30px;
-
-border-radius:12px;
-
-padding:18px 22px;
-
-}
-
-.framework{
-grid-template-columns:repeat(3,1fr);
-}
-
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 </head>
 
 
 <body>
 
-<!-- HERO -->
+<nav class="nav">
+
+<div class="logo">Ben Hawes<span>.</span></div>
+
+<button onclick="openForm()">Book Ben</button>
+
+</nav>
+
+
+
+<!-- HERO (kept almost identical to your current design) -->
 
 <section class="hero">
 
-<div class="hero-inner">
+<div>
 
-<div class="hero-grid">
+<div class="hero-label">TEAM ENGAGEMENT & ACTIVATION SPEAKER</div>
 
 <h1>
 Strategy sets the direction.<br>
-Activated people deliver the results.
+<span class="people">Activated people deliver the results.</span>
 </h1>
 
 <p>
-Ben Hawes helps teams reconnect their daily work to the mission and goals of the organization and introduces the Activation Score, a simple framework that helps employees and managers have honest conversations about commitment, ownership, and progress.
+Ben Hawes helps organizations activate their teams through clarity, communication, and honest conversations about commitment to the work ahead.
 </p>
 
-<a class="hero-cta" onclick="openForm()">
-Check Availability
-</a>
+<button class="cta" onclick="openForm()">Check Availability</button>
+
+<div class="badges">
+Through roles in leadership and engagement at ClassPass, LifeLabs Learning, and Rocket Money, Ben has helped teams reconnect to purpose and activate ownership.
+</div>
 
 </div>
 
-<img src="ben-photo.jpg" alt="Ben Hawes">
-
+<div class="hero-img-wrap">
+<img src="headshot.jpg" alt="Ben Hawes">
 </div>
 
 </section>
 
 
-<!-- ABOUT -->
 
-<section class="section container">
+<!-- KEYNOTE SECTION -->
 
-<h2>
-Engaged is one thing. Activated goes further.
-</h2>
+<section class="container">
 
-<p>
+<h2>Signature Keynote</h2>
 
-Most companies spend enormous time developing strategy, aligning goals, and planning for the future.
+<h3 style="font-size:32px;margin-top:10px;">
+The Activation Framework
+</h3>
 
-But strategy alone doesn't move work forward.
-
-People do.
-
-Ben Hawes helps organizations activate the people responsible for bringing strategy to life.
-
+<p style="max-width:700px;margin-top:20px;font-size:18px;">
+Most organizations have strategy, goals, and a clear direction.
 </p>
 
-</section>
+<p style="max-width:700px;margin-top:10px;font-size:18px;">
+But strategy alone doesn't move work forward. Activated people do.
+</p>
+
+<p style="max-width:700px;margin-top:10px;font-size:18px;">
+This keynote helps teams reconnect their daily work to the mission of the organization and gives them a structure for honest conversations about commitment, ownership, and progress.
+</p>
 
 
-<!-- FRAMEWORK -->
+<div class="cards" style="margin-top:50px;">
 
-<section class="section section-gray">
-
-<div class="container">
-
-<h2>The Activation Framework</h2>
-
-<div class="framework">
-
-<div class="framework-box">
+<div class="card">
 
 <h3>Clarity</h3>
 
 <p>
-People understand the direction of the organization and how their work connects to it.
+Employees understand how their individual work connects to the organization's mission and strategic direction.
 </p>
 
 </div>
 
-<div class="framework-box">
+
+<div class="card">
 
 <h3>Communication</h3>
 
 <p>
-Employees and managers have honest conversations about expectations, priorities, and goals.
+Teams learn how to talk openly with managers about priorities, goals, and engagement with the work ahead.
 </p>
 
 </div>
 
-<div class="framework-box">
+
+<div class="card">
 
 <h3>Activation</h3>
 
 <p>
-People choose to step forward, take ownership, and commit to the work ahead.
+Employees reflect on how they show up at work and leave with a renewed sense of ownership and commitment.
 </p>
 
 </div>
 
 </div>
 
-</div>
+</section>
+
+
+
+<!-- STATEMENT SECTION -->
+
+<section class="statement container">
+
+<h2 style="font-size:48px;line-height:1.3;">
+
+You have the strategy.<br>
+You have the goals.<br><br>
+
+Do you have the team <span style="color:#F94501;">activated</span> to deliver it?
+
+</h2>
 
 </section>
+
 
 
 <!-- ACTIVATION SCORE -->
 
-<section class="section container">
+<section class="container">
 
 <h2>What's Your Activation Score?</h2>
 
-<p>
-
-Participants leave Ben's keynote with a simple reflection:
-
-How activated are you in your work right now?
-
+<p style="max-width:700px;margin-top:20px;font-size:18px;">
+At the center of Ben's keynote is a simple reflection question:
 </p>
 
-<div class="score">
-1 — 10
-</div>
+<h3 style="font-size:36px;margin-top:30px;">
+How activated are you in your work right now?
+</h3>
 
-<p>
+<p style="max-width:700px;margin-top:20px;font-size:18px;">
+Participants rate themselves on a scale from 1 to 10 and reflect on a simple question:
+</p>
 
-From there the real question becomes:
-
+<h3 style="margin-top:20px;">
 What would move you one point higher?
+</h3>
 
+<p style="max-width:700px;margin-top:20px;font-size:18px;">
+That reflection becomes the starting point for more honest conversations between employees and managers about goals, motivation, and ownership.
 </p>
 
 </section>
 
 
 
-<!-- ACTIVATION BAR -->
+<!-- BOOKING SECTION -->
+
+<section class="container">
+
+<h2>Bring Ben To Your Team</h2>
+
+<p style="max-width:700px;margin-top:20px;font-size:18px;">
+Perfect for company offsites, team gatherings, leadership meetings, and moments when organizations need to reconnect people to the mission and activate momentum.
+</p>
+
+<button class="cta" onclick="openForm()">Check Availability</button>
+
+</section>
+
+
+
+<!-- STICKY ACTIVATION BAR -->
 
 <div class="activation-bar">
 
-<div>
+<div class="activation-text">
 ⚡ Activate Your Team
 </div>
 
@@ -476,7 +210,7 @@ Check Availability
 
 <div class="form-card">
 
-<h3>Bring Ben to Your Team</h3>
+<h3>Bring Ben To Your Team</h3>
 
 <input type="text" placeholder="Organization / Company">
 
@@ -499,6 +233,7 @@ Close
 </div>
 
 
+
 <script>
 
 function openForm(){
@@ -511,6 +246,6 @@ document.getElementById("activationForm").style.display="none";
 
 </script>
 
-</body>
 
+</body>
 </html>
