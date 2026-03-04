@@ -38,6 +38,37 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(12,14,19,0.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  z-index:1000;
+}
+
+.nav-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:20px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  margin-left:30px;
+  font-weight:500;
+  transition:color 0.2s ease;
+}
+
+nav a:hover{
+  color:var(--orange);
+}
+
 .container{
   max-width:1200px;
   margin:0 auto;
@@ -68,14 +99,13 @@ p{
   color:var(--orange);
 }
 
-/* HERO */
-
 .hero{
   display:grid;
   grid-template-columns:1.2fr 1fr;
   gap:80px;
   align-items:center;
   min-height:100vh;
+  padding-top:120px;
 }
 
 .hero p{
@@ -110,8 +140,6 @@ p{
 .hero-image img:hover{
   transform:scale(1.02);
 }
-
-/* SECTION */
 
 .section{
   background:var(--section);
@@ -153,8 +181,6 @@ p{
   font-size:1.3rem;
 }
 
-/* FOOTER */
-
 footer{
   text-align:center;
   padding:80px 20px;
@@ -166,8 +192,6 @@ footer a{
   color:var(--orange);
   text-decoration:none;
 }
-
-/* MOBILE */
 
 @media(max-width:900px){
   h1{
@@ -191,6 +215,17 @@ footer a{
 
 <body>
 
+<nav>
+  <div class="nav-inner">
+    <div><strong>Ben Hawes</strong></div>
+    <div>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
 <section class="container hero">
 
   <div>
@@ -213,32 +248,23 @@ footer a{
 
 </section>
 
-
 <section class="container section">
-
   <div class="text-block">
     <h2>The Reality</h2>
-
     <p>
-      Every company has vision, KPIs, and quarterly goals.
-      But strategy does not execute itself.
+      Every company has vision, KPIs, and quarterly goals. But strategy does not execute itself.
     </p>
-
     <p>
       It depends on people who take initiative, speak up early, own outcomes, and bring energy into the room.
       When activation drops, performance follows.
     </p>
-
     <p>
       Not because the strategy is wrong — but because engagement is low.
     </p>
   </div>
-
 </section>
 
-
 <section class="container">
-
   <h2>What Ben Does</h2>
 
   <div class="grid">
@@ -251,52 +277,41 @@ footer a{
     </div>
 
     <div class="card">
-      <h3>Leadership Consulting</h3>
+      <h3>Manager Activation Consulting</h3>
       <p>
-        Structured sessions that equip managers with a language for discussing activation and engagement.
+        Structured sessions that equip managers with a language to discuss activation and engagement in measurable ways.
       </p>
     </div>
 
     <div class="card">
-      <h3>Company-Wide Shifts</h3>
+      <h3>Company-Wide Engagement Shifts</h3>
       <p>
         Targeted engagements that raise energy, strengthen accountability, and build lasting momentum.
       </p>
     </div>
 
   </div>
-
 </section>
 
-
 <section class="container section">
-
   <div class="text-block">
     <h2>Why It Works</h2>
-
     <p>
       Ben’s understanding of activation comes from 15 years inside rooms — corporate rooms, training rooms, startup rooms, and live audiences.
     </p>
-
     <p>
-      From leading development programs to building an events business, from working with managers on accountability to performing on stage, he has studied one thing consistently:
+      From leading internal development programs to building a live events company, from working managers through accountability friction to performing on stage, he has studied one thing consistently:
     </p>
-
     <p>
       Energy is contagious. So is disengagement.
     </p>
-
     <p>
       Activation is a choice — and it can be influenced.
     </p>
-
   </div>
-
 </section>
 
-
 <section id="book" class="container">
-
   <h2>Increase Activation. Build Momentum.</h2>
 
   <p style="max-width:700px; margin-bottom:40px; color:var(--muted);">
@@ -305,12 +320,10 @@ footer a{
   </p>
 
   <a href="mailto:hello@benhawes.com" class="button">Book Ben Hawes</a>
-
 </section>
 
-
 <footer>
-  <p>© 2026 Ben Hawes</p>
+  © 2026 Ben Hawes · <a href="mailto:hello@benhawes.com">Contact</a>
 </footer>
 
 </body>
