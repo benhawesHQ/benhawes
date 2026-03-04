@@ -16,15 +16,15 @@
   --black:#000;
   --white:#fff;
   --orange:#F94501;
-  --max:1100px;
+  --max:1150px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-  font-family:'Open Sans',sans-serif;
   background:#000;
   color:#fff;
+  font-family:'Open Sans',sans-serif;
   line-height:1.7;
 }
 
@@ -56,34 +56,35 @@ nav{
 
 .nav-cta{
   background:var(--orange);
-  padding:12px 26px;
+  padding:12px 28px;
   border-radius:40px;
   text-decoration:none;
   color:white;
   font-weight:700;
-  transition:0.2s ease;
+  transition:0.25s ease;
 }
 
 .nav-cta:hover{
   transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(249,69,1,0.4);
 }
 
 /* HERO */
 
 .hero{
-  padding:100px 0 120px 0;
+  padding:110px 0 120px 0;
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1.1fr 1fr;
   gap:80px;
   align-items:center;
 }
 
 .hero h1{
   font-family:'Poppins';
-  font-size:4.5rem;
+  font-size:4.8rem;
   font-weight:900;
   line-height:1.05;
   letter-spacing:-2px;
@@ -95,31 +96,32 @@ nav{
 }
 
 .hero p{
-  margin:34px 0 42px 0;
-  font-size:1.3rem;
-  max-width:560px;
+  font-size:1.35rem;
+  margin:36px 0 46px 0;
+  max-width:600px;
 }
 
 .cta-button{
+  display:inline-block;
   background:var(--orange);
-  padding:18px 40px;
+  padding:20px 46px;
   border-radius:50px;
   text-decoration:none;
   color:white;
   font-weight:800;
-  font-size:1rem;
+  font-size:1.05rem;
   transition:0.25s ease;
 }
 
 .cta-button:hover{
-  transform:translateY(-4px);
-  box-shadow:0 20px 60px rgba(249,69,1,0.4);
+  transform:translateY(-5px);
+  box-shadow:0 25px 70px rgba(249,69,1,0.5);
 }
 
 .hero img{
   width:100%;
-  border-radius:24px;
-  box-shadow:0 40px 120px rgba(249,69,1,0.25);
+  border-radius:28px;
+  box-shadow:0 50px 120px rgba(249,69,1,0.25);
   transition:0.3s ease;
 }
 
@@ -131,54 +133,44 @@ nav{
 
 .section{
   padding:120px 0;
-  position:relative;
-}
-
-.section-number{
-  position:absolute;
-  top:0;
-  left:0;
-  font-family:'Poppins';
-  font-size:8rem;
-  font-weight:900;
-  color:rgba(255,255,255,0.04);
-  pointer-events:none;
 }
 
 .section h2{
   font-family:'Poppins';
-  font-size:2.8rem;
+  font-size:3rem;
   font-weight:900;
-  margin-bottom:28px;
-  position:relative;
+  margin-bottom:32px;
+  line-height:1.15;
 }
 
-.section h2::after{
-  content:"";
-  display:block;
-  width:60px;
-  height:4px;
-  background:var(--orange);
-  margin-top:16px;
+.section h2 span{
+  color:var(--orange);
 }
 
 .section p{
-  font-size:1.2rem;
-  margin-bottom:18px;
-  max-width:750px;
+  font-size:1.25rem;
+  margin-bottom:22px;
+  max-width:820px;
+}
+
+/* EMPHASIS */
+
+.highlight{
+  color:var(--orange);
+  font-weight:700;
 }
 
 /* BULLETS */
 
 .bullets{
-  margin-top:30px;
+  margin-top:32px;
 }
 
 .bullets div{
-  margin-bottom:16px;
-  font-size:1.15rem;
-  padding-left:22px;
+  margin-bottom:18px;
+  font-size:1.2rem;
   position:relative;
+  padding-left:26px;
 }
 
 .bullets div::before{
@@ -190,32 +182,28 @@ nav{
 /* SERVICES */
 
 .service{
-  margin-bottom:60px;
+  margin-bottom:70px;
 }
 
 .service-title{
   font-family:'Poppins';
-  font-size:1.8rem;
+  font-size:2rem;
+  font-weight:800;
   color:var(--orange);
-  margin-bottom:14px;
-}
-
-.service p{
-  font-size:1.15rem;
-  max-width:720px;
+  margin-bottom:18px;
 }
 
 /* FAQ */
 
 .faq-item{
   border-bottom:1px solid rgba(255,255,255,0.15);
-  padding:20px 0;
+  padding:24px 0;
 }
 
 .faq-question{
   font-family:'Poppins';
-  font-size:1.3rem;
-  font-weight:700;
+  font-size:1.4rem;
+  font-weight:800;
   cursor:pointer;
   display:flex;
   justify-content:space-between;
@@ -225,12 +213,12 @@ nav{
   max-height:0;
   overflow:hidden;
   transition:max-height 0.4s ease;
-  margin-top:14px;
-  font-size:1.1rem;
+  margin-top:16px;
+  font-size:1.15rem;
 }
 
 .faq-item.active .faq-answer{
-  max-height:600px;
+  max-height:700px;
 }
 
 /* FOOTER */
@@ -238,7 +226,7 @@ nav{
 footer{
   padding:100px 0;
   text-align:center;
-  font-size:0.9rem;
+  font-size:0.95rem;
   opacity:0.7;
 }
 
@@ -251,15 +239,15 @@ footer{
 }
 
 .hero h1{
-  font-size:3rem;
-}
-
-.section-number{
-  display:none;
+  font-size:3.2rem;
 }
 
 .section{
   padding:80px 0;
+}
+
+.section h2{
+  font-size:2.2rem;
 }
 
 }
@@ -273,7 +261,7 @@ footer{
 <nav>
   <div class="nav-inner">
     <div class="logo">Ben <span>Hawes ⚡️</span></div>
-    <a href="#" class="nav-cta">Book a Keynote</a>
+    <a href="#" class="nav-cta">Book the Keynote</a>
   </div>
 </nav>
 </div>
@@ -287,81 +275,142 @@ footer{
       </h1>
 
       <p>
-        A high-impact keynote that activates ownership, sharpens clarity, and shifts the energy of the room.
+        A keynote experience designed for growth-stage companies that need alignment, ownership, and real activation — not another slide deck.
       </p>
 
-      <a href="#" class="cta-button">Bring Ben to Your Stage</a>
+      <a href="#" class="cta-button">Bring Ben to Your Offsite</a>
     </div>
 
     <div>
-      <img src="headshot.jpg" alt="Ben Hawes speaking on stage">
+      <img src="headshot.jpg" alt="Ben Hawes speaking at company offsite">
     </div>
   </div>
 </section>
 
 <section class="section container">
-  <div class="section-number">01</div>
-  <h2>This is for you if…</h2>
 
-  <p>You’re a founder, CEO, or Head of People leading a growing company.</p>
+  <h2>Something feels different.</h2>
+
+  <p>
+    You’ve set the strategy. You’ve aligned leadership. You’ve rolled out the roadmap.
+  </p>
+
+  <p>
+    On paper, everything makes sense.
+  </p>
+
+  <p>
+    But in the room?
+  </p>
+
+  <p class="highlight">
+    The energy is softer. Ownership feels thinner. Momentum is harder to sustain.
+  </p>
+
+  <p>
+    You’re getting execution — but not activation.
+  </p>
+
+</section>
+
+<section class="section container">
+
+  <h2>Engagement isn’t happiness. <span>It’s alignment.</span></h2>
+
+  <p>
+    Engagement is when someone understands the vision, sees how their daily work connects to it, and feels personally motivated to carry it forward.
+  </p>
+
+  <p>
+    When that connection weakens, strategy stalls.
+  </p>
+
+  <p>
+    Not because the plan is wrong — but because activation is missing.
+  </p>
+
+</section>
+
+<section class="section container">
+
+  <h2>I work in that gap.</h2>
+
+  <p>
+    I’ve led trainings, all-hands meetings, culture resets, and activation sessions inside high-growth startups and public-facing brands.
+  </p>
+
+  <p>
+    I’ve worked across customer service, sales, learning & development, marketing, and workplace experience.
+  </p>
+
+  <p>
+    And I’ve consistently been the person leaders call when they need the message to land — and the room to move.
+  </p>
+
+</section>
+
+<section class="section container">
+
+  <h2>What happens in the keynote</h2>
 
   <div class="bullets">
-    <div>The room is listening — but not leaning in.</div>
-    <div>Energy is flatter than it used to be.</div>
-    <div>Execution is happening — but ownership is softer.</div>
-    <div>You need activation, not another slide deck.</div>
+    <div>Your team reconnects their daily execution to the bigger mission.</div>
+    <div>Ownership becomes personal — not abstract.</div>
+    <div>Language around activation becomes shared.</div>
+    <div>The energy in the room visibly shifts.</div>
   </div>
+
 </section>
 
 <section class="section container">
-  <div class="section-number">02</div>
-  <h2>What happens in the room</h2>
 
-  <p>
-    Through humor, direct challenge, and grounded storytelling,
-    your team reconnects their daily execution to the bigger mission.
-  </p>
-
-  <p>
-    They leave with language around ownership they actually use.
-  </p>
-</section>
-
-<section class="section container">
-  <div class="section-number">03</div>
   <h2>What Ben Does</h2>
 
   <div class="service">
-    <div class="service-title">🎤 Keynote Experiences</div>
-    <p>One-time activation experiences designed for offsites and all-hands meetings.</p>
+    <div class="service-title">🎤 Keynote Activation</div>
+    <p>
+      A high-impact experience for offsites, leadership meetings, and all-hands gatherings designed to shift momentum immediately.
+    </p>
   </div>
 
   <div class="service">
     <div class="service-title">🤝 Leadership Collaboration</div>
-    <p>Working sessions with leadership teams to align messaging and energy.</p>
+    <p>
+      Smaller sessions with founders and leadership teams to sharpen messaging, clarify activation strategy, and align execution.
+    </p>
   </div>
 
   <div class="service">
     <div class="service-title">🛠 Project-Based Engagement Work</div>
-    <p>Custom initiatives that extend activation into ongoing culture shifts.</p>
+    <p>
+      Custom engagement initiatives that extend activation beyond the keynote and into culture.
+    </p>
   </div>
+
 </section>
 
 <section class="section container">
-  <div class="section-number">04</div>
+
   <h2>Frequently Asked Questions</h2>
 
   <div class="faq-item">
-    <div class="faq-question">What makes this keynote different? <span>+</span></div>
+    <div class="faq-question">How is this different from a motivational speech? <span>+</span></div>
     <div class="faq-answer">
-      It blends humor, vulnerability, and challenge to create an ownership shift — not surface-level motivation.
+      This keynote is rooted in real operational experience. It focuses on ownership, clarity, and alignment within existing company strategy — not generic inspiration.
     </div>
   </div>
 
   <div class="faq-item">
-    <div class="faq-question">How long is the keynote? <span>+</span></div>
+    <div class="faq-question">Is this only for startups? <span>+</span></div>
     <div class="faq-answer">
-      Typically 45–75 minutes, tailored to your event format.
+      It works best in growth-stage environments navigating scale, transition, or renewed focus — but the principles apply to any team seeking stronger activation.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Can this extend beyond the keynote? <span>+</span></div>
+    <div class="faq-answer">
+      Yes. Leadership collaboration and project-based work are available for companies who want to deepen the activation process.
     </div>
   </div>
 
