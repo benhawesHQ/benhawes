@@ -13,21 +13,22 @@
 <style>
 
 :root{
-  --black:#000;
-  --white:#fff;
-  --soft:rgba(255,255,255,0.8);
+  --black:#000000;
+  --white:#ffffff;
+  --soft:rgba(255,255,255,0.82);
   --orange:#F94501;
+  --panel:#111111;
   --max:1200px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-  background:#000;
-  color:#fff;
+  background:var(--black);
+  color:var(--white);
   font-family:'Inter',sans-serif;
   -webkit-font-smoothing:antialiased;
-  line-height:1.7;
+  line-height:1.6;
 }
 
 .container{
@@ -67,7 +68,7 @@ nav{
   color:white;
   font-weight:700;
   font-size:0.9rem;
-  transition:0.25s ease;
+  transition:0.3s ease;
 }
 
 .nav-cta:hover{
@@ -89,7 +90,7 @@ nav{
 
 .hero h1{
   font-family:'Poppins';
-  font-size:4.6rem;
+  font-size:4.5rem;
   line-height:1.05;
   letter-spacing:-2px;
   margin-bottom:40px;
@@ -133,7 +134,7 @@ nav{
   text-decoration:none;
   color:white;
   font-weight:800;
-  transition:0.25s ease;
+  transition:0.3s ease;
 }
 
 .cta-large:hover{
@@ -146,90 +147,174 @@ nav{
   padding:160px 0;
 }
 
-.narrow{
+.story{
   max-width:900px;
 }
 
-.section h2{
+.story h2{
   font-family:'Poppins';
   font-size:3rem;
-  margin-bottom:50px;
+  line-height:1.1;
+  margin-bottom:60px;
 }
 
-.section p{
+.story p{
   font-size:1.25rem;
   color:var(--soft);
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
-/* STATEMENT BREAK */
+/* TRANSITION */
 
-.statement{
-  padding:180px 0;
+.transition{
+  padding:200px 0;
   text-align:center;
+  background:var(--panel);
 }
 
-.statement h2{
+.transition h2{
   font-family:'Poppins';
   font-size:3.5rem;
   line-height:1.1;
+  margin-bottom:40px;
 }
 
-.statement span{
-  display:block;
+.transition span{
   color:var(--orange);
+  display:block;
 }
 
-/* OFFER GRID */
+.transition p{
+  font-size:1.3rem;
+  color:var(--soft);
+  max-width:800px;
+  margin:0 auto;
+}
 
-.offer-grid{
+/* IMPACT SECTION */
+
+.impact{
+  padding:200px 0;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.08);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.impact h2{
+  font-family:'Poppins';
+  font-size:3rem;
+  margin-bottom:100px;
+}
+
+.impact-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:70px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:60px;
 }
 
-.offer-card{
-  border:1px solid rgba(255,255,255,0.08);
-  padding:50px;
-  border-radius:20px;
+.impact-item{
+  padding:40px 20px;
   transition:0.3s ease;
 }
 
-.offer-card:hover{
-  transform:translateY(-8px);
-  border-color:var(--orange);
+.impact-item:hover{
+  transform:translateY(-6px);
 }
 
-.offer-card h3{
+.counter{
   font-family:'Poppins';
-  font-size:1.8rem;
-  margin-bottom:25px;
+  font-size:4rem;
+  color:var(--orange);
+  margin-bottom:20px;
+}
+
+.impact-item p{
+  font-size:1.1rem;
+  color:var(--soft);
+  max-width:260px;
+  margin:0 auto;
+}
+
+/* EXPECT */
+
+.expect{
+  padding:200px 0;
+}
+
+.expect-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:80px;
+}
+
+.expect-item h3{
+  font-family:'Poppins';
+  font-size:1.6rem;
+  margin-bottom:20px;
+}
+
+.expect-item p{
+  font-size:1.1rem;
+  color:var(--soft);
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+  padding:200px 0;
+  text-align:center;
+}
+
+.testimonial blockquote{
+  font-family:'Poppins';
+  font-size:2rem;
+  line-height:1.4;
+  max-width:900px;
+  margin:0 auto 30px auto;
+}
+
+.testimonial cite{
+  font-size:0.95rem;
+  opacity:0.6;
+}
+
+/* FINAL CTA */
+
+.final{
+  padding:220px 0;
+  text-align:center;
+}
+
+.final h2{
+  font-family:'Poppins';
+  font-size:3.8rem;
+  margin-bottom:40px;
+}
+
+.final h2 span{
+  color:var(--orange);
+  display:block;
 }
 
 /* FOOTER */
 
 footer{
+  background:#0a0a0a;
   padding:120px 0 60px 0;
-  border-top:1px solid rgba(255,255,255,0.08);
 }
 
 .footer-grid{
   display:grid;
   grid-template-columns:2fr 1fr 1fr;
-  gap:60px;
+  gap:80px;
   margin-bottom:60px;
 }
 
-.footer-grid h4{
-  font-family:'Poppins';
-  margin-bottom:20px;
-}
-
-.footer-grid a{
+.footer-links a{
   display:block;
   color:var(--soft);
   text-decoration:none;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 .footer-bottom{
@@ -252,6 +337,7 @@ footer{
 
 .footer-grid{
   grid-template-columns:1fr;
+  gap:40px;
 }
 
 }
@@ -271,9 +357,7 @@ footer{
 </div>
 
 <section class="hero container">
-
   <div class="hero-grid">
-
     <div>
       <div class="hero-title">Team Engagement & Activation Speaker</div>
 
@@ -283,9 +367,9 @@ footer{
       </h1>
 
       <p class="hero-sub">
-        Ben Hawes works with CEOs, founders, and HR leaders during pivotal moments,
-        helping teams clarify motivation, activate engagement,
-        and align daily work to the larger company vision.
+        Ben Hawes works with companies during pivotal moments,
+        helping teams communicate motivation, activate engagement,
+        and drive measurable results long after the room clears.
       </p>
 
       <a href="#" class="cta-large">Activate Your Team</a>
@@ -294,146 +378,92 @@ footer{
     <div>
       <img src="headshot.jpg" alt="Ben Hawes speaking at company offsite">
     </div>
-
   </div>
-
-</section>
-
-<section class="section container narrow">
-
-  <h2>The problem isn’t strategy.</h2>
-
-  <p>
-    Leaders design strategy all the time. Vision decks are built.
-    Roadmaps are defined. OKRs are set.
-  </p>
-
-  <p>
-    But unless your people understand how their day-to-day work connects to that vision,
-    the strategy will not go the distance.
-  </p>
-
-  <p>
-    Engagement is not happiness. It is not satisfaction.
-    Engagement is commitment. Effort. Ownership.
-    It is the willingness to try harder because the work feels meaningful.
-  </p>
-
-  <p>
-    And most companies do not know how to measure it,
-    communicate about it,
-    or activate it.
-  </p>
-
-</section>
-
-<section class="statement">
-
-  <h2>
-    Activation is the bridge
-    <span>between vision and results.</span>
-  </h2>
-
-</section>
-
-<section class="section container narrow">
-
-  <p>
-    For over fifteen years, Ben has helped growing companies translate big ideas into lived experience.
-  </p>
-
-  <p>
-    At ClassPass, he led learning and development as the company scaled from 200 to 700 employees.
-    At LifeLabs Learning, he partnered with HR leaders and executives to design measurable training programs.
-    At Rocket Money, he shapes the day-to-day experience of a fast-moving tech office.
-  </p>
-
-  <p>
-    He has worked across customer service, marketing, engineering,
-    sales, operations, and leadership teams.
-  </p>
-
-  <p>
-    His reputation inside organizations has been consistent:
-    the person who can step into the room,
-    clarify the message,
-    elevate the energy,
-    and help people commit to the mission.
-  </p>
-
 </section>
 
 <section class="section container">
-
-  <h2>How We Work Together</h2>
-
-  <div class="offer-grid">
-
-    <div class="offer-card">
-      <h3>Keynote Activation Experience</h3>
-      <p>
-        An interactive keynote designed for company offsites,
-        leadership retreats, and all-hands meetings.
-        Teams leave with language around motivation,
-        clarity around their role,
-        and a renewed commitment to the company vision.
-      </p>
-    </div>
-
-    <div class="offer-card">
-      <h3>Leadership & Team Consulting</h3>
-      <p>
-        Small-group or executive consulting focused on aligning leadership communication,
-        activating engagement metrics,
-        and designing a strategy that people will actually execute.
-      </p>
-    </div>
-
+  <div class="story">
+    <h2>The strategy was clear. The room was not.</h2>
+    <p>That gap is where performance drifts.</p>
   </div>
-
 </section>
 
-<section class="statement">
+<section class="transition">
+  <h2>Strategy does not fail quietly.<span>Activation does.</span></h2>
+  <p>When teams cannot articulate how their work connects to results, energy fades and execution slows.</p>
+</section>
 
-  <h2>
-    When your people are activated,
-    <span>your strategy goes the distance.</span>
-  </h2>
+<section class="impact">
+  <div class="container">
+    <h2>When engagement is activated, results move.</h2>
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="counter" data-target="27">0%</div>
+        <p>Increase in clarity around company goals</p>
+      </div>
+      <div class="impact-item">
+        <div class="counter" data-target="21">0%</div>
+        <p>Higher profitability in highly engaged teams</p>
+      </div>
+      <div class="impact-item">
+        <div class="counter" data-target="59">0%</div>
+        <p>Lower turnover in activated teams</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <a href="#" class="cta-large" style="margin-top:50px;">Activate Your Team</a>
-
+<section class="final container">
+  <h2>Activate the room.<span>Change the year.</span></h2>
+  <a href="#" class="cta-large">Activate Your Team</a>
 </section>
 
 <footer>
   <div class="container footer-grid">
-
     <div>
-      <h4>Ben Hawes ⚡️</h4>
-      <p style="color:var(--soft);">
-        Team Engagement & Activation Speaker helping companies align motivation,
-        elevate engagement, and drive measurable results.
-      </p>
+      <h3>Ben Hawes ⚡️</h3>
+      <p style="color:var(--soft);">Team Engagement & Activation Speaker helping companies align motivation and drive measurable results.</p>
     </div>
-
-    <div>
-      <h4>Explore</h4>
-      <a href="#">About</a>
+    <div class="footer-links">
       <a href="#">Speaking</a>
+      <a href="#">About</a>
       <a href="#">Contact</a>
     </div>
-
-    <div>
-      <h4>Connect</h4>
+    <div class="footer-links">
       <a href="#">LinkedIn</a>
       <a href="#">Instagram</a>
     </div>
-
   </div>
-
-  <div class="footer-bottom">
-    © 2026 Ben Hawes
-  </div>
+  <div class="footer-bottom">© 2026 Ben Hawes</div>
 </footer>
+
+<script>
+const counters = document.querySelectorAll('.counter');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const update = () => {
+          count += Math.ceil(target/100);
+          if(count < target){
+            counter.innerText = count + "%";
+            requestAnimationFrame(update);
+          } else {
+            counter.innerText = target + "%";
+          }
+        };
+        update();
+      });
+      observer.disconnect();
+    }
+  });
+});
+
+observer.observe(document.querySelector('.impact'));
+</script>
 
 </body>
 </html>
