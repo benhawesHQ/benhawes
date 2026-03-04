@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ben Hawes | Employee Activation Speaker</title>
+<title>Ben Hawes | Activating Modern Teams</title>
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
@@ -12,9 +12,9 @@
 <style>
 
 :root{
-  --black:#000000;
+  --black:#0D0D0F;
   --white:#FFFFFF;
-  --muted:#BDBDBD;
+  --muted:#C2C2C2;
   --orange:#F94501;
   --max-width:1100px;
 }
@@ -25,7 +25,7 @@ body{
   font-family:'Inter',sans-serif;
   background:var(--black);
   color:var(--white);
-  line-height:1.7;
+  line-height:1.75;
 }
 
 .container{
@@ -39,7 +39,7 @@ body{
 nav{
   position:fixed;
   width:100%;
-  background:#000;
+  background:rgba(13,13,15,0.95);
   padding:22px 0;
   z-index:1000;
 }
@@ -55,16 +55,19 @@ nav{
 
 .logo{
   font-family:'Poppins';
-  font-weight:900;
-  font-size:1.8rem;
+  font-weight:800;
+  font-size:1.7rem;
+  letter-spacing:1px;
 }
 
-.logo span{color:var(--orange);}
+.logo .first{color:white;}
+.logo .last{color:var(--orange); margin-left:8px;}
 
 .nav-links a{
-  margin-left:30px;
+  margin-left:28px;
   text-decoration:none;
-  color:var(--white);
+  color:white;
+  font-weight:500;
 }
 
 .nav-cta{
@@ -78,14 +81,21 @@ nav{
 
 .hero{
   padding-top:220px;
-  padding-bottom:200px;
+  padding-bottom:180px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:80px;
+  align-items:center;
 }
 
 .hero h1{
   font-family:'Poppins';
-  font-size:4rem;
+  font-size:3.6rem;
   font-weight:900;
-  line-height:1.1;
+  line-height:1.15;
 }
 
 .hero h1 span{
@@ -93,39 +103,50 @@ nav{
 }
 
 .hero p{
-  margin-top:40px;
-  font-size:1.2rem;
+  margin-top:36px;
+  font-size:1.15rem;
   color:var(--muted);
-  max-width:700px;
+  max-width:640px;
 }
 
 .cta{
   display:inline-block;
-  margin-top:50px;
+  margin-top:48px;
   background:var(--orange);
   color:white;
   padding:16px 30px;
   border-radius:40px;
   font-weight:700;
   text-decoration:none;
+  transition:0.3s;
+}
+
+.cta:hover{
+  transform:translateY(-4px);
+}
+
+.hero img{
+  width:100%;
+  border-radius:26px;
+  box-shadow:0 40px 100px rgba(0,0,0,0.5);
 }
 
 /* SECTION */
 
 .section{
-  padding:180px 0;
+  padding:160px 0;
 }
 
 .section h2{
   font-family:'Poppins';
-  font-size:2.6rem;
-  margin-bottom:40px;
+  font-size:2.4rem;
+  margin-bottom:30px;
 }
 
 .section p{
   color:var(--muted);
-  max-width:750px;
-  margin-bottom:26px;
+  max-width:720px;
+  margin-bottom:22px;
   font-size:1.1rem;
 }
 
@@ -136,9 +157,10 @@ nav{
   background:rgba(255,255,255,0.08);
 }
 
-/* FIELD GUIDE */
+/* FOOTER CTA */
 
-.field-guide{
+.footer-cta{
+  padding:160px 0;
   text-align:center;
 }
 
@@ -164,17 +186,17 @@ nav{
   background:var(--orange);
   color:white;
   font-weight:700;
-  cursor:pointer;
 }
 
 footer{
-  padding:120px 0;
+  padding:100px 0;
   text-align:center;
   color:#777;
   font-size:0.9rem;
 }
 
-@media(max-width:800px){
+@media(max-width:900px){
+.hero-grid{grid-template-columns:1fr;}
 .hero h1{font-size:2.6rem;}
 .section{padding:120px 0;}
 }
@@ -186,7 +208,10 @@ footer{
 
 <nav>
   <div class="nav-inner">
-    <div class="logo">Ben<span>Hawes</span></div>
+    <div class="logo">
+      <span class="first">Ben</span>
+      <span class="last">Hawes</span>
+    </div>
     <div class="nav-links">
       <a href="#">About</a>
       <a href="#">Activation Journal</a>
@@ -196,40 +221,47 @@ footer{
 </nav>
 
 <section class="hero container">
-  <h1>
-    Strategy does not go the distance.
-    <span>People do.</span>
-  </h1>
+  <div class="hero-grid">
+    <div>
+      <h1>
+        You do not need another strategy deck.
+        <span>You need people who care.</span>
+      </h1>
 
-  <p>
-    Most organizations do not have a strategy problem. They have an activation problem.
-  </p>
+      <p>
+        When energy dips, ownership softens. Meetings happen. Metrics exist. But momentum fades.
+      </p>
 
-  <p>
-    People know the goals. They understand the metrics. They attend the meetings.
-    But something feels flat. Energy dips. Initiative slows. Ownership softens.
-  </p>
+      <p>
+        Ben Hawes helps modern teams rediscover activation. The moment when someone decides to show up fully, take initiative, and move the work forward.
+      </p>
 
-  <a href="#" class="cta">Activate Your Team</a>
+      <a href="#" class="cta">Activate Your Team</a>
+    </div>
+
+    <div>
+      <img src="headshot.jpg" alt="Ben Hawes speaking">
+    </div>
+  </div>
 </section>
 
 <div class="divider"></div>
 
 <section class="section container">
-  <h2>The Reality Leaders Face</h2>
+  <h2>You Feel It Too</h2>
 
   <p>
-    CEOs want momentum. HR leaders want engagement. Sales leaders want urgency.
+    The strategy is clear.
+    The goals are ambitious.
+    The team is talented.
   </p>
 
   <p>
-    But strategy decks do not create energy.
-    Roadmaps do not create commitment.
-    Incentives do not create ownership.
+    And yet something feels flat.
   </p>
 
   <p>
-    Activation does.
+    Activation is missing.
   </p>
 </section>
 
@@ -239,46 +271,26 @@ footer{
   <h2>Why Ben</h2>
 
   <p>
-    For fifteen years, Ben Hawes has worked at the intersection of performance and engagement.
+    For fifteen years, Ben has worked at the intersection of leadership, live engagement, and performance.
   </p>
 
   <p>
-    He has led training programs inside high growth startups. Built large scale corporate engagement experiences. Coached managers on accountability and clarity. Commanded stages as a performer.
+    From training managers inside high growth startups to commanding rooms as a performer, he understands what shifts behavior.
   </p>
 
   <p>
-    He understands what moves a room.
-    He understands what moves a team.
+    He does not teach strategy.
+    He activates the people responsible for executing it.
   </p>
 </section>
 
 <div class="divider"></div>
 
-<section class="section container">
-  <h2>The Activation Philosophy</h2>
-
-  <p>
-    Activation is the moment someone decides to care.
-  </p>
-
-  <p>
-    It is when a passive contributor becomes an owner.
-    When a manager moves from oversight to leadership.
-    When a team shifts from compliance to commitment.
-  </p>
-
-  <p>
-    Activation is emotional before it is operational.
-  </p>
-</section>
-
-<div class="divider"></div>
-
-<section class="section container field-guide">
+<section class="footer-cta container">
   <h2>The Activation Field Guide</h2>
 
   <p>
-    A practical framework for increasing ownership, clarity, and energy inside modern teams.
+    A practical framework for increasing ownership and energy inside modern teams.
   </p>
 
   <div class="email-form">
