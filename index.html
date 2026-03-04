@@ -4,18 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ben Hawes | Belonging & Energy Speaker</title>
-<meta name="description" content="Ben Hawes is a speaker helping teams create belonging, energy, and meaningful engagement through bold experiences.">
+<title>Ben Hawes | Experiential Culture & Engagement Speaker</title>
+
+<meta name="description" content="Ben Hawes helps companies design high-impact offsites, keynotes, and engagement moments that increase ownership, alignment, and team energy.">
+
+<meta name="keywords" content="corporate keynote speaker, employee engagement speaker, offsite facilitator, company retreat speaker, workplace culture consultant, leadership offsite experience">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --orange:#FF4A00;
-  --bg:#0E0F14;
-  --section:#1A1C23;
-  --text:#F5F5F5;
-  --muted:#A0A3B1;
+  --bg:#0F1115;
+  --section:#171A21;
+  --text:#F4F4F4;
+  --muted:#9AA0A6;
+  --border:#242832;
 }
 
 *{
@@ -32,7 +36,7 @@ body{
 }
 
 .container{
-  max-width:1100px;
+  max-width:1150px;
   margin:0 auto;
   padding:100px 20px;
 }
@@ -42,13 +46,13 @@ h1,h2,h3{
 }
 
 h1{
-  font-size:3.5rem;
+  font-size:3.6rem;
   font-weight:800;
   line-height:1.1;
 }
 
 h2{
-  font-size:2rem;
+  font-size:2.2rem;
   margin-bottom:20px;
 }
 
@@ -57,6 +61,7 @@ h2{
 }
 
 /* HERO */
+
 .hero{
   display:flex;
   align-items:center;
@@ -71,28 +76,26 @@ h2{
 
 .hero-text p{
   font-size:1.2rem;
-  margin:25px 0 35px 0;
   color:var(--muted);
-  max-width:500px;
+  margin:30px 0;
+  max-width:560px;
 }
 
 .button{
   display:inline-block;
   background:var(--orange);
   color:white;
-  padding:16px 32px;
+  padding:16px 34px;
   font-weight:600;
   text-decoration:none;
   border-radius:8px;
-  transition:0.3s ease;
+  transition:0.2s ease;
 }
 
 .button:hover{
   transform:translateY(-3px);
-  box-shadow:0 10px 30px rgba(255,74,0,0.4);
 }
 
-/* HEADSHOT */
 .hero-image{
   flex:1;
   display:flex;
@@ -101,56 +104,66 @@ h2{
 
 .hero-image img{
   width:420px;
-  border-radius:20px;
-  transition:0.4s ease;
-  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+  border-radius:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  transition:0.3s ease;
 }
 
 .hero-image img:hover{
-  transform:scale(1.04);
-  box-shadow:0 25px 80px rgba(255,74,0,0.35);
+  transform:scale(1.02);
 }
 
-/* SECTIONS */
+/* SECTION STYLING */
+
 .section{
   background:var(--section);
+  border-top:1px solid var(--border);
 }
 
 .card-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+  gap:35px;
   margin-top:40px;
 }
 
 .card{
-  background:#11131A;
-  padding:35px;
-  border-radius:14px;
+  background:#12141A;
+  padding:40px;
+  border-radius:16px;
+  border:1px solid var(--border);
   transition:0.3s ease;
 }
 
 .card:hover{
   transform:translateY(-6px);
-  border:1px solid var(--orange);
+  border-color:var(--orange);
 }
 
 .card h3{
   color:var(--orange);
-  margin-bottom:12px;
+  margin-bottom:15px;
+}
+
+.muted{
+  color:var(--muted);
+  max-width:760px;
 }
 
 /* FOOTER */
+
 footer{
   text-align:center;
   padding:60px 20px;
-  background:#08090D;
+  background:#0A0C10;
 }
 
 footer a{
   color:var(--orange);
   text-decoration:none;
 }
+
+/* MOBILE */
 
 @media(max-width:900px){
   .hero{
@@ -171,43 +184,52 @@ footer a{
 
   <div class="hero-text">
     <h1>
-      I help teams create <span class="orange">belonging</span>  
-      and real energy.
+      I design high-impact moments that increase <span class="orange">ownership</span>, alignment, and energy.
     </h1>
 
     <p>
-      Speaker. Builder. Performer.  
-      I blend leadership insight, live experience, and creative energy to help companies unlock authentic engagement.
+      I work with startups, growth-stage companies, and leadership teams to transform offsites, keynotes, and internal events into measurable engagement shifts.
     </p>
 
-    <a href="#book" class="button">Book Ben</a>
+    <a href="#book" class="button">Book a Conversation</a>
   </div>
 
   <div class="hero-image">
-    <img src="headshot.jpg" alt="Ben Hawes headshot">
+    <img src="headshot.jpg" alt="Ben Hawes speaking and facilitating">
   </div>
 
 </section>
 
 
 <section class="container section">
-  <h2>What I Bring Into the Room</h2>
+  <h2>What Companies Hire Me To Do</h2>
+
+  <p class="muted">
+    Most companies invest heavily in strategy, talent, and execution.  
+    Few intentionally design the emotional and psychological experience of their teams.
+  </p>
 
   <div class="card-grid">
 
     <div class="card">
-      <h3>High-Energy Keynotes</h3>
-      <p>Interactive sessions on ownership, engagement, and creating culture through action.</p>
+      <h3>Elevate Offsites</h3>
+      <p>
+        Transform leadership retreats and team gatherings into structured experiences that surface real issues, increase accountability, and create lasting alignment.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Offsite & Team Facilitation</h3>
-      <p>Helping teams unpack engagement issues and rebuild connection in real time.</p>
+      <h3>Shift Energy at Scale</h3>
+      <p>
+        Deliver high-engagement keynotes that move teams from passive participation to active ownership.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Experiential Gatherings</h3>
-      <p>Blending performance, storytelling, and strategy to make events unforgettable.</p>
+      <h3>Design ROI-Driven Events</h3>
+      <p>
+        Ensure company celebrations, holiday parties, and all-hands meetings reinforce culture, not dilute it.
+      </p>
     </div>
 
   </div>
@@ -215,22 +237,55 @@ footer a{
 
 
 <section class="container">
-  <h2>Why This Works</h2>
+  <h2>Why Me</h2>
 
-  <p style="max-width:700px;color:var(--muted);">
-    I’ve worked inside high-growth startups, trained leaders in management development environments,
-    built live experience businesses, and performed on stage for years.
-    I understand how people think, how teams operate, and how energy shifts a room.
+  <p class="muted">
+    I’ve worked inside high-growth startups, partnered with managers to improve performance, built live event businesses from scratch, and spent years performing on stage.
+  </p>
+
+  <p class="muted" style="margin-top:25px;">
+    I understand how to read a room — digitally, in person, and strategically.  
+    I understand leadership pressure.  
+    I understand engagement breakdown.  
+    And I know how to shift the emotional climate of a team in real time.
+  </p>
+
+  <p class="muted" style="margin-top:25px;">
+    When I walk into a room, I’m not delivering a script.  
+    I’m diagnosing energy, adjusting live, and engineering momentum.
   </p>
 </section>
 
 
-<section id="book" class="container section">
-  <h2>Let’s Build Something Meaningful</h2>
+<section class="container section">
+  <h2>The Outcome</h2>
 
-  <p style="color:var(--muted);margin-bottom:30px;">
-    Company offsite. Conference keynote. Leadership gathering.
-    Let’s create something powerful.
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>Increased Ownership</h3>
+      <p>Teams take clearer responsibility for results and communication.</p>
+    </div>
+
+    <div class="card">
+      <h3>Stronger Alignment</h3>
+      <p>Leaders and teams leave speaking the same language about culture and expectations.</p>
+    </div>
+
+    <div class="card">
+      <h3>Visible Energy Lift</h3>
+      <p>Engagement increases because people feel seen, challenged, and connected.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="book" class="container">
+  <h2>Let’s Design the Moment That Moves Your Team</h2>
+
+  <p class="muted" style="margin-bottom:30px;">
+    If you're planning an offsite, company reset, conference keynote, or internal gathering, let's design something that shifts how your team operates.
   </p>
 
   <a href="mailto:hello@benhawes.com" class="button">Start the Conversation</a>
