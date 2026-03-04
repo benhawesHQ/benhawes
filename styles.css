@@ -14,13 +14,27 @@ padding:0;
 box-sizing:border-box;
 }
 
+/* PREVENT HORIZONTAL SCROLL */
+
+html,body{
+width:100%;
+overflow-x:hidden;
+}
+
 body{
 font-family:"Open Sans",sans-serif;
 font-size:16px;
 color:var(--black);
 line-height:1.7;
 background:white;
-overflow-x:hidden;
+}
+
+/* MAKE MEDIA RESPONSIVE */
+
+img{
+max-width:100%;
+height:auto;
+display:block;
 }
 
 /* TYPOGRAPHY */
@@ -52,6 +66,7 @@ max-width:var(--max);
 margin:auto;
 padding:100px 24px;
 position:relative;
+width:100%;
 }
 
 /* NAV */
@@ -173,6 +188,7 @@ left:-40px;
 opacity:.12;
 transform:rotate(6deg);
 z-index:-1;
+animation:drift 18s ease-in-out infinite;
 }
 
 .hero-img-wrap:after{
@@ -186,6 +202,7 @@ bottom:-30px;
 right:-30px;
 opacity:.08;
 z-index:-1;
+animation:drift2 20s ease-in-out infinite;
 }
 
 /* DRIFTY SPRINKLES */
@@ -200,7 +217,7 @@ border-radius:30px;
 top:10%;
 left:6%;
 z-index:-1;
-animation:float1 16s infinite alternate;
+animation:drift 22s ease-in-out infinite;
 }
 
 body:after{
@@ -213,7 +230,7 @@ border-radius:50%;
 bottom:12%;
 right:8%;
 z-index:-1;
-animation:float2 18s infinite alternate;
+animation:drift2 26s ease-in-out infinite;
 }
 
 .statement:before{
@@ -225,19 +242,49 @@ background:var(--orangeSoft);
 border-radius:40px;
 top:-40px;
 right:10%;
-animation:float1 18s infinite alternate;
+animation:drift 24s ease-in-out infinite;
 }
 
-/* FLOAT ANIMATION */
+/* FLOAT ANIMATIONS */
 
-@keyframes float1{
-0%{transform:translateY(0) rotate(0)}
-100%{transform:translateY(40px) rotate(10deg)}
+@keyframes drift{
+
+0%{
+transform:translate(0,0) rotate(0deg);
 }
 
-@keyframes float2{
-0%{transform:translateY(0)}
-100%{transform:translateY(-40px)}
+25%{
+transform:translate(10px,-15px) rotate(6deg);
+}
+
+50%{
+transform:translate(-10px,10px) rotate(-6deg);
+}
+
+75%{
+transform:translate(5px,15px) rotate(3deg);
+}
+
+100%{
+transform:translate(0,0) rotate(0deg);
+}
+
+}
+
+@keyframes drift2{
+
+0%{
+transform:translate(0,0);
+}
+
+50%{
+transform:translate(-20px,20px);
+}
+
+100%{
+transform:translate(0,0);
+}
+
 }
 
 /* STATEMENT */
