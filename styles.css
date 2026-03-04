@@ -15,12 +15,6 @@ body{
 font-family:"Open Sans",sans-serif;
 color:var(--black);
 line-height:1.7;
-background:white;
-}
-
-img{
-max-width:100%;
-display:block;
 }
 
 h1,h2,h3{
@@ -29,12 +23,11 @@ font-weight:700;
 }
 
 h1{
-font-size:64px;
-line-height:1.05;
+font-size:56px;
 }
 
 h2{
-font-size:44px;
+font-size:40px;
 margin-bottom:24px;
 }
 
@@ -43,10 +36,6 @@ max-width:var(--max);
 margin:auto;
 padding:100px 24px;
 }
-
-
-
-/* NAV */
 
 .nav{
 display:flex;
@@ -59,7 +48,6 @@ margin:auto;
 
 .logo{
 font-size:30px;
-font-family:Poppins;
 font-weight:700;
 }
 
@@ -67,24 +55,19 @@ font-weight:700;
 color:var(--orange);
 }
 
-.nav-btn{
+.nav button{
 background:var(--orange);
 color:white;
+border:none;
 padding:12px 24px;
 border-radius:30px;
-border:none;
 cursor:pointer;
-font-weight:600;
 }
-
-
-
-/* HERO */
 
 .hero{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:80px;
+gap:70px;
 align-items:center;
 max-width:var(--max);
 margin:auto;
@@ -96,77 +79,49 @@ color:var(--orange);
 font-weight:600;
 letter-spacing:2px;
 text-transform:uppercase;
-margin-bottom:16px;
+margin-bottom:14px;
 }
 
 .hero p{
-font-size:19px;
-max-width:520px;
 margin:20px 0;
+font-size:18px;
 }
 
 .cta{
 background:var(--orange);
 color:white;
 padding:16px 30px;
-border-radius:40px;
 border:none;
-cursor:pointer;
-font-weight:600;
-}
-
-.badges{
-margin-top:25px;
-color:#555;
-font-weight:600;
-}
-
-
-
-/* VIDEO HERO */
-
-.hero-video-wrap{
-position:relative;
-display:flex;
-justify-content:center;
-}
-
-.video-frame{
-width:380px;
-aspect-ratio:9/16;
-border-radius:22px;
-overflow:hidden;
-background:black;
-box-shadow:0 25px 60px rgba(0,0,0,.2);
-}
-
-.video-frame video{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-
-
-/* SHAPES */
-
-.video-shape-square{
-position:absolute;
-width:320px;
-height:320px;
-background:var(--orange);
-opacity:.10;
 border-radius:40px;
-top:-40px;
-left:-40px;
-transform:rotate(6deg);
+cursor:pointer;
+}
+
+.hero-video{
+position:relative;
+}
+
+.hero-video iframe{
+width:100%;
+height:320px;
+border-radius:18px;
+}
+
+.shape-square{
+position:absolute;
+width:300px;
+height:300px;
+background:var(--orange);
+opacity:.1;
+border-radius:40px;
+top:-30px;
+left:-30px;
 z-index:-1;
 }
 
-.video-shape-circle{
+.shape-circle{
 position:absolute;
-width:260px;
-height:260px;
+width:220px;
+height:220px;
 border-radius:50%;
 background:var(--orange);
 opacity:.08;
@@ -175,28 +130,11 @@ right:-30px;
 z-index:-1;
 }
 
-
-
-/* STATEMENT */
-
-.statement h2{
-font-size:48px;
-line-height:1.3;
-}
-
-.orange{
-color:var(--orange);
-}
-
-
-
-/* CARDS */
-
 .cards{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:30px;
-margin-top:50px;
+margin-top:40px;
 }
 
 .card{
@@ -206,9 +144,17 @@ border-radius:18px;
 box-shadow:0 16px 40px rgba(0,0,0,.12);
 }
 
+.statement{
+text-align:center;
+}
 
+.statement h2{
+font-size:44px;
+}
 
-/* BIO */
+.orange{
+color:var(--orange);
+}
 
 .bio-grid{
 display:grid;
@@ -221,15 +167,6 @@ align-items:center;
 border-radius:16px;
 }
 
-.quote{
-margin-top:20px;
-font-style:italic;
-}
-
-
-
-/* CTA */
-
 .cta-section{
 background:var(--orange);
 color:white;
@@ -237,34 +174,54 @@ text-align:center;
 padding:80px 24px;
 }
 
-.cta-section p{
-margin:15px 0 25px;
+.lead-form{
+max-width:500px;
+margin:40px auto 0;
+display:grid;
+gap:14px;
 }
 
+.lead-form input,
+.lead-form textarea{
+padding:14px;
+border-radius:8px;
+border:none;
+font-size:16px;
+}
 
-
-/* FOOTER */
+.lead-form textarea{
+min-height:120px;
+}
 
 .footer{
-background:#111;
-color:white;
 text-align:center;
 padding:60px 20px;
+background:#111;
+color:white;
 }
 
+/* floating CTA */
 
+.floating-cta{
+position:fixed;
+bottom:25px;
+right:25px;
+background:var(--orange);
+color:white;
+padding:16px 22px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
 
-/* MOBILE */
+/* mobile */
 
 @media(max-width:900px){
 
 .hero{
 grid-template-columns:1fr;
 text-align:center;
-}
-
-.video-frame{
-width:280px;
 }
 
 .cards{
@@ -276,11 +233,7 @@ grid-template-columns:1fr;
 }
 
 h1{
-font-size:42px;
-}
-
-h2{
-font-size:32px;
+font-size:40px;
 }
 
 }
