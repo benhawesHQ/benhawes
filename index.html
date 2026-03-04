@@ -14,11 +14,9 @@
 
 :root{
   --black:#000;
-  --panel:#0f0f0f;
-  --panel2:#141414;
   --white:#fff;
   --orange:#F94501;
-  --max:1100px;
+  --max:1050px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -27,8 +25,7 @@ body{
   font-family:'Open Sans',sans-serif;
   background:#000;
   color:#fff;
-  line-height:1.7;
-  overflow-x:hidden;
+  line-height:1.65;
 }
 
 .container{
@@ -37,20 +34,10 @@ body{
   padding:0 24px;
 }
 
-/* TOP BAR */
-
-.topbar{
-  background:var(--orange);
-  text-align:center;
-  padding:10px;
-  font-weight:600;
-  font-size:0.85rem;
-}
-
 /* NAV */
 
 nav{
-  padding:20px 0;
+  padding:22px 0;
 }
 
 .nav-inner{
@@ -69,7 +56,7 @@ nav{
 
 .nav-cta{
   background:var(--orange);
-  padding:10px 20px;
+  padding:10px 22px;
   border-radius:30px;
   text-decoration:none;
   color:white;
@@ -80,7 +67,7 @@ nav{
 /* HERO */
 
 .hero{
-  padding:70px 0 100px 0;
+  padding:80px 0 100px 0;
 }
 
 .hero-grid{
@@ -92,7 +79,7 @@ nav{
 
 .hero h1{
   font-family:'Poppins';
-  font-size:3.5rem;
+  font-size:3.6rem;
   line-height:1.1;
 }
 
@@ -102,13 +89,14 @@ nav{
 }
 
 .hero p{
-  margin:30px 0 40px 0;
+  margin:28px 0 38px 0;
   font-size:1.15rem;
+  max-width:550px;
 }
 
 .cta-button{
   background:var(--orange);
-  padding:16px 36px;
+  padding:16px 34px;
   border-radius:40px;
   text-decoration:none;
   color:white;
@@ -119,105 +107,93 @@ nav{
 .hero img{
   width:100%;
   border-radius:20px;
-  box-shadow:0 25px 70px rgba(249,69,1,0.3);
+  box-shadow:0 30px 80px rgba(249,69,1,0.25);
 }
 
-/* SECTION */
+/* Credibility */
+
+.cred{
+  text-align:center;
+  font-size:0.9rem;
+  letter-spacing:1px;
+  padding:30px 0;
+  opacity:0.8;
+}
+
+/* SECTION BASE */
 
 .section{
-  padding:110px 0;
-}
-
-.section.alt{
-  background:var(--panel);
+  padding:90px 0;
 }
 
 .section h2{
   font-family:'Poppins';
-  font-size:2.2rem;
+  font-size:2.5rem;
   margin-bottom:30px;
-  position:relative;
-}
-
-.section h2::after{
-  content:"";
-  display:block;
-  width:60px;
-  height:4px;
-  background:var(--orange);
-  margin-top:14px;
 }
 
 .section p{
   font-size:1.1rem;
-  margin-bottom:20px;
+  margin-bottom:18px;
   max-width:700px;
 }
 
-/* IMPACT CARDS */
+/* WHAT BEN DOES */
 
-.impact-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:24px;
-  margin-top:50px;
+.services{
+  padding:120px 0;
 }
 
-.impact-card{
-  background:var(--panel2);
-  padding:30px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,0.08);
+.service-block{
+  margin-bottom:60px;
 }
 
-/* FAQ ACCORDION */
+.service-title{
+  font-family:'Poppins';
+  font-size:1.8rem;
+  color:var(--orange);
+  margin-bottom:14px;
+}
+
+/* FAQ */
 
 .faq{
-  margin-top:50px;
+  margin-top:30px;
 }
 
 .faq-item{
-  border-bottom:1px solid rgba(255,255,255,0.1);
+  border-bottom:1px solid rgba(255,255,255,0.12);
   padding:18px 0;
 }
 
 .faq-question{
   cursor:pointer;
   font-family:'Poppins';
-  font-size:1.2rem;
+  font-size:1.15rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
-}
-
-.faq-question span{
-  color:var(--orange);
-  transition:0.3s ease;
 }
 
 .faq-answer{
   max-height:0;
   overflow:hidden;
   transition:max-height 0.4s ease;
+  margin-top:8px;
   font-size:1rem;
-  margin-top:10px;
 }
 
 .faq-item.active .faq-answer{
   max-height:500px;
 }
 
-.faq-item.active .faq-question span{
-  transform:rotate(45deg);
-}
-
 /* FOOTER */
 
 footer{
-  padding:90px 0;
-  background:#0a0a0a;
+  padding:70px 0;
   text-align:center;
   font-size:0.85rem;
+  opacity:0.7;
 }
 
 /* MOBILE */
@@ -229,10 +205,14 @@ footer{
 }
 
 .hero h1{
-  font-size:2.5rem;
+  font-size:2.6rem;
 }
 
 .section{
+  padding:70px 0;
+}
+
+.services{
   padding:80px 0;
 }
 
@@ -243,15 +223,11 @@ footer{
 
 <body>
 
-<div class="topbar">
-Now Booking 2026 Offsites ⚡️
-</div>
-
 <div class="container">
 <nav>
   <div class="nav-inner">
     <div class="logo">Ben <span>Hawes ⚡️</span></div>
-    <a href="#" class="nav-cta">Activate</a>
+    <a href="#" class="nav-cta">Book a Keynote</a>
   </div>
 </nav>
 </div>
@@ -265,65 +241,56 @@ Now Booking 2026 Offsites ⚡️
       </h1>
 
       <p>
-        I help growing teams move from listening to leaning in —
-        aligning motivation, ownership, and execution so strategy
-        actually reaches its destination.
+        I deliver keynotes that activate ownership, elevate energy,
+        and help teams connect their daily work to something bigger.
       </p>
 
-      <a href="#" class="cta-button">Activate Your Team</a>
+      <a href="#" class="cta-button">Bring Ben to Your Stage</a>
     </div>
 
     <div>
-      <img src="headshot.jpg" alt="Ben Hawes speaking">
+      <img src="headshot.jpg" alt="Ben Hawes speaking on stage">
     </div>
   </div>
 </section>
 
-<section class="section alt container">
+<div class="cred container">
+Former Leadership & Engagement Roles at ClassPass • LifeLabs Learning • Rocket Money
+</div>
 
-  <h2>Why do strategy resets fall flat?</h2>
+<section class="services container">
 
-  <p>
-    After layoffs, pivots, or rapid growth, clarity drops.
-    Energy shifts.
-    High performers go quiet.
-  </p>
+  <h2>What Ben Does</h2>
 
-  <p>
-    Teams are listening — but they are not activated.
-  </p>
+  <div class="service-block">
+    <div class="service-title">🎤 Keynote Experiences</div>
+    <p>
+      A high-energy, story-driven keynote designed to activate ownership,
+      reconnect teams to purpose, and shift the energy of the room.
+      Ideal for company offsites, all-hands meetings, and leadership gatherings.
+    </p>
+  </div>
 
-  <p>
-    That is not a communication issue.
-    That is an engagement gap.
-  </p>
+  <div class="service-block">
+    <div class="service-title">🤝 Leadership Collaboration</div>
+    <p>
+      Smaller group sessions with founders or leadership teams to
+      unpack engagement challenges, clarify messaging,
+      and design activation moments that extend beyond the stage.
+    </p>
+  </div>
+
+  <div class="service-block">
+    <div class="service-title">🛠 Project-Based Engagement Work</div>
+    <p>
+      Custom engagement initiatives, facilitation, or culture-focused
+      projects that help translate inspiration into sustained momentum.
+    </p>
+  </div>
 
 </section>
 
 <section class="section container">
-
-  <h2>What happens inside the keynote?</h2>
-
-  <div class="impact-grid">
-    <div class="impact-card">
-      <strong>Clarity</strong>
-      <p>Teams identify what drives them and how their role connects to company outcomes.</p>
-    </div>
-
-    <div class="impact-card">
-      <strong>Ownership</strong>
-      <p>Employees articulate personal accountability instead of waiting for direction.</p>
-    </div>
-
-    <div class="impact-card">
-      <strong>Momentum</strong>
-      <p>The offsite becomes a turning point — not just another meeting.</p>
-    </div>
-  </div>
-
-</section>
-
-<section class="section alt container">
 
   <h2>Frequently Asked Questions</h2>
 
@@ -331,46 +298,46 @@ Now Booking 2026 Offsites ⚡️
 
     <div class="faq-item">
       <div class="faq-question">
-        What is team engagement, really? <span>+</span>
+        What makes this keynote different? <span>+</span>
       </div>
       <div class="faq-answer">
-        Team engagement is not about happiness or surface-level morale. It is about ownership. It is the level of effort and emotional investment employees bring to their work. Engaged teams understand how their daily tasks connect to the bigger strategy and feel responsible for outcomes, not just activity.
+        This keynote blends personal storytelling, humor, and practical insight to help employees see themselves inside the company mission. It is not hype-driven. It is ownership-driven.
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question">
-        Who hires a Team Engagement & Activation Speaker? <span>+</span>
+        Is this only for startups? <span>+</span>
       </div>
       <div class="faq-answer">
-        Founders, CEOs, and HR leaders hire engagement speakers during moments of transition — after layoffs, during rapid growth, before major strategy resets, or when energy feels flat. These leaders want more than motivation. They want alignment and measurable follow-through.
+        Growth-stage startups benefit most, but any team navigating change, scale, or strategic evolution can benefit from activation work.
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question">
-        How is this different from a motivational speech? <span>+</span>
+        How long is the keynote? <span>+</span>
       </div>
       <div class="faq-answer">
-        Motivation fades quickly. Activation creates behavior change. My keynotes focus on clarity, accountability, and personal ownership within a company’s current strategy. It is not about hype. It is about helping people see where they fit and why that matters.
+        Keynotes typically range from 45–75 minutes and can include interactive elements or audience reflection exercises.
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question">
-        Does engagement actually impact business results? <span>+</span>
+        Can this extend beyond the keynote? <span>+</span>
       </div>
       <div class="faq-answer">
-        Research consistently shows that highly engaged teams outperform in profitability, retention, and productivity. Engagement influences discretionary effort — the difference between doing the job and driving the result.
+        Yes. Leadership collaboration sessions and project-based engagement work are available for teams looking to go deeper.
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question">
-        What size companies benefit most? <span>+</span>
+        What is the ultimate outcome? <span>+</span>
       </div>
       <div class="faq-answer">
-        Growth-stage startups and scaling teams benefit most, especially in the 50–500 employee range. These companies are large enough to feel misalignment but small enough to shift quickly when clarity returns.
+        Teams leave clearer, more accountable, and more connected to why their work matters.
       </div>
     </div>
 
