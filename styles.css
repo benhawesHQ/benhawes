@@ -1,11 +1,10 @@
 :root{
-  --orange:#FF4A00;
-  --bg:#0E1117;
-  --section:#151923;
-  --card:#11151D;
-  --text:#F5F7FA;
-  --muted:#9CA3AF;
-  --border:#222633;
+  --orange:#F94501;
+  --cream:#F4EFE8;
+  --clay:#E8E1D7;
+  --charcoal:#1E1E1E;
+  --soft:#6B6B6B;
+  --white:#FFFFFF;
 }
 
 *{
@@ -14,15 +13,11 @@
   box-sizing:border-box;
 }
 
-html{
-  scroll-behavior:smooth;
-}
-
 body{
-  background:var(--bg);
-  color:var(--text);
   font-family:'Open Sans',sans-serif;
-  line-height:1.65;
+  background:var(--cream);
+  color:var(--charcoal);
+  line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
 
@@ -35,16 +30,16 @@ nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(14,17,23,0.95);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
+  background:rgba(244,239,232,0.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(0,0,0,0.05);
   z-index:1000;
 }
 
 .nav-inner{
   max-width:1200px;
   margin:0 auto;
-  padding:20px 24px;
+  padding:22px 24px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -52,9 +47,8 @@ nav{
 
 .logo{
   font-family:'Poppins',sans-serif;
-  font-weight:800;
-  font-size:1.3rem;
-  letter-spacing:-0.5px;
+  font-weight:700;
+  font-size:1.4rem;
 }
 
 .logo span{
@@ -64,89 +58,77 @@ nav{
 nav a{
   margin-left:30px;
   font-weight:500;
+  color:var(--soft);
   transition:0.2s ease;
 }
 
 nav a:hover{
-  color:var(--orange);
+  color:var(--charcoal);
 }
 
 .nav-cta{
   background:var(--orange);
-  padding:10px 18px;
-  border-radius:10px;
+  color:white;
+  padding:12px 20px;
+  border-radius:30px;
   font-weight:600;
 }
 
-.nav-cta:hover{
-  transform:translateY(-2px);
-}
-
 .container{
-  max-width:1200px;
+  max-width:1100px;
   margin:0 auto;
-  padding:120px 24px;
+  padding:140px 24px;
 }
 
-h1,h2,h3{
+h1,h2{
   font-family:'Poppins',sans-serif;
 }
 
 h1{
-  font-size:4rem;
-  font-weight:800;
-  line-height:1.05;
+  font-size:3.8rem;
+  line-height:1.1;
   letter-spacing:-1px;
 }
 
 h2{
-  font-size:2.4rem;
+  font-size:2.2rem;
   margin-bottom:30px;
-}
-
-p{
-  font-size:1.15rem;
-}
-
-.orange{
-  color:var(--orange);
 }
 
 .hero{
   display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:80px;
+  grid-template-columns:1.1fr 1fr;
+  gap:90px;
   align-items:center;
-  min-height:100vh;
-  padding-top:120px;
+  min-height:90vh;
 }
 
 .hero p{
   margin:30px 0 40px 0;
-  color:var(--muted);
-  max-width:600px;
+  color:var(--soft);
+  font-size:1.2rem;
 }
 
 .cta-button{
   display:inline-block;
   background:var(--orange);
   color:white;
-  padding:18px 38px;
+  padding:18px 34px;
+  border-radius:40px;
   font-weight:600;
-  border-radius:14px;
   transition:0.2s ease;
 }
 
 .cta-button:hover{
-  transform:translateY(-3px);
+  transform:translateY(-2px);
 }
 
 .hero-image img{
   width:100%;
-  max-width:420px;
-  border-radius:28px;
-  box-shadow:0 30px 80px rgba(0,0,0,0.6);
-  transition:0.4s ease;
+  max-width:440px;
+  border-radius:24px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.08);
+  transition:0.3s ease;
 }
 
 .hero-image img:hover{
@@ -154,56 +136,53 @@ p{
 }
 
 .section{
-  background:var(--section);
-  border-top:1px solid var(--border);
+  background:var(--white);
+  padding:120px 24px;
 }
 
 .text-block{
-  max-width:850px;
+  max-width:800px;
 }
 
 .text-block p{
-  margin-bottom:25px;
-  color:var(--muted);
+  margin-bottom:28px;
+  color:var(--soft);
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:40px;
   margin-top:60px;
 }
 
 .card{
-  background:var(--card);
-  padding:45px;
-  border-radius:22px;
-  border:1px solid var(--border);
-  transition:0.3s ease;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  border-color:var(--orange);
+  background:var(--white);
+  padding:40px;
+  border-radius:20px;
+  border:1px solid rgba(0,0,0,0.05);
+  transition:0.2s ease;
 }
 
 .card h3{
-  color:var(--orange);
-  margin-bottom:20px;
-  font-size:1.3rem;
+  margin-bottom:18px;
+  font-family:'Poppins';
+}
+
+.card:hover{
+  transform:translateY(-4px);
 }
 
 footer{
   text-align:center;
   padding:80px 20px;
-  background:#0A0C11;
-  border-top:1px solid var(--border);
-  color:var(--muted);
+  background:var(--clay);
+  color:var(--soft);
 }
 
 @media(max-width:900px){
   h1{
-    font-size:2.8rem;
+    font-size:2.6rem;
   }
   .hero{
     grid-template-columns:1fr;
