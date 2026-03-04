@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ben Hawes | Team Engagement & Activation Keynote Speaker</title>
+<title>Ben Hawes | Team Engagement & Activation Keynote</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡️</text></svg>">
 
 <style>
 
 :root{
   --orange:#F94501;
-  --white:#ffffff;
-  --black:#000000;
-  --max:1150px;
+  --black:#0F0F0F;
+  --white:#FFFFFF;
+  --max:1200px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -26,6 +26,12 @@ body{
   background:var(--orange);
   color:var(--white);
   line-height:1.75;
+  overflow-x:hidden;
+}
+
+/* Smooth scrolling */
+html{
+  scroll-behavior:smooth;
 }
 
 /* Layout */
@@ -33,13 +39,15 @@ body{
 .container{
   max-width:var(--max);
   margin:0 auto;
-  padding:0 28px;
+  padding:0 32px;
 }
 
 /* NAV */
 
 nav{
-  padding:32px 0;
+  padding:34px 0;
+  position:relative;
+  z-index:10;
 }
 
 .nav-inner{
@@ -51,98 +59,89 @@ nav{
 .logo{
   font-family:'Poppins';
   font-weight:900;
-  font-size:1.6rem;
+  font-size:1.7rem;
 }
 
 .nav-cta{
-  background:var(--white);
+  background:white;
   color:var(--orange);
-  padding:14px 32px;
-  border-radius:50px;
+  padding:14px 36px;
+  border-radius:60px;
   text-decoration:none;
   font-weight:800;
   transition:0.3s ease;
 }
 
 .nav-cta:hover{
-  transform:translateY(-4px);
+  transform:translateY(-5px);
+  box-shadow:0 25px 70px rgba(0,0,0,0.35);
 }
 
 /* HERO */
 
 .hero{
-  padding:120px 0 140px 0;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.1fr 1fr;
-  gap:80px;
-  align-items:center;
+  padding:140px 0 160px 0;
+  background:linear-gradient(180deg,#F94501 0%, #E13F00 100%);
+  position:relative;
 }
 
 .hero h1{
   font-family:'Poppins';
-  font-size:5rem;
+  font-size:5.5rem;
   font-weight:900;
   line-height:1.05;
   letter-spacing:-2px;
+  max-width:900px;
 }
 
 .hero p{
-  font-size:1.4rem;
-  margin:40px 0 50px 0;
-  max-width:620px;
+  font-size:1.5rem;
+  margin:42px 0 54px 0;
+  max-width:640px;
 }
 
 .cta-button{
   display:inline-block;
-  background:var(--white);
+  background:white;
   color:var(--orange);
-  padding:22px 52px;
-  border-radius:60px;
+  padding:24px 60px;
+  border-radius:70px;
   text-decoration:none;
   font-weight:900;
-  font-size:1.1rem;
+  font-size:1.15rem;
   transition:0.3s ease;
 }
 
 .cta-button:hover{
   transform:translateY(-6px);
-  box-shadow:0 25px 70px rgba(0,0,0,0.25);
+  box-shadow:0 30px 80px rgba(0,0,0,0.35);
 }
 
-.hero img{
-  width:100%;
-  border-radius:30px;
-  box-shadow:0 50px 120px rgba(0,0,0,0.3);
-  transition:0.4s ease;
-}
+/* FLOATING WHITE PANEL */
 
-.hero img:hover{
-  transform:scale(1.04);
-}
-
-/* WHITE SECTIONS */
-
-.section{
-  background:var(--white);
+.panel{
+  background:white;
   color:var(--black);
-  padding:120px 0;
+  padding:110px 100px;
+  border-radius:40px;
+  margin:-80px auto 120px auto;
+  max-width:1050px;
+  box-shadow:0 60px 140px rgba(0,0,0,0.35);
   position:relative;
+  z-index:5;
+  animation:fadeUp 1s ease forwards;
 }
 
-.section h2{
+.panel h2{
   font-family:'Poppins';
-  font-size:3rem;
+  font-size:3.2rem;
   font-weight:900;
-  margin-bottom:32px;
+  margin-bottom:34px;
 }
 
-.section p{
-  font-size:1.25rem;
-  margin-bottom:22px;
-  max-width:820px;
+.panel p{
+  font-size:1.3rem;
+  margin-bottom:24px;
 }
 
 .highlight{
@@ -150,122 +149,140 @@ nav{
   font-weight:900;
 }
 
-/* STATS */
+/* DARK RESET SECTION */
 
-.stats{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:40px;
-  margin-top:60px;
+.dark-section{
+  background:var(--black);
+  padding:140px 0;
 }
 
-.stat{
-  text-align:center;
-}
-
-.stat-number{
+.dark-section h2{
   font-family:'Poppins';
   font-size:3.5rem;
   font-weight:900;
-  color:var(--orange);
+  margin-bottom:40px;
 }
 
-.stat-label{
-  font-size:1rem;
-  margin-top:10px;
-}
-
-/* BULLETS */
-
-.bullets{
-  margin-top:32px;
-}
-
-.bullets div{
-  margin-bottom:18px;
-  font-size:1.2rem;
-  position:relative;
-  padding-left:28px;
-}
-
-.bullets div::before{
-  content:"⚡️";
-  position:absolute;
-  left:0;
-}
-
-/* SERVICES */
-
-.service{
-  margin-bottom:70px;
-}
-
-.service-title{
-  font-family:'Poppins';
-  font-size:2rem;
-  font-weight:900;
-  color:var(--orange);
-  margin-bottom:16px;
+.dark-section p{
+  font-size:1.35rem;
+  max-width:800px;
+  margin-bottom:30px;
 }
 
 /* FAQ */
 
+.faq-panel{
+  background:white;
+  color:var(--black);
+  padding:110px 100px;
+  border-radius:40px;
+  margin:120px auto;
+  max-width:1050px;
+  box-shadow:0 60px 140px rgba(0,0,0,0.35);
+}
+
 .faq-item{
   border-bottom:1px solid rgba(0,0,0,0.1);
-  padding:24px 0;
+  padding:28px 0;
 }
 
 .faq-question{
   font-family:'Poppins';
-  font-size:1.4rem;
+  font-size:1.6rem;
   font-weight:900;
   cursor:pointer;
   display:flex;
   justify-content:space-between;
 }
 
+.faq-icon{
+  transition:0.3s ease;
+}
+
+.faq-item.active .faq-icon{
+  transform:rotate(45deg);
+}
+
 .faq-answer{
   max-height:0;
   overflow:hidden;
-  transition:max-height 0.5s ease;
+  transition:max-height 0.4s ease;
   margin-top:18px;
-  font-size:1.15rem;
+  font-size:1.2rem;
 }
 
 .faq-item.active .faq-answer{
   max-height:800px;
 }
 
-/* FOOTER */
+/* SERIOUS FOOTER */
 
 footer{
-  padding:120px 0;
+  background:#0B0B0B;
+  padding:100px 0 60px 0;
+  color:#aaa;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:60px;
+  margin-bottom:60px;
+}
+
+.footer-grid h4{
+  font-family:'Poppins';
+  color:white;
+  margin-bottom:20px;
+}
+
+.footer-grid a{
+  display:block;
+  color:#aaa;
+  text-decoration:none;
+  margin-bottom:10px;
+  transition:0.2s ease;
+}
+
+.footer-grid a:hover{
+  color:white;
+}
+
+.footer-bottom{
+  border-top:1px solid #222;
+  padding-top:30px;
+  font-size:0.9rem;
   text-align:center;
-  font-size:1rem;
+  color:#777;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
 
-.hero-grid{
-  grid-template-columns:1fr;
-}
-
 .hero h1{
   font-size:3.2rem;
 }
 
-.section{
+.panel,
+.faq-panel{
+  padding:60px 40px;
+  margin:60px 20px;
+}
+
+.dark-section{
   padding:80px 0;
 }
 
-.section h2{
-  font-size:2.2rem;
-}
-
-.stat-number{
-  font-size:2.5rem;
+.footer-grid{
+  grid-template-columns:1fr;
 }
 
 }
@@ -285,140 +302,126 @@ footer{
 </div>
 
 <section class="hero container">
-  <div class="hero-grid">
-    <div>
-      <h1>
-        Strategy doesn’t go the distance.
-        People do.
-      </h1>
-      <p>
-        A high-impact keynote that activates ownership, sharpens clarity,
-        and reignites momentum inside growth-stage companies.
-      </p>
-      <a href="#" class="cta-button">Bring Ben to Your Offsite</a>
-    </div>
-    <div>
-      <img src="headshot.jpg" alt="Ben Hawes speaking">
-    </div>
-  </div>
-</section>
-
-<section class="section">
-<div class="container">
-
-  <h2>Why does engagement break down after strategy is set?</h2>
+  <h1>
+    Strategy doesn’t go the distance.
+    People do.
+  </h1>
 
   <p>
-    Engagement isn’t about happiness. It’s about alignment.
-    When people don’t clearly see how their daily execution connects
-    to the bigger mission, momentum fades.
+    A keynote experience built for growth-stage companies that need ownership,
+    clarity, and real activation — not another presentation.
   </p>
 
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-number" data-target="70">0</div>
-      <div class="stat-label">of employees report feeling disengaged</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number" data-target="84">0</div>
-      <div class="stat-label">say clarity drives performance</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number" data-target="3">0</div>
-      <div class="stat-label">x more productive when aligned</div>
-    </div>
-  </div>
+  <a href="#" class="cta-button">Bring Ben to Your Offsite</a>
+</section>
+
+<div class="panel">
+  <h2>Something feels off.</h2>
+
+  <p>
+    You’ve set the strategy.  
+    You’ve aligned leadership.  
+    You’ve communicated the vision.
+  </p>
+
+  <p class="highlight">
+    And yet — the room doesn’t feel activated.
+  </p>
+
+  <p>
+    Execution is happening.  
+    But ownership is thinner than it should be.  
+    Energy is softer than it needs to be.
+  </p>
+</div>
+
+<section class="dark-section">
+<div class="container">
+
+  <h2>Engagement isn’t happiness. It’s alignment.</h2>
+
+  <p>
+    Engagement happens when someone understands the vision,
+    sees how their daily work connects to it,
+    and feels personally motivated to carry it forward.
+  </p>
+
+  <p>
+    When that connection weakens, strategy stalls.
+    Not because the plan is wrong —
+    but because activation is missing.
+  </p>
 
 </div>
 </section>
 
-<section class="section">
-<div class="container">
-
-  <h2>What happens in the keynote experience?</h2>
-
-  <div class="bullets">
-    <div>Your team reconnects their role to the bigger mission.</div>
-    <div>Ownership becomes visible and personal.</div>
-    <div>Activation shifts from abstract to actionable.</div>
-    <div>The energy in the room tangibly changes.</div>
-  </div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-
-  <h2>What does Ben offer beyond the keynote?</h2>
-
-  <div class="service">
-    <div class="service-title">🎤 Keynote Activation</div>
-    <p>A high-impact offsite or all-hands experience.</p>
-  </div>
-
-  <div class="service">
-    <div class="service-title">🤝 Leadership Collaboration</div>
-    <p>Working sessions with founders and leadership teams.</p>
-  </div>
-
-  <div class="service">
-    <div class="service-title">🛠 Project-Based Engagement Work</div>
-    <p>Custom activation initiatives that extend beyond the stage.</p>
-  </div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="container">
+<div class="faq-panel">
 
   <h2>Frequently Asked Questions</h2>
 
   <div class="faq-item">
-    <div class="faq-question">How is this different from a motivational speech? <span>+</span></div>
+    <div class="faq-question">
+      Is this just another motivational keynote?
+      <span class="faq-icon">+</span>
+    </div>
     <div class="faq-answer">
-      This keynote focuses on activation and ownership inside your current strategy — not generic inspiration.
+      No. Motivation fades. Activation sticks.
+      This keynote focuses on ownership inside your existing strategy.
+      Your team leaves with clarity and language they actually use.
     </div>
   </div>
 
   <div class="faq-item">
-    <div class="faq-question">Is this only for startups? <span>+</span></div>
+    <div class="faq-question">
+      Who is this built for?
+      <span class="faq-icon">+</span>
+    </div>
     <div class="faq-answer">
-      It works best in growth-stage companies navigating change, scale, or renewed focus.
+      Growth-stage companies navigating scale or reset.
+      Leaders who need strategy to truly land.
+      Teams that are capable — but not fully activated.
     </div>
   </div>
 
 </div>
-</section>
 
 <footer>
-© 2026 Ben Hawes ⚡️
+  <div class="container footer-grid">
+    <div>
+      <h4>Ben Hawes ⚡️</h4>
+      <p>Team Engagement & Activation Keynote Speaker</p>
+      <p>New York City</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <a href="#">Keynotes</a>
+      <a href="#">Leadership Collaboration</a>
+      <a href="#">Engagement Projects</a>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#">About</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Ben Hawes. All Rights Reserved.
+  </div>
 </footer>
 
 <script>
-document.querySelectorAll(".faq-question").forEach(item => {
-  item.addEventListener("click", () => {
+document.querySelectorAll(".faq-question").forEach(item=>{
+  item.addEventListener("click",()=>{
     item.parentElement.classList.toggle("active");
   });
-});
-
-/* Slower stat animation */
-const counters = document.querySelectorAll('.stat-number');
-counters.forEach(counter => {
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const increment = target / 200;
-
-    if(count < target){
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
-  updateCount();
 });
 </script>
 
