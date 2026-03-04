@@ -4,22 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ben Hawes | Experiential Culture & Engagement Speaker</title>
+<title>Ben Hawes | Employee Activation Speaker</title>
 
-<meta name="description" content="Ben Hawes helps companies design high-impact offsites, keynotes, and engagement moments that increase ownership, alignment, and team energy.">
-
-<meta name="keywords" content="corporate keynote speaker, employee engagement speaker, offsite facilitator, company retreat speaker, workplace culture consultant, leadership offsite experience">
+<meta name="description" content="Ben Hawes helps companies increase employee activation, transforming passive participation into energized ownership.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --orange:#FF4A00;
-  --bg:#0F1115;
-  --section:#171A21;
-  --text:#F4F4F4;
-  --muted:#9AA0A6;
-  --border:#242832;
+  --bg:#0C0E13;
+  --section:#141720;
+  --text:#F3F4F6;
+  --muted:#9CA3AF;
+  --border:#222633;
 }
 
 *{
@@ -28,17 +26,22 @@
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   background:var(--bg);
   color:var(--text);
   font-family:'Open Sans',sans-serif;
-  line-height:1.6;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
 }
 
 .container{
-  max-width:1150px;
+  max-width:1200px;
   margin:0 auto;
-  padding:100px 20px;
+  padding:120px 24px;
 }
 
 h1,h2,h3{
@@ -46,14 +49,19 @@ h1,h2,h3{
 }
 
 h1{
-  font-size:3.6rem;
+  font-size:4rem;
   font-weight:800;
-  line-height:1.1;
+  line-height:1.05;
+  letter-spacing:-1px;
 }
 
 h2{
-  font-size:2.2rem;
-  margin-bottom:20px;
+  font-size:2.4rem;
+  margin-bottom:30px;
+}
+
+p{
+  font-size:1.15rem;
 }
 
 .orange{
@@ -63,76 +71,75 @@ h2{
 /* HERO */
 
 .hero{
-  display:flex;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:80px;
   align-items:center;
-  justify-content:space-between;
-  gap:60px;
-  min-height:90vh;
+  min-height:100vh;
 }
 
-.hero-text{
-  flex:1;
-}
-
-.hero-text p{
-  font-size:1.2rem;
+.hero p{
+  margin:30px 0 40px 0;
   color:var(--muted);
-  margin:30px 0;
-  max-width:560px;
+  max-width:600px;
 }
 
 .button{
   display:inline-block;
   background:var(--orange);
   color:white;
-  padding:16px 34px;
+  padding:18px 38px;
   font-weight:600;
   text-decoration:none;
-  border-radius:8px;
-  transition:0.2s ease;
+  border-radius:12px;
+  transition:all 0.2s ease;
 }
 
 .button:hover{
   transform:translateY(-3px);
 }
 
-.hero-image{
-  flex:1;
-  display:flex;
-  justify-content:center;
-}
-
 .hero-image img{
-  width:420px;
-  border-radius:24px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.5);
-  transition:0.3s ease;
+  width:100%;
+  max-width:420px;
+  border-radius:28px;
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
+  transition:transform 0.4s ease;
 }
 
 .hero-image img:hover{
   transform:scale(1.02);
 }
 
-/* SECTION STYLING */
+/* SECTION */
 
 .section{
   background:var(--section);
   border-top:1px solid var(--border);
 }
 
-.card-grid{
+.text-block{
+  max-width:850px;
+}
+
+.text-block p{
+  margin-bottom:25px;
+  color:var(--muted);
+}
+
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:35px;
-  margin-top:40px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+  margin-top:60px;
 }
 
 .card{
-  background:#12141A;
-  padding:40px;
-  border-radius:16px;
+  background:#0F1219;
+  padding:45px;
+  border-radius:22px;
   border:1px solid var(--border);
-  transition:0.3s ease;
+  transition:all 0.3s ease;
 }
 
 .card:hover{
@@ -142,20 +149,17 @@ h2{
 
 .card h3{
   color:var(--orange);
-  margin-bottom:15px;
-}
-
-.muted{
-  color:var(--muted);
-  max-width:760px;
+  margin-bottom:20px;
+  font-size:1.3rem;
 }
 
 /* FOOTER */
 
 footer{
   text-align:center;
-  padding:60px 20px;
-  background:#0A0C10;
+  padding:80px 20px;
+  background:#080A0F;
+  border-top:1px solid var(--border);
 }
 
 footer a{
@@ -166,13 +170,20 @@ footer a{
 /* MOBILE */
 
 @media(max-width:900px){
+  h1{
+    font-size:2.8rem;
+  }
   .hero{
-    flex-direction:column;
+    grid-template-columns:1fr;
     text-align:center;
   }
-  .hero-text p{
+  .hero p{
     margin-left:auto;
     margin-right:auto;
+  }
+  .hero-image{
+    display:flex;
+    justify-content:center;
   }
 }
 </style>
@@ -182,113 +193,119 @@ footer a{
 
 <section class="container hero">
 
-  <div class="hero-text">
+  <div>
     <h1>
-      I design high-impact moments that increase <span class="orange">ownership</span>, alignment, and energy.
+      Strategy doesn’t go the distance.  
+      <span class="orange">People do.</span>
     </h1>
 
     <p>
-      I work with startups, growth-stage companies, and leadership teams to transform offsites, keynotes, and internal events into measurable engagement shifts.
+      Ben Hawes helps companies increase employee activation — transforming passive participation into energized ownership.
+      Through high-impact talks and consulting, he shifts how teams show up inside the strategy they’ve already built.
     </p>
 
-    <a href="#book" class="button">Book a Conversation</a>
+    <a href="#book" class="button">Start the Conversation</a>
   </div>
 
   <div class="hero-image">
-    <img src="headshot.jpg" alt="Ben Hawes speaking and facilitating">
+    <img src="headshot.jpg" alt="Ben Hawes speaking">
   </div>
 
 </section>
 
 
 <section class="container section">
-  <h2>What Companies Hire Me To Do</h2>
 
-  <p class="muted">
-    Most companies invest heavily in strategy, talent, and execution.  
-    Few intentionally design the emotional and psychological experience of their teams.
-  </p>
+  <div class="text-block">
+    <h2>The Reality</h2>
 
-  <div class="card-grid">
+    <p>
+      Every company has vision, KPIs, and quarterly goals.
+      But strategy does not execute itself.
+    </p>
 
-    <div class="card">
-      <h3>Elevate Offsites</h3>
-      <p>
-        Transform leadership retreats and team gatherings into structured experiences that surface real issues, increase accountability, and create lasting alignment.
-      </p>
-    </div>
+    <p>
+      It depends on people who take initiative, speak up early, own outcomes, and bring energy into the room.
+      When activation drops, performance follows.
+    </p>
 
-    <div class="card">
-      <h3>Shift Energy at Scale</h3>
-      <p>
-        Deliver high-engagement keynotes that move teams from passive participation to active ownership.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Design ROI-Driven Events</h3>
-      <p>
-        Ensure company celebrations, holiday parties, and all-hands meetings reinforce culture, not dilute it.
-      </p>
-    </div>
-
+    <p>
+      Not because the strategy is wrong — but because engagement is low.
+    </p>
   </div>
+
 </section>
 
 
 <section class="container">
-  <h2>Why Me</h2>
 
-  <p class="muted">
-    I’ve worked inside high-growth startups, partnered with managers to improve performance, built live event businesses from scratch, and spent years performing on stage.
-  </p>
+  <h2>What Ben Does</h2>
 
-  <p class="muted" style="margin-top:25px;">
-    I understand how to read a room — digitally, in person, and strategically.  
-    I understand leadership pressure.  
-    I understand engagement breakdown.  
-    And I know how to shift the emotional climate of a team in real time.
-  </p>
+  <div class="grid">
 
-  <p class="muted" style="margin-top:25px;">
-    When I walk into a room, I’m not delivering a script.  
-    I’m diagnosing energy, adjusting live, and engineering momentum.
-  </p>
+    <div class="card">
+      <h3>Activation Keynotes</h3>
+      <p>
+        High-impact talks that move teams from passive participation to visible ownership and initiative.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Leadership Consulting</h3>
+      <p>
+        Structured sessions that equip managers with a language for discussing activation and engagement.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Company-Wide Shifts</h3>
+      <p>
+        Targeted engagements that raise energy, strengthen accountability, and build lasting momentum.
+      </p>
+    </div>
+
+  </div>
+
 </section>
 
 
 <section class="container section">
-  <h2>The Outcome</h2>
 
-  <div class="card-grid">
+  <div class="text-block">
+    <h2>Why It Works</h2>
 
-    <div class="card">
-      <h3>Increased Ownership</h3>
-      <p>Teams take clearer responsibility for results and communication.</p>
-    </div>
+    <p>
+      Ben’s understanding of activation comes from 15 years inside rooms — corporate rooms, training rooms, startup rooms, and live audiences.
+    </p>
 
-    <div class="card">
-      <h3>Stronger Alignment</h3>
-      <p>Leaders and teams leave speaking the same language about culture and expectations.</p>
-    </div>
+    <p>
+      From leading development programs to building an events business, from working with managers on accountability to performing on stage, he has studied one thing consistently:
+    </p>
 
-    <div class="card">
-      <h3>Visible Energy Lift</h3>
-      <p>Engagement increases because people feel seen, challenged, and connected.</p>
-    </div>
+    <p>
+      Energy is contagious. So is disengagement.
+    </p>
+
+    <p>
+      Activation is a choice — and it can be influenced.
+    </p>
 
   </div>
+
 </section>
 
 
 <section id="book" class="container">
-  <h2>Let’s Design the Moment That Moves Your Team</h2>
 
-  <p class="muted" style="margin-bottom:30px;">
-    If you're planning an offsite, company reset, conference keynote, or internal gathering, let's design something that shifts how your team operates.
+  <h2>Increase Activation. Build Momentum.</h2>
+
+  <p style="max-width:700px; margin-bottom:40px; color:var(--muted);">
+    If you're planning a leadership offsite, company reset, or keynote moment,
+    let’s design something that shifts how your team participates.
   </p>
 
-  <a href="mailto:hello@benhawes.com" class="button">Start the Conversation</a>
+  <a href="mailto:hello@benhawes.com" class="button">Book Ben Hawes</a>
+
 </section>
 
 
