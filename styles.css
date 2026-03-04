@@ -1,5 +1,7 @@
 :root{
 --orange:#F94501;
+--orangeSoft:rgba(249,69,1,.08);
+--orangeSoft2:rgba(249,69,1,.05);
 --black:#0f0f0f;
 --light:#f6f6f6;
 --max:1200px;
@@ -19,7 +21,7 @@ color:var(--black);
 line-height:1.7;
 background:white;
 overflow-x:hidden;
-padding-bottom:120px;
+padding-bottom:140px;
 }
 
 h1,h2,h3{
@@ -45,7 +47,39 @@ p{
 font-size:18px;
 }
 
+/* ============================= */
+/* ORANGE SHAPES */
+/* ============================= */
+
+.shape{
+position:absolute;
+background:var(--orangeSoft);
+z-index:-1;
+}
+
+.circle{
+width:200px;
+height:200px;
+border-radius:50%;
+}
+
+.square{
+width:160px;
+height:160px;
+}
+
+.triangle{
+width:0;
+height:0;
+border-left:80px solid transparent;
+border-right:80px solid transparent;
+border-bottom:140px solid var(--orangeSoft2);
+background:none;
+}
+
+/* ============================= */
 /* NAV */
+/* ============================= */
 
 .nav{
 display:flex;
@@ -76,7 +110,9 @@ border-radius:6px;
 cursor:pointer;
 }
 
+/* ============================= */
 /* HERO */
+/* ============================= */
 
 .hero{
 
@@ -87,9 +123,11 @@ display:grid;
 grid-template-columns:1fr;
 gap:40px;
 
-padding:80px 24px;
+padding:100px 24px;
 
 align-items:center;
+
+position:relative;
 }
 
 .hero-label{
@@ -105,10 +143,6 @@ margin-top:20px;
 max-width:520px;
 }
 
-.people{
-color:var(--orange);
-}
-
 .hero-img-wrap{
 display:flex;
 justify-content:center;
@@ -121,7 +155,17 @@ border-radius:14px;
 box-shadow:0 20px 60px rgba(0,0,0,.15);
 }
 
+/* ============================= */
+/* ORANGE ACTIVATION WORDS */
+/* ============================= */
+
+.activation-word{
+color:var(--orange);
+}
+
+/* ============================= */
 /* CTA */
+/* ============================= */
 
 .cta{
 background:var(--orange);
@@ -139,15 +183,19 @@ transition:.2s;
 transform:translateY(-2px);
 }
 
+/* ============================= */
 /* CONTAINER */
+/* ============================= */
 
 .container{
 max-width:var(--max);
 margin:auto;
-padding:80px 24px;
+padding:100px 24px;
 }
 
+/* ============================= */
 /* CARDS */
+/* ============================= */
 
 .cards{
 display:grid;
@@ -167,14 +215,8 @@ transition:.2s;
 transform:translateY(-4px);
 }
 
-/* STATEMENT */
-
-.statement{
-text-align:center;
-}
-
 /* ============================= */
-/* CHAT STYLE ACTIVATION CARD */
+/* FLOATING ACTIVATION CARD */
 /* ============================= */
 
 .activation-bar{
@@ -203,39 +245,13 @@ width:calc(100% - 48px);
 
 border:1px solid rgba(0,0,0,.05);
 
-/* animation starting state */
-
-opacity:0;
-transform:translateY(40px) scale(.95);
-
-transition:all .5s cubic-bezier(.22,1,.36,1);
-
-}
-
-/* when JS adds .show */
-
-.activation-bar.show{
-
 opacity:1;
-transform:translateY(0) scale(1);
+transform:translateY(0);
+transition:all .4s ease;
 
 }
 
-/* hover lift on desktop */
-
-@media(min-width:900px){
-
-.activation-bar:hover{
-
-transform:translateY(-4px) scale(1.02);
-
-box-shadow:0 26px 70px rgba(0,0,0,.28);
-
-}
-
-}
-
-/* lightning icon bubble */
+/* icon */
 
 .activation-icon{
 
@@ -261,11 +277,9 @@ flex-shrink:0;
 /* text */
 
 .activation-text{
-
 font-size:15px;
 line-height:1.4;
 font-weight:600;
-
 }
 
 /* button */
@@ -296,14 +310,16 @@ transform:translateY(-2px);
 box-shadow:0 6px 14px rgba(249,69,1,.3);
 }
 
-/* stack text + button */
+/* stack text */
 
 .activation-content{
 display:flex;
 flex-direction:column;
 }
 
-/* FORM OVERLAY */
+/* ============================= */
+/* FORM */
+/* ============================= */
 
 .activation-form{
 
@@ -414,15 +430,9 @@ grid-template-columns:repeat(3,1fr);
 left:50%;
 right:auto;
 
-transform:translateX(-50%) translateY(40px) scale(.95);
+transform:translateX(-50%);
 
 width:calc(100% - 32px);
-
-}
-
-.activation-bar.show{
-
-transform:translateX(-50%) translateY(0) scale(1);
 
 }
 
@@ -431,7 +441,7 @@ transform:translateX(-50%) translateY(0) scale(1);
 @media(min-width:1000px){
 
 .hero{
-padding:120px 24px;
+padding:140px 24px;
 }
 
 .container{
