@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ben Hawes | Team Engagement & Activation Speaker</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
 --orange:#F94501;
---black:#111;
+--black:#0e0e0e;
 --white:#ffffff;
---max:1150px;
+--gray:#f5f5f5;
+--max:1200px;
 }
 
 *{
@@ -24,188 +26,242 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Open Sans',sans-serif;
-background:var(--orange);
-color:var(--white);
+font-family:Inter, sans-serif;
+color:var(--black);
+background:white;
 line-height:1.6;
 }
 
 .container{
 max-width:var(--max);
 margin:auto;
-padding:60px 20px;
+padding:80px 24px;
 }
 
 h1,h2,h3{
-font-family:'Poppins',sans-serif;
+font-family:Poppins;
+}
+
+button{
+border:none;
+cursor:pointer;
 }
 
 .nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
+padding:24px;
+max-width:var(--max);
+margin:auto;
 }
 
 .logo{
-font-weight:800;
-font-size:20px;
+font-family:Poppins;
+font-weight:700;
+font-size:22px;
+}
+
+.logo span{
+color:var(--orange);
 }
 
 .nav button{
-background:white;
-color:black;
-border:none;
-padding:10px 18px;
+background:var(--orange);
+color:white;
+padding:12px 20px;
 border-radius:30px;
 font-weight:600;
-cursor:pointer;
 }
 
 .hero{
-text-align:center;
-padding:80px 20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+max-width:var(--max);
+margin:auto;
+padding:60px 24px;
 }
 
-.label{
-font-size:14px;
-opacity:.85;
+.hero-label{
+color:var(--orange);
+font-weight:600;
 margin-bottom:12px;
 }
 
 .hero h1{
-font-size:46px;
+font-size:54px;
+line-height:1.1;
 margin-bottom:20px;
 }
 
 .hero p{
-max-width:650px;
-margin:auto;
-margin-bottom:35px;
 font-size:18px;
+margin-bottom:30px;
+max-width:520px;
 }
 
 .cta{
-background:white;
-color:black;
-padding:14px 28px;
+background:var(--orange);
+color:white;
+padding:16px 28px;
 border-radius:40px;
 font-weight:600;
-display:inline-block;
+font-size:16px;
 }
 
 .badges{
-margin-top:35px;
-font-size:14px;
-opacity:.85;
+margin-top:30px;
+display:flex;
+gap:20px;
+font-weight:600;
+color:#555;
+flex-wrap:wrap;
 }
 
-.section-white{
-background:white;
-color:black;
+.hero img{
+width:100%;
+border-radius:16px;
+}
+
+.statement{
+background:var(--gray);
 text-align:center;
 }
 
-.big-statement{
-font-size:36px;
-max-width:700px;
+.statement h2{
+font-size:46px;
+max-width:900px;
 margin:auto;
-line-height:1.4;
+line-height:1.2;
 }
 
-.section-orange{
+.orange{
+background:var(--orange);
+color:white;
 text-align:center;
+}
+
+.orange h2{
+font-size:40px;
+margin-bottom:20px;
 }
 
 .stat{
-font-size:28px;
-font-weight:800;
-max-width:650px;
-margin:30px auto;
-}
-
-.source{
-font-size:14px;
-opacity:.8;
-margin-bottom:30px;
+font-size:34px;
+font-weight:700;
+max-width:700px;
+margin:40px auto;
 }
 
 .model{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-justify-content:center;
-margin-top:40px;
+background:white;
+text-align:center;
 }
 
-.model-card{
-background:white;
-color:black;
-padding:28px;
+.model h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.formula{
+font-size:28px;
+margin-bottom:40px;
+font-weight:600;
+color:var(--orange);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:30px;
+}
+
+.card{
+background:#fafafa;
+padding:32px;
 border-radius:12px;
-max-width:260px;
+text-align:left;
+}
+
+.card h3{
+margin-bottom:10px;
 }
 
 .bio{
-max-width:800px;
-margin:auto;
-text-align:left;
+background:var(--gray);
+}
+
+.bio-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.bio img{
+width:100%;
+border-radius:14px;
 }
 
 .bio p{
 margin-bottom:18px;
 }
 
-.speaking{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-justify-content:center;
-margin-top:40px;
+.cta-section{
+background:var(--orange);
+color:white;
+text-align:center;
 }
 
-.speaking-card{
-background:white;
-color:black;
-padding:25px;
-border-radius:12px;
-max-width:300px;
+.cta-section h2{
+font-size:42px;
+margin-bottom:20px;
 }
 
 .footer{
-background:black;
+background:#111;
+color:white;
 text-align:center;
-padding:70px 20px;
+padding:60px 20px;
 }
 
 .footer a{
-color:white;
 display:block;
 margin-top:10px;
-opacity:.8;
+color:white;
 text-decoration:none;
+opacity:.8;
 }
 
-.footer h3{
-margin-bottom:10px;
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
 }
 
-@media(max-width:700px){
+.hero img{
+max-width:420px;
+margin:auto;
+}
 
-.hero h1{
+.cards{
+grid-template-columns:1fr;
+}
+
+.bio-grid{
+grid-template-columns:1fr;
+}
+
+.statement h2{
 font-size:34px;
 }
 
-.big-statement{
-font-size:28px;
-}
-
-.stat{
-font-size:24px;
-}
-
-.bio{
-text-align:center;
+.hero h1{
+font-size:42px;
 }
 
 }
@@ -215,178 +271,167 @@ text-align:center;
 
 <body>
 
-<div class="nav">
+<nav class="nav">
 
-<div class="logo">Ben Hawes •</div>
+<div class="logo">Ben Hawes<span>.</span></div>
 
-<button>Book Ben</button>
+<button>Bring Ben to Your Offsite</button>
 
-</div>
+</nav>
 
 <section class="hero">
 
-<div class="label">Team Engagement & Activation Speaker</div>
+<div>
 
-<h1>Strategy doesn’t go the distance. People do.</h1>
+<div class="hero-label">Team Engagement & Activation Speaker</div>
+
+<h1>Strategy doesn’t go the distance.<br>People do.</h1>
 
 <p>
-Ben Hawes helps organizations activate the motivation behind their strategy by creating clarity, communication, and commitment across teams.
+Ben Hawes is a workplace engagement speaker who helps teams reconnect to the motivation behind their work and activate commitment to company goals.
 </p>
 
-<a class="cta">Bring Ben to Your Offsite</a>
+<button class="cta">Bring Ben to Your Offsite</button>
 
 <div class="badges">
-Past roles: ClassPass • LifeLabs Learning • Rocket Money
+ClassPass • LifeLabs Learning • Rocket Money
 </div>
+
+</div>
+
+<img src="headshot.jpg">
 
 </section>
 
-<section class="section-white container">
+<section class="statement container">
 
-<div class="big-statement">
+<h2>
 
 You have the strategy.<br>
 You have the OKRs.<br><br>
 
 <strong>Is your team activated to deliver them?</strong>
 
-</div>
+</h2>
 
 </section>
 
-<section class="section-orange container">
+<section class="orange container">
 
-<h2>Engagement Drives Performance</h2>
+<h2>In moments of change, engagement matters most</h2>
 
 <p>
-When employees understand how their work connects to the mission, motivation increases and teams perform better.
+When companies grow, shift strategy, or face uncertainty, engagement often drifts.
 </p>
 
 <div class="stat">
-Employees who strongly agree their work connects to their company’s mission are
+
+Employees who feel their work connects to company mission are  
 <strong>4.6× more likely to be engaged.</strong>
+
 </div>
 
-<div class="source">
-Source: Gallup State of the Global Workplace Report
-</div>
-
-<div class="stat">
-Highly engaged teams show
-<strong>23% higher profitability</strong>
-than teams with low engagement.
-</div>
-
-<div class="source">
-Source: Gallup Workplace Q12 Meta-Analysis
-</div>
+<p>Source: Gallup State of the Global Workplace Report</p>
 
 </section>
 
-<section class="section-white container">
+<section class="model container">
 
-<h2>The Engagement Activation Model</h2>
+<h2>The Activation Model</h2>
 
-<p>Clarity + Communication = Commitment</p>
+<div class="formula">
 
-<div class="model">
+Clarity + Communication = Commitment
 
-<div class="model-card">
+</div>
+
+<div class="cards">
+
+<div class="card">
+
 <h3>Clarity</h3>
+
 <p>
-Employees clearly understand how their day-to-day work connects to the company mission and goals.
+Employees understand how their day-to-day work connects to the larger company mission and objectives.
 </p>
+
 </div>
 
-<div class="model-card">
+<div class="card">
+
 <h3>Communication</h3>
+
 <p>
-Teams feel comfortable discussing motivation, challenges, and alignment with leadership.
+Teams are able to openly discuss motivation, challenges, and alignment with leadership.
 </p>
+
 </div>
 
-<div class="model-card">
+<div class="card">
+
 <h3>Commitment</h3>
+
 <p>
-When clarity and communication exist, teams commit to delivering the strategy.
+When clarity and communication exist, employees commit to delivering results.
 </p>
+
 </div>
 
 </div>
 
 </section>
 
-<section class="section-orange container">
+<section class="bio container">
+
+<div class="bio-grid">
+
+<img src="headshot.jpg">
+
+<div>
 
 <h2>Meet Ben Hawes</h2>
 
-<div class="bio">
-
 <p>
-Ben Hawes is a team engagement and workplace motivation speaker who helps organizations activate the energy behind their strategy.
+
+Ben Hawes is a leadership and engagement speaker who specializes in activating the motivation of teams large and small.
+
 </p>
 
 <p>
-He has spent more than a decade designing learning experiences, leading employee engagement programs, and building high-performing teams.
+
+He spent five years at ClassPass building learning and development programs, followed by three years at LifeLabs Learning specializing in leadership and engagement training.
+
 </p>
 
 <p>
-Ben previously worked in leadership development and employee engagement roles at ClassPass, LifeLabs Learning, and Rocket Money.
+
+He now leads employee experience and workplace engagement initiatives in New York at Rocket Money.
+
 </p>
 
 <p>
-Outside the corporate world, Ben is also a performer, musician, and comedian, bringing humor, energy, and interaction to every keynote.
+
+Outside the corporate world, Ben is a performer, musician, and comedian. That experience brings humor and energy to his speaking sessions, creating highly interactive talks that leave audiences feeling lighter, motivated, and ready to act.
+
 </p>
 
-<p>
-His sessions combine leadership insight, workplace psychology, and live performance energy to create experiences that leave teams motivated and ready to act.
-</p>
-
-</div>
-
-</section>
-
-<section class="section-white container">
-
-<h2>Speaking Experiences</h2>
-
-<div class="speaking">
-
-<div class="speaking-card">
-<h3>Team Offsites</h3>
-<p>
-Interactive sessions designed to help teams reconnect to motivation and align around goals.
-</p>
-</div>
-
-<div class="speaking-card">
-<h3>Company Kickoffs</h3>
-<p>
-High-energy keynote experiences that activate excitement and commitment for the year ahead.
-</p>
-</div>
-
-<div class="speaking-card">
-<h3>Leadership Retreats</h3>
-<p>
-Workshops that help leaders build clarity, communication, and engagement across teams.
-</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section-orange container">
+<section class="cta-section container">
 
-<h2>Your strategy deserves an activated team.</h2>
+<h2>Your strategy deserves an activated team</h2>
 
-<p style="max-width:650px;margin:auto;margin-bottom:30px;">
-You can create a strategy. You can build a plan. But strategy doesn’t go the distance.
-<strong>Your people do.</strong>
+<p>
+Whether you're planning a team offsite, leadership retreat, or company kickoff, Ben helps teams reconnect to motivation and commit to the mission ahead.
 </p>
 
-<a class="cta">Bring Ben to Your Offsite</a>
+<br>
+
+<button class="cta">Book Ben</button>
 
 </section>
 
@@ -397,8 +442,8 @@ You can create a strategy. You can build a plan. But strategy doesn’t go the d
 <p>Team Engagement & Activation Speaker</p>
 
 <a href="#">LinkedIn</a>
-<a href="#">Podcast</a>
 <a href="#">Business Insider Feature</a>
+<a href="#">Podcast</a>
 <a href="#">Contact</a>
 
 </footer>
