@@ -6,41 +6,46 @@
 
 <title>Ben Hawes | Team Engagement & Activation Speaker</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
 
 <style>
 
 :root{
-  --black:#000000;
-  --white:#ffffff;
-  --soft:rgba(255,255,255,0.82);
+  --black:#000;
+  --charcoal:#0c0c0c;
+  --panel:#111;
+  --white:#fff;
+  --soft:rgba(255,255,255,0.75);
   --orange:#F94501;
-  --panel:#111111;
   --max:1200px;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
+  font-family:'Open Sans',sans-serif;
   background:var(--black);
   color:var(--white);
-  font-family:'Inter',sans-serif;
+  line-height:1.7;
   -webkit-font-smoothing:antialiased;
-  line-height:1.6;
 }
 
 .container{
   max-width:var(--max);
   margin:0 auto;
-  padding:0 40px;
+  padding:0 32px;
 }
 
 /* NAV */
 
 nav{
-  padding:30px 0;
+  padding:28px 0;
 }
 
 .nav-inner{
@@ -51,8 +56,8 @@ nav{
 
 .logo{
   font-family:'Poppins';
-  font-weight:900;
-  font-size:2rem;
+  font-weight:800;
+  font-size:1.6rem;
   letter-spacing:-1px;
 }
 
@@ -62,13 +67,12 @@ nav{
 
 .nav-cta{
   background:var(--orange);
-  padding:12px 28px;
+  padding:12px 26px;
   border-radius:40px;
   text-decoration:none;
   color:white;
-  font-weight:700;
-  font-size:0.9rem;
-  transition:0.3s ease;
+  font-weight:600;
+  transition:0.25s ease;
 }
 
 .nav-cta:hover{
@@ -90,10 +94,10 @@ nav{
 
 .hero h1{
   font-family:'Poppins';
-  font-size:4.5rem;
+  font-size:4.6rem;
   line-height:1.05;
   letter-spacing:-2px;
-  margin-bottom:40px;
+  margin-bottom:36px;
 }
 
 .hero h1 span{
@@ -101,24 +105,16 @@ nav{
   color:var(--orange);
 }
 
-.hero-sub{
+.hero p{
   font-size:1.3rem;
   color:var(--soft);
   margin-bottom:50px;
-  max-width:650px;
-}
-
-.hero-title{
-  font-size:0.85rem;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  opacity:0.6;
-  margin-bottom:25px;
+  max-width:620px;
 }
 
 .hero img{
   width:100%;
-  border-radius:18px;
+  border-radius:20px;
   transition:0.4s ease;
 }
 
@@ -126,201 +122,118 @@ nav{
   transform:translateY(-6px);
 }
 
-.cta-large{
+.cta-button{
   display:inline-block;
   background:var(--orange);
-  padding:20px 60px;
-  border-radius:60px;
+  padding:18px 50px;
+  border-radius:50px;
   text-decoration:none;
   color:white;
-  font-weight:800;
+  font-weight:700;
   transition:0.3s ease;
 }
 
-.cta-large:hover{
+.cta-button:hover{
   transform:translateY(-4px);
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section{
   padding:160px 0;
 }
 
-.story{
-  max-width:900px;
-}
-
-.story h2{
+.section h2{
   font-family:'Poppins';
   font-size:3rem;
-  line-height:1.1;
-  margin-bottom:60px;
+  margin-bottom:50px;
 }
 
-.story p{
+.section p{
   font-size:1.25rem;
   color:var(--soft);
-  margin-bottom:28px;
-}
-
-/* TRANSITION */
-
-.transition{
-  padding:200px 0;
-  text-align:center;
-  background:var(--panel);
-}
-
-.transition h2{
-  font-family:'Poppins';
-  font-size:3.5rem;
-  line-height:1.1;
-  margin-bottom:40px;
-}
-
-.transition span{
-  color:var(--orange);
-  display:block;
-}
-
-.transition p{
-  font-size:1.3rem;
-  color:var(--soft);
-  max-width:800px;
-  margin:0 auto;
+  margin-bottom:30px;
 }
 
 /* IMPACT SECTION */
 
 .impact{
-  padding:200px 0;
+  padding:220px 0;
+  background:var(--charcoal);
   text-align:center;
-  border-top:1px solid rgba(255,255,255,0.08);
-  border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .impact h2{
   font-family:'Poppins';
-  font-size:3rem;
-  margin-bottom:100px;
+  font-size:3.2rem;
+  margin-bottom:110px;
 }
 
 .impact-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:60px;
 }
 
-.impact-item{
-  padding:40px 20px;
+.impact-card{
+  background:var(--panel);
+  padding:50px 40px;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,0.06);
   transition:0.3s ease;
 }
 
-.impact-item:hover{
-  transform:translateY(-6px);
+.impact-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--orange);
+  box-shadow:0 30px 60px rgba(0,0,0,0.5);
 }
 
 .counter{
   font-family:'Poppins';
-  font-size:4rem;
+  font-size:4.5rem;
+  font-weight:800;
   color:var(--orange);
   margin-bottom:20px;
 }
 
-.impact-item p{
-  font-size:1.1rem;
+.impact-text{
+  font-size:1.15rem;
   color:var(--soft);
-  max-width:260px;
-  margin:0 auto;
+  margin-bottom:30px;
 }
 
-/* EXPECT */
-
-.expect{
-  padding:200px 0;
+.impact-source{
+  font-size:0.85rem;
+  color:rgba(255,255,255,0.45);
 }
 
-.expect-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:80px;
-}
+/* STATEMENT */
 
-.expect-item h3{
-  font-family:'Poppins';
-  font-size:1.6rem;
-  margin-bottom:20px;
-}
-
-.expect-item p{
-  font-size:1.1rem;
-  color:var(--soft);
-}
-
-/* TESTIMONIAL */
-
-.testimonial{
+.statement{
   padding:200px 0;
   text-align:center;
 }
 
-.testimonial blockquote{
-  font-family:'Poppins';
-  font-size:2rem;
-  line-height:1.4;
-  max-width:900px;
-  margin:0 auto 30px auto;
-}
-
-.testimonial cite{
-  font-size:0.95rem;
-  opacity:0.6;
-}
-
-/* FINAL CTA */
-
-.final{
-  padding:220px 0;
-  text-align:center;
-}
-
-.final h2{
+.statement h2{
   font-family:'Poppins';
   font-size:3.8rem;
-  margin-bottom:40px;
+  line-height:1.1;
 }
 
-.final h2 span{
-  color:var(--orange);
+.statement span{
   display:block;
+  color:var(--orange);
 }
 
 /* FOOTER */
 
 footer{
-  background:#0a0a0a;
   padding:120px 0 60px 0;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:80px;
-  margin-bottom:60px;
-}
-
-.footer-links a{
-  display:block;
-  color:var(--soft);
-  text-decoration:none;
-  margin-bottom:12px;
-}
-
-.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.08);
   text-align:center;
-  font-size:0.8rem;
-  opacity:0.5;
+  color:rgba(255,255,255,0.5);
+  font-size:0.85rem;
 }
 
 /* MOBILE */
@@ -335,9 +248,8 @@ footer{
   font-size:3rem;
 }
 
-.footer-grid{
-  grid-template-columns:1fr;
-  gap:40px;
+.statement h2{
+  font-size:2.6rem;
 }
 
 }
@@ -359,82 +271,71 @@ footer{
 <section class="hero container">
   <div class="hero-grid">
     <div>
-      <div class="hero-title">Team Engagement & Activation Speaker</div>
-
       <h1>
         Strategy doesn’t go the distance…
         <span>People do.</span>
       </h1>
 
-      <p class="hero-sub">
-        Ben Hawes works with companies during pivotal moments,
-        helping teams communicate motivation, activate engagement,
-        and drive measurable results long after the room clears.
+      <p>
+        I work with founders, CEOs, and HR leaders to activate engagement inside fast-moving teams — aligning motivation to vision so strategy actually reaches its destination.
       </p>
 
-      <a href="#" class="cta-large">Activate Your Team</a>
+      <a href="#" class="cta-button">Activate Your Team</a>
     </div>
 
     <div>
-      <img src="headshot.jpg" alt="Ben Hawes speaking at company offsite">
+      <img src="headshot.jpg" alt="Ben Hawes speaking">
     </div>
   </div>
 </section>
 
 <section class="section container">
-  <div class="story">
-    <h2>The strategy was clear. The room was not.</h2>
-    <p>That gap is where performance drifts.</p>
-  </div>
-</section>
-
-<section class="transition">
-  <h2>Strategy does not fail quietly.<span>Activation does.</span></h2>
-  <p>When teams cannot articulate how their work connects to results, energy fades and execution slows.</p>
+  <h2>The gap isn’t strategy.</h2>
+  <p>Most leadership teams can articulate their goals. Roadmaps are built. Metrics are defined.</p>
+  <p>If your people cannot clearly connect their daily work to the bigger vision, performance stalls.</p>
+  <p>Engagement is not happiness. Engagement is ownership. Effort. Commitment to outcomes.</p>
 </section>
 
 <section class="impact">
   <div class="container">
-    <h2>When engagement is activated, results move.</h2>
+    <h2>When engagement is activated, performance accelerates.</h2>
+
     <div class="impact-grid">
-      <div class="impact-item">
+
+      <div class="impact-card">
         <div class="counter" data-target="27">0%</div>
-        <p>Increase in clarity around company goals</p>
+        <p class="impact-text">Increase in clarity around company goals when employees understand how their role connects to strategy.</p>
+        <div class="impact-source">Source: Gallup Workplace Engagement Study</div>
       </div>
-      <div class="impact-item">
+
+      <div class="impact-card">
         <div class="counter" data-target="21">0%</div>
-        <p>Higher profitability in highly engaged teams</p>
+        <p class="impact-text">Higher profitability in companies with highly engaged teams.</p>
+        <div class="impact-source">Source: Gallup Meta-Analysis</div>
       </div>
-      <div class="impact-item">
+
+      <div class="impact-card">
         <div class="counter" data-target="59">0%</div>
-        <p>Lower turnover in activated teams</p>
+        <p class="impact-text">Lower turnover in organizations with activated engagement.</p>
+        <div class="impact-source">Source: Deloitte Human Capital Trends</div>
       </div>
+
     </div>
   </div>
 </section>
 
-<section class="final container">
-  <h2>Activate the room.<span>Change the year.</span></h2>
-  <a href="#" class="cta-large">Activate Your Team</a>
+<section class="statement">
+  <h2>
+    Activate the room.
+    <span>Change the year.</span>
+  </h2>
+  <div style="margin-top:50px;">
+    <a href="#" class="cta-button">Activate Your Team</a>
+  </div>
 </section>
 
 <footer>
-  <div class="container footer-grid">
-    <div>
-      <h3>Ben Hawes ⚡️</h3>
-      <p style="color:var(--soft);">Team Engagement & Activation Speaker helping companies align motivation and drive measurable results.</p>
-    </div>
-    <div class="footer-links">
-      <a href="#">Speaking</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="footer-links">
-      <a href="#">LinkedIn</a>
-      <a href="#">Instagram</a>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2026 Ben Hawes</div>
+  © 2026 Ben Hawes ⚡️
 </footer>
 
 <script>
@@ -445,17 +346,20 @@ const observer = new IntersectionObserver(entries => {
     if(entry.isIntersecting){
       counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
-        let count = 0;
-        const update = () => {
-          count += Math.ceil(target/100);
-          if(count < target){
-            counter.innerText = count + "%";
-            requestAnimationFrame(update);
+        let current = 0;
+        const increment = target / 100;
+
+        const updateCounter = () => {
+          if(current < target){
+            current += increment;
+            counter.innerText = Math.ceil(current) + "%";
+            requestAnimationFrame(updateCounter);
           } else {
             counter.innerText = target + "%";
           }
         };
-        update();
+
+        updateCounter();
       });
       observer.disconnect();
     }
