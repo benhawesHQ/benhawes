@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 </head>
 
@@ -51,13 +51,10 @@ With roles in leadership & engagement at ClassPass, LifeLabs Learning, and Rocke
 </div>
 
 <div class="hero-img-wrap">
-<img src="headshot2.jpg">
+<img src="headshot.jpg">
 </div>
 
 </section>
-
-
-<div class="divider"></div>
 
 
 <section class="statement container">
@@ -72,9 +69,6 @@ You have the OKRs.<br><br>
 </h2>
 
 </section>
-
-
-<div class="divider"></div>
 
 
 <section class="orange container">
@@ -95,9 +89,6 @@ Employees who feel their work connects to company mission are
 <p>Source: Gallup State of the Global Workplace Report</p>
 
 </section>
-
-
-<div class="divider"></div>
 
 
 <section class="model container">
@@ -145,9 +136,6 @@ Turning clarity and communication into meaningful commitment.
 </section>
 
 
-<div class="divider"></div>
-
-
 <section class="keynote container">
 
 <h2>The Keynote Experience</h2>
@@ -172,9 +160,6 @@ Employees reflect on their own level of commitment and set intentions.
 </div>
 
 </section>
-
-
-<div class="divider"></div>
 
 
 <section class="bio container">
@@ -216,9 +201,6 @@ Outside the corporate world, Ben is a performer, musician, and comedian, bringin
 </section>
 
 
-<div class="divider"></div>
-
-
 <section class="cta-section container">
 
 <h2>Ready for an activated team?</h2>
@@ -228,6 +210,20 @@ Reach out to Ben today and get set up for the keynote talk, collaborative consul
 </p>
 
 <form class="form">
+
+<div class="interest">
+
+<label>I’m interested in...</label>
+
+<div class="interest-options">
+
+<button type="button" class="interest-btn">🎤 Keynote</button>
+<button type="button" class="interest-btn">🤝 Collaboration</button>
+<button type="button" class="interest-btn">🛠 Custom Project</button>
+
+</div>
+
+</div>
 
 <input placeholder="First Name">
 <input placeholder="Last Name">
@@ -255,6 +251,16 @@ Reach out to Ben today and get set up for the keynote talk, collaborative consul
 <a href="#">Contact</a>
 
 </footer>
+
+<script>
+
+document.querySelectorAll(".interest-btn").forEach(btn=>{
+btn.addEventListener("click",()=>{
+btn.classList.toggle("selected")
+})
+})
+
+</script>
 
 </body>
 </html>
