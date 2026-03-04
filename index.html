@@ -23,7 +23,6 @@ body{
   background:var(--orange);
   color:var(--white);
   line-height:1.7;
-  overflow-x:hidden;
 }
 
 /* Layout */
@@ -31,13 +30,13 @@ body{
 .container{
   max-width:var(--max);
   margin:0 auto;
-  padding:0 32px;
+  padding:0 24px;
 }
 
 /* NAV */
 
 nav{
-  padding:28px 0;
+  padding:22px 0;
 }
 
 .nav-inner{
@@ -49,43 +48,44 @@ nav{
 .logo{
   font-family:'Poppins';
   font-weight:900;
-  font-size:1.6rem;
+  font-size:1.2rem;
 }
 
 .nav-cta{
   background:white;
   color:var(--orange);
-  padding:14px 34px;
-  border-radius:60px;
+  padding:12px 24px;
+  border-radius:50px;
   font-weight:800;
   text-decoration:none;
+  font-size:0.9rem;
   transition:0.3s ease;
 }
 
 .nav-cta:hover{
-  transform:translateY(-4px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.3);
 }
 
 /* HERO */
 
 .hero{
-  padding:80px 0 120px 0;
+  padding:60px 0 90px 0;
 }
 
 .hero-grid{
   display:grid;
   grid-template-columns:1.1fr 1fr;
-  gap:70px;
+  gap:60px;
   align-items:center;
 }
 
 .hero h1{
   font-family:'Poppins';
   font-weight:900;
-  font-size:5.2rem;
-  line-height:0.95;
-  letter-spacing:-2px;
+  font-size:clamp(2.6rem, 5vw, 4rem);
+  line-height:1.05;
+  letter-spacing:-1px;
 }
 
 .hero h1 span{
@@ -93,37 +93,37 @@ nav{
 }
 
 .hero p{
-  font-size:1.4rem;
-  margin:40px 0 50px 0;
-  max-width:600px;
+  font-size:clamp(1.1rem, 2vw, 1.35rem);
+  margin:28px 0 36px 0;
+  max-width:520px;
 }
 
 .cta-button{
   display:inline-block;
   background:white;
   color:var(--orange);
-  padding:22px 60px;
-  border-radius:60px;
+  padding:18px 42px;
+  border-radius:50px;
   font-weight:900;
-  font-size:1.05rem;
+  font-size:1rem;
   text-decoration:none;
   transition:0.3s ease;
 }
 
 .cta-button:hover{
-  transform:translateY(-6px);
-  box-shadow:0 30px 80px rgba(0,0,0,0.35);
+  transform:translateY(-4px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.35);
 }
 
 .hero img{
   width:100%;
-  border-radius:24px;
-  box-shadow:0 50px 120px rgba(0,0,0,0.35);
+  border-radius:18px;
+  box-shadow:0 40px 100px rgba(0,0,0,0.3);
   transition:0.4s ease;
 }
 
 .hero img:hover{
-  transform:scale(1.03);
+  transform:scale(1.02);
 }
 
 /* WHITE PANEL */
@@ -131,22 +131,22 @@ nav{
 .panel{
   background:white;
   color:var(--black);
-  padding:100px 90px;
-  border-radius:40px;
-  margin:0 auto 120px auto;
-  max-width:1050px;
-  box-shadow:0 60px 140px rgba(0,0,0,0.35);
+  padding:70px 60px;
+  border-radius:28px;
+  margin:40px auto 90px auto;
+  max-width:950px;
+  box-shadow:0 50px 120px rgba(0,0,0,0.35);
 }
 
 .panel h2{
   font-family:'Poppins';
-  font-size:3rem;
-  margin-bottom:30px;
+  font-size:clamp(1.8rem,3vw,2.4rem);
+  margin-bottom:24px;
 }
 
 .panel p{
-  font-size:1.3rem;
-  margin-bottom:22px;
+  font-size:1.15rem;
+  margin-bottom:18px;
 }
 
 .highlight{
@@ -158,19 +158,19 @@ nav{
 
 .dark{
   background:var(--black);
-  padding:120px 0;
+  padding:90px 0;
 }
 
 .dark h2{
   font-family:'Poppins';
-  font-size:3.2rem;
-  margin-bottom:40px;
+  font-size:clamp(1.8rem,3vw,2.6rem);
+  margin-bottom:26px;
 }
 
 .dark p{
-  font-size:1.3rem;
-  max-width:800px;
-  margin-bottom:26px;
+  font-size:1.2rem;
+  max-width:700px;
+  margin-bottom:18px;
 }
 
 /* SERVICES */
@@ -178,72 +178,71 @@ nav{
 .services{
   background:white;
   color:var(--black);
-  padding:120px 0;
+  padding:90px 0;
 }
 
 .services h2{
   font-family:'Poppins';
-  font-size:3rem;
-  margin-bottom:60px;
+  font-size:clamp(1.8rem,3vw,2.6rem);
+  margin-bottom:50px;
   text-align:center;
 }
 
 .service-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
 }
 
 .service-card{
   background:#fafafa;
-  padding:50px;
-  border-radius:24px;
+  padding:36px;
+  border-radius:20px;
   transition:0.3s ease;
 }
 
 .service-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 30px 80px rgba(0,0,0,0.12);
+  transform:translateY(-5px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.12);
 }
 
 .service-card h3{
   font-family:'Poppins';
-  font-size:1.6rem;
-  margin-bottom:20px;
+  font-size:1.3rem;
+  margin-bottom:14px;
 }
 
 /* FAQ */
 
 .faq{
-  background:var(--orange);
-  padding:120px 0;
+  padding:90px 0;
 }
 
 .faq-panel{
   background:white;
   color:var(--black);
-  padding:90px 70px;
-  border-radius:40px;
-  max-width:1050px;
+  padding:60px 50px;
+  border-radius:28px;
+  max-width:950px;
   margin:0 auto;
-  box-shadow:0 60px 140px rgba(0,0,0,0.35);
+  box-shadow:0 50px 120px rgba(0,0,0,0.35);
 }
 
 .faq-panel h2{
   font-family:'Poppins';
-  font-size:2.8rem;
-  margin-bottom:40px;
+  font-size:clamp(1.6rem,3vw,2.3rem);
+  margin-bottom:30px;
 }
 
 .faq-item{
   border-bottom:1px solid rgba(0,0,0,0.1);
-  padding:24px 0;
+  padding:18px 0;
 }
 
 .faq-question{
   font-family:'Poppins';
-  font-size:1.4rem;
-  font-weight:900;
+  font-size:1.1rem;
+  font-weight:800;
   cursor:pointer;
   display:flex;
   justify-content:space-between;
@@ -253,46 +252,48 @@ nav{
   max-height:0;
   overflow:hidden;
   transition:max-height 0.4s ease;
-  margin-top:16px;
-  font-size:1.15rem;
+  margin-top:12px;
+  font-size:1rem;
 }
 
 .faq-item.active .faq-answer{
-  max-height:800px;
+  max-height:600px;
 }
 
 /* FOOTER */
 
 footer{
   background:#0B0B0B;
-  padding:100px 0 60px 0;
+  padding:70px 0 40px 0;
   color:#aaa;
 }
 
 .footer-grid{
   display:grid;
   grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:60px;
-  margin-bottom:60px;
+  gap:40px;
+  margin-bottom:40px;
 }
 
 .footer-grid h4{
   font-family:'Poppins';
   color:white;
-  margin-bottom:20px;
+  margin-bottom:12px;
+  font-size:1rem;
 }
 
 .footer-grid a{
   display:block;
   color:#aaa;
   text-decoration:none;
-  margin-bottom:10px;
+  margin-bottom:6px;
+  font-size:0.9rem;
 }
 
 .footer-bottom{
   border-top:1px solid #222;
-  padding-top:30px;
-  font-size:0.9rem;
+  padding-top:20px;
+  font-size:0.8rem;
   text-align:center;
   color:#777;
 }
@@ -305,18 +306,44 @@ footer{
   grid-template-columns:1fr;
 }
 
-.hero h1{
-  font-size:3rem;
+.hero{
+  padding:40px 0 60px 0;
 }
 
-.panel,
+.hero p{
+  margin:20px 0 30px 0;
+}
+
+.cta-button{
+  width:100%;
+  text-align:center;
+  padding:18px;
+}
+
+.panel{
+  padding:40px 28px;
+  margin:30px 16px 60px 16px;
+}
+
+.dark{
+  padding:60px 0;
+}
+
+.services{
+  padding:60px 0;
+}
+
+.faq{
+  padding:60px 0;
+}
+
 .faq-panel{
-  padding:60px 40px;
-  margin:60px 20px;
+  padding:40px 28px;
 }
 
 .footer-grid{
   grid-template-columns:1fr;
+  text-align:center;
 }
 
 }
@@ -339,11 +366,8 @@ footer{
   <div class="hero-grid">
     <div>
       <h1>
-        <span>STRATEGY</span>
-        <span>DOESN’T GO</span>
-        <span>THE DISTANCE…</span>
-        <span style="margin-top:20px;">ACTIVATED</span>
-        <span>PEOPLE DO.</span>
+        <span>Strategy doesn’t go the distance…</span>
+        <span>Activated people do.</span>
       </h1>
 
       <p>
@@ -362,102 +386,17 @@ footer{
 
 <div class="panel">
   <h2>You can design the roadmap. You cannot force activation.</h2>
-
-  <p>
-    You’ve clarified the goals.  
-    You’ve aligned leadership.  
-    You’ve communicated the vision.
-  </p>
-
-  <p class="highlight">
-    But ownership in the room feels thinner than it should.
-  </p>
-
-  <p>
-    Engagement isn’t happiness.  
-    It’s not satisfaction.  
-    It’s personal ownership of company vision.
-  </p>
-
-  <p>
-    That’s what I activate.
-  </p>
+  <p>You’ve clarified goals. You’ve aligned leadership. You’ve communicated vision.</p>
+  <p class="highlight">But ownership in the room feels thinner than it should.</p>
+  <p>Engagement is not happiness. It’s personal ownership of company strategy.</p>
 </div>
 
 <section class="dark">
 <div class="container">
   <h2>I’ve led strategy from the inside.</h2>
-
-  <p>
-    I’ve worked inside high-growth startups like ClassPass, learning and development organizations like LifeLabs Learning,
-    and public-facing brands like Rocket Money.
-  </p>
-
-  <p>
-    I’ve led customer service teams, marketing teams, engineering teams, and workplace experience programs.
-    I’ve run trainings, offsites, and goal-setting initiatives that roll directly into company strategy.
-  </p>
-
-  <p>
-    I’ve been in the room when the message landed.
-    And I’ve been in the room when it didn’t.
-  </p>
-
-  <p>
-    I know what moves people.
-  </p>
-</div>
-</section>
-
-<section class="services">
-<div class="container">
-  <h2>The Activation Experience</h2>
-
-  <div class="service-grid">
-
-    <div class="service-card">
-      <h3>Keynote Activation</h3>
-      <p>
-        A 45–75 minute high-impact keynote designed to shift ownership in the room.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <h3>Leadership Collaboration</h3>
-      <p>
-        Small-group sessions with founders and leadership teams to ensure activation lasts beyond the event.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <h3>Project-Based Engagement</h3>
-      <p>
-        Custom activation initiatives tied directly to your strategic priorities.
-      </p>
-    </div>
-
-  </div>
-</div>
-</section>
-
-<section class="faq">
-<div class="faq-panel">
-  <h2>Frequently Asked Questions</h2>
-
-  <div class="faq-item"><div class="faq-question">What does a team activation keynote actually change?<span>+</span></div><div class="faq-answer">It shifts ownership. Teams leave with clearer connection between daily execution and company vision. Leaders gain language for activation.</div></div>
-
-  <div class="faq-item"><div class="faq-question">How is this different from a motivational speaker?<span>+</span></div><div class="faq-answer">Motivation fades. Activation sticks. This is structured, practical, and grounded in real startup experience.</div></div>
-
-  <div class="faq-item"><div class="faq-question">When is the right time to bring you in?<span>+</span></div><div class="faq-answer">Strategy resets, growth spurts, post-layoff recalibration, or any moment where alignment feels thin.</div></div>
-
-  <div class="faq-item"><div class="faq-question">Can this work for technical teams?<span>+</span></div><div class="faq-answer">Yes. Engineering and technical teams respond to clarity, logic, and ownership language. Activation isn’t personality-based.</div></div>
-
-  <div class="faq-item"><div class="faq-question">Is engagement measurable?<span>+</span></div><div class="faq-answer">Yes. Through execution clarity, ownership behaviors, and alignment language that leaders can reinforce.</div></div>
-
-  <div class="faq-item"><div class="faq-question">Do you only do one-time keynotes?<span>+</span></div><div class="faq-answer">No. Leadership collaboration and project-based engagement work are available.</div></div>
-
-  <div class="faq-item"><div class="faq-question">What is the outcome leaders should expect?<span>+</span></div><div class="faq-answer">Sharper clarity. Visible ownership. Strategy that actually goes the distance.</div></div>
-
+  <p>I’ve worked inside ClassPass, LifeLabs Learning, and Rocket Money.</p>
+  <p>I’ve led trainings, offsites, and goal-setting programs that roll directly into company strategy.</p>
+  <p>I know what moves people.</p>
 </div>
 </section>
 
