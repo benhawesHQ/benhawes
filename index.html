@@ -22,7 +22,7 @@ body{
   font-family:'Open Sans',sans-serif;
   background:var(--orange);
   color:var(--white);
-  line-height:1.7;
+  line-height:1.6;
 }
 
 /* Layout */
@@ -30,13 +30,13 @@ body{
 .container{
   max-width:var(--max);
   margin:0 auto;
-  padding:0 24px;
+  padding:0 20px;
 }
 
 /* NAV */
 
 nav{
-  padding:22px 0;
+  padding:18px 0;
 }
 
 .nav-inner{
@@ -48,17 +48,17 @@ nav{
 .logo{
   font-family:'Poppins';
   font-weight:900;
-  font-size:1.2rem;
+  font-size:1.3rem;
 }
 
 .nav-cta{
   background:white;
   color:var(--orange);
-  padding:12px 24px;
-  border-radius:50px;
+  padding:10px 18px;
+  border-radius:40px;
   font-weight:800;
   text-decoration:none;
-  font-size:0.9rem;
+  font-size:0.85rem;
   transition:0.3s ease;
 }
 
@@ -70,20 +70,20 @@ nav{
 /* HERO */
 
 .hero{
-  padding:60px 0 90px 0;
+  padding:40px 0 70px 0;
 }
 
 .hero-grid{
   display:grid;
   grid-template-columns:1.1fr 1fr;
-  gap:60px;
+  gap:50px;
   align-items:center;
 }
 
 .hero h1{
   font-family:'Poppins';
   font-weight:900;
-  font-size:clamp(2.6rem, 5vw, 4rem);
+  font-size:clamp(2.4rem, 4.5vw, 3.6rem);
   line-height:1.05;
   letter-spacing:-1px;
 }
@@ -93,8 +93,8 @@ nav{
 }
 
 .hero p{
-  font-size:clamp(1.1rem, 2vw, 1.35rem);
-  margin:28px 0 36px 0;
+  font-size:clamp(1rem, 1.5vw, 1.25rem);
+  margin:22px 0 30px 0;
   max-width:520px;
 }
 
@@ -102,10 +102,10 @@ nav{
   display:inline-block;
   background:white;
   color:var(--orange);
-  padding:18px 42px;
-  border-radius:50px;
+  padding:16px 34px;
+  border-radius:40px;
   font-weight:900;
-  font-size:1rem;
+  font-size:0.95rem;
   text-decoration:none;
   transition:0.3s ease;
 }
@@ -117,13 +117,9 @@ nav{
 
 .hero img{
   width:100%;
-  border-radius:18px;
-  box-shadow:0 40px 100px rgba(0,0,0,0.3);
-  transition:0.4s ease;
-}
-
-.hero img:hover{
-  transform:scale(1.02);
+  border-radius:16px;
+  box-shadow:0 30px 80px rgba(0,0,0,0.3);
+  margin-top:10px;
 }
 
 /* WHITE PANEL */
@@ -131,22 +127,22 @@ nav{
 .panel{
   background:white;
   color:var(--black);
-  padding:70px 60px;
-  border-radius:28px;
-  margin:40px auto 90px auto;
-  max-width:950px;
-  box-shadow:0 50px 120px rgba(0,0,0,0.35);
+  padding:50px 40px;
+  border-radius:24px;
+  margin:30px auto 70px auto;
+  max-width:900px;
+  box-shadow:0 40px 100px rgba(0,0,0,0.35);
 }
 
 .panel h2{
   font-family:'Poppins';
-  font-size:clamp(1.8rem,3vw,2.4rem);
-  margin-bottom:24px;
+  font-size:clamp(1.6rem,2.5vw,2.2rem);
+  margin-bottom:18px;
 }
 
 .panel p{
-  font-size:1.15rem;
-  margin-bottom:18px;
+  font-size:1.05rem;
+  margin-bottom:14px;
 }
 
 .highlight{
@@ -158,19 +154,19 @@ nav{
 
 .dark{
   background:var(--black);
-  padding:90px 0;
+  padding:70px 0;
 }
 
 .dark h2{
   font-family:'Poppins';
-  font-size:clamp(1.8rem,3vw,2.6rem);
-  margin-bottom:26px;
+  font-size:clamp(1.6rem,2.5vw,2.2rem);
+  margin-bottom:20px;
 }
 
 .dark p{
-  font-size:1.2rem;
-  max-width:700px;
-  margin-bottom:18px;
+  font-size:1.05rem;
+  max-width:650px;
+  margin-bottom:14px;
 }
 
 /* SERVICES */
@@ -178,265 +174,48 @@ nav{
 .services{
   background:white;
   color:var(--black);
-  padding:90px 0;
+  padding:70px 0;
 }
 
 .services h2{
   font-family:'Poppins';
-  font-size:clamp(1.8rem,3vw,2.6rem);
-  margin-bottom:50px;
+  font-size:clamp(1.6rem,2.5vw,2.2rem);
+  margin-bottom:40px;
   text-align:center;
 }
 
 .service-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 
 .service-card{
   background:#fafafa;
-  padding:36px;
-  border-radius:20px;
+  padding:26px;
+  border-radius:16px;
   transition:0.3s ease;
 }
 
 .service-card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-4px);
   box-shadow:0 20px 60px rgba(0,0,0,0.12);
 }
 
 .service-card h3{
   font-family:'Poppins';
-  font-size:1.3rem;
-  margin-bottom:14px;
+  font-size:1.1rem;
+  margin-bottom:10px;
 }
 
 /* FAQ */
 
 .faq{
-  padding:90px 0;
+  padding:70px 0;
 }
 
 .faq-panel{
   background:white;
   color:var(--black);
-  padding:60px 50px;
-  border-radius:28px;
-  max-width:950px;
-  margin:0 auto;
-  box-shadow:0 50px 120px rgba(0,0,0,0.35);
-}
-
-.faq-panel h2{
-  font-family:'Poppins';
-  font-size:clamp(1.6rem,3vw,2.3rem);
-  margin-bottom:30px;
-}
-
-.faq-item{
-  border-bottom:1px solid rgba(0,0,0,0.1);
-  padding:18px 0;
-}
-
-.faq-question{
-  font-family:'Poppins';
-  font-size:1.1rem;
-  font-weight:800;
-  cursor:pointer;
-  display:flex;
-  justify-content:space-between;
-}
-
-.faq-answer{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height 0.4s ease;
-  margin-top:12px;
-  font-size:1rem;
-}
-
-.faq-item.active .faq-answer{
-  max-height:600px;
-}
-
-/* FOOTER */
-
-footer{
-  background:#0B0B0B;
-  padding:70px 0 40px 0;
-  color:#aaa;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:40px;
-  margin-bottom:40px;
-}
-
-.footer-grid h4{
-  font-family:'Poppins';
-  color:white;
-  margin-bottom:12px;
-  font-size:1rem;
-}
-
-.footer-grid a{
-  display:block;
-  color:#aaa;
-  text-decoration:none;
-  margin-bottom:6px;
-  font-size:0.9rem;
-}
-
-.footer-bottom{
-  border-top:1px solid #222;
-  padding-top:20px;
-  font-size:0.8rem;
-  text-align:center;
-  color:#777;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.hero-grid{
-  grid-template-columns:1fr;
-}
-
-.hero{
-  padding:40px 0 60px 0;
-}
-
-.hero p{
-  margin:20px 0 30px 0;
-}
-
-.cta-button{
-  width:100%;
-  text-align:center;
-  padding:18px;
-}
-
-.panel{
-  padding:40px 28px;
-  margin:30px 16px 60px 16px;
-}
-
-.dark{
-  padding:60px 0;
-}
-
-.services{
-  padding:60px 0;
-}
-
-.faq{
-  padding:60px 0;
-}
-
-.faq-panel{
-  padding:40px 28px;
-}
-
-.footer-grid{
-  grid-template-columns:1fr;
-  text-align:center;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="container">
-<nav>
-  <div class="nav-inner">
-    <div class="logo">Ben Hawes ⚡ Team Engagement & Activation Speaker</div>
-    <a href="#" class="nav-cta">Activate Your Team</a>
-  </div>
-</nav>
-</div>
-
-<section class="hero container">
-  <div class="hero-grid">
-    <div>
-      <h1>
-        <span>Strategy doesn’t go the distance…</span>
-        <span>Activated people do.</span>
-      </h1>
-
-      <p>
-        When growth-stage companies hit a strategy reset, execution doesn’t fail because the plan is weak.
-        It fails because activation is thin.
-      </p>
-
-      <a href="#" class="cta-button">Bring Ben to Your Offsite</a>
-    </div>
-
-    <div>
-      <img src="headshot.jpg" alt="Ben Hawes speaking on stage">
-    </div>
-  </div>
-</section>
-
-<div class="panel">
-  <h2>You can design the roadmap. You cannot force activation.</h2>
-  <p>You’ve clarified goals. You’ve aligned leadership. You’ve communicated vision.</p>
-  <p class="highlight">But ownership in the room feels thinner than it should.</p>
-  <p>Engagement is not happiness. It’s personal ownership of company strategy.</p>
-</div>
-
-<section class="dark">
-<div class="container">
-  <h2>I’ve led strategy from the inside.</h2>
-  <p>I’ve worked inside ClassPass, LifeLabs Learning, and Rocket Money.</p>
-  <p>I’ve led trainings, offsites, and goal-setting programs that roll directly into company strategy.</p>
-  <p>I know what moves people.</p>
-</div>
-</section>
-
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <h4>Ben Hawes ⚡</h4>
-      <p>Team Engagement & Activation Speaker</p>
-      <p>New York City</p>
-    </div>
-    <div>
-      <h4>Services</h4>
-      <a href="#">Keynotes</a>
-      <a href="#">Consulting</a>
-    </div>
-    <div>
-      <h4>Connect</h4>
-      <a href="#">LinkedIn</a>
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-    </div>
-    <div>
-      <h4>Company</h4>
-      <a href="#">About</a>
-      <a href="#">FAQ</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2026 Ben Hawes. All Rights Reserved.
-  </div>
-</footer>
-
-<script>
-document.querySelectorAll(".faq-question").forEach(item=>{
-  item.addEventListener("click",()=>{
-    item.parentElement.classList.toggle("active");
-  });
-});
-</script>
-
-</body>
-</html>
+  padding:40px 30px;
+  border-radius:24
