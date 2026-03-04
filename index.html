@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ben Hawes | Team Engagement & Activation Keynote</title>
+<title>Ben Hawes | Team Engagement & Activation Speaker</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --orange:#F94501;
   --black:#0F0F0F;
@@ -21,9 +22,11 @@ body{
   font-family:'Open Sans',sans-serif;
   background:var(--orange);
   color:var(--white);
-  line-height:1.75;
+  line-height:1.7;
   overflow-x:hidden;
 }
+
+/* Layout */
 
 .container{
   max-width:var(--max);
@@ -34,7 +37,7 @@ body{
 /* NAV */
 
 nav{
-  padding:34px 0;
+  padding:28px 0;
 }
 
 .nav-inner{
@@ -46,16 +49,16 @@ nav{
 .logo{
   font-family:'Poppins';
   font-weight:900;
-  font-size:1.7rem;
+  font-size:1.6rem;
 }
 
 .nav-cta{
   background:white;
   color:var(--orange);
-  padding:14px 36px;
+  padding:14px 34px;
   border-radius:60px;
-  text-decoration:none;
   font-weight:800;
+  text-decoration:none;
   transition:0.3s ease;
 }
 
@@ -67,39 +70,43 @@ nav{
 /* HERO */
 
 .hero{
-  padding:140px 0 160px 0;
+  padding:80px 0 120px 0;
 }
 
 .hero-grid{
   display:grid;
   grid-template-columns:1.1fr 1fr;
-  gap:80px;
+  gap:70px;
   align-items:center;
 }
 
 .hero h1{
   font-family:'Poppins';
-  font-size:5rem;
   font-weight:900;
-  line-height:1.05;
+  font-size:5.2rem;
+  line-height:0.95;
   letter-spacing:-2px;
 }
 
+.hero h1 span{
+  display:block;
+}
+
 .hero p{
-  font-size:1.45rem;
+  font-size:1.4rem;
   margin:40px 0 50px 0;
-  max-width:650px;
+  max-width:600px;
 }
 
 .cta-button{
   display:inline-block;
   background:white;
   color:var(--orange);
-  padding:24px 60px;
-  border-radius:70px;
-  text-decoration:none;
+  padding:22px 60px;
+  border-radius:60px;
   font-weight:900;
-  font-size:1.1rem;
+  font-size:1.05rem;
+  text-decoration:none;
   transition:0.3s ease;
 }
 
@@ -110,23 +117,23 @@ nav{
 
 .hero img{
   width:100%;
-  border-radius:30px;
+  border-radius:24px;
   box-shadow:0 50px 120px rgba(0,0,0,0.35);
   transition:0.4s ease;
 }
 
 .hero img:hover{
-  transform:scale(1.04);
+  transform:scale(1.03);
 }
 
-/* WHITE STORY PANEL */
+/* WHITE PANEL */
 
 .panel{
   background:white;
   color:var(--black);
-  padding:110px 90px;
+  padding:100px 90px;
   border-radius:40px;
-  margin:-60px auto 120px auto;
+  margin:0 auto 120px auto;
   max-width:1050px;
   box-shadow:0 60px 140px rgba(0,0,0,0.35);
 }
@@ -134,13 +141,12 @@ nav{
 .panel h2{
   font-family:'Poppins';
   font-size:3rem;
-  font-weight:900;
-  margin-bottom:34px;
+  margin-bottom:30px;
 }
 
 .panel p{
   font-size:1.3rem;
-  margin-bottom:24px;
+  margin-bottom:22px;
 }
 
 .highlight{
@@ -152,32 +158,32 @@ nav{
 
 .dark{
   background:var(--black);
-  padding:140px 0;
+  padding:120px 0;
 }
 
 .dark h2{
   font-family:'Poppins';
-  font-size:3.4rem;
+  font-size:3.2rem;
   margin-bottom:40px;
 }
 
 .dark p{
-  font-size:1.35rem;
-  max-width:850px;
-  margin-bottom:30px;
+  font-size:1.3rem;
+  max-width:800px;
+  margin-bottom:26px;
 }
 
-/* WHAT BEN DOES */
+/* SERVICES */
 
 .services{
   background:white;
   color:var(--black);
-  padding:140px 0;
+  padding:120px 0;
 }
 
 .services h2{
   font-family:'Poppins';
-  font-size:3.4rem;
+  font-size:3rem;
   margin-bottom:60px;
   text-align:center;
 }
@@ -185,13 +191,13 @@ nav{
 .service-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:50px;
+  gap:40px;
 }
 
 .service-card{
   background:#fafafa;
   padding:50px;
-  border-radius:30px;
+  border-radius:24px;
   transition:0.3s ease;
 }
 
@@ -202,21 +208,21 @@ nav{
 
 .service-card h3{
   font-family:'Poppins';
-  margin-bottom:20px;
   font-size:1.6rem;
+  margin-bottom:20px;
 }
 
 /* FAQ */
 
 .faq{
   background:var(--orange);
-  padding:140px 0;
+  padding:120px 0;
 }
 
 .faq-panel{
   background:white;
   color:var(--black);
-  padding:100px 80px;
+  padding:90px 70px;
   border-radius:40px;
   max-width:1050px;
   margin:0 auto;
@@ -225,18 +231,18 @@ nav{
 
 .faq-panel h2{
   font-family:'Poppins';
-  font-size:3rem;
+  font-size:2.8rem;
   margin-bottom:40px;
 }
 
 .faq-item{
   border-bottom:1px solid rgba(0,0,0,0.1);
-  padding:26px 0;
+  padding:24px 0;
 }
 
 .faq-question{
   font-family:'Poppins';
-  font-size:1.5rem;
+  font-size:1.4rem;
   font-weight:900;
   cursor:pointer;
   display:flex;
@@ -247,8 +253,8 @@ nav{
   max-height:0;
   overflow:hidden;
   transition:max-height 0.4s ease;
-  margin-top:18px;
-  font-size:1.2rem;
+  margin-top:16px;
+  font-size:1.15rem;
 }
 
 .faq-item.active .faq-answer{
@@ -317,13 +323,14 @@ footer{
 
 </style>
 </head>
+
 <body>
 
 <div class="container">
 <nav>
   <div class="nav-inner">
-    <div class="logo">Ben Hawes ⚡️</div>
-    <a href="#" class="nav-cta">Book the Keynote</a>
+    <div class="logo">Ben Hawes ⚡ Team Engagement & Activation Speaker</div>
+    <a href="#" class="nav-cta">Activate Your Team</a>
   </div>
 </nav>
 </div>
@@ -332,15 +339,21 @@ footer{
   <div class="hero-grid">
     <div>
       <h1>
-        Strategy doesn’t go the distance.
-        People do.
+        <span>STRATEGY</span>
+        <span>DOESN’T GO</span>
+        <span>THE DISTANCE…</span>
+        <span style="margin-top:20px;">ACTIVATED</span>
+        <span>PEOPLE DO.</span>
       </h1>
+
       <p>
-        A keynote built for growth-stage companies who need ownership,
-        clarity, and visible activation — not just alignment slides.
+        When growth-stage companies hit a strategy reset, execution doesn’t fail because the plan is weak.
+        It fails because activation is thin.
       </p>
+
       <a href="#" class="cta-button">Bring Ben to Your Offsite</a>
     </div>
+
     <div>
       <img src="headshot.jpg" alt="Ben Hawes speaking on stage">
     </div>
@@ -348,61 +361,78 @@ footer{
 </section>
 
 <div class="panel">
-  <h2>When activation is missing, performance drifts.</h2>
+  <h2>You can design the roadmap. You cannot force activation.</h2>
+
   <p>
-    You’ve set the strategy. You’ve aligned leadership.
-    The roadmap makes sense.
+    You’ve clarified the goals.  
+    You’ve aligned leadership.  
+    You’ve communicated the vision.
   </p>
+
   <p class="highlight">
-    But the room doesn’t feel fully engaged.
+    But ownership in the room feels thinner than it should.
   </p>
+
   <p>
-    Execution is happening — yet ownership feels thinner than it should.
-    Energy isn’t matching ambition.
+    Engagement isn’t happiness.  
+    It’s not satisfaction.  
+    It’s personal ownership of company vision.
+  </p>
+
+  <p>
+    That’s what I activate.
   </p>
 </div>
 
 <section class="dark">
 <div class="container">
-  <h2>Engagement is not about happiness. It’s about ownership.</h2>
+  <h2>I’ve led strategy from the inside.</h2>
+
   <p>
-    Engagement happens when someone understands the vision,
-    sees how their role connects to it,
-    and feels personally motivated to carry it forward.
+    I’ve worked inside high-growth startups like ClassPass, learning and development organizations like LifeLabs Learning,
+    and public-facing brands like Rocket Money.
   </p>
+
   <p>
-    That’s activation.
+    I’ve led customer service teams, marketing teams, engineering teams, and workplace experience programs.
+    I’ve run trainings, offsites, and goal-setting initiatives that roll directly into company strategy.
+  </p>
+
+  <p>
+    I’ve been in the room when the message landed.
+    And I’ve been in the room when it didn’t.
+  </p>
+
+  <p>
+    I know what moves people.
   </p>
 </div>
 </section>
 
 <section class="services">
 <div class="container">
-  <h2>What Ben Does</h2>
+  <h2>The Activation Experience</h2>
 
   <div class="service-grid">
 
     <div class="service-card">
       <h3>Keynote Activation</h3>
       <p>
-        A 45–75 minute high-energy keynote experience
-        designed to shift ownership in the room.
+        A 45–75 minute high-impact keynote designed to shift ownership in the room.
       </p>
     </div>
 
     <div class="service-card">
       <h3>Leadership Collaboration</h3>
       <p>
-        Small-group strategy and alignment sessions
-        to ensure activation lasts beyond the event.
+        Small-group sessions with founders and leadership teams to ensure activation lasts beyond the event.
       </p>
     </div>
 
     <div class="service-card">
       <h3>Project-Based Engagement</h3>
       <p>
-        Custom activation initiatives tied directly
-        to your strategic priorities.
+        Custom activation initiatives tied directly to your strategic priorities.
       </p>
     </div>
 
@@ -414,19 +444,19 @@ footer{
 <div class="faq-panel">
   <h2>Frequently Asked Questions</h2>
 
-  <div class="faq-item"><div class="faq-question">Is this just motivational?<span>+</span></div><div class="faq-answer">No. Motivation fades. Activation shifts ownership. Teams leave with clarity and language they actually use.</div></div>
+  <div class="faq-item"><div class="faq-question">What does a team activation keynote actually change?<span>+</span></div><div class="faq-answer">It shifts ownership. Teams leave with clearer connection between daily execution and company vision. Leaders gain language for activation.</div></div>
 
-  <div class="faq-item"><div class="faq-question">Who is this for?<span>+</span></div><div class="faq-answer">Growth-stage startups and scaling teams navigating change, reset, or expansion.</div></div>
+  <div class="faq-item"><div class="faq-question">How is this different from a motivational speaker?<span>+</span></div><div class="faq-answer">Motivation fades. Activation sticks. This is structured, practical, and grounded in real startup experience.</div></div>
 
-  <div class="faq-item"><div class="faq-question">What makes you credible?<span>+</span></div><div class="faq-answer">Experience across startups and public brands in L&D, sales, marketing, and workplace experience.</div></div>
+  <div class="faq-item"><div class="faq-question">When is the right time to bring you in?<span>+</span></div><div class="faq-answer">Strategy resets, growth spurts, post-layoff recalibration, or any moment where alignment feels thin.</div></div>
 
-  <div class="faq-item"><div class="faq-question">What changes in the room?<span>+</span></div><div class="faq-answer">Ownership becomes personal. Alignment becomes visible. Energy shifts.</div></div>
+  <div class="faq-item"><div class="faq-question">Can this work for technical teams?<span>+</span></div><div class="faq-answer">Yes. Engineering and technical teams respond to clarity, logic, and ownership language. Activation isn’t personality-based.</div></div>
 
-  <div class="faq-item"><div class="faq-question">Can this extend beyond one keynote?<span>+</span></div><div class="faq-answer">Yes. Leadership collaboration and project-based engagement are available.</div></div>
+  <div class="faq-item"><div class="faq-question">Is engagement measurable?<span>+</span></div><div class="faq-answer">Yes. Through execution clarity, ownership behaviors, and alignment language that leaders can reinforce.</div></div>
 
-  <div class="faq-item"><div class="faq-question">How long is the keynote?<span>+</span></div><div class="faq-answer">Typically 45–75 minutes with optional interactive components.</div></div>
+  <div class="faq-item"><div class="faq-question">Do you only do one-time keynotes?<span>+</span></div><div class="faq-answer">No. Leadership collaboration and project-based engagement work are available.</div></div>
 
-  <div class="faq-item"><div class="faq-question">What is the ultimate outcome?<span>+</span></div><div class="faq-answer">Stronger alignment. Sharper clarity. Strategy that actually goes the distance.</div></div>
+  <div class="faq-item"><div class="faq-question">What is the outcome leaders should expect?<span>+</span></div><div class="faq-answer">Sharper clarity. Visible ownership. Strategy that actually goes the distance.</div></div>
 
 </div>
 </section>
@@ -434,8 +464,8 @@ footer{
 <footer>
   <div class="container footer-grid">
     <div>
-      <h4>Ben Hawes ⚡️</h4>
-      <p>Team Engagement & Activation Keynote Speaker</p>
+      <h4>Ben Hawes ⚡</h4>
+      <p>Team Engagement & Activation Speaker</p>
       <p>New York City</p>
     </div>
     <div>
