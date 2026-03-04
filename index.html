@@ -6,8 +6,6 @@
 
 <title>Ben Hawes | Team Engagement & Activation Speaker</title>
 
-<meta name="description" content="Team Engagement & Activation Speaker helping startups align motivation, engagement, and performance after strategic shifts.">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
@@ -16,7 +14,7 @@
 
 :root{
   --black:#000;
-  --panel:#0d0d0d;
+  --panel:#0f0f0f;
   --white:#fff;
   --orange:#F94501;
   --max:1200px;
@@ -32,25 +30,20 @@ body{
   overflow-x:hidden;
 }
 
-/* Subtle dot pattern background */
-
-body::before{
-  content:"";
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-image:radial-gradient(rgba(249,69,1,0.15) 1px, transparent 1px);
-  background-size:40px 40px;
-  opacity:0.2;
-  pointer-events:none;
-}
-
 .container{
   max-width:var(--max);
   margin:0 auto;
   padding:0 32px;
+}
+
+/* Announcement Bar */
+
+.topbar{
+  background:var(--orange);
+  text-align:center;
+  padding:10px;
+  font-weight:600;
+  font-size:0.9rem;
 }
 
 /* NAV */
@@ -90,7 +83,7 @@ nav{
 /* HERO */
 
 .hero{
-  padding:80px 0 140px 0;
+  padding:100px 0 140px 0;
 }
 
 .hero-grid{
@@ -105,17 +98,6 @@ nav{
   font-size:4.5rem;
   line-height:1.05;
   margin-bottom:30px;
-  position:relative;
-}
-
-.hero h1::after{
-  content:"";
-  position:absolute;
-  bottom:-15px;
-  left:0;
-  width:80px;
-  height:4px;
-  background:var(--orange);
 }
 
 .hero h1 span{
@@ -147,19 +129,25 @@ nav{
 .hero img{
   width:100%;
   border-radius:24px;
-  box-shadow:0 30px 80px rgba(249,69,1,0.2);
-  transition:0.4s ease;
+  box-shadow:0 30px 80px rgba(249,69,1,0.25);
 }
 
-.hero img:hover{
-  transform:translateY(-8px);
+/* Credibility Strip */
+
+.cred-strip{
+  border-top:1px solid rgba(255,255,255,0.08);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  padding:40px 0;
+  text-align:center;
+  font-size:0.95rem;
+  letter-spacing:1px;
+  opacity:0.8;
 }
 
-/* SECTION */
+/* Sections */
 
 .section{
   padding:160px 0;
-  border-top:1px solid rgba(255,255,255,0.08);
 }
 
 .section h2{
@@ -168,23 +156,37 @@ nav{
   margin-bottom:40px;
 }
 
-.section h2 span{
-  color:var(--orange);
-}
-
 .section p{
   font-size:1.2rem;
   margin-bottom:28px;
 }
 
-.bold{font-weight:700;}
-.orange{color:var(--orange);}
-.italic{font-style:italic;}
+/* Impact Cards */
+
+.impact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px;
+  margin-top:60px;
+}
+
+.impact-card{
+  background:var(--panel);
+  padding:40px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.3s ease;
+}
+
+.impact-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--orange);
+}
 
 /* FAQ */
 
 .faq-item{
-  margin-bottom:50px;
+  margin-bottom:40px;
   padding-left:20px;
   border-left:4px solid var(--orange);
 }
@@ -195,7 +197,7 @@ nav{
   margin-bottom:15px;
 }
 
-/* FOOTER */
+/* Footer */
 
 footer{
   padding:140px 0 80px 0;
@@ -226,19 +228,6 @@ footer{
   font-size:0.9rem;
 }
 
-/* FADE IN ANIMATION */
-
-.fade{
-  opacity:0;
-  transform:translateY(40px);
-  transition:0.8s ease;
-}
-
-.fade.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-
 @media(max-width:1000px){
 .hero-grid{grid-template-columns:1fr;}
 .hero h1{font-size:3rem;}
@@ -250,6 +239,10 @@ footer{
 
 <body>
 
+<div class="topbar">
+Now Booking 2026 Company Offsites ⚡️
+</div>
+
 <div class="container">
 <nav>
   <div class="nav-inner">
@@ -259,7 +252,7 @@ footer{
 </nav>
 </div>
 
-<section class="hero container fade">
+<section class="hero container">
   <div class="hero-grid">
     <div>
       <h1>
@@ -268,82 +261,87 @@ footer{
       </h1>
 
       <p>
-        I help <span class="bold">startups and scaling teams</span> activate motivation,
-        strengthen engagement, and align daily execution to the bigger company vision.
+        I help startups and growing teams activate motivation,
+        align daily work to company vision,
+        and turn strategy into measurable momentum.
       </p>
 
-      <a href="#" class="cta-button">Activate Your Team ⚡️</a>
+      <a href="#" class="cta-button">Activate Your Team</a>
     </div>
 
     <div>
-      <img src="headshot.jpg" alt="Ben Hawes speaking at company offsite">
+      <img src="headshot.jpg" alt="Ben Hawes speaking">
     </div>
   </div>
 </section>
 
-<section class="section container fade">
+<div class="cred-strip container">
+Former Leadership & Engagement Roles at ClassPass • LifeLabs Learning • Rocket Money
+</div>
 
-  <h2>Why do teams struggle with <span>engagement</span> after strategy resets?</h2>
+<section class="section container">
+
+  <h2>Why do strategy resets fall flat?</h2>
 
   <p>
-    After layoffs, restructuring, or rapid growth, people are often <span class="italic">unclear</span>.
+    After layoffs, restructuring, or rapid growth,
+    teams are listening —
+    but they are not leaning in.
   </p>
 
   <p>
-    Unclear expectations lead to unclear ownership.
+    Expectations shift.
+    Energy dips.
+    High performers go quiet.
   </p>
 
   <p>
-    And when ownership fades, performance follows.
-  </p>
-
-</section>
-
-<section class="section container fade">
-
-  <h2>What does “activated engagement” actually mean?</h2>
-
-  <p>
-    Engagement is not happiness.
-  </p>
-
-  <p>
-    Engagement is <span class="orange bold">ownership.</span>
-  </p>
-
-  <p>
-    Engagement is effort.
-  </p>
-
-  <p>
-    Engagement is alignment between personal motivation and company mission.
+    That is not a strategy problem.
+    That is an activation problem.
   </p>
 
 </section>
 
-<section class="section container fade">
+<section class="section container">
+
+  <h2>What does a Team Engagement & Activation Keynote include?</h2>
+
+  <div class="impact-grid">
+    <div class="impact-card">
+      <h3>Clarity</h3>
+      <p>Employees understand how their role connects to company goals.</p>
+    </div>
+
+    <div class="impact-card">
+      <h3>Ownership</h3>
+      <p>Teams articulate what drives them and how it shows up in execution.</p>
+    </div>
+
+    <div class="impact-card">
+      <h3>Momentum</h3>
+      <p>The offsite becomes a turning point — not just a meeting.</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="section container">
 
   <h2>Frequently Asked Questions</h2>
 
   <div class="faq-item">
-    <h3>What does a team engagement speaker do?</h3>
-    <p>
-      A team engagement speaker helps employees understand how their daily work connects to strategy and results.
-    </p>
+    <h3>What is team engagement?</h3>
+    <p>Team engagement is the level of ownership and effort employees bring to their work.</p>
   </div>
 
   <div class="faq-item">
-    <h3>Who hires a team activation keynote speaker?</h3>
-    <p>
-      CEOs, founders, HR leaders, and People teams hire engagement speakers for offsites, all-hands meetings, and strategic resets.
-    </p>
+    <h3>Who hires a team engagement keynote speaker?</h3>
+    <p>CEOs, founders, HR leaders, and People teams hire engagement speakers for offsites and all-hands meetings.</p>
   </div>
 
   <div class="faq-item">
-    <h3>Does employee engagement improve business results?</h3>
-    <p>
-      Research shows highly engaged teams outperform in profitability, retention, and productivity.
-    </p>
+    <h3>Does engagement improve performance?</h3>
+    <p>Research shows highly engaged teams outperform in retention, productivity, and profitability.</p>
   </div>
 
 </section>
@@ -353,10 +351,7 @@ footer{
   <div class="container footer-grid">
     <div>
       <h3>Ben Hawes ⚡️</h3>
-      <p>
-        Team Engagement & Activation Speaker helping startups align motivation,
-        communication, and measurable performance.
-      </p>
+      <p>Team Engagement & Activation Speaker helping companies turn strategy into momentum.</p>
     </div>
 
     <div>
@@ -370,7 +365,6 @@ footer{
       <h3>Connect</h3>
       <a href="#">LinkedIn</a>
       <a href="#">Instagram</a>
-      <a href="#">Email</a>
     </div>
   </div>
 
@@ -379,26 +373,6 @@ footer{
   </div>
 
 </footer>
-
-<script>
-const faders = document.querySelectorAll('.fade');
-
-const appearOptions = {
-  threshold: 0.2
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-  entries.forEach(entry => {
-    if(!entry.isIntersecting){ return; }
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
-</script>
 
 </body>
 </html>
