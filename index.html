@@ -8,6 +8,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
+
 <style>
 
 :root{
@@ -15,6 +17,7 @@
   --white:#ffffff;
   --soft:rgba(255,255,255,0.82);
   --orange:#F94501;
+  --panel:#111111;
   --max:1200px;
 }
 
@@ -25,6 +28,7 @@ body{
   color:var(--white);
   font-family:'Inter',sans-serif;
   -webkit-font-smoothing:antialiased;
+  line-height:1.6;
 }
 
 .container{
@@ -70,7 +74,6 @@ nav{
 
 .hero{
   padding:120px 0 160px 0;
-  position:relative;
 }
 
 .hero-grid{
@@ -113,31 +116,74 @@ nav{
   border-radius:18px;
 }
 
+.cta-large{
+  display:inline-block;
+  margin-top:40px;
+  background:var(--orange);
+  padding:22px 60px;
+  border-radius:60px;
+  text-decoration:none;
+  color:white;
+  font-weight:800;
+}
+
 /* SECTION */
 
 .section{
   padding:180px 0;
 }
 
-/* INTRO */
+/* STORY */
 
-.intro{
-  max-width:800px;
+.story{
+  max-width:900px;
 }
 
-.intro h2{
+.story h2{
   font-family:'Poppins';
-  font-size:2.6rem;
-  margin-bottom:30px;
+  font-size:3rem;
+  line-height:1.1;
+  margin-bottom:60px;
 }
 
-.intro p{
-  font-size:1.2rem;
+.story p{
+  font-size:1.25rem;
   color:var(--soft);
-  margin-bottom:25px;
+  margin-bottom:28px;
+}
+
+/* TRANSITION */
+
+.transition{
+  padding:200px 0;
+  text-align:center;
+  background:var(--panel);
+}
+
+.transition h2{
+  font-family:'Poppins';
+  font-size:3.5rem;
+  line-height:1.1;
+  margin-bottom:40px;
+}
+
+.transition span{
+  color:var(--orange);
+  display:block;
+}
+
+.transition p{
+  font-size:1.3rem;
+  color:var(--soft);
+  max-width:800px;
+  margin:0 auto;
 }
 
 /* EXPECT */
+
+.expect{
+  padding:200px 0;
+}
 
 .expect-grid{
   display:grid;
@@ -156,7 +202,7 @@ nav{
   color:var(--soft);
 }
 
-/* TESTIMONIAL PLACEHOLDER */
+/* TESTIMONIAL */
 
 .testimonial{
   padding:200px 0;
@@ -194,21 +240,43 @@ nav{
   display:block;
 }
 
-.cta-large{
-  display:inline-block;
-  margin-top:40px;
-  background:var(--orange);
-  padding:22px 60px;
-  border-radius:60px;
-  text-decoration:none;
-  color:white;
-  font-weight:800;
-}
+/* FOOTER */
 
 footer{
-  padding:120px 0;
+  background:#0a0a0a;
+  padding:120px 0 60px 0;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:80px;
+  margin-bottom:60px;
+}
+
+.footer-brand h3{
+  font-family:'Poppins';
+  font-size:1.6rem;
+  margin-bottom:20px;
+}
+
+.footer-brand p{
+  color:var(--soft);
+  font-size:1rem;
+  max-width:400px;
+}
+
+.footer-links a{
+  display:block;
+  color:var(--soft);
+  text-decoration:none;
+  margin-bottom:12px;
+  font-size:0.95rem;
+}
+
+.footer-bottom{
   text-align:center;
-  font-size:0.85rem;
+  font-size:0.8rem;
   opacity:0.5;
 }
 
@@ -222,6 +290,11 @@ footer{
 
 .hero h1{
   font-size:3rem;
+}
+
+.footer-grid{
+  grid-template-columns:1fr;
+  gap:40px;
 }
 
 }
@@ -271,29 +344,50 @@ footer{
 
 <section class="section container">
 
-  <div class="intro">
-    <h2>Why Ben</h2>
+  <div class="story">
+    <h2>The strategy was clear. The room was not.</h2>
 
     <p>
-      Ben has led high-impact internal meetings for over fifteen years,
-      translating strategy into clarity and momentum.
+      One hundred and twenty people. Smart. Capable. Talented.
     </p>
 
     <p>
-      He understands how to speak to engineers, creatives,
-      operators and executives without theatrics or fluff.
+      The company had just reset direction. New goals. New structure. New expectations.
+      Some teams had grown. Others had shrunk.
+      Everyone was recalibrating.
     </p>
 
     <p>
-      His sessions are direct, energising, and designed to create
-      measurable shifts in how teams communicate and perform.
+      On paper, the strategy made sense.
+      In the room, something felt misaligned.
     </p>
 
+    <p>
+      People were listening.
+      But they were not leaning in.
+    </p>
+
+    <p>
+      That gap is where performance drifts.
+    </p>
   </div>
 
 </section>
 
-<section class="section container">
+<section class="transition">
+  <h2>
+    Strategy does not fail quietly.
+    <span>Activation does.</span>
+  </h2>
+
+  <p>
+    When teams cannot clearly articulate what drives them,
+    or how their role connects to results,
+    execution slows. Ownership blurs. Energy fades.
+  </p>
+</section>
+
+<section class="expect container">
 
   <div class="expect-grid">
 
@@ -301,7 +395,7 @@ footer{
       <h3>Clarity in Motivation</h3>
       <p>
         Teams leave with shared language around what drives them
-        and how activation shows up in their role.
+        and how activation shows up inside their role.
       </p>
     </div>
 
@@ -309,15 +403,14 @@ footer{
       <h3>Measurable Engagement</h3>
       <p>
         Leaders gain tools to identify and reinforce motivation
-        through behaviour and execution.
+        through behavior and execution.
       </p>
     </div>
 
     <div class="expect-item">
       <h3>Stronger Results</h3>
       <p>
-        The offsite becomes a pivot point,
-        not just a memory.
+        The offsite becomes a pivot point, not just a memory.
       </p>
     </div>
 
@@ -348,7 +441,38 @@ footer{
 </section>
 
 <footer>
-© 2026 Ben Hawes
+
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+      <h3>Ben Hawes ⚡️</h3>
+      <p>
+        Team Engagement & Activation Speaker helping companies
+        align motivation, strengthen communication,
+        and drive measurable results.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">Life in Bold</a>
+      <a href="#">Rent My Booth</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Ben Hawes
+  </div>
+
 </footer>
 
 </body>
