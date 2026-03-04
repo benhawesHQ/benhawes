@@ -13,22 +13,21 @@
 <style>
 
 :root{
-  --black:#000000;
-  --white:#ffffff;
-  --soft:rgba(255,255,255,0.82);
+  --black:#000;
+  --white:#fff;
+  --soft:rgba(255,255,255,0.8);
   --orange:#F94501;
-  --panel:#111111;
   --max:1200px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-  background:var(--black);
-  color:var(--white);
+  background:#000;
+  color:#fff;
   font-family:'Inter',sans-serif;
   -webkit-font-smoothing:antialiased;
-  line-height:1.6;
+  line-height:1.7;
 }
 
 .container{
@@ -40,7 +39,7 @@ body{
 /* NAV */
 
 nav{
-  padding:40px 0;
+  padding:30px 0;
 }
 
 .nav-inner{
@@ -68,24 +67,29 @@ nav{
   color:white;
   font-weight:700;
   font-size:0.9rem;
+  transition:0.25s ease;
+}
+
+.nav-cta:hover{
+  transform:translateY(-3px);
 }
 
 /* HERO */
 
 .hero{
-  padding:120px 0 160px 0;
+  padding:80px 0 120px 0;
 }
 
 .hero-grid{
   display:grid;
   grid-template-columns:1.1fr 1fr;
-  gap:100px;
+  gap:80px;
   align-items:center;
 }
 
 .hero h1{
   font-family:'Poppins';
-  font-size:4.8rem;
+  font-size:4.6rem;
   line-height:1.05;
   letter-spacing:-2px;
   margin-bottom:40px;
@@ -97,181 +101,135 @@ nav{
 }
 
 .hero-sub{
-  font-size:1.25rem;
+  font-size:1.3rem;
   color:var(--soft);
-  margin-bottom:60px;
+  margin-bottom:50px;
   max-width:650px;
 }
 
 .hero-title{
-  font-size:0.9rem;
+  font-size:0.85rem;
   letter-spacing:2px;
   text-transform:uppercase;
   opacity:0.6;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 .hero img{
   width:100%;
   border-radius:18px;
+  transition:0.4s ease;
+}
+
+.hero img:hover{
+  transform:translateY(-6px);
 }
 
 .cta-large{
   display:inline-block;
-  margin-top:40px;
   background:var(--orange);
-  padding:22px 60px;
+  padding:20px 60px;
   border-radius:60px;
   text-decoration:none;
   color:white;
   font-weight:800;
+  transition:0.25s ease;
 }
 
-/* SECTION */
+.cta-large:hover{
+  transform:translateY(-4px);
+}
+
+/* SECTIONS */
 
 .section{
-  padding:180px 0;
+  padding:160px 0;
 }
 
-/* STORY */
-
-.story{
+.narrow{
   max-width:900px;
 }
 
-.story h2{
+.section h2{
   font-family:'Poppins';
   font-size:3rem;
-  line-height:1.1;
-  margin-bottom:60px;
+  margin-bottom:50px;
 }
 
-.story p{
+.section p{
   font-size:1.25rem;
   color:var(--soft);
-  margin-bottom:28px;
+  margin-bottom:30px;
 }
 
-/* TRANSITION */
+/* STATEMENT BREAK */
 
-.transition{
-  padding:200px 0;
+.statement{
+  padding:180px 0;
   text-align:center;
-  background:var(--panel);
 }
 
-.transition h2{
+.statement h2{
   font-family:'Poppins';
   font-size:3.5rem;
   line-height:1.1;
-  margin-bottom:40px;
 }
 
-.transition span{
-  color:var(--orange);
+.statement span{
   display:block;
+  color:var(--orange);
 }
 
-.transition p{
-  font-size:1.3rem;
-  color:var(--soft);
-  max-width:800px;
-  margin:0 auto;
-}
+/* OFFER GRID */
 
-/* EXPECT */
-
-.expect{
-  padding:200px 0;
-}
-
-.expect-grid{
+.offer-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:80px;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:70px;
 }
 
-.expect-item h3{
+.offer-card{
+  border:1px solid rgba(255,255,255,0.08);
+  padding:50px;
+  border-radius:20px;
+  transition:0.3s ease;
+}
+
+.offer-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--orange);
+}
+
+.offer-card h3{
   font-family:'Poppins';
-  font-size:1.6rem;
-  margin-bottom:20px;
-}
-
-.expect-item p{
-  font-size:1.1rem;
-  color:var(--soft);
-}
-
-/* TESTIMONIAL */
-
-.testimonial{
-  padding:200px 0;
-  text-align:center;
-}
-
-.testimonial blockquote{
-  font-family:'Poppins';
-  font-size:2rem;
-  line-height:1.4;
-  max-width:900px;
-  margin:0 auto 30px auto;
-}
-
-.testimonial cite{
-  font-size:0.95rem;
-  opacity:0.6;
-}
-
-/* FINAL CTA */
-
-.final{
-  padding:220px 0;
-  text-align:center;
-}
-
-.final h2{
-  font-family:'Poppins';
-  font-size:3.8rem;
-  margin-bottom:40px;
-}
-
-.final h2 span{
-  color:var(--orange);
-  display:block;
+  font-size:1.8rem;
+  margin-bottom:25px;
 }
 
 /* FOOTER */
 
 footer{
-  background:#0a0a0a;
   padding:120px 0 60px 0;
+  border-top:1px solid rgba(255,255,255,0.08);
 }
 
 .footer-grid{
   display:grid;
   grid-template-columns:2fr 1fr 1fr;
-  gap:80px;
+  gap:60px;
   margin-bottom:60px;
 }
 
-.footer-brand h3{
+.footer-grid h4{
   font-family:'Poppins';
-  font-size:1.6rem;
   margin-bottom:20px;
 }
 
-.footer-brand p{
-  color:var(--soft);
-  font-size:1rem;
-  max-width:400px;
-}
-
-.footer-links a{
+.footer-grid a{
   display:block;
   color:var(--soft);
   text-decoration:none;
-  margin-bottom:12px;
-  font-size:0.95rem;
+  margin-bottom:10px;
 }
 
 .footer-bottom{
@@ -294,7 +252,6 @@ footer{
 
 .footer-grid{
   grid-template-columns:1fr;
-  gap:40px;
 }
 
 }
@@ -307,8 +264,8 @@ footer{
 <div class="container">
 <nav>
   <div class="nav-inner">
-    <div class="logo">Ben <span>Hawes</span></div>
-    <a href="#" class="nav-cta">Enquire</a>
+    <div class="logo">Ben <span>Hawes ⚡️</span></div>
+    <a href="#" class="nav-cta">Activate Your Team</a>
   </div>
 </nav>
 </div>
@@ -321,14 +278,14 @@ footer{
       <div class="hero-title">Team Engagement & Activation Speaker</div>
 
       <h1>
-        Strategy doesn’t go the distance.
+        Strategy doesn’t go the distance…
         <span>People do.</span>
       </h1>
 
       <p class="hero-sub">
-        Ben Hawes works with companies during pivotal moments,
-        helping teams communicate motivation, increase activation,
-        and drive measurable results after the room clears.
+        Ben Hawes works with CEOs, founders, and HR leaders during pivotal moments,
+        helping teams clarify motivation, activate engagement,
+        and align daily work to the larger company vision.
       </p>
 
       <a href="#" class="cta-large">Activate Your Team</a>
@@ -342,75 +299,93 @@ footer{
 
 </section>
 
-<section class="section container">
+<section class="section container narrow">
 
-  <div class="story">
-    <h2>The strategy was clear. The room was not.</h2>
-
-    <p>
-      One hundred and twenty people. Smart. Capable. Talented.
-    </p>
-
-    <p>
-      The company had just reset direction. New goals. New structure. New expectations.
-      Some teams had grown. Others had shrunk.
-      Everyone was recalibrating.
-    </p>
-
-    <p>
-      On paper, the strategy made sense.
-      In the room, something felt misaligned.
-    </p>
-
-    <p>
-      People were listening.
-      But they were not leaning in.
-    </p>
-
-    <p>
-      That gap is where performance drifts.
-    </p>
-  </div>
-
-</section>
-
-<section class="transition">
-  <h2>
-    Strategy does not fail quietly.
-    <span>Activation does.</span>
-  </h2>
+  <h2>The problem isn’t strategy.</h2>
 
   <p>
-    When teams cannot clearly articulate what drives them,
-    or how their role connects to results,
-    execution slows. Ownership blurs. Energy fades.
+    Leaders design strategy all the time. Vision decks are built.
+    Roadmaps are defined. OKRs are set.
   </p>
+
+  <p>
+    But unless your people understand how their day-to-day work connects to that vision,
+    the strategy will not go the distance.
+  </p>
+
+  <p>
+    Engagement is not happiness. It is not satisfaction.
+    Engagement is commitment. Effort. Ownership.
+    It is the willingness to try harder because the work feels meaningful.
+  </p>
+
+  <p>
+    And most companies do not know how to measure it,
+    communicate about it,
+    or activate it.
+  </p>
+
 </section>
 
-<section class="expect container">
+<section class="statement">
 
-  <div class="expect-grid">
+  <h2>
+    Activation is the bridge
+    <span>between vision and results.</span>
+  </h2>
 
-    <div class="expect-item">
-      <h3>Clarity in Motivation</h3>
+</section>
+
+<section class="section container narrow">
+
+  <p>
+    For over fifteen years, Ben has helped growing companies translate big ideas into lived experience.
+  </p>
+
+  <p>
+    At ClassPass, he led learning and development as the company scaled from 200 to 700 employees.
+    At LifeLabs Learning, he partnered with HR leaders and executives to design measurable training programs.
+    At Rocket Money, he shapes the day-to-day experience of a fast-moving tech office.
+  </p>
+
+  <p>
+    He has worked across customer service, marketing, engineering,
+    sales, operations, and leadership teams.
+  </p>
+
+  <p>
+    His reputation inside organizations has been consistent:
+    the person who can step into the room,
+    clarify the message,
+    elevate the energy,
+    and help people commit to the mission.
+  </p>
+
+</section>
+
+<section class="section container">
+
+  <h2>How We Work Together</h2>
+
+  <div class="offer-grid">
+
+    <div class="offer-card">
+      <h3>Keynote Activation Experience</h3>
       <p>
-        Teams leave with shared language around what drives them
-        and how activation shows up inside their role.
+        An interactive keynote designed for company offsites,
+        leadership retreats, and all-hands meetings.
+        Teams leave with language around motivation,
+        clarity around their role,
+        and a renewed commitment to the company vision.
       </p>
     </div>
 
-    <div class="expect-item">
-      <h3>Measurable Engagement</h3>
+    <div class="offer-card">
+      <h3>Leadership & Team Consulting</h3>
       <p>
-        Leaders gain tools to identify and reinforce motivation
-        through behavior and execution.
-      </p>
-    </div>
-
-    <div class="expect-item">
-      <h3>Stronger Results</h3>
-      <p>
-        The offsite becomes a pivot point, not just a memory.
+        Small-group or executive consulting focused on aligning leadership communication,
+        activating engagement metrics,
+        and designing a strategy that people will actually execute.
       </p>
     </div>
 
@@ -418,53 +393,39 @@ footer{
 
 </section>
 
-<section class="testimonial">
-
-  <blockquote>
-    “The session didn’t just energise the team.
-    It changed how we talk about ownership.”
-  </blockquote>
-
-  <cite>Future Client Name | Title</cite>
-
-</section>
-
-<section class="final container">
+<section class="statement">
 
   <h2>
-    Activate the room.
-    <span>Change the year.</span>
+    When your people are activated,
+    <span>your strategy goes the distance.</span>
   </h2>
 
-  <a href="#" class="cta-large">Enquire Now</a>
+  <a href="#" class="cta-large" style="margin-top:50px;">Activate Your Team</a>
 
 </section>
 
 <footer>
-
   <div class="container footer-grid">
 
-    <div class="footer-brand">
-      <h3>Ben Hawes ⚡️</h3>
-      <p>
-        Team Engagement & Activation Speaker helping companies
-        align motivation, strengthen communication,
-        and drive measurable results.
+    <div>
+      <h4>Ben Hawes ⚡️</h4>
+      <p style="color:var(--soft);">
+        Team Engagement & Activation Speaker helping companies align motivation,
+        elevate engagement, and drive measurable results.
       </p>
     </div>
 
-    <div class="footer-links">
-      <a href="#">Home</a>
+    <div>
+      <h4>Explore</h4>
       <a href="#">About</a>
-      <a href="#">Testimonials</a>
+      <a href="#">Speaking</a>
       <a href="#">Contact</a>
     </div>
 
-    <div class="footer-links">
+    <div>
+      <h4>Connect</h4>
       <a href="#">LinkedIn</a>
       <a href="#">Instagram</a>
-      <a href="#">Life in Bold</a>
-      <a href="#">Rent My Booth</a>
     </div>
 
   </div>
@@ -472,7 +433,6 @@ footer{
   <div class="footer-bottom">
     © 2026 Ben Hawes
   </div>
-
 </footer>
 
 </body>
