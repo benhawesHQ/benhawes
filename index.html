@@ -8,16 +8,9 @@
 
 <title>Ben Hawes | Team Activation Keynote</title>
 
-<link rel="icon" href="data:image/svg+xml,
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-<text y='.9em' font-size='90'>⚡</text>
-</svg>">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-/* GLOBAL */
 
 :root{
 --orange:#F94501;
@@ -33,8 +26,9 @@ box-sizing:border-box;
 }
 
 html,body{
-overflow-x:hidden;
+width:100%;
 max-width:100%;
+overflow-x:hidden;
 }
 
 body{
@@ -75,6 +69,7 @@ p{font-size:20px;margin-bottom:18px;}
 max-width:var(--max);
 margin:auto;
 padding:120px 40px;
+width:100%;
 }
 
 section{border-bottom:1px solid #eee;}
@@ -170,41 +165,30 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-height:100%;
+max-width:100vw;
+height:100vh;
 background:white;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-gap:35px;
-text-align:center;
+gap:40px;
+font-size:28px;
 transform:translateY(-100%);
 transition:.4s;
 z-index:999;
-padding:40px;
+overflow-y:auto;
+text-align:center;
+}
+
+.mobile-menu a{
+text-decoration:none;
+color:black;
+font-weight:600;
 }
 
 .mobile-menu.active{
 transform:translateY(0);
-}
-
-.mobile-menu .menu-logo{
-font-family:Poppins;
-font-size:36px;
-font-weight:900;
-}
-
-.mobile-menu a{
-font-size:24px;
-text-decoration:none;
-color:black;
-}
-
-.mobile-quote{
-margin-top:40px;
-max-width:500px;
-font-size:18px;
-color:#555;
 }
 
 /* HERO */
@@ -274,7 +258,11 @@ font-size:22px;
 
 /* PROBLEM */
 
-.problem{text-align:center;max-width:850px;margin:auto;}
+.problem{
+text-align:center;
+max-width:850px;
+margin:auto;
+}
 
 /* FRAMEWORK */
 
@@ -391,6 +379,11 @@ border:1px solid #ddd;
 border-radius:8px;
 }
 
+.reply-note{
+font-size:14px;
+color:#666;
+}
+
 /* FOOTER */
 
 footer{
@@ -408,14 +401,21 @@ text-align:center;
 grid-template-columns:1fr;
 }
 
-.nav-links{display:none;}
-.hamburger{display:flex;}
+.nav-links{
+display:none;
+}
+
+.hamburger{
+display:flex;
+}
 
 .container{
 padding:80px 25px;
 }
 
-h1{font-size:42px;}
+h1{
+font-size:42px;
+}
 
 .hero-buttons{
 flex-direction:column;
@@ -467,20 +467,10 @@ Now booking Q2 and Q3 keynote chats.
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-
-<div class="menu-logo">Ben Hawes<span style="color:#F94501">.</span></div>
-
 <a href="#about">About</a>
 <a href="#framework">Keynote</a>
 <a href="#testimonials">Testimonials</a>
 <a href="#contact">Bring Ben In</a>
-
-<div class="mobile-quote">
-“Engagement isn’t just about happiness. It’s about the level to which employees are willing to spend their energy going the distance for the mission.”
-<br><br>
-— Ben Hawes
-</div>
-
 </div>
 
 <!-- HERO -->
@@ -561,6 +551,119 @@ Execution happens when people feel personally connected to the work ahead.
 
 </section>
 
+<!-- QUOTE -->
+
+<section class="container">
+
+<div class="quote-panel">
+
+“Engagement isn’t just about happiness.
+
+It’s about the level to which employees are willing to spend their energy going the distance for the mission.”
+
+<br><br>
+
+— Ben Hawes
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="container">
+
+<div class="about">
+
+<img src="headshot.jpg">
+
+<div>
+
+<h2>Meet Ben</h2>
+
+<p>
+Ben Hawes is a team activation keynote speaker who believes the most powerful driver of execution is emotional connection to the mission.
+</p>
+
+<p>
+After leading learning and development initiatives at ClassPass and supporting global culture and engagement programs at LifeLabs Learning, Ben developed frameworks that help teams align around purpose, clarity, and commitment.
+</p>
+
+<p>
+Today he works with organizations to activate teams around strategy through storytelling, shared experiences, and practical frameworks leaders and team members can apply immediately.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials" class="container">
+
+<h2>What Leaders Are Saying on <span style="color:#0A66C2;">LinkedIn</span></h2>
+
+<div class="testimonials">
+
+<div class="linkedin-post">
+<div class="linkedin-label">LinkedIn</div>
+<p>“Ben is a natural leader and helped employees truly understand the mission and vision of the company.”</p>
+<p><b>Payal Kadakia</b><br>Founder, ClassPass</p>
+</div>
+
+<div class="linkedin-post">
+<div class="linkedin-label">LinkedIn</div>
+<p>“Ben brings passion, humor, and clarity that energizes the entire organization.”</p>
+<p><b>Susan Loh</b><br>People & HR Consultant</p>
+</div>
+
+<div class="linkedin-post">
+<div class="linkedin-label">LinkedIn</div>
+<p>“Ben consistently stood out as someone who could bring energy and alignment to teams.”</p>
+<p><b>Fritz Lanman</b><br>CEO, Playlist</p>
+</div>
+
+<div class="linkedin-post">
+<div class="linkedin-label">LinkedIn</div>
+<p>“Ben built an impressive catalog of learning programs and became a cultural center for the company.”</p>
+<p><b>Petra Townsend</b><br>People & Culture Leader</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="container">
+
+<h2>Bring Ben to Your Team</h2>
+
+<p>Interested in a keynote, offsite talk, or leadership session?</p>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Name" required>
+<input type="text" placeholder="Company">
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Tell me about your event or team"></textarea>
+
+<button type="submit" class="button primary">Get In Touch</button>
+
+<div class="reply-note">I reply in less than 24 hours.</div>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© Ben Hawes | Team Activation Keynote Speaker</p>
+
+</footer>
+
 <script>
 
 const tabs=[
@@ -602,6 +705,13 @@ hamburger.onclick=()=>{
 hamburger.classList.toggle("active")
 mobileMenu.classList.toggle("active")
 }
+
+document.querySelectorAll(".mobile-menu a").forEach(link=>{
+link.onclick=()=>{
+hamburger.classList.remove("active")
+mobileMenu.classList.remove("active")
+}
+})
 
 </script>
 
