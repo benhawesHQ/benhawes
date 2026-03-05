@@ -135,6 +135,69 @@ padding:12px 24px;
 border-radius:8px;
 }
 
+/* ---------------- HAMBURGER ---------------- */
+
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* ---------------- MOBILE MENU ---------------- */
+
+.mobile-menu{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:white;
+z-index:2000;
+display:none;
+padding:60px 30px;
+}
+
+.mobile-menu.active{
+display:block;
+}
+
+.mobile-inner{
+max-width:500px;
+margin:auto;
+text-align:center;
+}
+
+.mobile-logo{
+font-size:32px;
+font-family:Poppins;
+font-weight:900;
+margin-bottom:40px;
+}
+
+.mobile-logo span{
+color:var(--orange);
+}
+
+.mobile-links{
+display:flex;
+flex-direction:column;
+gap:24px;
+margin-bottom:50px;
+}
+
+.mobile-links a{
+font-size:26px;
+text-decoration:none;
+color:black;
+font-weight:600;
+}
+
+.mobile-quote{
+font-size:18px;
+line-height:1.6;
+color:#555;
+}
+
 /* ---------------- HERO ---------------- */
 
 .hero{
@@ -378,6 +441,14 @@ margin-top:8px;
 
 @media(max-width:900px){
 
+.nav-links{
+display:none;
+}
+
+.hamburger{
+display:block;
+}
+
 .hero,
 .about,
 .testimonials,
@@ -423,18 +494,47 @@ Ben Hawes<span>.</span>
 </div>
 
 <div class="nav-links">
-
 <a href="#about">About</a>
 <a href="#framework">Keynote</a>
 <a href="#testimonials">Testimonials</a>
-
 <a href="#contact" class="cta">Bring Ben In</a>
-
 </div>
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
 
 </div>
 
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+
+<div class="mobile-inner">
+
+<div class="mobile-logo">
+Ben Hawes<span>.</span>
+</div>
+
+<div class="mobile-links">
+<a href="#about" onclick="toggleMenu()">About</a>
+<a href="#framework" onclick="toggleMenu()">Keynote</a>
+<a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+<a href="#contact" onclick="toggleMenu()">Bring Ben In</a>
+</div>
+
+<div class="mobile-quote">
+“Engagement isn’t just about happiness.
+
+It’s about the level to which employees are willing to spend their energy going the distance for the mission.”
+
+<br><br>
+— Ben Hawes
+</div>
+
+</div>
+
+</div>
+
+<!-- HERO -->
 
 <section class="container hero">
 
@@ -456,7 +556,6 @@ Ben Hawes helps organizations <a href="#framework" class="orange"><b>activate th
 <div class="hero-buttons">
 
 <a href="#contact" class="button primary">Check Availability</a>
-
 <a href="#framework" class="button secondary">See the Keynote</a>
 
 </div>
@@ -472,327 +571,70 @@ Or leave a voicemail → (646) 543-7205
 <div class="video-square"></div>
 
 <div class="video">
-
 <iframe src="https://www.youtube.com/embed/Ca3coU2oqT4" allowfullscreen></iframe>
-
 </div>
 
 </div>
 
 </section>
+
+<!-- QUOTE -->
 
 <section class="container">
 
-<div class="cred">
+<div class="quote-panel">
 
-<p>
+“Engagement isn’t just about happiness.
 
-With leadership and engagement roles at companies like <b>ClassPass</b>, <b>LifeLabs Learning</b>, and <b>Rocket Money</b>, Ben Hawes has helped activate the passion and commitment of thousands of employees across fast-growing teams 🚀
+It’s about the level to which employees are willing to spend their energy going the distance for the mission.”
 
-</p>
+<br><br>
 
-</div>
-
-</section>
-
-<section class="container problem">
-
-<h2>
-
-You have the strategy.<br>
-You have the OKRs.<br><br>
-
-Do you have the team <span class="orange">activated</span> to deliver it?
-
-</h2>
-
-<p>
-
-Companies invest enormous time in strategy. But strategy alone doesn't move the mission forward.
-
-Execution happens when people feel personally connected to the work ahead.
-
-</p>
-
-</section>
-
-<section id="framework" class="framework">
-
-<div class="framework-inner">
-
-<h2>The Activation Framework</h2>
-
-<div class="tabs">
-
-<button class="tab-btn active" onclick="showTab(0)">Clarity</button>
-<button class="tab-btn" onclick="showTab(1)">Communication</button>
-<button class="tab-btn" onclick="showTab(2)">Commitment</button>
-<button class="tab-btn" onclick="showTab(3)">What Teams Walk Away With</button>
-
-</div>
-
-<div class="framework-card" id="tabContent"></div>
+— Ben Hawes
 
 </div>
 
 </section>
 
-<section id="testimonials" class="container">
+<!-- ABOUT -->
 
-<h2>What leaders are saying on <span style="color:#0a66c2">LinkedIn</span></h2>
+<section id="about" class="container">
 
-<div class="testimonials">
+<div class="about">
 
-<!-- Payal -->
-
-<div class="linkedin-post">
-
-<div class="linkedin-label">LinkedIn</div>
-
-<p>
-Ben is a natural leader and a people-person who has been central to the ClassPass team since his earliest days. He helped train new hires, build learning programs, and champion culture throughout the organization. His enthusiasm lights up the room and helps employees truly understand the mission and vision of the company.
-</p>
-
-<div class="linkedin-author">
-
-<a href="#">
-<img src="payal.jpg">
-</a>
+<img src="ben.jpg">
 
 <div>
 
-<a href="#" class="linkedin-name">Payal Kadakia</a>
-
-<div class="linkedin-role">Founder, ClassPass</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Fritz -->
-
-<div class="linkedin-post">
-
-<div class="linkedin-label">LinkedIn</div>
+<h2>Meet Ben</h2>
 
 <p>
-Ben consistently stood out as someone who could bring energy, connection, and alignment to teams. His work in learning and development helped employees understand the strategy while feeling genuinely excited about contributing to the mission.
+Ben Hawes is a team activation keynote speaker who believes the most powerful driver of execution is emotional connection to the mission.
 </p>
-
-<div class="linkedin-author">
-
-<a href="#">
-<img src="fritz.jpg">
-</a>
-
-<div>
-
-<a href="#" class="linkedin-name">Fritz Lanman</a>
-
-<div class="linkedin-role">CEO, Playlist</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Susan -->
-
-<div class="linkedin-post">
-
-<div class="linkedin-label">LinkedIn</div>
 
 <p>
-As the driver of L&D at ClassPass, Ben built an impressive catalog of learning programs. Beyond that, he became the cultural center of the company — his humor and personality brought joy to the office and he became the go-to MC for company meetings and events.
+After leading learning and development initiatives at ClassPass and supporting global culture and engagement programs at LifeLabs Learning, Ben developed frameworks that help teams align around purpose, clarity, and commitment.
 </p>
-
-<div class="linkedin-author">
-
-<a href="#">
-<img src="susan.jpg">
-</a>
-
-<div>
-
-<a href="#" class="linkedin-name">Susan Loh</a>
-
-<div class="linkedin-role">HR / People Consultant</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Petra -->
-
-<div class="linkedin-post">
-
-<div class="linkedin-label">LinkedIn</div>
 
 <p>
-Ben brings great energy to everything he does. He deeply cares about building cultures where employees feel valued, included, and invested. He is thoughtful, committed, and an incredible asset to growing teams.
+Today he works with organizations to activate teams around strategy through storytelling, shared experiences, and practical frameworks leaders and team members can apply immediately.
 </p>
-
-<div class="linkedin-author">
-
-<a href="#">
-<img src="petra.jpg">
-</a>
-
-<div>
-
-<a href="#" class="linkedin-name">Petra Townsend</a>
-
-<div class="linkedin-role">People & Culture Leadership</div>
-
-</div>
-
-</div>
 
 </div>
 
 </div>
 
 </section>
-
-<section id="contact" class="container cta-section">
-
-<h2>
-Interested in bringing Ben to your team?
-</h2>
-
-<p>
-Keynotes are available for offsites, company gatherings, and leadership events.
-</p>
-
-<br>
-
-<a class="button primary">Check Availability</a>
-
-<p class="phone">
-Or call / leave a voicemail → (646) 543-7205
-</p>
-
-</section>
-
-<footer>
-
-<div class="footer-grid">
-
-<div>
-
-<h3>Ben Hawes</h3>
-
-<p>Team Activation Keynote Speaker</p>
-
-</div>
-
-<div>
-
-<h4>Resources</h4>
-
-<a href="#">Download Engagement Worksheet</a>
-<a href="#">Email Newsletter</a>
-
-</div>
-
-<div>
-
-<h4>Projects</h4>
-
-<a href="#">Rent My Booth</a>
-<a href="#">Courses</a>
-
-</div>
-
-<div>
-
-<h4>Contact</h4>
-
-<a href="#">ben@email.com</a>
-<a href="#">(646) 543-7205</a>
-
-</div>
-
-</div>
-
-</footer>
 
 <script>
 
-const tabs=[
+function toggleMenu(){
 
-`
-<h3>Clarity</h3>
+const menu=document.getElementById("mobileMenu");
 
-<p>
-
-The first moment in the keynote focuses on helping employees reconnect their daily work to the larger mission of the organization.
-
-Teams explore how strategy, OKRs, and goals translate into real work — and how each person’s role contributes to the bigger picture.
-
-This section helps employees shift from simply completing tasks to understanding the real impact of their work.
-
-</p>
-`,
-
-`
-<h3>Communication</h3>
-
-<p>
-
-Once teams reconnect to purpose, the next step is learning how to talk about engagement openly.
-
-Employees explore how to communicate what motivates them, what drains energy, and how leaders and teams can have honest conversations about alignment.
-
-These conversations help teams build a shared language around engagement and ensure expectations are clear across the organization.
-
-</p>
-`,
-
-`
-<h3>Commitment</h3>
-
-<p>
-
-Ultimately engagement is a personal decision.
-
-Employees reflect on the level of energy they bring to the mission and how they choose to show up for the work ahead.
-
-This moment encourages ownership, accountability, and pride in contributing to the organization's success.
-
-</p>
-`,
-
-`
-<h3>What Teams Walk Away With</h3>
-
-<p>
-
-By the end of the keynote, teams walk away with a renewed connection to the company mission, strategy, and goals.
-
-They leave with clarity around their own commitment, a shared language for discussing engagement across teams, and a framework that helps organizations stay aligned and energized as they pursue big results together.
-
-</p>
-`
-
-];
-
-function showTab(i){
-
-document.querySelector("#tabContent").innerHTML=tabs[i];
-
-document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
-
-document.querySelectorAll(".tab-btn")[i].classList.add("active");
+menu.classList.toggle("active");
 
 }
-
-showTab(0);
 
 </script>
 
