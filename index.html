@@ -56,12 +56,16 @@ margin-bottom:30px;
 
 h2{
 font-size:46px;
-margin-bottom:25px;
+margin-bottom:30px;
 }
 
 p{
 font-size:20px;
 margin-bottom:18px;
+}
+
+.orange{
+color:var(--orange);
 }
 
 /* ---------------- LAYOUT ---------------- */
@@ -146,10 +150,6 @@ align-items:center;
 padding-top:120px;
 }
 
-.people{
-color:var(--orange);
-}
-
 .hero-buttons{
 margin-top:35px;
 display:flex;
@@ -230,22 +230,40 @@ margin:auto;
 text-align:center;
 }
 
-/* ---------------- MODEL ---------------- */
+/* ---------------- FRAMEWORK TABS ---------------- */
 
-.model{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
+.tabs{
 margin-top:60px;
 }
 
-.card{
+.tab-buttons{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.tab-btn{
+padding:14px 22px;
+border-radius:30px;
+border:none;
+background:#f4f4f4;
+cursor:pointer;
+font-weight:600;
+}
+
+.tab-btn.active{
+background:var(--orange);
+color:white;
+}
+
+.tab-content{
 background:#fafafa;
-padding:40px;
+padding:50px;
 border-radius:16px;
 }
 
-/* ---------------- BIG QUOTE ---------------- */
+/* ---------------- QUOTE ---------------- */
 
 .quote-panel{
 background:var(--orange);
@@ -281,20 +299,39 @@ gap:40px;
 margin-top:60px;
 }
 
-.testimonial{
-background:#fafafa;
+.linkedin-card{
+background:white;
 padding:40px;
 border-radius:16px;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.linkedin-header{
+display:flex;
+align-items:center;
+gap:14px;
+margin-bottom:20px;
+}
+
+.linkedin-header img{
+width:50px;
+height:50px;
+border-radius:50%;
+}
+
+.linkedin-name{
+font-weight:600;
+}
+
+.linkedin-title{
+font-size:14px;
+color:#666;
 }
 
 /* ---------------- CTA ---------------- */
 
 .cta-section{
 text-align:center;
-}
-
-.cta-section h2{
-margin-bottom:20px;
 }
 
 /* ---------------- FOOTER ---------------- */
@@ -313,19 +350,48 @@ margin-top:100px;
 
 .hero,
 .about,
-.model,
 .testimonials{
 grid-template-columns:1fr;
 }
 
-h1{
-font-size:44px;
-}
-
 .container{
-padding:90px 30px;
+padding:90px 28px;
 }
 
+h1{
+font-size:42px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.button{
+width:100%;
+text-align:center;
+}
+
+}
+
+/* sticky mobile CTA */
+
+.mobile-cta{
+display:none;
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:var(--orange);
+color:white;
+text-align:center;
+padding:16px;
+font-weight:700;
+}
+
+@media(max-width:700px){
+.mobile-cta{
+display:block;
+}
 }
 
 </style>
@@ -347,13 +413,10 @@ Ben Hawes<span>.</span>
 </div>
 
 <div class="nav-links">
-
 <a href="#about">About</a>
 <a href="#framework">Keynote</a>
 <a href="#testimonials">Testimonials</a>
-
 <a href="#contact" class="cta">Bring Ben In</a>
-
 </div>
 
 </div>
@@ -370,7 +433,7 @@ Ben Hawes<span>.</span>
 <h1>
 
 Strategy doesn’t go the distance.<br>
-<span class="people">People do.</span>
+<span class="orange">People do.</span>
 
 </h1>
 
@@ -378,7 +441,7 @@ Strategy doesn’t go the distance.<br>
 
 The most powerful strategy in the world only works when the people responsible for delivering it feel connected to the mission.
 
-Ben Hawes helps organizations activate their people so strategy turns into momentum.
+Ben Hawes helps organizations <span class="orange">activate their people</span> so strategy turns into momentum.
 
 </p>
 
@@ -407,7 +470,7 @@ allowfullscreen></iframe>
 
 <p>
 
-With leadership and engagement roles at companies like <b>ClassPass, LifeLabs Learning, and Rocket Money</b>, Ben Hawes has helped activate the passion and commitment of thousands of employees across fast-growing teams.
+With leadership and engagement roles at companies like <b>ClassPass</b>, <b>LifeLabs Learning</b>, and <b>Rocket Money</b>, Ben Hawes has helped activate the passion and commitment of thousands of employees across fast-growing teams.
 
 </p>
 
@@ -418,10 +481,11 @@ With leadership and engagement roles at companies like <b>ClassPass, LifeLabs Le
 <section class="container problem">
 
 <h2>
+
 You have the strategy.<br>
 You have the OKRs.<br><br>
 
-Do you have the team activated to deliver it?
+Do you have the team <span class="orange">activated</span> to deliver it?
 
 </h2>
 
@@ -439,40 +503,27 @@ Execution happens when people feel personally connected to the work ahead.
 
 <h2>The Activation Framework</h2>
 
-<p>
+<div class="tabs">
 
-Ben’s keynote focuses on the moment where strategy becomes human. Where employees reconnect to purpose and choose how they show up for the work ahead.
+<div class="tab-buttons">
 
-</p>
+<button class="tab-btn active" onclick="showTab(0)">Clarity</button>
+<button class="tab-btn" onclick="showTab(1)">Communication</button>
+<button class="tab-btn" onclick="showTab(2)">Commitment</button>
+<button class="tab-btn" onclick="showTab(3)">What Teams Walk Away With</button>
 
-<div class="model">
+</div>
 
-<div class="card">
+<div class="tab-content" id="tabContent">
 
 <h3>Clarity</h3>
 
 <p>
-Understanding how your role connects to the mission and the impact of the work.
-</p>
 
-</div>
+Employees reflect on how their role connects to the mission, strategy, and goals of the company.
 
-<div class="card">
+The keynote helps teams reconnect their daily work to the bigger picture so that people feel purpose in what they’re doing.
 
-<h3>Communication</h3>
-
-<p>
-Creating open conversations across teams about motivation, expectations, and alignment.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Commitment</h3>
-
-<p>
-The personal decision employees make about how much energy they bring to the mission.
 </p>
 
 </div>
@@ -537,7 +588,15 @@ Today he works with organizations to activate teams around strategy through stor
 
 <div class="testimonials">
 
-<div class="testimonial">
+<a href="https://linkedin.com" target="_blank" class="linkedin-card">
+
+<div class="linkedin-header">
+<img src="https://randomuser.me/api/portraits/women/45.jpg">
+<div>
+<div class="linkedin-name">Payal Kadakia</div>
+<div class="linkedin-title">Founder, ClassPass</div>
+</div>
+</div>
 
 <p>
 
@@ -545,45 +604,25 @@ Ben is a natural leader and a central part of the ClassPass culture. His enthusi
 
 </p>
 
-<strong>Payal Kadakia — Founder, ClassPass</strong>
+</a>
 
+<a href="https://linkedin.com" target="_blank" class="linkedin-card">
+
+<div class="linkedin-header">
+<img src="https://randomuser.me/api/portraits/women/46.jpg">
+<div>
+<div class="linkedin-name">Susan Loh</div>
+<div class="linkedin-title">People & HR Consultant</div>
 </div>
-
-<div class="testimonial">
+</div>
 
 <p>
 
-Ben brings passion, humor, and clarity that energizes the entire organization. People leave his sessions genuinely excited about the work ahead.
+Ben brings passion, humor, and clarity that energizes the entire organization. People leave his sessions excited about the work ahead.
 
 </p>
 
-<strong>People Leader</strong>
-
-</div>
-
-<div class="testimonial">
-
-<p>
-
-I've never seen someone connect with employees the way Ben does. He brings energy that helps teams feel invested again.
-
-</p>
-
-<strong>Operations Leader</strong>
-
-</div>
-
-<div class="testimonial">
-
-<p>
-
-Ben creates moments where teams pause, reconnect to purpose, and leave aligned around the mission.
-
-</p>
-
-<strong>HR Director</strong>
-
-</div>
+</a>
 
 </div>
 
@@ -610,12 +649,47 @@ Keynotes are available for team offsites, company gatherings, and leadership eve
 <footer>
 
 <p>
-
 © Ben Hawes | Team Activation Keynote Speaker
-
 </p>
 
 </footer>
+
+<div class="mobile-cta">
+Bring Ben to Your Team
+</div>
+
+<script>
+
+const tabs=[
+`
+<h3>Clarity</h3>
+<p>Employees reconnect their roles to the mission and understand the impact of their work.</p>
+`,
+`
+<h3>Communication</h3>
+<p>Teams learn how to talk openly about engagement and alignment across the organization.</p>
+`,
+`
+<h3>Commitment</h3>
+<p>Employees reflect on the energy they bring to the mission and how they choose to show up.</p>
+`,
+`
+<h3>What Teams Walk Away With</h3>
+<p>A renewed connection to the company mission, clarity around personal commitment, and a shared framework to communicate engagement across teams.</p>
+`
+];
+
+function showTab(i){
+
+document.querySelector("#tabContent").innerHTML=tabs[i];
+
+document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+
+document.querySelectorAll(".tab-btn")[i].classList.add("active");
+
+}
+
+</script>
 
 </body>
 </html>
