@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,18 +13,20 @@
 <text y='.9em' font-size='90'>⚡</text>
 </svg>">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
+/* ---------------- DESIGN SYSTEM ---------------- */
+
 :root{
 --orange:#F94501;
---lightorange:#fde6dc;
+--lightorange:rgba(249,69,1,.08);
 --black:#111;
 --max:1200px;
 }
 
-/* GLOBAL */
+/* ---------------- RESET ---------------- */
 
 *{
 margin:0;
@@ -32,101 +35,108 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Inter,sans-serif;
-color:#111;
+font-family:"Inter",sans-serif;
+color:var(--black);
 background:white;
 line-height:1.7;
+overflow-x:hidden;
 }
 
-.container{
-max-width:var(--max);
-margin:auto;
-padding:0 40px;
-}
+/* ---------------- TYPOGRAPHY ---------------- */
 
-section{
-padding:150px 0;
+h1,h2,h3{
+font-family:"Poppins";
 }
 
 h1{
-font-size:68px;
-font-weight:900;
+font-size:72px;
 line-height:1.05;
 margin-bottom:30px;
 }
 
 h2{
-font-size:42px;
-font-weight:800;
-margin-bottom:30px;
+font-size:46px;
+margin-bottom:25px;
 }
 
 p{
 font-size:20px;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
-/* TOP BAR */
+/* ---------------- LAYOUT ---------------- */
 
-.topbar{
+.container{
+max-width:var(--max);
+margin:auto;
+padding:140px 40px;
+position:relative;
+}
+
+section{
+border-bottom:1px solid #eee;
+}
+
+/* ---------------- ANNOUNCEMENT ---------------- */
+
+.announce{
 background:#111;
 color:white;
 text-align:center;
-padding:10px;
+padding:12px;
 font-size:14px;
 }
 
-/* HEADER */
+/* ---------------- HEADER ---------------- */
 
 header{
 position:sticky;
 top:0;
 background:white;
+z-index:1000;
 border-bottom:1px solid #eee;
-z-index:10;
 }
 
 .nav{
+max-width:var(--max);
+margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-height:110px;
+padding:24px 40px;
 }
 
 .logo{
+font-family:"Poppins";
 font-weight:900;
 font-size:28px;
 }
 
-.logo span{color:var(--orange)}
-
-nav a{
-margin-left:30px;
-font-weight:500;
-color:#111;
-text-decoration:none;
+.logo span{
+color:var(--orange);
 }
 
-/* BUTTONS */
+.nav-links{
+display:flex;
+gap:30px;
+align-items:center;
+}
 
-.btn{
-display:inline-block;
-padding:15px 32px;
-border-radius:10px;
+.nav-links a{
+text-decoration:none;
+color:var(--black);
+font-weight:500;
+}
+
+.cta{
+background:var(--orange);
+color:white;
+padding:12px 24px;
+border-radius:8px;
 font-weight:600;
 }
 
-.btn-primary{
-background:var(--orange);
-color:white;
-}
-
-.btn-outline{
-border:2px solid #111;
-color:#111;
-}
-
-/* HERO */
+/* ---------------- HERO ---------------- */
 
 .hero{
 display:grid;
@@ -134,64 +144,44 @@ grid-template-columns:1fr 1fr;
 gap:90px;
 align-items:center;
 padding-top:120px;
-position:relative;
 }
-
-/* drifting shapes */
-
-.hero:before{
-content:"";
-position:absolute;
-width:220px;
-height:220px;
-background:var(--lightorange);
-border-radius:40px;
-left:-80px;
-top:-60px;
-opacity:.4;
-}
-
-.hero:after{
-content:"";
-position:absolute;
-width:160px;
-height:160px;
-background:var(--lightorange);
-border-radius:30px;
-right:0;
-bottom:-50px;
-opacity:.4;
-}
-
-/* underline */
 
 .people{
-position:relative;
-display:inline-block;
+color:var(--orange);
 }
 
-.people:after{
-content:"";
-position:absolute;
-left:0;
-bottom:-10px;
-width:100%;
-height:14px;
-background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 15 Q 100 5 195 15' stroke='%23F94501' stroke-width='7' fill='none'/%3E%3C/svg%3E") no-repeat center;
-background-size:contain;
+.hero-buttons{
+margin-top:35px;
+display:flex;
+gap:20px;
 }
 
-/* video */
+.button{
+padding:14px 28px;
+border-radius:10px;
+font-weight:600;
+text-decoration:none;
+}
 
-.hero-video{
+.primary{
+background:var(--orange);
+color:white;
+}
+
+.secondary{
+border:2px solid #111;
+color:#111;
+}
+
+.video{
 position:relative;
-padding-bottom:56.25%;
-height:0;
+padding-top:56%;
 border-radius:20px;
 overflow:hidden;
+box-shadow:0 25px 70px rgba(0,0,0,.15);
 }
 
-.hero-video iframe{
+.video iframe{
 position:absolute;
 top:0;
 left:0;
@@ -200,79 +190,80 @@ height:100%;
 border:0;
 }
 
-.activate{
-color:var(--orange);
-font-weight:700;
+/* ---------------- SHAPES ---------------- */
+
+.shape{
+position:absolute;
+background:var(--lightorange);
+border-radius:40px;
+z-index:-1;
 }
 
-.hero-buttons{
-margin-top:30px;
-display:flex;
-gap:20px;
-flex-wrap:wrap;
+.shape.one{
+width:220px;
+height:220px;
+top:120px;
+left:-120px;
 }
 
-/* OKR SECTION */
+.shape.two{
+width:160px;
+height:160px;
+bottom:80px;
+right:-80px;
+}
 
-.statement{
+/* ---------------- CREDIBILITY ---------------- */
+
+.cred{
 text-align:center;
 max-width:900px;
 margin:auto;
+font-size:22px;
 }
 
-.statement h2{
-font-size:48px;
+/* ---------------- PROBLEM ---------------- */
+
+.problem{
+max-width:900px;
+margin:auto;
+text-align:center;
 }
 
-.stat-number{
-font-size:60px;
-font-weight:900;
-margin-top:40px;
-}
-
-/* KEYNOTE MODEL */
+/* ---------------- MODEL ---------------- */
 
 .model{
-margin-top:60px;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:50px;
+gap:40px;
+margin-top:60px;
 }
 
-.model-card{
+.card{
 background:#fafafa;
 padding:40px;
 border-radius:16px;
 }
 
-.model-card h3{
-font-size:24px;
-margin-bottom:10px;
-}
+/* ---------------- BIG QUOTE ---------------- */
 
-/* PERFECT FIT */
-
-.fit{
-background:#fafafa;
-padding:100px;
+.quote-panel{
+background:var(--orange);
+color:white;
+padding:120px 80px;
+font-size:34px;
+font-weight:700;
+text-align:center;
 border-radius:20px;
+line-height:1.4;
 }
 
-.fit ul{
-margin-top:30px;
-}
-
-.fit li{
-margin-bottom:20px;
-font-size:20px;
-}
-
-/* ABOUT */
+/* ---------------- ABOUT ---------------- */
 
 .about{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:90px;
+gap:80px;
 align-items:center;
 }
 
@@ -281,75 +272,127 @@ width:100%;
 border-radius:20px;
 }
 
-/* MOBILE */
+/* ---------------- TESTIMONIALS ---------------- */
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+margin-top:60px;
+}
+
+.testimonial{
+background:#fafafa;
+padding:40px;
+border-radius:16px;
+}
+
+/* ---------------- CTA ---------------- */
+
+.cta-section{
+text-align:center;
+}
+
+.cta-section h2{
+margin-bottom:20px;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+background:#111;
+color:white;
+padding:80px 40px;
+text-align:center;
+margin-top:100px;
+}
+
+/* ---------------- MOBILE ---------------- */
 
 @media(max-width:900px){
 
-.hero{grid-template-columns:1fr}
+.hero,
+.about,
+.model,
+.testimonials{
+grid-template-columns:1fr;
+}
 
-.about{grid-template-columns:1fr}
+h1{
+font-size:44px;
+}
 
-.model{grid-template-columns:1fr}
-
-h1{font-size:44px}
+.container{
+padding:90px 30px;
+}
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="topbar">
-Now booking Q2 & Q3 keynotes — Check availability
+<div class="announce">
+Now booking Q2 and Q3 keynote chats. Check availability here.
 </div>
 
 <header>
 
-<div class="container nav">
+<div class="nav">
 
 <div class="logo">
 Ben Hawes<span>.</span>
 </div>
 
-<nav>
+<div class="nav-links">
+
 <a href="#about">About</a>
-<a href="#keynote">Keynote</a>
-<a href="#contact" class="btn btn-primary">Bring Ben In</a>
-</nav>
+<a href="#framework">Keynote</a>
+<a href="#testimonials">Testimonials</a>
+
+<a href="#contact" class="cta">Bring Ben In</a>
+
+</div>
 
 </div>
 
 </header>
+
+<div class="shape one"></div>
+<div class="shape two"></div>
 
 <section class="container hero">
 
 <div>
 
 <h1>
+
 Strategy doesn’t go the distance.<br>
 <span class="people">People do.</span>
+
 </h1>
 
 <p>
 
-The most powerful strategy in the world is enabled by people who believe in it.
+The most powerful strategy in the world only works when the people responsible for delivering it feel connected to the mission.
 
-Ben helps organizations <span class="activate">activate their people</span> so momentum follows the plan.
+Ben Hawes helps organizations activate their people so strategy turns into momentum.
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="#contact" class="btn btn-primary">Bring Ben to Your Team</a>
+<a href="#contact" class="button primary">Bring Ben to Your Team</a>
 
-<a href="#keynote" class="btn btn-outline">Learn About the Keynote</a>
-
-</div>
+<a href="#about" class="button secondary">Learn More</a>
 
 </div>
 
-<div class="hero-video">
+</div>
+
+<div class="video">
 
 <iframe src="https://www.youtube.com/embed/Ca3coU2oqT4"
 allowfullscreen></iframe>
@@ -358,75 +401,78 @@ allowfullscreen></iframe>
 
 </section>
 
-<section class="container statement">
+<section class="container">
+
+<div class="cred">
+
+<p>
+
+With leadership and engagement roles at companies like <b>ClassPass, LifeLabs Learning, and Rocket Money</b>, Ben Hawes has helped activate the passion and commitment of thousands of employees across fast-growing teams.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="container problem">
 
 <h2>
 You have the strategy.<br>
 You have the OKRs.<br><br>
 
 Do you have the team activated to deliver it?
+
 </h2>
 
-</section>
-
-<section class="container statement">
-
-<h2>In moments of change, engagement matters most.</h2>
-
 <p>
-When companies grow, shift strategy, or face uncertainty, teams often lose connection to why their work matters.
-</p>
 
-<div class="stat-number">
-4.6×
-</div>
+Companies invest enormous time in strategy. But strategy alone doesn't move the mission forward.
 
-<p>
-Employees who feel their work connects to company mission are dramatically more engaged.
-</p>
+Execution happens when people feel personally connected to the work ahead.
 
-<p style="font-size:14px">
-Source: Gallup State of the Global Workplace Report
 </p>
 
 </section>
 
-<section id="keynote" class="container">
+<section id="framework" class="container">
 
-<h2>The Activation Model</h2>
+<h2>The Activation Framework</h2>
 
-<p style="font-size:24px">
-Clarity + Communication = Commitment
+<p>
+
+Ben’s keynote focuses on the moment where strategy becomes human. Where employees reconnect to purpose and choose how they show up for the work ahead.
+
 </p>
 
 <div class="model">
 
-<div class="model-card">
+<div class="card">
 
 <h3>Clarity</h3>
 
 <p>
-Employees connect their roles, tasks, and goals to the mission through reflection and alignment.
+Understanding how your role connects to the mission and the impact of the work.
 </p>
 
 </div>
 
-<div class="model-card">
+<div class="card">
 
 <h3>Communication</h3>
 
 <p>
-Teams learn how to talk openly about motivation, engagement, and alignment with leadership.
+Creating open conversations across teams about motivation, expectations, and alignment.
 </p>
 
 </div>
 
-<div class="model-card">
+<div class="card">
 
 <h3>Commitment</h3>
 
 <p>
-Employees reflect on their level of commitment and set intentions for how they show up at work.
+The personal decision employees make about how much energy they bring to the mission.
 </p>
 
 </div>
@@ -437,70 +483,45 @@ Employees reflect on their level of commitment and set intentions for how they s
 
 <section class="container">
 
-<div class="fit">
+<div class="quote-panel">
 
-<h2>
-Ben is perfect for your team if...
-</h2>
+“Engagement isn’t just about happiness.
 
-<ul>
+It’s about the level to which employees are willing to spend their energy going the distance for the mission.”
 
-<li>
-Your company is growing quickly and you want your team aligned, motivated, and committed to the mission ahead.
-</li>
+<br><br>
 
-<li>
-You are a tech-forward or strategy-driven organization with roughly 20–150 employees where engagement and alignment directly impact performance.
-</li>
-
-<li>
-You care deeply about people and culture but may not yet have a full-time engagement strategist guiding these conversations.
-</li>
-
-</ul>
-
-<p style="margin-top:40px">
-
-Ben’s talk helps teams reconnect to purpose, boost alignment across the organization, and equip managers and employees to have the honest conversations needed when engagement begins to drift.
-
-</p>
-
-<p style="font-weight:700">
-
-Because when engagement drops, growth slows.<br>
-When teams reconnect to purpose, momentum returns.
-
-</p>
+— Ben Hawes
 
 </div>
 
 </section>
 
-<section id="about">
+<section id="about" class="container">
 
-<div class="container about">
+<div class="about">
 
 <img src="headshot.jpg">
 
 <div>
 
-<h2>About Ben</h2>
+<h2>Meet Ben</h2>
 
 <p>
 
-Ben Hawes is a team activation keynote speaker who helps organizations reconnect strategy with the human energy required to execute it.
+Ben Hawes is a team activation keynote speaker who believes the most powerful driver of execution is emotional connection to the mission.
 
 </p>
 
 <p>
 
-After leading learning initiatives at ClassPass and supporting global culture and engagement programs at LifeLabs Learning, Ben developed frameworks that help teams align around clarity, communication, and commitment.
+After leading learning and development initiatives at ClassPass and supporting global culture and engagement programs at LifeLabs Learning, Ben developed frameworks that help teams align around purpose, clarity, and commitment.
 
 </p>
 
 <p>
 
-Today he works with organizations to activate teams around strategy through storytelling, shared experiences, and practical frameworks that leaders and employees can apply immediately.
+Today he works with organizations to activate teams around strategy through storytelling, shared experiences, and practical frameworks leaders and team members can apply immediately.
 
 </p>
 
@@ -509,6 +530,92 @@ Today he works with organizations to activate teams around strategy through stor
 </div>
 
 </section>
+
+<section id="testimonials" class="container">
+
+<h2>What Leaders Say</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+
+<p>
+
+Ben is a natural leader and a central part of the ClassPass culture. His enthusiasm lights up the room and helps employees truly understand the mission and vision of the company.
+
+</p>
+
+<strong>Payal Kadakia — Founder, ClassPass</strong>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+
+Ben brings passion, humor, and clarity that energizes the entire organization. People leave his sessions genuinely excited about the work ahead.
+
+</p>
+
+<strong>People Leader</strong>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+
+I've never seen someone connect with employees the way Ben does. He brings energy that helps teams feel invested again.
+
+</p>
+
+<strong>Operations Leader</strong>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+
+Ben creates moments where teams pause, reconnect to purpose, and leave aligned around the mission.
+
+</p>
+
+<strong>HR Director</strong>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="container cta-section">
+
+<h2>
+Interested in bringing Ben to your team?
+</h2>
+
+<p>
+
+Keynotes are available for team offsites, company gatherings, and leadership events.
+
+</p>
+
+<br>
+
+<a class="button primary">Check Availability</a>
+
+</section>
+
+<footer>
+
+<p>
+
+© Ben Hawes | Team Activation Keynote Speaker
+
+</p>
+
+</footer>
 
 </body>
 </html>
