@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm, energetic speaker brand */
+    --background: 30 25% 98%;
+    --foreground: 20 20% 8%;
+
+    --primary: 16 97% 49%;        /* Ben's signature warm orange #F94501 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 15% 12%;      /* Rich near-black for contrast */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 30 10% 94%;
+    --muted-foreground: 20 10% 44%;
+
+    --accent: 16 97% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 20% 8%;
+
+    --border: 30 15% 90%;
+    --ring: 16 97% 49%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: hsl(16 97% 49% / 0.15);
+  color: hsl(20 20% 8%);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid hsl(16 97% 49%);
+  outline-offset: 2px;
+}
