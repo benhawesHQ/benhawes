@@ -2,30 +2,21 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ben Hawes | Team Engagement & Activation Speaker</title>
 
-<link rel="icon" href="data:image/svg+xml,
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-<text y='.9em' font-size='90'>⚡</text>
-</svg>">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* ---------------- DESIGN SYSTEM ---------------- */
-
 :root{
 --orange:#F94501;
+--orangeSoft:rgba(249,69,1,.08);
 --black:#111111;
---max:1500px;
+--max:1200px;
 }
-
-/* ---------------- RESET ---------------- */
 
 *{
 margin:0;
@@ -34,649 +25,441 @@ box-sizing:border-box;
 }
 
 body{
-font-family:"Inter",sans-serif;
+font-family:"Open Sans",sans-serif;
 color:var(--black);
-background:white;
 line-height:1.7;
-overflow-x:hidden;
-}
-
-/* ---------------- HEADER ---------------- */
-
-header{
-position:sticky;
-top:0;
 background:white;
-z-index:1000;
-border-bottom:1px solid #eaeaea;
 }
 
-.nav{
-max-width:var(--max);
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:22px 50px;
+h1,h2,h3{
+font-family:"Poppins",sans-serif;
+font-weight:700;
 }
 
-.logo{
-font-family:"Poppins";
-font-weight:800;
-font-size:28px;
+h1{
+font-size:56px;
+line-height:1.1;
 }
 
-.logo span{
-color:var(--orange);
+h2{
+font-size:40px;
+margin-bottom:20px;
 }
 
-.nav-links{
-display:flex;
-gap:30px;
-align-items:center;
+h3{
+font-size:22px;
+margin-bottom:10px;
 }
 
-.nav-links a{
-text-decoration:none;
-color:var(--black);
-font-weight:500;
+p{
+margin-bottom:14px;
 }
-
-.button{
-background:var(--orange);
-color:white;
-padding:12px 24px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-transition:.25s;
-}
-
-.button:hover{
-transform:translateY(-3px);
-}
-
-/* ---------------- LAYOUT ---------------- */
 
 .container{
 max-width:var(--max);
 margin:auto;
-padding:140px 50px;
-position:relative;
+padding:100px 24px;
 }
 
-section{
-border-bottom:1px solid #eee;
+.hero{
+background:white;
+padding:120px 24px;
+text-align:center;
 }
 
-/* ---------------- TYPOGRAPHY ---------------- */
-
-h1,h2,h3{
-font-family:"Poppins";
-}
-
-h1{
-font-size:72px;
-line-height:1.05;
-}
-
-h2{
-font-size:48px;
-margin-bottom:24px;
-}
-
-h3{
-font-size:24px;
-margin-bottom:12px;
-}
-
-p{
-font-size:18px;
-}
-
-/* ---------------- HERO ---------------- */
-
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:80px;
-align-items:center;
-}
-
-.label{
-font-size:14px;
-letter-spacing:1px;
-font-weight:600;
+.hero h1{
 margin-bottom:20px;
 }
 
-.hero-buttons{
-margin-top:28px;
-display:flex;
-gap:20px;
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
 }
 
-/* VIDEO */
-
 .video{
-position:relative;
-padding-top:56%;
-border-radius:16px;
+margin-top:40px;
+border-radius:20px;
 overflow:hidden;
-box-shadow:0 20px 60px rgba(0,0,0,.15);
+box-shadow:0 20px 40px rgba(0,0,0,.1);
 }
 
 .video iframe{
-position:absolute;
-top:0;
-left:0;
 width:100%;
-height:100%;
+height:500px;
 border:0;
 }
 
-/* ---------------- SHAPES ---------------- */
-
-.shape{
-position:absolute;
-background:rgba(249,69,1,.08);
-border-radius:40px;
-z-index:-1;
-}
-
-.shape.one{
-width:220px;
-height:220px;
-top:120px;
-left:-100px;
-}
-
-.shape.two{
-width:160px;
-height:160px;
-bottom:60px;
-right:-60px;
-}
-
-/* ---------------- GRID CARDS ---------------- */
-
-.grid-3{
+.two-col{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-margin-top:60px;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.two-col img{
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.reverse{
+direction:rtl;
+}
+
+.reverse *{
+direction:ltr;
 }
 
 .card{
 background:white;
-padding:40px;
-border-radius:14px;
-border:1px solid #eee;
-transition:.25s;
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
 }
 
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 40px rgba(0,0,0,.08);
-}
-
-/* ---------------- SOCIAL PROOF ---------------- */
-
-.logos{
-display:flex;
-gap:50px;
-flex-wrap:wrap;
+.framework{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:20px;
 margin-top:30px;
+}
+
+.framework div{
+background:var(--orangeSoft);
+padding:20px;
+border-radius:16px;
 font-weight:600;
 }
 
-/* ---------------- TESTIMONIALS ---------------- */
-
-.grid-2{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:40px;
-margin-top:60px;
-}
-
-.quote{
-font-size:20px;
-margin-bottom:20px;
-}
-
-/* ---------------- ABOUT ---------------- */
-
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:80px;
-align-items:center;
-}
-
-.headshot{
-width:100%;
-border-radius:14px;
-}
-
-/* ---------------- FAQ ---------------- */
-
-.faq-item{
-border-bottom:1px solid #eee;
-padding:24px 0;
-cursor:pointer;
-}
-
-.faq-question{
-font-weight:600;
-font-size:20px;
-}
-
-.faq-answer{
-max-height:0;
-overflow:hidden;
-transition:.3s;
-margin-top:10px;
-}
-
-.faq-item.active .faq-answer{
-max-height:200px;
-}
-
-/* ---------------- CTA ---------------- */
-
-.cta{
+.image-break{
+background:var(--orange);
+color:white;
 text-align:center;
+padding:120px 24px;
 }
 
-.cta h2{
-margin-bottom:10px;
+.image-break h2{
+color:white;
+max-width:700px;
+margin:auto;
 }
 
-/* ---------------- FOOTER ---------------- */
+.image-break img{
+margin-top:40px;
+border-radius:20px;
+max-width:900px;
+width:100%;
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
 
-footer{
-padding:80px 50px;
+.testimonials{
 background:#fafafa;
 }
 
-.footer-grid{
-max-width:var(--max);
-margin:auto;
+.testimonial-grid{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:40px;
+grid-template-columns:1fr 1fr;
+gap:30px;
+margin-top:40px;
 }
 
-footer h4{
+.testimonial{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.testimonial h4{
+margin-bottom:6px;
 font-family:"Poppins";
-margin-bottom:10px;
 }
 
-footer a{
-display:block;
+.testimonial span{
+font-size:14px;
+color:#666;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.cta{
+background:var(--orange);
+color:white;
+text-align:center;
+padding:100px 24px;
+}
+
+.cta h2{
+color:white;
+margin-bottom:20px;
+}
+
+.button{
+display:inline-block;
+padding:14px 28px;
+background:white;
+color:var(--orange);
+font-weight:600;
+border-radius:30px;
 text-decoration:none;
-color:var(--black);
-margin-bottom:8px;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+footer{
+text-align:center;
+padding:40px;
+font-size:14px;
+color:#777;
+}
 
-@media(max-width:1000px){
+@media(max-width:900px){
 
-.hero-grid,
-.grid-3,
-.grid-2,
-.about-grid,
-.footer-grid{
+.two-col,
+.about{
 grid-template-columns:1fr;
 }
 
-h1{
-font-size:46px;
+.framework{
+grid-template-columns:1fr;
 }
 
-.container{
-padding:100px 30px;
+.testimonial-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:40px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="shape one"></div>
-<div class="shape two"></div>
+<section class="hero">
 
-<header>
-
-<div class="nav">
-
-<div class="logo">
-BenHawes<span>.</span>
-</div>
-
-<div class="nav-links">
-
-<a href="#activation">Activation Model</a>
-<a href="#about">About</a>
-<a href="#faq">FAQ</a>
-
-<a href="#contact" class="button">Get in Touch</a>
-
-</div>
-
-</div>
-
-</header>
-
-<section class="container">
-
-<div class="hero-grid">
-
-<div>
-
-<div class="label">
-TEAM ENGAGEMENT & ACTIVATION SPEAKER
-</div>
-
-<h1>
-Strategy doesn’t go the distance.<br>
-People do.
-</h1>
+<h1>Team Engagement & Activation</h1>
 
 <p>
-
-Organizations spend enormous energy building strategy. Roadmaps are created, priorities are aligned, and goals are defined.
-
-What teams often need next is activation. A moment where people reconnect to the mission and feel genuinely excited about the work ahead.
-
+Strategy is everywhere.  
+What teams often lack is activation.  
+Ben Hawes helps organizations reconnect people to their work, their teams, and the energy that drives great performance.
 </p>
-
-<div class="hero-buttons">
-
-<a href="#contact" class="button">Reach Out</a>
-
-</div>
-
-</div>
 
 <div class="video">
-
 <iframe src="https://www.youtube.com/embed/VIDEOID"></iframe>
-
-</div>
-
 </div>
 
 </section>
 
 <section class="container">
 
-<h2>
-You have the strategy.<br>
-Do you have the activated team to deliver it?
-</h2>
-
-<div class="grid-3">
-
-<div class="card">
-
-<h3>Strategy</h3>
-
-<p>
-Leadership teams spend months developing thoughtful strategies, priorities, and OKRs.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Alignment</h3>
-
-<p>
-Teams understand the direction and what success should look like.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Activation</h3>
-
-<p>
-The missing moment is often energy. People reconnecting to why the work matters and how they personally show up for it.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="activation" class="container">
-
-<h2>
-The Activation Model
-</h2>
-
-<p>
-
-Ben’s keynote introduces a simple framework for how teams reconnect to the mission in front of them. The talk blends storytelling, humor, and lived experience working inside organizations to help teams think about how they show up.
-
-</p>
-
-<div class="grid-3">
-
-<div class="card">
-
-<h3>Clarity</h3>
-
-<p>
-Understanding how your work connects to the mission.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Communication</h3>
-
-<p>
-Healthy conversations that keep teams aligned.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Commitment</h3>
-
-<p>
-The personal decision about how you show up.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="container">
-
-<h2>
-Organizations Ben has worked with
-</h2>
-
-<div class="logos">
-
-<span>ClassPass</span>
-<span>LifeLabs Learning</span>
-<span>Rocket Money</span>
-
-</div>
-
-</section>
-
-<section class="container">
-
-<h2>
-What teams say
-</h2>
-
-<div class="grid-2">
-
-<div class="card">
-
-<p class="quote">
-“Ben completely shifted the energy of the room. People were laughing, reflecting, and talking about the work ahead in a new way.”
-</p>
-
-<strong>Director of Operations</strong>
-
-</div>
-
-<div class="card">
-
-<p class="quote">
-“This was the highlight of our offsite. It helped the team reconnect to the mission.”
-</p>
-
-<strong>Leadership Team</strong>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="about" class="container">
-
-<div class="about-grid">
+<div class="two-col">
 
 <div>
 
-<h2>
-About Ben
-</h2>
+<h2>Strategy is everywhere.</h2>
 
 <p>
+Most companies have thoughtful strategies, clear goals, and well-designed plans. But strategy alone doesn’t create momentum.
+</p>
 
-Ben Hawes has spent more than a decade working inside organizations focused on engagement, training, and team culture.
-
-His career spans roles in customer experience, leadership development, and employee training at companies like ClassPass, LifeLabs Learning, and Rocket Money.
-
-Along the way he became fascinated with a simple question: what actually makes teams feel connected to their work?
-
-Today his keynote brings together those experiences with storytelling and humor to create a moment where teams pause, reconnect to their mission, and feel excited about the work ahead.
-
+<p>
+Execution depends on something deeper: engagement, clarity, and shared energy across a team.
 </p>
 
 </div>
 
-<img src="headshot.jpg" class="headshot">
+<img src="images/1.png">
 
 </div>
 
 </section>
 
-<section id="faq" class="container">
+<section class="container">
 
-<h2>
-Questions organizers ask
-</h2>
+<div class="two-col reverse">
 
-<div class="faq-item">
+<div>
 
-<div class="faq-question">How long is the keynote?</div>
-<div class="faq-answer">
-Most talks are between 45 and 60 minutes depending on the event format.
+<h2>Activation brings strategy to life.</h2>
+
+<p>
+Activation happens when people understand their role, communicate clearly, and commit to moving forward together.
+</p>
+
+<p>
+In Ben’s keynote, teams explore practical ways to reconnect with purpose, build stronger communication, and create real momentum inside their work.
+</p>
+
+</div>
+
+<img src="images/2.png">
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="two-col">
+
+<div>
+
+<h2>The Activation Model</h2>
+
+<p>
+Ben’s approach focuses on three core drivers that help teams move from passive alignment to active engagement.
+</p>
+
+<div class="framework">
+
+<div>Clarity</div>
+<div>Communication</div>
+<div>Commitment</div>
+
 </div>
 
 </div>
 
-<div class="faq-item">
-
-<div class="faq-question">What type of audience is this talk designed for?</div>
-<div class="faq-answer">
-The keynote works best when entire teams experience it together including individual contributors, managers, and leadership.
-</div>
+<img src="images/3.png">
 
 </div>
 
-<div class="faq-item">
+</section>
 
-<div class="faq-question">Is the keynote customizable?</div>
-<div class="faq-answer">
-Ben works with organizers to understand the event goals and align the message accordingly.
+<section class="image-break">
+
+<h2>Engaged teams move faster, collaborate better, and create stronger results.</h2>
+
+<img src="images/4.png">
+
+</section>
+
+<section class="container">
+
+<div class="two-col reverse">
+
+<div>
+
+<h2>Great work starts with people.</h2>
+
+<p>
+Ben combines experience in employee engagement, training, events, and media to help organizations build cultures where people feel energized and connected to their work.
+</p>
+
+<p>
+His talks blend storytelling, practical frameworks, and real-world examples that help teams reflect, laugh, and move forward together.
+</p>
+
+</div>
+
+<img src="images/5.png">
+
+</div>
+
+</section>
+
+<section class="container testimonials">
+
+<h2>What leaders say</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+<h4>Petra Townsend</h4>
+<span>People & Culture Leader</span>
+<p>
+Ben brings great energy to all that he does. He managed learning programs that balanced internal development with outside expertise. Ben has a deep desire to support employees and create a culture where people feel valued, included, and invested in. He is thoughtful, committed, and a joy to work with.
+</p>
+</div>
+
+<div class="testimonial">
+<h4>Hollen Spatz Hellman</h4>
+<span>Operations, CX & People Leader (ClassPass, Gilt)</span>
+<p>
+I’ve never witnessed someone bring people together the way Ben does. He is deeply committed to creating authentic learning environments and constantly pushes himself to grow and take on new challenges. Any company would be lucky to have him.
+</p>
+</div>
+
+<div class="testimonial">
+<h4>Payal Kadakia</h4>
+<span>Founder of ClassPass</span>
+<p>
+Ben is a natural leader and a central part of the ClassPass team culture. He helped train new hires, build learning programs, and champion the mission of the company. His enthusiasm lights up a room and brings energy to every team he works with.
+</p>
+</div>
+
+<div class="testimonial">
+<h4>Susan Loh</h4>
+<span>HR & People Consultant</span>
+<p>
+Ben built an impressive catalog of learning programs and consistently improved them through feedback and iteration. Beyond his work, his personality and humor made him the cultural center of the organization.
+</p>
+</div>
+
+<div class="testimonial">
+<h4>Fritz Lanman</h4>
+<span>CEO Playlist, former ClassPass & Mindbody executive</span>
+<p>
+Ben’s ability to energize teams and connect people to culture and mission is rare. His leadership and presence elevate the organizations he works with.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="contact" class="container cta">
+<section class="container about">
 
-<h2>
-Interested in bringing this keynote to your team?
-</h2>
+<img src="images/headshot.jpg">
 
-<a class="button">Get in Touch with Ben</a>
+<div>
+
+<h2>About Ben</h2>
+
+<p>
+Ben Hawes is a speaker, creative entrepreneur, and event producer who has spent more than a decade helping teams connect, collaborate, and bring ideas to life.
+</p>
+
+<p>
+His background spans employee experience, training, events, media production, and entrepreneurship, giving him a unique perspective on how people and ideas come together inside organizations.
+</p>
+
+<p>
+Ben’s work blends storytelling, humor, and practical frameworks that help teams think differently about engagement, ownership, and momentum.
+</p>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>Bring Activation to Your Team</h2>
+
+<a href="contact.html" class="button">Book Ben</a>
 
 </section>
 
 <footer>
 
-<div class="footer-grid">
-
-<div>
-
-<h4>Ben Hawes</h4>
-<p>Team Engagement & Activation Speaker</p>
-
-</div>
-
-<div>
-
-<h4>Explore</h4>
-
-<a href="#">Speaking</a>
-<a href="#">Podcast</a>
-
-</div>
-
-<div>
-
-<h4>Projects</h4>
-
-<a href="#">Rent My Booth</a>
-
-</div>
-
-<div>
-
-<h4>Connect</h4>
-
-<a href="#">LinkedIn</a>
-<a href="#">Instagram</a>
-
-</div>
-
-</div>
+© Ben Hawes
 
 </footer>
-
-<script>
-
-document.querySelectorAll(".faq-item").forEach(item=>{
-item.addEventListener("click",()=>{
-item.classList.toggle("active")
-})
-})
-
-</script>
 
 </body>
 </html>
