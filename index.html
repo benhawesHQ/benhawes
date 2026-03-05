@@ -17,16 +17,14 @@
 
 <style>
 
-/* ---------------- DESIGN SYSTEM ---------------- */
+/* ---------------- DESIGN ---------------- */
 
 :root{
 --orange:#F94501;
---lightorange:rgba(249,69,1,.08);
 --black:#111;
+--light:#fafafa;
 --max:1200px;
 }
-
-/* ---------------- RESET ---------------- */
 
 *{
 margin:0;
@@ -39,7 +37,6 @@ font-family:"Inter",sans-serif;
 color:var(--black);
 background:white;
 line-height:1.7;
-overflow-x:hidden;
 }
 
 /* ---------------- TYPOGRAPHY ---------------- */
@@ -73,15 +70,14 @@ color:var(--orange);
 .container{
 max-width:var(--max);
 margin:auto;
-padding:140px 40px;
-position:relative;
+padding:120px 40px;
 }
 
 section{
 border-bottom:1px solid #eee;
 }
 
-/* ---------------- ANNOUNCEMENT ---------------- */
+/* ---------------- TOP BAR ---------------- */
 
 .announce{
 background:#111;
@@ -91,14 +87,14 @@ padding:12px;
 font-size:14px;
 }
 
-/* ---------------- HEADER ---------------- */
+/* ---------------- NAV ---------------- */
 
 header{
 position:sticky;
 top:0;
 background:white;
-z-index:1000;
 border-bottom:1px solid #eee;
+z-index:1000;
 }
 
 .nav{
@@ -111,9 +107,9 @@ padding:24px 40px;
 }
 
 .logo{
-font-family:"Poppins";
 font-weight:900;
 font-size:28px;
+font-family:Poppins;
 }
 
 .logo span{
@@ -128,16 +124,15 @@ align-items:center;
 
 .nav-links a{
 text-decoration:none;
-color:var(--black);
+color:black;
 font-weight:500;
 }
 
 .cta{
 background:var(--orange);
 color:white;
-padding:12px 24px;
+padding:12px 22px;
 border-radius:8px;
-font-weight:600;
 }
 
 /* ---------------- HERO ---------------- */
@@ -147,7 +142,6 @@ display:grid;
 grid-template-columns:1fr 1fr;
 gap:90px;
 align-items:center;
-padding-top:120px;
 }
 
 .hero-buttons{
@@ -169,8 +163,8 @@ color:white;
 }
 
 .secondary{
-border:2px solid #111;
-color:#111;
+border:2px solid black;
+color:black;
 }
 
 .video{
@@ -190,29 +184,6 @@ height:100%;
 border:0;
 }
 
-/* ---------------- SHAPES ---------------- */
-
-.shape{
-position:absolute;
-background:var(--lightorange);
-border-radius:40px;
-z-index:-1;
-}
-
-.shape.one{
-width:220px;
-height:220px;
-top:120px;
-left:-120px;
-}
-
-.shape.two{
-width:160px;
-height:160px;
-bottom:80px;
-right:-80px;
-}
-
 /* ---------------- CREDIBILITY ---------------- */
 
 .cred{
@@ -225,42 +196,60 @@ font-size:22px;
 /* ---------------- PROBLEM ---------------- */
 
 .problem{
+text-align:center;
+max-width:850px;
+margin:auto;
+}
+
+/* ---------------- FRAMEWORK ---------------- */
+
+.framework-section{
+background:var(--orange);
+padding:120px 0;
+}
+
+.framework-inner{
 max-width:900px;
 margin:auto;
 text-align:center;
 }
 
-/* ---------------- FRAMEWORK TABS ---------------- */
-
-.tabs{
-margin-top:60px;
+.framework-inner h2{
+color:white;
+margin-bottom:50px;
 }
 
 .tab-buttons{
 display:flex;
-gap:10px;
+justify-content:center;
+gap:14px;
 flex-wrap:wrap;
 margin-bottom:40px;
 }
 
 .tab-btn{
-padding:14px 22px;
-border-radius:30px;
+padding:14px 24px;
+border-radius:40px;
 border:none;
-background:#f4f4f4;
-cursor:pointer;
+background:#ffffff44;
+color:white;
 font-weight:600;
+cursor:pointer;
 }
 
 .tab-btn.active{
-background:var(--orange);
-color:white;
+background:white;
+color:var(--orange);
 }
 
-.tab-content{
-background:#fafafa;
-padding:50px;
-border-radius:16px;
+.framework-card{
+background:white;
+padding:60px;
+border-radius:20px;
+text-align:left;
+max-width:900px;
+margin:auto;
+box-shadow:0 20px 60px rgba(0,0,0,.15);
 }
 
 /* ---------------- QUOTE ---------------- */
@@ -273,7 +262,6 @@ font-size:34px;
 font-weight:700;
 text-align:center;
 border-radius:20px;
-line-height:1.4;
 }
 
 /* ---------------- ABOUT ---------------- */
@@ -290,7 +278,7 @@ width:100%;
 border-radius:20px;
 }
 
-/* ---------------- TESTIMONIALS ---------------- */
+/* ---------------- LINKEDIN POSTS ---------------- */
 
 .testimonials{
 display:grid;
@@ -299,21 +287,28 @@ gap:40px;
 margin-top:60px;
 }
 
-.linkedin-card{
+.linkedin-post{
 background:white;
 padding:40px;
 border-radius:16px;
-box-shadow:0 20px 50px rgba(0,0,0,.08);
+box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
-.linkedin-header{
+.linkedin-label{
+font-weight:600;
+font-size:14px;
+margin-bottom:20px;
+color:#666;
+}
+
+.linkedin-author{
 display:flex;
 align-items:center;
 gap:14px;
-margin-bottom:20px;
+margin-top:25px;
 }
 
-.linkedin-header img{
+.linkedin-author img{
 width:50px;
 height:50px;
 border-radius:50%;
@@ -321,9 +316,11 @@ border-radius:50%;
 
 .linkedin-name{
 font-weight:600;
+text-decoration:none;
+color:black;
 }
 
-.linkedin-title{
+.linkedin-role{
 font-size:14px;
 color:#666;
 }
@@ -339,9 +336,9 @@ text-align:center;
 footer{
 background:#111;
 color:white;
-padding:80px 40px;
+padding:70px;
 text-align:center;
-margin-top:100px;
+margin-top:80px;
 }
 
 /* ---------------- MOBILE ---------------- */
@@ -355,7 +352,7 @@ grid-template-columns:1fr;
 }
 
 .container{
-padding:90px 28px;
+padding:80px 25px;
 }
 
 h1{
@@ -371,27 +368,6 @@ width:100%;
 text-align:center;
 }
 
-}
-
-/* sticky mobile CTA */
-
-.mobile-cta{
-display:none;
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-background:var(--orange);
-color:white;
-text-align:center;
-padding:16px;
-font-weight:700;
-}
-
-@media(max-width:700px){
-.mobile-cta{
-display:block;
-}
 }
 
 </style>
@@ -413,28 +389,26 @@ Ben Hawes<span>.</span>
 </div>
 
 <div class="nav-links">
+
 <a href="#about">About</a>
 <a href="#framework">Keynote</a>
 <a href="#testimonials">Testimonials</a>
+
 <a href="#contact" class="cta">Bring Ben In</a>
+
 </div>
 
 </div>
 
 </header>
 
-<div class="shape one"></div>
-<div class="shape two"></div>
-
 <section class="container hero">
 
 <div>
 
 <h1>
-
 Strategy doesn’t go the distance.<br>
 <span class="orange">People do.</span>
-
 </h1>
 
 <p>
@@ -457,8 +431,7 @@ Ben Hawes helps organizations <span class="orange">activate their people</span> 
 
 <div class="video">
 
-<iframe src="https://www.youtube.com/embed/Ca3coU2oqT4"
-allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/Ca3coU2oqT4" allowfullscreen></iframe>
 
 </div>
 
@@ -499,11 +472,11 @@ Execution happens when people feel personally connected to the work ahead.
 
 </section>
 
-<section id="framework" class="container">
+<section id="framework" class="framework-section">
+
+<div class="framework-inner">
 
 <h2>The Activation Framework</h2>
-
-<div class="tabs">
 
 <div class="tab-buttons">
 
@@ -514,15 +487,15 @@ Execution happens when people feel personally connected to the work ahead.
 
 </div>
 
-<div class="tab-content" id="tabContent">
+<div class="framework-card" id="tabContent">
 
 <h3>Clarity</h3>
 
 <p>
 
-Employees reflect on how their role connects to the mission, strategy, and goals of the company.
+Employees reflect on how their role connects to the company mission, the strategy ahead, and the goals the organization is trying to accomplish.
 
-The keynote helps teams reconnect their daily work to the bigger picture so that people feel purpose in what they’re doing.
+This moment helps teams reconnect their daily work to the bigger picture so that people don’t just understand the plan — they feel personally invested in the outcome.
 
 </p>
 
@@ -588,41 +561,61 @@ Today he works with organizations to activate teams around strategy through stor
 
 <div class="testimonials">
 
-<a href="https://linkedin.com" target="_blank" class="linkedin-card">
+<div class="linkedin-post">
 
-<div class="linkedin-header">
-<img src="https://randomuser.me/api/portraits/women/45.jpg">
-<div>
-<div class="linkedin-name">Payal Kadakia</div>
-<div class="linkedin-title">Founder, ClassPass</div>
-</div>
-</div>
+<div class="linkedin-label">LinkedIn</div>
 
 <p>
 
-Ben is a natural leader and a central part of the ClassPass culture. His enthusiasm lights up the room and helps employees truly understand the mission and vision of the company.
+“I highly recommend Ben's sessions. His enthusiasm lights up the room and helps employees truly understand the mission and vision of the company.”
 
 </p>
 
+<div class="linkedin-author">
+
+<a href="PAYAL_LINK">
+<img src="payal.jpg">
 </a>
 
-<a href="https://linkedin.com" target="_blank" class="linkedin-card">
-
-<div class="linkedin-header">
-<img src="https://randomuser.me/api/portraits/women/46.jpg">
 <div>
-<div class="linkedin-name">Susan Loh</div>
-<div class="linkedin-title">People & HR Consultant</div>
+
+<a href="PAYAL_LINK" class="linkedin-name">Payal Kadakia</a>
+
+<div class="linkedin-role">Founder, ClassPass</div>
+
 </div>
+
 </div>
+
+</div>
+
+<div class="linkedin-post">
+
+<div class="linkedin-label">LinkedIn</div>
 
 <p>
 
-Ben brings passion, humor, and clarity that energizes the entire organization. People leave his sessions excited about the work ahead.
+“Ben brings passion, humor, and clarity that energizes the entire organization. People leave his sessions genuinely excited about the work ahead.”
 
 </p>
 
+<div class="linkedin-author">
+
+<a href="SUSAN_LINK">
+<img src="susan.jpg">
 </a>
+
+<div>
+
+<a href="SUSAN_LINK" class="linkedin-name">Susan Loh</a>
+
+<div class="linkedin-role">People & HR Consultant</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -635,9 +628,7 @@ Interested in bringing Ben to your team?
 </h2>
 
 <p>
-
 Keynotes are available for team offsites, company gatherings, and leadership events.
-
 </p>
 
 <br>
@@ -648,34 +639,28 @@ Keynotes are available for team offsites, company gatherings, and leadership eve
 
 <footer>
 
-<p>
-© Ben Hawes | Team Activation Keynote Speaker
-</p>
+<p>© Ben Hawes | Team Activation Keynote Speaker</p>
 
 </footer>
-
-<div class="mobile-cta">
-Bring Ben to Your Team
-</div>
 
 <script>
 
 const tabs=[
 `
 <h3>Clarity</h3>
-<p>Employees reconnect their roles to the mission and understand the impact of their work.</p>
+<p>Employees reconnect their role to the mission and strategy so the work ahead feels meaningful and aligned.</p>
 `,
 `
 <h3>Communication</h3>
-<p>Teams learn how to talk openly about engagement and alignment across the organization.</p>
+<p>Teams learn how to talk openly about motivation, alignment, and engagement across the organization.</p>
 `,
 `
 <h3>Commitment</h3>
-<p>Employees reflect on the energy they bring to the mission and how they choose to show up.</p>
+<p>Employees reflect on the level of energy they bring to the mission and how they choose to show up.</p>
 `,
 `
 <h3>What Teams Walk Away With</h3>
-<p>A renewed connection to the company mission, clarity around personal commitment, and a shared framework to communicate engagement across teams.</p>
+<p>A renewed connection to the company strategy, mission, goals and OKRs along with a framework to communicate engagement across teams.</p>
 `
 ];
 
