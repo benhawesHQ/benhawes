@@ -5,16 +5,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ben Hawes | Team Engagement & Activation Speaker</title>
+<title>Ben Hawes | Team Activation Speaker</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+<text y=%22.9em%22 font-size=%2290%22>⚡</text>
+</svg>">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
 --orange:#F94501;
---orangeSoft:rgba(249,69,1,.08);
---black:#111111;
+--black:#111;
 --max:1200px;
 }
 
@@ -25,161 +29,159 @@ box-sizing:border-box;
 }
 
 body{
-font-family:"Open Sans",sans-serif;
-color:var(--black);
-line-height:1.7;
+font-family:Inter, sans-serif;
+color:#111;
 background:white;
-}
-
-h1,h2,h3{
-font-family:"Poppins",sans-serif;
-font-weight:700;
-}
-
-h1{
-font-size:56px;
-line-height:1.1;
-}
-
-h2{
-font-size:40px;
-margin-bottom:20px;
-}
-
-h3{
-font-size:22px;
-margin-bottom:10px;
-}
-
-p{
-margin-bottom:14px;
+line-height:1.5;
 }
 
 .container{
 max-width:var(--max);
 margin:auto;
-padding:100px 24px;
+padding:0 30px;
 }
 
-.hero{
-background:white;
-padding:120px 24px;
-text-align:center;
+section{
+padding:90px 0;
 }
 
-.hero h1{
+h1{
+font-size:64px;
+font-weight:900;
+line-height:1.05;
+}
+
+h2{
+font-size:44px;
+font-weight:800;
 margin-bottom:20px;
 }
 
-.hero p{
-font-size:20px;
-max-width:700px;
-margin:auto;
+p{
+font-size:18px;
+margin-bottom:20px;
 }
 
-.video{
-margin-top:40px;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 20px 40px rgba(0,0,0,.1);
+/* ---------------- TOP BAR ---------------- */
+
+.topbar{
+background:#111;
+color:white;
+font-size:14px;
+text-align:center;
+padding:10px;
 }
 
-.video iframe{
-width:100%;
-height:500px;
-border:0;
-}
+/* ---------------- HEADER ---------------- */
 
-.two-col{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.two-col img{
-width:100%;
-border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,.08);
-}
-
-.reverse{
-direction:rtl;
-}
-
-.reverse *{
-direction:ltr;
-}
-
-.card{
+header{
+position:sticky;
+top:0;
 background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,.08);
+border-bottom:1px solid #eee;
+z-index:10;
 }
 
-.framework{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:20px;
-margin-top:30px;
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:80px;
 }
 
-.framework div{
-background:var(--orangeSoft);
-padding:20px;
-border-radius:16px;
+.logo{
+font-size:26px;
+font-weight:900;
+}
+
+.logo span{
+color:var(--orange);
+}
+
+nav a{
+margin-left:30px;
+text-decoration:none;
+color:#111;
+font-weight:500;
+}
+
+.cta{
+background:var(--orange);
+color:white;
+padding:12px 22px;
+border-radius:8px;
+margin-left:25px;
 font-weight:600;
 }
 
-.image-break{
-background:var(--orange);
-color:white;
-text-align:center;
-padding:120px 24px;
+/* ---------------- HERO ---------------- */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
 }
 
-.image-break h2{
+.hero video{
+width:100%;
+border-radius:14px;
+}
+
+.hero-sub{
+font-size:20px;
+margin-top:20px;
+}
+
+.hero-buttons{
+margin-top:30px;
+}
+
+.hero-buttons a{
+margin-right:15px;
+text-decoration:none;
+padding:14px 26px;
+border-radius:8px;
+font-weight:600;
+}
+
+.primary{
+background:var(--orange);
 color:white;
-max-width:700px;
+}
+
+.secondary{
+border:2px solid #111;
+color:#111;
+}
+
+/* ---------------- CREDIBILITY ---------------- */
+
+.cred{
+text-align:center;
+font-size:20px;
+max-width:900px;
 margin:auto;
 }
 
-.image-break img{
-margin-top:40px;
-border-radius:20px;
-max-width:900px;
-width:100%;
-box-shadow:0 20px 40px rgba(0,0,0,.2);
+.cred strong{
+color:var(--orange);
 }
 
-.testimonials{
-background:#fafafa;
-}
+/* ---------------- IMAGE GRID ---------------- */
 
-.testimonial-grid{
+.grid{
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(3,1fr);
 gap:30px;
-margin-top:40px;
 }
 
-.testimonial{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,.08);
+.grid img{
+width:100%;
+border-radius:14px;
 }
 
-.testimonial h4{
-margin-bottom:6px;
-font-family:"Poppins";
-}
-
-.testimonial span{
-font-size:14px;
-color:#666;
-}
+/* ---------------- ABOUT ---------------- */
 
 .about{
 display:grid;
@@ -190,58 +192,40 @@ align-items:center;
 
 .about img{
 width:100%;
-border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,.08);
+border-radius:14px;
 }
 
-.cta{
-background:var(--orange);
-color:white;
-text-align:center;
-padding:100px 24px;
+/* ---------------- TESTIMONIALS ---------------- */
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
 }
 
-.cta h2{
-color:white;
-margin-bottom:20px;
+.quote{
+background:#fafafa;
+padding:35px;
+border-radius:12px;
 }
 
-.button{
-display:inline-block;
-padding:14px 28px;
-background:white;
-color:var(--orange);
-font-weight:600;
-border-radius:30px;
-text-decoration:none;
+.quote p{
+font-size:18px;
 }
+
+.quote strong{
+display:block;
+margin-top:15px;
+}
+
+/* ---------------- FOOTER ---------------- */
 
 footer{
+background:#111;
+color:white;
+padding:60px 0;
 text-align:center;
-padding:40px;
 font-size:14px;
-color:#777;
-}
-
-@media(max-width:900px){
-
-.two-col,
-.about{
-grid-template-columns:1fr;
-}
-
-.framework{
-grid-template-columns:1fr;
-}
-
-.testimonial-grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:40px;
-}
-
 }
 
 </style>
@@ -249,215 +233,161 @@ font-size:40px;
 
 <body>
 
-<section class="hero">
-
-<h1>Team Engagement & Activation</h1>
-
-<p>
-Strategy is everywhere.  
-What teams often lack is activation.  
-Ben Hawes helps organizations reconnect people to their work, their teams, and the energy that drives great performance.
-</p>
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/VIDEOID"></iframe>
+<div class="topbar">
+Team Engagement & Activation Keynote Speaker
 </div>
 
-</section>
+<header>
+<div class="container nav">
 
-<section class="container">
+<div class="logo">VenHoss<span>.</span></div>
 
-<div class="two-col">
+<nav>
+<a href="#">About</a>
+<a href="#">Speaking</a>
+<a href="#">Resources</a>
+<a href="#" class="cta">Get in Touch</a>
+</nav>
+
+</div>
+</header>
+
+<section class="container hero">
 
 <div>
 
-<h2>Strategy is everywhere.</h2>
+<h1>
+Strategy doesn’t go the distance.<br>
+People do.
+</h1>
 
-<p>
-Most companies have thoughtful strategies, clear goals, and well-designed plans. But strategy alone doesn’t create momentum.
+<p class="hero-sub">
+The most powerful strategy in the world means nothing without a team that believes in it.
+Ben helps organizations activate their people so momentum follows the plan.
 </p>
 
-<p>
-Execution depends on something deeper: engagement, clarity, and shared energy across a team.
-</p>
+<div class="hero-buttons">
+
+<a class="primary">Bring Ben to Your Team</a>
+
+<a class="secondary">Learn More</a>
 
 </div>
 
-<img src="images/1.png">
-
 </div>
-
-</section>
-
-<section class="container">
-
-<div class="two-col reverse">
 
 <div>
 
-<h2>Activation brings strategy to life.</h2>
-
-<p>
-Activation happens when people understand their role, communicate clearly, and commit to moving forward together.
-</p>
-
-<p>
-In Ben’s keynote, teams explore practical ways to reconnect with purpose, build stronger communication, and create real momentum inside their work.
-</p>
-
-</div>
-
-<img src="images/2.png">
+<video autoplay muted loop playsinline>
+<source src="hero.mp4" type="video/mp4">
+</video>
 
 </div>
 
 </section>
 
-<section class="container">
+<section>
 
-<div class="two-col">
-
-<div>
-
-<h2>The Activation Model</h2>
+<div class="container cred">
 
 <p>
-Ben’s approach focuses on three core drivers that help teams move from passive alignment to active engagement.
+
+With leadership and engagement roles at companies like <strong>ClassPass</strong> and experience building learning and culture programs inside fast-growing teams, Ben Hawes has helped thousands of employees reconnect to mission, momentum, and the work that matters.
+
 </p>
-
-<div class="framework">
-
-<div>Clarity</div>
-<div>Communication</div>
-<div>Commitment</div>
-
-</div>
-
-</div>
-
-<img src="images/3.png">
 
 </div>
 
 </section>
 
-<section class="image-break">
+<section>
 
-<h2>Engaged teams move faster, collaborate better, and create stronger results.</h2>
+<div class="container grid">
 
-<img src="images/4.png">
-
-</section>
-
-<section class="container">
-
-<div class="two-col reverse">
-
-<div>
-
-<h2>Great work starts with people.</h2>
-
-<p>
-Ben combines experience in employee engagement, training, events, and media to help organizations build cultures where people feel energized and connected to their work.
-</p>
-
-<p>
-His talks blend storytelling, practical frameworks, and real-world examples that help teams reflect, laugh, and move forward together.
-</p>
-
-</div>
-
-<img src="images/5.png">
+<img src="Untitled design (2)/1.png">
+<img src="Untitled design (2)/2.png">
+<img src="Untitled design (2)/3.png">
+<img src="Untitled design (2)/4.png">
+<img src="Untitled design (2)/5.png">
+<img src="Untitled design (2)/1.png">
 
 </div>
 
 </section>
 
-<section class="container testimonials">
+<section>
 
-<h2>What leaders say</h2>
+<div class="container about">
 
-<div class="testimonial-grid">
-
-<div class="testimonial">
-<h4>Petra Townsend</h4>
-<span>People & Culture Leader</span>
-<p>
-Ben brings great energy to all that he does. He managed learning programs that balanced internal development with outside expertise. Ben has a deep desire to support employees and create a culture where people feel valued, included, and invested in. He is thoughtful, committed, and a joy to work with.
-</p>
-</div>
-
-<div class="testimonial">
-<h4>Hollen Spatz Hellman</h4>
-<span>Operations, CX & People Leader (ClassPass, Gilt)</span>
-<p>
-I’ve never witnessed someone bring people together the way Ben does. He is deeply committed to creating authentic learning environments and constantly pushes himself to grow and take on new challenges. Any company would be lucky to have him.
-</p>
-</div>
-
-<div class="testimonial">
-<h4>Payal Kadakia</h4>
-<span>Founder of ClassPass</span>
-<p>
-Ben is a natural leader and a central part of the ClassPass team culture. He helped train new hires, build learning programs, and champion the mission of the company. His enthusiasm lights up a room and brings energy to every team he works with.
-</p>
-</div>
-
-<div class="testimonial">
-<h4>Susan Loh</h4>
-<span>HR & People Consultant</span>
-<p>
-Ben built an impressive catalog of learning programs and consistently improved them through feedback and iteration. Beyond his work, his personality and humor made him the cultural center of the organization.
-</p>
-</div>
-
-<div class="testimonial">
-<h4>Fritz Lanman</h4>
-<span>CEO Playlist, former ClassPass & Mindbody executive</span>
-<p>
-Ben’s ability to energize teams and connect people to culture and mission is rare. His leadership and presence elevate the organizations he works with.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="container about">
-
-<img src="images/headshot.jpg">
+<img src="headshot.jpg">
 
 <div>
 
 <h2>About Ben</h2>
 
 <p>
-Ben Hawes is a speaker, creative entrepreneur, and event producer who has spent more than a decade helping teams connect, collaborate, and bring ideas to life.
+Ben Hawes is a team activation speaker who believes the most powerful driver of execution is emotional connection to the mission. His work focuses on helping organizations translate strategy into energy across teams.
 </p>
 
 <p>
-His background spans employee experience, training, events, media production, and entrepreneurship, giving him a unique perspective on how people and ideas come together inside organizations.
+After leading learning and development initiatives at ClassPass and supporting culture and engagement programs inside scaling organizations, Ben developed frameworks that help teams reconnect to purpose, clarity, and commitment.
 </p>
 
 <p>
-Ben’s work blends storytelling, humor, and practical frameworks that help teams think differently about engagement, ownership, and momentum.
+Today he works with companies to activate teams around strategy through storytelling, shared experiences, and practical frameworks leaders can immediately apply.
 </p>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="cta">
+<section>
 
-<h2>Bring Activation to Your Team</h2>
+<div class="container">
 
-<a href="contact.html" class="button">Book Ben</a>
+<h2>What Leaders Say</h2>
+
+<div class="testimonials">
+
+<div class="quote">
+
+<p>
+Ben brings great energy to all that he does. He managed a learning program balanced with internal learning and outside expertise. Ben has a deep desire to support employees and build a culture where people feel valued and invested in.
+</p>
+
+<strong>
+Petra Townsend — People & Culture Leadership
+</strong>
+
+</div>
+
+<div class="quote">
+
+<p>
+In my career I've never witnessed someone bring people together the way Ben does. He creates authentic learning environments and inspires teams to grow beyond their comfort zones.
+</p>
+
+<strong>
+Hollen Spatz Hellman — Operations, CX & People Leader (ClassPass, Gilt)
+</strong>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <footer>
 
-© Ben Hawes
+<div class="container">
+
+VenHoss — Team Engagement & Activation Speaker
+
+</div>
 
 </footer>
 
