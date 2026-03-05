@@ -7,17 +7,22 @@
 
 <title>Ben Hawes | Activation Keynote</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* ------------------ DESIGN SYSTEM ------------------ */
 
 :root{
 --orange:#F94501;
 --orangeSoft:rgba(249,69,1,.08);
---black:#0e0e0e;
---gray:#666;
---max:1500px;
+--orangeGlow:rgba(249,69,1,.25);
+--black:#0f0f0f;
+--gray:#5c5c5c;
+--max:1600px;
 }
+
+/* ------------------ RESET ------------------ */
 
 *{
 margin:0;
@@ -30,47 +35,74 @@ font-family:"Open Sans",sans-serif;
 color:var(--black);
 line-height:1.7;
 background:white;
+overflow-x:hidden;
 }
 
-/* CONTAINER */
-
-.container{
-max-width:var(--max);
-margin:auto;
-padding:120px 40px;
-}
-
-/* TYPOGRAPHY */
+/* ------------------ TYPOGRAPHY ------------------ */
 
 h1,h2,h3{
 font-family:"Poppins";
 }
 
 h1{
-font-size:72px;
+font-size:78px;
 line-height:1.05;
 }
 
 h2{
-font-size:48px;
+font-size:52px;
 margin-bottom:30px;
 }
 
 h3{
-font-size:24px;
+font-size:26px;
 margin-bottom:12px;
 }
 
 p{
-font-size:18px;
+font-size:19px;
 color:var(--gray);
 }
 
-/* HERO */
+/* ------------------ LAYOUT ------------------ */
+
+.container{
+max-width:var(--max);
+margin:auto;
+padding:140px 60px;
+position:relative;
+}
+
+/* ------------------ BUTTONS ------------------ */
+
+.button{
+display:inline-block;
+padding:18px 32px;
+border-radius:10px;
+font-weight:600;
+text-decoration:none;
+transition:.25s;
+}
+
+.primary{
+background:var(--orange);
+color:white;
+box-shadow:0 10px 30px var(--orangeGlow);
+}
+
+.primary:hover{
+transform:translateY(-3px);
+}
+
+.secondary{
+border:2px solid var(--orange);
+color:var(--orange);
+}
+
+/* ------------------ HERO ------------------ */
 
 .hero{
 padding-top:80px;
-padding-bottom:140px;
 }
 
 .hero-grid{
@@ -81,39 +113,24 @@ align-items:center;
 }
 
 .hero p{
-margin-top:20px;
-max-width:520px;
+margin-top:22px;
+max-width:600px;
 }
 
 .hero-buttons{
-margin-top:30px;
+margin-top:35px;
 display:flex;
-gap:16px;
+gap:20px;
 }
 
-.button{
-padding:16px 28px;
-border-radius:8px;
-font-weight:600;
-text-decoration:none;
-}
-
-.primary{
-background:var(--orange);
-color:white;
-}
-
-.secondary{
-border:2px solid var(--orange);
-color:var(--orange);
-}
+/* VIDEO */
 
 .video{
 position:relative;
 padding-top:56%;
-border-radius:12px;
+border-radius:16px;
 overflow:hidden;
-box-shadow:0 20px 60px rgba(0,0,0,.15);
+box-shadow:0 25px 80px rgba(0,0,0,.25);
 }
 
 .video iframe{
@@ -125,90 +142,124 @@ height:100%;
 border:0;
 }
 
-/* PROBLEM */
+/* HERO SHAPES */
 
-.problem{
+.shape{
+position:absolute;
 background:var(--orangeSoft);
+border-radius:50%;
+filter:blur(40px);
+animation:float 8s infinite ease-in-out;
 }
 
-.problem-grid{
+.shape.one{
+width:240px;
+height:240px;
+top:120px;
+left:-100px;
+}
+
+.shape.two{
+width:180px;
+height:180px;
+bottom:40px;
+right:-60px;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-25px)}
+100%{transform:translateY(0)}
+}
+
+/* ------------------ CARDS ------------------ */
+
+.grid-3{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:40px;
-margin-top:60px;
+margin-top:70px;
 }
 
 .card{
 background:white;
-padding:40px;
-border-radius:12px;
-box-shadow:0 6px 24px rgba(0,0,0,.06);
+padding:42px;
+border-radius:16px;
+box-shadow:0 10px 40px rgba(0,0,0,.07);
+transition:.25s;
 }
 
-/* PRODUCT */
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-margin-top:60px;
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 60px rgba(0,0,0,.12);
 }
 
-/* TESTIMONIALS */
+/* ------------------ TESTIMONIALS ------------------ */
 
 .testimonials{
 background:#fafafa;
 }
 
-.testimonial-grid{
+.grid-2{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:40px;
+gap:50px;
 margin-top:60px;
 }
 
 .quote{
-font-size:18px;
+font-size:20px;
 line-height:1.6;
 margin-bottom:20px;
 }
 
-/* ABOUT */
+/* ------------------ ABOUT ------------------ */
 
 .about-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:80px;
+gap:90px;
 align-items:center;
 }
 
 .headshot{
 width:100%;
-border-radius:14px;
-box-shadow:0 20px 60px rgba(0,0,0,.15);
+border-radius:18px;
+box-shadow:0 30px 80px rgba(0,0,0,.2);
 }
 
-/* FAQ */
-
-.faq-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-margin-top:60px;
-}
+/* ------------------ FAQ ------------------ */
 
 .faq-item{
-background:#fafafa;
-padding:30px;
-border-radius:10px;
+border-bottom:1px solid #eee;
+padding:24px 0;
+cursor:pointer;
 }
 
-/* CTA */
+.faq-question{
+font-weight:600;
+font-size:20px;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:.3s;
+color:var(--gray);
+margin-top:10px;
+}
+
+.faq-item.active .faq-answer{
+max-height:200px;
+}
+
+/* ------------------ CTA ------------------ */
 
 .cta{
 background:var(--orange);
 color:white;
 text-align:center;
+border-radius:20px;
 }
 
 .cta h2{
@@ -221,12 +272,12 @@ opacity:.9;
 margin-top:10px;
 }
 
-/* FOOTER */
+/* ------------------ FOOTER ------------------ */
 
 footer{
-background:#111;
-color:#bbb;
-padding:80px 40px;
+background:#0d0d0d;
+color:#aaa;
+padding:90px 60px;
 }
 
 .footer-grid{
@@ -234,7 +285,7 @@ max-width:var(--max);
 margin:auto;
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:40px;
+gap:50px;
 }
 
 footer h4{
@@ -246,30 +297,32 @@ font-family:"Poppins";
 footer a{
 display:block;
 text-decoration:none;
-color:#bbb;
-margin-bottom:8px;
+color:#aaa;
+margin-bottom:10px;
 }
 
 footer a:hover{
 color:white;
 }
 
-/* RESPONSIVE */
+/* ------------------ RESPONSIVE ------------------ */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
 .hero-grid,
-.problem-grid,
-.product-grid,
-.testimonial-grid,
+.grid-3,
+.grid-2,
 .about-grid,
-.faq-grid,
 .footer-grid{
 grid-template-columns:1fr;
 }
 
 h1{
-font-size:46px;
+font-size:50px;
+}
+
+.container{
+padding:100px 30px;
 }
 
 }
@@ -279,6 +332,9 @@ font-size:46px;
 </head>
 
 <body>
+
+<div class="shape one"></div>
+<div class="shape two"></div>
 
 <!-- HERO -->
 
@@ -301,8 +357,8 @@ But translating strategy into real momentum across an organization is the real c
 
 <div class="hero-buttons">
 
-<a href="#contact" class="button primary">Book Ben</a>
-<a href="#video" class="button secondary">Watch the Keynote</a>
+<a href="#" class="button primary">Book the Keynote</a>
+<a href="#video" class="button secondary">Watch the Talk</a>
 
 </div>
 
@@ -320,43 +376,37 @@ But translating strategy into real momentum across an organization is the real c
 
 <!-- PROBLEM -->
 
-<section class="problem container">
+<section class="container">
 
 <h2>Great strategy deserves momentum</h2>
 
 <p>
-Strategy is serious work. But even strong plans can stall when teams lose energy or alignment.
+Even strong strategies can stall when teams lose energy, alignment, or focus.
 </p>
 
-<div class="problem-grid">
+<div class="grid-3">
 
 <div class="card">
 
-<h3>Strategy Meetings</h3>
+<h3>Months of planning</h3>
 
-<p>
-Leaders spend months refining priorities, roadmaps, and long term direction.
-</p>
+<p>Leadership teams invest enormous effort shaping priorities and roadmaps.</p>
 
 </div>
 
 <div class="card">
 
-<h3>Clear Goals</h3>
+<h3>Clear goals</h3>
 
-<p>
-Objectives are defined and teams know what success should look like.
-</p>
+<p>Teams understand the mission and the outcomes they are working toward.</p>
 
 </div>
 
 <div class="card">
 
-<h3>Execution Friction</h3>
+<h3>Execution friction</h3>
 
-<p>
-Day to day work gets busy. Communication fragments. Momentum fades.
-</p>
+<p>But day to day work gets busy. Communication fragments and momentum fades.</p>
 
 </div>
 
@@ -374,15 +424,13 @@ Day to day work gets busy. Communication fragments. Momentum fades.
 A high energy keynote experience designed to reconnect teams to the mission in front of them and build excitement around the work ahead.
 </p>
 
-<div class="product-grid">
+<div class="grid-3">
 
 <div class="card">
 
 <h3>Clarity</h3>
 
-<p>
-Teams reconnect to the bigger purpose behind the work they are doing.
-</p>
+<p>Teams reconnect to the bigger purpose behind their work.</p>
 
 </div>
 
@@ -390,9 +438,7 @@ Teams reconnect to the bigger purpose behind the work they are doing.
 
 <h3>Energy</h3>
 
-<p>
-Stories and humor reenergize the room and remind people why their work matters.
-</p>
+<p>Humor and storytelling bring renewed excitement into the room.</p>
 
 </div>
 
@@ -400,9 +446,7 @@ Stories and humor reenergize the room and remind people why their work matters.
 
 <h3>Momentum</h3>
 
-<p>
-Teams leave excited about what comes next and ready to move forward together.
-</p>
+<p>Teams leave energized and ready to move forward together.</p>
 
 </div>
 
@@ -416,12 +460,12 @@ Teams leave excited about what comes next and ready to move forward together.
 
 <h2>What teams say</h2>
 
-<div class="testimonial-grid">
+<div class="grid-2">
 
 <div class="card">
 
 <p class="quote">
-“Ben completely shifted the energy of the room. People were laughing, reflecting, and talking about the work ahead in a totally different way.”
+“Ben completely shifted the energy of the room. People were laughing, reflecting, and leaving excited about the work ahead.”
 </p>
 
 <strong>Director of Operations</strong>
@@ -431,10 +475,10 @@ Teams leave excited about what comes next and ready to move forward together.
 <div class="card">
 
 <p class="quote">
-“This was the most engaging session of our offsite. It helped the team reconnect to the mission and why our work matters.”
+“This was the highlight of our offsite. It helped the team reconnect to the mission and why our work matters.”
 </p>
 
-<strong>Startup Leadership Team</strong>
+<strong>Leadership Team</strong>
 
 </div>
 
@@ -453,9 +497,7 @@ Teams leave excited about what comes next and ready to move forward together.
 <h2>About Ben</h2>
 
 <p>
-Ben Hawes has spent over a decade working in leadership, training, and employee engagement.
-<br><br>
-He has led programs at companies including ClassPass, LifeLabs Learning, and Rocket Money, helping teams build stronger communication, better experiences, and more energized workplaces.
+Ben Hawes has spent over a decade working in leadership, training, and employee engagement at companies like ClassPass, LifeLabs Learning, and Rocket Money.
 <br><br>
 Today he combines that experience with storytelling and live event energy to help teams reconnect to their work and move forward with momentum.
 </p>
@@ -472,44 +514,40 @@ Today he combines that experience with storytelling and live event energy to hel
 
 <section class="container">
 
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq-grid">
+<h2>Questions event organizers ask</h2>
 
 <div class="faq-item">
 
-<h3>How long is the keynote?</h3>
-<p>Typically 45–60 minutes depending on the format of your event.</p>
+<div class="faq-question">How long is the keynote?</div>
+<div class="faq-answer">Typically 45–60 minutes depending on the format of your event.</div>
 
 </div>
 
 <div class="faq-item">
 
-<h3>Is the talk customizable?</h3>
-<p>Yes. Ben works with organizers to understand the goals of the event and tailor the message.</p>
+<div class="faq-question">Is the talk customizable?</div>
+<div class="faq-answer">Yes. Ben works with organizers to align the talk with the event goals.</div>
 
 </div>
 
 <div class="faq-item">
 
-<h3>What audience size works best?</h3>
-<p>The keynote works for groups ranging from small leadership teams to large company all hands.</p>
+<div class="faq-question">What audience size works best?</div>
+<div class="faq-answer">From small leadership teams to large company all hands.</div>
 
 </div>
 
 <div class="faq-item">
 
-<h3>What outcomes should leaders expect?</h3>
-<p>Teams leave energized, aligned, and excited about the work ahead.</p>
+<div class="faq-question">What outcomes should leaders expect?</div>
+<div class="faq-answer">Teams leave energized, aligned, and excited about the work ahead.</div>
 
 </div>
 
 <div class="faq-item">
 
-<h3>How do we book?</h3>
-<p>Reach out through the contact form and we’ll find the right format for your event.</p>
-
-</div>
+<div class="faq-question">How do we book?</div>
+<div class="faq-answer">Reach out through the contact page and we’ll coordinate details.</div>
 
 </div>
 
@@ -517,15 +555,15 @@ Today he combines that experience with storytelling and live event energy to hel
 
 <!-- CTA -->
 
-<section class="cta container">
+<section class="container cta">
 
 <h2>Bring momentum back to your team</h2>
 
-<p>Book the Activation Keynote for your next company offsite or leadership gathering.</p>
+<p>Book the Activation Keynote for your next company offsite.</p>
 
 <br>
 
-<a href="#contact" class="button secondary">Contact</a>
+<a href="#" class="button secondary">Contact Ben</a>
 
 </section>
 
@@ -538,8 +576,9 @@ Today he combines that experience with storytelling and live event energy to hel
 <div>
 
 <h4>Ben Hawes</h4>
-<a href="#">About</a>
+
 <a href="#">Speaking</a>
+<a href="#">About</a>
 <a href="#">Podcast</a>
 
 </div>
@@ -547,6 +586,7 @@ Today he combines that experience with storytelling and live event energy to hel
 <div>
 
 <h4>Projects</h4>
+
 <a href="#">Life in Bold</a>
 <a href="#">Rent My Booth</a>
 <a href="#">Ben Hawes HQ</a>
@@ -556,6 +596,7 @@ Today he combines that experience with storytelling and live event energy to hel
 <div>
 
 <h4>Connect</h4>
+
 <a href="#">LinkedIn</a>
 <a href="#">Instagram</a>
 <a href="#">YouTube</a>
@@ -565,6 +606,7 @@ Today he combines that experience with storytelling and live event energy to hel
 <div>
 
 <h4>Booking</h4>
+
 <a href="#">Contact</a>
 <a href="#">Media Kit</a>
 
@@ -573,6 +615,16 @@ Today he combines that experience with storytelling and live event energy to hel
 </div>
 
 </footer>
+
+<script>
+
+document.querySelectorAll(".faq-item").forEach(item=>{
+item.addEventListener("click",()=>{
+item.classList.toggle("active")
+})
+})
+
+</script>
 
 </body>
 </html>
