@@ -29,10 +29,10 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Inter, sans-serif;
+font-family:Inter,sans-serif;
 color:#111;
 background:white;
-line-height:1.5;
+line-height:1.6;
 }
 
 .container{
@@ -42,37 +42,42 @@ padding:0 30px;
 }
 
 section{
-padding:90px 0;
+padding:100px 0;
 }
 
 h1{
 font-size:64px;
 font-weight:900;
 line-height:1.05;
+margin-top:60px;
 }
 
 h2{
-font-size:44px;
+font-size:42px;
 font-weight:800;
 margin-bottom:20px;
 }
 
 p{
-font-size:18px;
+font-size:19px;
 margin-bottom:20px;
 }
 
-/* ---------------- TOP BAR ---------------- */
+a{
+text-decoration:none;
+}
+
+/* TOP BAR */
 
 .topbar{
 background:#111;
 color:white;
-font-size:14px;
 text-align:center;
 padding:10px;
+font-size:14px;
 }
 
-/* ---------------- HEADER ---------------- */
+/* HEADER */
 
 header{
 position:sticky;
@@ -90,8 +95,8 @@ height:80px;
 }
 
 .logo{
-font-size:26px;
 font-weight:900;
+font-size:26px;
 }
 
 .logo span{
@@ -100,9 +105,8 @@ color:var(--orange);
 
 nav a{
 margin-left:30px;
-text-decoration:none;
-color:#111;
 font-weight:500;
+color:#111;
 }
 
 .cta{
@@ -110,27 +114,25 @@ background:var(--orange);
 color:white;
 padding:12px 22px;
 border-radius:8px;
-margin-left:25px;
-font-weight:600;
 }
 
-/* ---------------- HERO ---------------- */
+/* HERO */
 
 .hero{
 display:grid;
 grid-template-columns:1fr 1fr;
-align-items:center;
 gap:60px;
-}
-
-.hero video{
-width:100%;
-border-radius:14px;
+align-items:center;
 }
 
 .hero-sub{
-font-size:20px;
+font-size:21px;
 margin-top:20px;
+}
+
+.activate{
+color:var(--orange);
+font-weight:700;
 }
 
 .hero-buttons{
@@ -138,11 +140,10 @@ margin-top:30px;
 }
 
 .hero-buttons a{
-margin-right:15px;
-text-decoration:none;
-padding:14px 26px;
+padding:14px 28px;
 border-radius:8px;
 font-weight:600;
+margin-right:15px;
 }
 
 .primary{
@@ -155,33 +156,39 @@ border:2px solid #111;
 color:#111;
 }
 
-/* ---------------- CREDIBILITY ---------------- */
+.hero video{
+width:100%;
+border-radius:16px;
+}
+
+/* HAND UNDERLINE */
+
+.people{
+position:relative;
+display:inline-block;
+}
+
+.people:after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:100%;
+height:12px;
+background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 15 Q 100 5 195 15' stroke='%23F94501' stroke-width='5' fill='none'/%3E%3C/svg%3E") no-repeat center;
+background-size:contain;
+}
+
+/* CREDIBILITY */
 
 .cred{
 text-align:center;
-font-size:20px;
 max-width:900px;
 margin:auto;
+font-size:21px;
 }
 
-.cred strong{
-color:var(--orange);
-}
-
-/* ---------------- IMAGE GRID ---------------- */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-}
-
-.grid img{
-width:100%;
-border-radius:14px;
-}
-
-/* ---------------- ABOUT ---------------- */
+/* ABOUT */
 
 .about{
 display:grid;
@@ -192,40 +199,61 @@ align-items:center;
 
 .about img{
 width:100%;
-border-radius:14px;
+border-radius:16px;
 }
 
-/* ---------------- TESTIMONIALS ---------------- */
+/* BIG QUOTE */
+
+.bigquote{
+background:var(--orange);
+color:white;
+padding:70px;
+font-size:32px;
+font-weight:700;
+text-align:center;
+border-radius:16px;
+margin-top:60px;
+}
+
+/* TESTIMONIALS */
 
 .testimonials{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:40px;
+gap:30px;
+margin-top:40px;
 }
 
-.quote{
+.card{
 background:#fafafa;
 padding:35px;
-border-radius:12px;
+border-radius:14px;
 }
 
-.quote p{
-font-size:18px;
-}
-
-.quote strong{
+.card strong{
 display:block;
 margin-top:15px;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* FOOTER */
 
 footer{
 background:#111;
 color:white;
-padding:60px 0;
-text-align:center;
-font-size:14px;
+padding:80px 0;
+margin-top:100px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+}
+
+footer a{
+color:white;
+display:block;
+margin-bottom:8px;
 }
 
 </style>
@@ -234,22 +262,26 @@ font-size:14px;
 <body>
 
 <div class="topbar">
-Team Engagement & Activation Keynote Speaker
+Now booking Q2 & Q3 keynotes — Check availability
 </div>
 
 <header>
+
 <div class="container nav">
 
-<div class="logo">VenHoss<span>.</span></div>
+<div class="logo">
+Ben Hawes<span>.</span>
+</div>
 
 <nav>
-<a href="#">About</a>
-<a href="#">Speaking</a>
-<a href="#">Resources</a>
-<a href="#" class="cta">Get in Touch</a>
+<a href="#about">About</a>
+<a href="#testimonials">Testimonials</a>
+<a href="#contact">Contact</a>
+<a href="#contact" class="cta">Bring Ben In</a>
 </nav>
 
 </div>
+
 </header>
 
 <section class="container hero">
@@ -257,20 +289,25 @@ Team Engagement & Activation Keynote Speaker
 <div>
 
 <h1>
+
 Strategy doesn’t go the distance.<br>
-People do.
+<span class="people">People do.</span>
+
 </h1>
 
 <p class="hero-sub">
-The most powerful strategy in the world means nothing without a team that believes in it.
-Ben helps organizations activate their people so momentum follows the plan.
+
+The most powerful strategy in the world is enabled by people who believe in it.
+
+Ben helps organizations <span class="activate">activate their people</span> so momentum follows the plan.
+
 </p>
 
 <div class="hero-buttons">
 
-<a class="primary">Bring Ben to Your Team</a>
+<a href="#contact" class="primary">Bring Ben to Your Team</a>
 
-<a class="secondary">Learn More</a>
+<a href="#about" class="secondary">Learn More</a>
 
 </div>
 
@@ -292,7 +329,7 @@ Ben helps organizations activate their people so momentum follows the plan.
 
 <p>
 
-With leadership and engagement roles at companies like <strong>ClassPass</strong> and experience building learning and culture programs inside fast-growing teams, Ben Hawes has helped thousands of employees reconnect to mission, momentum, and the work that matters.
+With leadership and engagement roles at companies like <b>ClassPass, LifeLabs Learning, and Rocket Money</b>, Ben Hawes has helped activate the passion and commitment of thousands of employees across fast-growing teams.
 
 </p>
 
@@ -300,22 +337,7 @@ With leadership and engagement roles at companies like <strong>ClassPass</strong
 
 </section>
 
-<section>
-
-<div class="container grid">
-
-<img src="Untitled design (2)/1.png">
-<img src="Untitled design (2)/2.png">
-<img src="Untitled design (2)/3.png">
-<img src="Untitled design (2)/4.png">
-<img src="Untitled design (2)/5.png">
-<img src="Untitled design (2)/1.png">
-
-</div>
-
-</section>
-
-<section>
+<section id="about">
 
 <div class="container about">
 
@@ -326,24 +348,48 @@ With leadership and engagement roles at companies like <strong>ClassPass</strong
 <h2>About Ben</h2>
 
 <p>
-Ben Hawes is a team activation speaker who believes the most powerful driver of execution is emotional connection to the mission. His work focuses on helping organizations translate strategy into energy across teams.
+
+Ben Hawes is a <b>team activation and engagement speaker</b> who believes the most powerful driver of execution is emotional connection to the mission.
+
 </p>
 
 <p>
-After leading learning and development initiatives at ClassPass and supporting culture and engagement programs inside scaling organizations, Ben developed frameworks that help teams reconnect to purpose, clarity, and commitment.
+
+His work focuses on aligning strategy with energy across teams through clarity, communication, and commitment.
+
 </p>
 
 <p>
-Today he works with companies to activate teams around strategy through storytelling, shared experiences, and practical frameworks leaders can immediately apply.
+
+After leading learning and development initiatives at ClassPass and supporting global culture and engagement programs at LifeLabs Learning, Ben developed frameworks that help teams align around purpose and execute together.
+
+</p>
+
+<p>
+
+Today he works with organizations to activate teams around strategy through storytelling, shared experiences, and practical frameworks that leaders and team members can apply immediately.
+
 </p>
 
 </div>
+
+</div>
+
+<div class="container bigquote">
+
+“Engagement isn’t just about having fun or being happy.
+
+It’s about the level to which employees are willing to spend their energy going the distance for the mission.”
+
+<br><br>
+
+— Ben Hawes
 
 </div>
 
 </section>
 
-<section>
+<section id="testimonials">
 
 <div class="container">
 
@@ -351,10 +397,54 @@ Today he works with companies to activate teams around strategy through storytel
 
 <div class="testimonials">
 
-<div class="quote">
+<div class="card">
 
 <p>
-Ben brings great energy to all that he does. He managed a learning program balanced with internal learning and outside expertise. Ben has a deep desire to support employees and build a culture where people feel valued and invested in.
+
+Ben is a natural leader and a central part of the ClassPass culture. His enthusiasm lights up the room and helps employees truly understand the mission and vision of the company.
+
+</p>
+
+<strong>
+Payal Kadakia Pujji — Founder, ClassPass
+</strong>
+
+</div>
+
+<div class="card">
+
+<p>
+
+Ben has built an impressive catalog of learning programs and brings passion and humor that energizes the entire organization.
+
+</p>
+
+<strong>
+Susan Loh — People & HR Consultant
+</strong>
+
+</div>
+
+<div class="card">
+
+<p>
+
+I've never seen someone bring people together the way Ben does. His commitment to creating authentic learning environments is rare.
+
+</p>
+
+<strong>
+Hollen Spatz Hellman — Operations & CX Leader
+</strong>
+
+</div>
+
+<div class="card">
+
+<p>
+
+Ben brings incredible energy to every initiative and is deeply committed to building cultures where people feel valued and invested.
+
 </p>
 
 <strong>
@@ -363,29 +453,40 @@ Petra Townsend — People & Culture Leadership
 
 </div>
 
-<div class="quote">
-
-<p>
-In my career I've never witnessed someone bring people together the way Ben does. He creates authentic learning environments and inspires teams to grow beyond their comfort zones.
-</p>
-
-<strong>
-Hollen Spatz Hellman — Operations, CX & People Leader (ClassPass, Gilt)
-</strong>
-
-</div>
-
 </div>
 
 </div>
 
 </section>
 
-<footer>
+<footer id="contact">
 
-<div class="container">
+<div class="container footer-grid">
 
-VenHoss — Team Engagement & Activation Speaker
+<div>
+<h3>Ben Hawes</h3>
+<p>Team Activation Speaker</p>
+</div>
+
+<div>
+<h4>Speaking</h4>
+<a href="#">Keynotes</a>
+<a href="#">Workshops</a>
+<a href="#">Programs</a>
+</div>
+
+<div>
+<h4>Resources</h4>
+<a href="#">Articles</a>
+<a href="#">Insights</a>
+<a href="#">Frameworks</a>
+</div>
+
+<div>
+<h4>Contact</h4>
+<a href="#">Email Ben</a>
+<a href="#">LinkedIn</a>
+</div>
 
 </div>
 
