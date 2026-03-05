@@ -9,7 +9,7 @@ export function Contact() {
         <p className="text-sm font-semibold uppercase tracking-widest text-primary">
           Let{"'"}s Work Together
         </p>
-        <h2 className="mt-4 font-heading text-4xl font-800 tracking-tight text-foreground md:text-5xl">
+        <h2 className="mt-4 font-heading text-4xl font-extrabold tracking-tight text-foreground md:text-5xl">
           Bring Ben to Your Team
         </h2>
         <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">

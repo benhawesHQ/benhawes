@@ -1,4 +1,4 @@
-import { ArrowRight, Play } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
@@ -14,7 +14,7 @@ export function Hero() {
             Now booking Q3 & Q4 2026
           </div>
 
-          <h1 className="font-heading text-5xl font-900 leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
+          <h1 className="font-heading text-5xl font-black leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
             <span className="text-balance">
               Strategy doesn{"'"}t go the distance.
             </span>

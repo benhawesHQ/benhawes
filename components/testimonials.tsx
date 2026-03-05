@@ -35,7 +35,7 @@ export function Testimonials() {
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">
             Social Proof
           </p>
-          <h2 className="mt-4 font-heading text-4xl font-800 tracking-tight text-foreground md:text-5xl">
+          <h2 className="mt-4 font-heading text-4xl font-extrabold tracking-tight text-foreground md:text-5xl">
             What Leaders Are Saying
           </h2>
         </div>

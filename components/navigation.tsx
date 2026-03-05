@@ -16,7 +16,7 @@ export function Navigation() {
     <>
       <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-          <a href="#" className="font-heading text-2xl font-900 tracking-tight text-foreground">
+          <a href="#" className="font-heading text-2xl font-black tracking-tight text-foreground">
             Ben Hawes<span className="text-primary">.</span>
           </a>
 

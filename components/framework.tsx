@@ -47,7 +47,7 @@ export function Framework() {
           <p className="text-sm font-semibold uppercase tracking-widest text-primary-foreground/70">
             The Keynote
           </p>
-          <h2 className="mt-4 font-heading text-4xl font-800 tracking-tight text-primary-foreground md:text-5xl">
+          <h2 className="mt-4 font-heading text-4xl font-extrabold tracking-tight text-primary-foreground md:text-5xl">
             The Activation Framework
           </h2>
         </div>

@@ -22,7 +22,7 @@ export function About() {
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">
             About Ben
           </p>
-          <h2 className="mt-4 font-heading text-4xl font-800 tracking-tight text-foreground md:text-5xl">
+          <h2 className="mt-4 font-heading text-4xl font-extrabold tracking-tight text-foreground md:text-5xl">
             Meet the guy who genuinely believes your team is capable of more.
           </h2>
           <div className="mt-8 space-y-5 text-lg leading-relaxed text-muted-foreground">

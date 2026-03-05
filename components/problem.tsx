@@ -54,12 +54,12 @@ export function Problem() {
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">
               The Problem
             </p>
-            <h2 className="mt-4 font-heading text-4xl font-800 leading-tight tracking-tight text-foreground md:text-5xl">
+            <h2 className="mt-4 font-heading text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">
               <span className="text-balance">
                 You have the strategy. You have the OKRs.
               </span>
             </h2>
-            <p className="mt-3 font-heading text-3xl font-700 text-primary md:text-4xl">
+            <p className="mt-3 font-heading text-3xl font-bold text-primary md:text-4xl">
               Do you have the team activated to deliver it?
             </p>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
