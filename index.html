@@ -17,7 +17,7 @@
 
 <style>
 
-/* ---------------- DESIGN SYSTEM ---------------- */
+/* ---------------- DESIGN ---------------- */
 
 :root{
 --orange:#F94501;
@@ -37,33 +37,35 @@ font-family:"Inter",sans-serif;
 color:var(--black);
 background:white;
 line-height:1.7;
+position:relative;
+overflow-x:hidden;
 }
+
+/* ---------------- FLOATING SHAPES ---------------- */
+
+.shape{
+position:absolute;
+background:var(--orange);
+opacity:.07;
+border-radius:30px;
+z-index:-1;
+}
+
+.shape.one{width:220px;height:220px;top:200px;left:-80px;transform:rotate(12deg);}
+.shape.two{width:180px;height:180px;top:900px;right:-60px;transform:rotate(-8deg);}
+.shape.three{width:140px;height:140px;top:1700px;left:-50px;transform:rotate(18deg);}
+.shape.four{width:200px;height:200px;top:2600px;right:-80px;transform:rotate(-15deg);}
 
 /* ---------------- TYPOGRAPHY ---------------- */
 
-h1,h2,h3{
-font-family:"Poppins";
-}
+h1,h2,h3{font-family:"Poppins";}
 
-h1{
-font-size:72px;
-line-height:1.05;
-margin-bottom:30px;
-}
+h1{font-size:72px;line-height:1.05;margin-bottom:30px;}
+h2{font-size:46px;margin-bottom:30px;}
 
-h2{
-font-size:44px;
-margin-bottom:30px;
-}
+p{font-size:20px;margin-bottom:18px;}
 
-p{
-font-size:20px;
-margin-bottom:18px;
-}
-
-.orange{
-color:var(--orange);
-}
+.orange{color:var(--orange);}
 
 /* ---------------- LAYOUT ---------------- */
 
@@ -73,11 +75,9 @@ margin:auto;
 padding:120px 40px;
 }
 
-section{
-border-bottom:1px solid #eee;
-}
+section{border-bottom:1px solid #eee;}
 
-/* ---------------- ANNOUNCEMENT ---------------- */
+/* ---------------- TOP BAR ---------------- */
 
 .announce{
 background:#111;
@@ -112,15 +112,9 @@ font-size:28px;
 font-family:Poppins;
 }
 
-.logo span{
-color:var(--orange);
-}
+.logo span{color:var(--orange);}
 
-.nav-links{
-display:flex;
-gap:30px;
-align-items:center;
-}
+.nav-links{display:flex;gap:30px;align-items:center;}
 
 .nav-links a{
 text-decoration:none;
@@ -131,79 +125,8 @@ font-weight:500;
 .cta{
 background:var(--orange);
 color:white;
-padding:12px 24px;
+padding:12px 22px;
 border-radius:8px;
-}
-
-/* ---------------- HAMBURGER ---------------- */
-
-.hamburger{
-display:none;
-font-size:30px;
-cursor:pointer;
-}
-
-/* ---------------- MOBILE MENU ---------------- */
-
-.mobile-menu{
-position:fixed;
-top:0;
-right:-100%;
-width:100%;
-height:100%;
-background:white;
-z-index:2000;
-padding:60px 30px;
-transition:all .4s ease;
-}
-
-.mobile-menu.active{
-right:0;
-}
-
-.mobile-close{
-position:absolute;
-top:25px;
-right:30px;
-font-size:28px;
-cursor:pointer;
-}
-
-.mobile-inner{
-max-width:500px;
-margin:auto;
-text-align:center;
-}
-
-.mobile-logo{
-font-size:32px;
-font-family:Poppins;
-font-weight:900;
-margin-bottom:40px;
-}
-
-.mobile-logo span{
-color:var(--orange);
-}
-
-.mobile-links{
-display:flex;
-flex-direction:column;
-gap:24px;
-margin-bottom:60px;
-}
-
-.mobile-links a{
-font-size:26px;
-text-decoration:none;
-color:black;
-font-weight:600;
-}
-
-.mobile-quote{
-font-size:18px;
-line-height:1.6;
-color:#555;
 }
 
 /* ---------------- HERO ---------------- */
@@ -216,7 +139,7 @@ align-items:center;
 }
 
 .hero-buttons{
-margin-top:30px;
+margin-top:35px;
 display:flex;
 gap:20px;
 }
@@ -238,27 +161,7 @@ border:2px solid black;
 color:black;
 }
 
-.phone{
-margin-top:14px;
-font-size:15px;
-color:#555;
-}
-
-.video-wrap{
-position:relative;
-}
-
-.video-square{
-position:absolute;
-width:300px;
-height:300px;
-background:var(--orange);
-transform:rotate(12deg);
-top:-40px;
-left:-40px;
-opacity:.15;
-border-radius:20px;
-}
+/* video */
 
 .video{
 position:relative;
@@ -275,6 +178,22 @@ left:0;
 width:100%;
 height:100%;
 border:0;
+}
+
+/* tilted square behind video */
+
+.video:before{
+content:"";
+position:absolute;
+width:104%;
+height:104%;
+background:var(--orange);
+opacity:.08;
+top:-10px;
+left:-10px;
+border-radius:24px;
+transform:rotate(-3deg);
+z-index:-1;
 }
 
 /* ---------------- CREDIBILITY ---------------- */
@@ -296,7 +215,7 @@ margin:auto;
 
 /* ---------------- FRAMEWORK ---------------- */
 
-.framework{
+.framework-section{
 background:var(--orange);
 padding:120px 0;
 }
@@ -309,21 +228,22 @@ text-align:center;
 
 .framework-inner h2{
 color:white;
+margin-bottom:50px;
 }
 
-.tabs{
-margin-top:40px;
+.tab-buttons{
 display:flex;
 justify-content:center;
 gap:14px;
 flex-wrap:wrap;
+margin-bottom:40px;
 }
 
 .tab-btn{
 padding:14px 24px;
 border-radius:40px;
 border:none;
-background:#ffffff55;
+background:#ffffff44;
 color:white;
 font-weight:600;
 cursor:pointer;
@@ -340,7 +260,7 @@ padding:60px;
 border-radius:20px;
 text-align:left;
 max-width:900px;
-margin:40px auto 0;
+margin:auto;
 box-shadow:0 20px 60px rgba(0,0,0,.15);
 }
 
@@ -388,15 +308,16 @@ box-shadow:0 15px 40px rgba(0,0,0,.08);
 
 .linkedin-label{
 font-weight:600;
-color:#0a66c2;
-margin-bottom:18px;
+font-size:14px;
+margin-bottom:20px;
+color:#666;
 }
 
 .linkedin-author{
 display:flex;
 align-items:center;
 gap:14px;
-margin-top:20px;
+margin-top:25px;
 }
 
 .linkedin-author img{
@@ -416,10 +337,34 @@ font-size:14px;
 color:#666;
 }
 
-/* ---------------- CTA ---------------- */
+/* ---------------- CONTACT FORM ---------------- */
 
-.cta-section{
-text-align:center;
+.contact-form{
+max-width:600px;
+margin:40px auto;
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:14px;
+font-size:16px;
+border:1px solid #ddd;
+border-radius:8px;
+font-family:Inter;
+}
+
+.contact-form textarea{
+min-height:120px;
+resize:vertical;
+}
+
+.reply-note{
+font-size:14px;
+color:#666;
+margin-top:10px;
 }
 
 /* ---------------- FOOTER ---------------- */
@@ -427,60 +372,24 @@ text-align:center;
 footer{
 background:#111;
 color:white;
-padding:80px 40px;
-}
-
-.footer-grid{
-max-width:var(--max);
-margin:auto;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:40px;
-}
-
-footer a{
-color:#bbb;
-text-decoration:none;
-display:block;
-margin-top:8px;
-}
-
-.footer-logo{
-font-size:28px;
-font-family:Poppins;
-font-weight:900;
-}
-
-.footer-logo span{
-color:var(--orange);
+padding:70px;
+text-align:center;
+margin-top:80px;
 }
 
 /* ---------------- MOBILE ---------------- */
 
 @media(max-width:900px){
 
-.nav-links{
-display:none;
-}
-
-.hamburger{
-display:block;
-}
-
 .hero,
 .about,
-.testimonials,
-.footer-grid{
+.testimonials{
 grid-template-columns:1fr;
 }
 
-h1{
-font-size:42px;
-}
+.container{padding:80px 25px;}
 
-.container{
-padding:80px 25px;
-}
+h1{font-size:42px;}
 
 .hero-buttons{
 flex-direction:column;
@@ -499,6 +408,11 @@ text-align:center;
 
 <body>
 
+<div class="shape one"></div>
+<div class="shape two"></div>
+<div class="shape three"></div>
+<div class="shape four"></div>
+
 <div class="announce">
 Now booking Q2 and Q3 keynote chats. Check availability here.
 </div>
@@ -512,56 +426,18 @@ Ben Hawes<span>.</span>
 </div>
 
 <div class="nav-links">
+
 <a href="#about">About</a>
 <a href="#framework">Keynote</a>
 <a href="#testimonials">Testimonials</a>
-<a href="#contact" class="cta">Bring Ben In</a>
-</div>
 
-<div class="hamburger" onclick="openMenu()">☰</div>
+<a href="#contact" class="cta">Bring Ben In</a>
+
+</div>
 
 </div>
 
 </header>
-
-<!-- MOBILE MENU -->
-
-<div class="mobile-menu" id="mobileMenu">
-
-<div class="mobile-close" onclick="closeMenu()">✕</div>
-
-<div class="mobile-inner">
-
-<div class="mobile-logo">
-Ben Hawes<span>.</span>
-</div>
-
-<div class="mobile-links">
-
-<a href="#about" onclick="closeMenu()">About</a>
-<a href="#framework" onclick="closeMenu()">Keynote</a>
-<a href="#testimonials" onclick="closeMenu()">Testimonials</a>
-<a href="#contact" onclick="closeMenu()">Bring Ben In</a>
-
-</div>
-
-<div class="mobile-quote">
-
-“Engagement isn’t just about happiness.
-
-It’s about the level to which employees are willing to spend their energy going the distance for the mission.”
-
-<br><br>
-
-— Ben Hawes
-
-</div>
-
-</div>
-
-</div>
-
-<!-- HERO -->
 
 <section class="container hero">
 
@@ -573,42 +449,83 @@ Strategy doesn’t go the distance.<br>
 </h1>
 
 <p>
-
 The most powerful strategy in the world only works when the people responsible for delivering it feel connected to the mission.
 
-Ben Hawes helps organizations <a href="#framework" class="orange"><b>activate their people</b></a> so strategy turns into momentum.
-
+Ben Hawes helps organizations <span class="orange">activate their people</span> so strategy turns into momentum.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#contact" class="button primary">Check Availability</a>
-
-<a href="#framework" class="button secondary">See the Keynote</a>
-
-</div>
-
-<div class="phone">
-Or leave a voicemail → (646) 543-7205
-</div>
+<a href="#contact" class="button primary">Bring Ben to Your Team</a>
+<a href="#about" class="button secondary">Learn More</a>
 
 </div>
 
-<div class="video-wrap">
-
-<div class="video-square"></div>
+</div>
 
 <div class="video">
-
 <iframe src="https://www.youtube.com/embed/Ca3coU2oqT4" allowfullscreen></iframe>
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="cred">
+
+<p>
+With leadership and engagement roles at companies like <b>ClassPass</b>, <b>LifeLabs Learning</b>, and <b>Rocket Money</b>, Ben Hawes has helped activate the passion and commitment of thousands of employees across fast-growing teams.
+</p>
+
+</div>
+
+</section>
+
+<section class="container problem">
+
+<h2>
+You have the strategy.<br>
+You have the OKRs.<br><br>
+
+Do you have the team <span class="orange">activated</span> to deliver it?
+</h2>
+
+<p>
+Companies invest enormous time in strategy. But strategy alone doesn't move the mission forward.
+
+Execution happens when people feel personally connected to the work ahead.
+</p>
+
+</section>
+
+<section id="framework" class="framework-section">
+
+<div class="framework-inner">
+
+<h2>The Activation Framework</h2>
+
+<div class="tab-buttons">
+
+<button class="tab-btn active" onclick="showTab(0)">Clarity</button>
+<button class="tab-btn" onclick="showTab(1)">Communication</button>
+<button class="tab-btn" onclick="showTab(2)">Commitment</button>
+<button class="tab-btn" onclick="showTab(3)">What Teams Walk Away With</button>
+
+</div>
+
+<div class="framework-card" id="tabContent">
+
+<h3>Clarity</h3>
+
+<p>
+Employees reconnect their role to the mission and strategy so the work ahead feels meaningful and aligned.
+</p>
 
 </div>
 
 </div>
 
 </section>
-
-<!-- QUOTE -->
 
 <section class="container">
 
@@ -626,34 +543,26 @@ It’s about the level to which employees are willing to spend their energy goin
 
 </section>
 
-<!-- ABOUT -->
-
 <section id="about" class="container">
 
 <div class="about">
 
-<img src="ben.jpg">
+<img src="headshot.jpg">
 
 <div>
 
 <h2>Meet Ben</h2>
 
 <p>
-
 Ben Hawes is a team activation keynote speaker who believes the most powerful driver of execution is emotional connection to the mission.
-
 </p>
 
 <p>
-
 After leading learning and development initiatives at ClassPass and supporting global culture and engagement programs at LifeLabs Learning, Ben developed frameworks that help teams align around purpose, clarity, and commitment.
-
 </p>
 
 <p>
-
 Today he works with organizations to activate teams around strategy through storytelling, shared experiences, and practical frameworks leaders and team members can apply immediately.
-
 </p>
 
 </div>
@@ -662,61 +571,116 @@ Today he works with organizations to activate teams around strategy through stor
 
 </section>
 
-<!-- FOOTER -->
+<section id="testimonials" class="container">
+
+<h2>What Leaders Say</h2>
+
+<div class="testimonials">
+
+<div class="linkedin-post">
+<div class="linkedin-label">LinkedIn</div>
+<p>“Ben is a natural leader and helped employees truly understand the mission and vision of the company.”</p>
+<div class="linkedin-author">
+<div>
+<div class="linkedin-name">Payal Kadakia</div>
+<div class="linkedin-role">Founder, ClassPass</div>
+</div>
+</div>
+</div>
+
+<div class="linkedin-post">
+<div class="linkedin-label">LinkedIn</div>
+<p>“Ben brings passion, humor, and clarity that energizes the entire organization.”</p>
+<div class="linkedin-author">
+<div>
+<div class="linkedin-name">Susan Loh</div>
+<div class="linkedin-role">People & HR Consultant</div>
+</div>
+</div>
+</div>
+
+<div class="linkedin-post">
+<div class="linkedin-label">LinkedIn</div>
+<p>“Ben consistently stood out as someone who could bring energy and alignment to teams.”</p>
+<div class="linkedin-author">
+<div>
+<div class="linkedin-name">Fritz Lanman</div>
+<div class="linkedin-role">CEO, Playlist</div>
+</div>
+</div>
+</div>
+
+<div class="linkedin-post">
+<div class="linkedin-label">LinkedIn</div>
+<p>“Ben built an impressive catalog of learning programs and became a cultural center for the company.”</p>
+<div class="linkedin-author">
+<div>
+<div class="linkedin-name">ClassPass Leadership</div>
+<div class="linkedin-role">Executive Team</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="container">
+
+<h2>Bring Ben to Your Team</h2>
+
+<p>
+Interested in a keynote, offsite talk, or leadership session?
+</p>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Name" required>
+<input type="text" placeholder="Company">
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Tell me about your event or team"></textarea>
+
+<button type="submit" class="button primary">Get In Touch</button>
+
+<div class="reply-note">
+I reply in less than 24 hours.
+</div>
+
+</form>
+
+</section>
 
 <footer>
 
-<div class="footer-grid">
-
-<div>
-
-<div class="footer-logo">
-Ben Hawes<span>.</span>
-</div>
-
-<p>Team Activation Keynote Speaker</p>
-
-</div>
-
-<div>
-
-<h4>Resources</h4>
-
-<a href="#">Download Engagement Worksheet</a>
-<a href="#">Email Newsletter</a>
-
-</div>
-
-<div>
-
-<h4>Projects</h4>
-
-<a href="#">Rent My Booth</a>
-<a href="#">Courses</a>
-
-</div>
-
-<div>
-
-<h4>Contact</h4>
-
-<a href="#">ben@email.com</a>
-<a href="#">(646) 543-7205</a>
-
-</div>
-
-</div>
+<p>© Ben Hawes | Team Activation Keynote Speaker</p>
 
 </footer>
 
 <script>
 
-function openMenu(){
-document.getElementById("mobileMenu").classList.add("active");
-}
+const tabs=[
+`
+<h3>Clarity</h3>
+<p>Employees reconnect their role to the mission and strategy so the work ahead feels meaningful and aligned.</p>
+`,
+`
+<h3>Communication</h3>
+<p>Teams learn how to talk openly about motivation, alignment, and engagement across the organization.</p>
+`,
+`
+<h3>Commitment</h3>
+<p>Employees reflect on the level of energy they bring to the mission and how they choose to show up.</p>
+`,
+`
+<h3>What Teams Walk Away With</h3>
+<p>A renewed connection to the company strategy, mission, goals and OKRs along with a framework to communicate engagement across teams.</p>
+`
+];
 
-function closeMenu(){
-document.getElementById("mobileMenu").classList.remove("active");
+function showTab(i){
+document.querySelector("#tabContent").innerHTML=tabs[i];
+document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+document.querySelectorAll(".tab-btn")[i].classList.add("active");
 }
 
 </script>
