@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ben Hawes | Team Activation Speaker</title>
+<title>Ben Hawes | Team Engagement & Activation Speaker</title>
 
-<link rel="icon" href="data:image/svg+xml,
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-<text y='.9em' font-size='90'>⚡</text>
-</svg>">
+<link rel="icon" href="favicon.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* ---------- GLOBAL ---------- */
+/* ------------------- */
+/* VARIABLES */
+/* ------------------- */
 
 :root{
 --orange:#F94501;
+--green:#1DB954;
 --black:#111;
+--light:#f6f6f6;
 --max:1200px;
 }
+
+/* ------------------- */
+/* RESET */
+/* ------------------- */
 
 *{
 margin:0;
@@ -30,321 +36,264 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Inter,sans-serif;
-color:#111;
-background:#fff;
-line-height:1.6;
+font-family:"Open Sans",sans-serif;
+color:var(--black);
+line-height:1.7;
+background:white;
+overflow-x:hidden;
 }
 
-.container{
-max-width:var(--max);
-margin:auto;
-padding:0 30px;
-}
+/* ------------------- */
+/* TYPOGRAPHY */
+/* ------------------- */
 
-section{
-padding:110px 0;
+h1,h2,h3{
+font-family:"Poppins";
+font-weight:700;
 }
 
 h1{
-font-size:68px;
-font-weight:900;
+font-size:64px;
 line-height:1.05;
 }
 
 h2{
-font-size:44px;
-font-weight:800;
-margin-bottom:20px;
+font-size:40px;
+margin-bottom:30px;
+}
+
+h3{
+font-size:22px;
 }
 
 p{
-font-size:20px;
+font-size:18px;
 margin-bottom:20px;
 }
 
-a{
-text-decoration:none;
-color:inherit;
+.orange{
+color:var(--orange);
 }
 
-/* ---------- TOP BAR ---------- */
+/* ------------------- */
+/* LAYOUT */
+/* ------------------- */
 
-.topbar{
-background:#111;
-color:white;
-text-align:center;
-padding:10px;
-font-size:14px;
+.container{
+max-width:var(--max);
+margin:auto;
+padding:90px 24px;
 }
 
-/* ---------- NAV ---------- */
-
-header{
-position:sticky;
-top:0;
-background:white;
-border-bottom:1px solid #eee;
-z-index:10;
+.section{
+padding:80px 0;
 }
+
+/* ------------------- */
+/* NAV */
+/* ------------------- */
 
 .nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-height:80px;
+padding:20px 24px;
+max-width:var(--max);
+margin:auto;
 }
 
 .logo{
-font-weight:900;
-font-size:28px;
+font-family:"Poppins";
+font-size:22px;
+font-weight:700;
 }
 
 .logo span{
 color:var(--orange);
 }
 
-nav a{
-margin-left:30px;
-font-weight:500;
+.nav-links{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--black);
+font-weight:600;
 }
 
 .cta{
 background:var(--orange);
 color:white;
-padding:12px 22px;
-border-radius:8px;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
 }
 
-/* ---------- HERO ---------- */
+/* ------------------- */
+/* HERO */
+/* ------------------- */
 
 .hero{
+padding:80px 24px 100px;
+max-width:var(--max);
+margin:auto;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:60px;
 align-items:center;
 }
 
-.hero video{
-width:100%;
-border-radius:18px;
-}
-
-.activate{
-color:var(--orange);
-font-weight:700;
+.hero-text p{
+font-size:20px;
 }
 
 .hero-buttons{
 margin-top:30px;
-}
-
-.hero-buttons a{
-padding:14px 28px;
-border-radius:8px;
-font-weight:600;
-margin-right:15px;
-transition:.2s;
-}
-
-.primary{
-background:var(--orange);
-color:white;
-}
-
-.secondary{
-border:2px solid #111;
-}
-
-.hero-buttons a:hover{
-transform:translateY(-3px);
-}
-
-/* underline */
-
-.people{
-position:relative;
-display:inline-block;
-}
-
-.people:after{
-content:"";
-position:absolute;
-left:0;
-bottom:-10px;
-width:100%;
-height:14px;
-background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 15 Q 100 5 195 15' stroke='%23F94501' stroke-width='6' fill='none'/%3E%3C/svg%3E") no-repeat center;
-background-size:contain;
-}
-
-/* ---------- CREDIBILITY ---------- */
-
-.logo-strip{
 display:flex;
-justify-content:center;
-gap:60px;
-font-weight:700;
-font-size:18px;
-margin-top:40px;
+gap:20px;
 flex-wrap:wrap;
 }
 
-/* ---------- IMAGE GRID ---------- */
+.btn-primary{
+background:var(--orange);
+color:white;
+padding:14px 26px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+.btn-outline{
+border:2px solid var(--black);
+padding:12px 26px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+color:var(--black);
+}
+
+.hero-video iframe{
+width:100%;
+height:340px;
+border-radius:10px;
+border:none;
+}
+
+/* ------------------- */
+/* ORANGE PANEL */
+/* ------------------- */
+
+.orange-panel{
+background:var(--orange);
+color:white;
+padding:80px 24px;
+text-align:center;
+}
+
+.orange-panel h2{
+color:white;
+}
+
+/* ------------------- */
+/* CLIENTS */
+/* ------------------- */
+
+.clients{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:40px;
+font-weight:600;
+}
+
+/* ------------------- */
+/* IMAGE GRID */
+/* ------------------- */
 
 .image-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:30px;
+gap:24px;
 margin-top:40px;
 }
 
-.image-grid img{
-width:100%;
-border-radius:16px;
-transition:.25s;
-}
-
-.image-grid img:hover{
-transform:scale(1.05);
-}
-
-/* ---------- FRAMEWORK ---------- */
-
-.framework{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-margin-top:40px;
-}
-
-.card{
-padding:40px;
-border-radius:14px;
-background:#fafafa;
-transition:.25s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-/* ---------- PROGRAMS ---------- */
-
-.programs{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-}
-
-.program{
-border-radius:16px;
+.image-card{
+height:260px;
 overflow:hidden;
-background:#fafafa;
-transition:.25s;
+border-radius:10px;
 }
 
-.program img{
+.image-card img{
 width:100%;
+height:100%;
+object-fit:cover;
 }
 
-.program:hover{
-transform:translateY(-6px);
-}
+/* ------------------- */
+/* STRATEGY SECTION */
+/* ------------------- */
 
-/* ---------- STATS ---------- */
-
-.stats{
-background:#0e3b3a;
-color:white;
-text-align:center;
-}
-
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:40px;
-margin-top:40px;
-}
-
-.stat-number{
-font-size:56px;
-font-weight:800;
-}
-
-/* ---------- ABOUT ---------- */
-
-.about{
+.strategy{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:60px;
 align-items:center;
 }
 
-.about img{
+.strategy img{
 width:100%;
-border-radius:16px;
+border-radius:10px;
 }
 
-/* ---------- BIG QUOTE ---------- */
+/* ------------------- */
+/* FOOTER */
+/* ------------------- */
 
-.quote{
-background:var(--orange);
+.footer{
+background:var(--black);
 color:white;
-padding:70px;
-font-size:32px;
-font-weight:700;
-border-radius:16px;
-margin-top:60px;
 text-align:center;
+padding:40px 20px;
 }
 
-/* ---------- TESTIMONIALS ---------- */
+/* ------------------- */
+/* MOBILE */
+/* ------------------- */
 
-.testimonials{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:30px;
-margin-top:40px;
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
 }
 
-.testimonial{
-background:#fafafa;
-padding:35px;
-border-radius:14px;
+.strategy{
+grid-template-columns:1fr;
 }
 
-/* ---------- FOOTER ---------- */
-
-footer{
-background:#111;
-color:white;
-padding:90px 0;
-margin-top:120px;
+.image-grid{
+grid-template-columns:1fr 1fr;
 }
 
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:40px;
+h1{
+font-size:44px;
 }
 
-footer a{
-display:block;
-margin-bottom:8px;
 }
 
-/* ---------- FADE IN ---------- */
+@media(max-width:600px){
 
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:all .8s;
+.image-grid{
+grid-template-columns:1fr;
 }
 
-.fade.show{
-opacity:1;
-transform:none;
+.hero-video iframe{
+height:240px;
+}
+
 }
 
 </style>
@@ -352,73 +301,65 @@ transform:none;
 
 <body>
 
-<div class="topbar">
-Now booking Q2 & Q3 keynotes — Check availability
+
+<!-- NAV -->
+
+<nav class="nav">
+
+<div class="logo">Ben Hawes<span>.</span></div>
+
+<div class="nav-links">
+<a href="#">Framework</a>
+<a href="#">Programs</a>
+<a href="#">About</a>
+<a class="cta" href="#">Bring Ben In</a>
 </div>
 
-<header>
-<div class="container nav">
-
-<div class="logo">
-Ben Hawes<span>.</span>
-</div>
-
-<nav>
-<a href="#framework">Framework</a>
-<a href="#programs">Programs</a>
-<a href="#about">About</a>
-<a href="#contact" class="cta">Bring Ben In</a>
 </nav>
 
-</div>
-</header>
 
 <!-- HERO -->
 
-<section class="container hero fade">
+<section class="hero">
 
-<div>
+<div class="hero-text">
 
 <h1>
 Strategy doesn’t go the distance.<br>
-<span class="people">People do.</span>
+People do.
 </h1>
 
 <p>
-
-The most powerful strategy in the world is enabled by people who believe in it.
-
-Ben helps organizations <span class="activate">activate their people</span> so momentum follows the plan.
-
+The most powerful strategy in the world is enabled by people who believe in it. Ben helps organizations <span class="orange">activate their people</span> so momentum follows the plan.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#programs" class="primary">Bring Ben to Your Team</a>
+<a class="btn-primary" href="#">Bring Ben to Your Team</a>
 
-<a href="#framework" class="secondary">See the Framework</a>
-
-</div>
+<a class="btn-outline" href="#">See the Framework</a>
 
 </div>
 
-<div>
+</div>
 
-<video autoplay muted loop playsinline>
-<source src="hero.mp4" type="video/mp4">
-</video>
+
+<div class="hero-video">
+
+<iframe src="https://www.youtube.com/embed/Ca3coU2oqT4"></iframe>
 
 </div>
 
 </section>
 
-<!-- CREDIBILITY -->
 
-<section class="container fade">
+<!-- CLIENTS -->
 
-<h2 style="text-align:center;">Where Ben Has Built Engagement Programs</h2>
+<section class="container">
 
-<div class="logo-strip">
+<h2 style="text-align:center">Where Ben Has Built Engagement Programs</h2>
+
+<div class="clients">
 
 <span>LifeLabs Learning</span>
 <span>ClassPass</span>
@@ -430,254 +371,95 @@ Ben helps organizations <span class="activate">activate their people</span> so m
 
 </section>
 
+
+<!-- ORANGE PANEL -->
+
+<section class="orange-panel">
+
+<h2>Activation in Action</h2>
+
+<p>
+Strategy is only as powerful as the people who bring it to life.
+</p>
+
+</section>
+
+
 <!-- IMAGE GRID -->
 
-<section class="container fade">
-
-<h2 style="text-align:center;">Activation in Action</h2>
+<section class="container">
 
 <div class="image-grid">
 
-<img src="Untitled design (2)/1.png">
-<img src="Untitled design (2)/2.png">
-<img src="Untitled design (2)/3.png">
-<img src="Untitled design (2)/4.png">
-<img src="Untitled design (2)/5.png">
-<img src="Untitled design (2)/1.png">
-
+<div class="image-card">
+<img src="photo1.jpg">
 </div>
 
-</section>
-
-<!-- FRAMEWORK -->
-
-<section id="framework" class="container fade">
-
-<h2 style="text-align:center;">The Team Activation Framework</h2>
-
-<div class="framework">
-
-<div class="card">
-<h3>Clarity</h3>
-<p>Teams understand the mission, the strategy, and why it matters.</p>
+<div class="image-card">
+<img src="photo2.jpg">
 </div>
 
-<div class="card">
-<h3>Communication</h3>
-<p>Strategy becomes part of daily conversations and shared language.</p>
+<div class="image-card">
+<img src="photo3.jpg">
 </div>
 
-<div class="card">
-<h3>Commitment</h3>
-<p>People invest real energy into moving the mission forward.</p>
+<div class="image-card">
+<img src="photo4.jpg">
+</div>
+
+<div class="image-card">
+<img src="photo5.jpg">
+</div>
+
+<div class="image-card">
+<img src="photo6.jpg">
 </div>
 
 </div>
 
 </section>
 
-<!-- PROGRAMS -->
 
-<section id="programs" class="container fade">
+<!-- STRATEGY SECTION -->
 
-<h2 style="text-align:center;">Ways Teams Work With Ben</h2>
+<section class="container">
 
-<div class="programs">
-
-<div class="program">
-<img src="Untitled design (2)/2.png">
-<div style="padding:30px">
-<h3>Keynote Talk</h3>
-<p>High-energy activation talks for company events and leadership summits.</p>
-</div>
-</div>
-
-<div class="program">
-<img src="Untitled design (2)/3.png">
-<div style="padding:30px">
-<h3>Leadership Workshops</h3>
-<p>Interactive sessions helping leaders activate their teams around strategy.</p>
-</div>
-</div>
-
-<div class="program">
-<img src="Untitled design (2)/4.png">
-<div style="padding:30px">
-<h3>Team Activation Experience</h3>
-<p>Programs designed to align entire teams with mission and momentum.</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<!-- STATS -->
-
-<section class="stats fade">
-
-<div class="container">
-
-<h2>When Teams Activate, Strategy Moves</h2>
-
-<div class="stats-grid">
-
-<div>
-<div class="stat-number">10k+</div>
-<p>Employees energized through learning programs</p>
-</div>
-
-<div>
-<div class="stat-number">95%</div>
-<p>Participants report increased motivation</p>
-</div>
-
-<div>
-<div class="stat-number">4</div>
-<p>Industries supported</p>
-</div>
-
-<div>
-<div class="stat-number">100+</div>
-<p>Teams activated around strategy</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="container fade">
-
-<div class="about">
-
-<img src="headshot.jpg">
+<div class="strategy">
 
 <div>
 
-<h2>About Ben</h2>
+<h2>The Strategy Activation Framework</h2>
 
 <p>
-
-Ben Hawes is a team activation and engagement speaker who believes the most powerful driver of execution is emotional connection to the mission.
-
+Strategy is not a slide deck. It’s a shared commitment. Ben’s work helps teams connect the plan to real human behavior so execution becomes natural.
 </p>
 
 <p>
-
-After leading learning and development initiatives at ClassPass and supporting global culture programs at LifeLabs Learning, Ben developed frameworks that help teams align around clarity, communication, and commitment.
-
+Through storytelling, humor, and clear frameworks, teams leave energized, aligned, and ready to move.
 </p>
 
-<p>
-
-Today he works with organizations to activate teams around strategy through storytelling, shared experiences, and practical frameworks leaders and team members can apply immediately.
-
-</p>
+<a class="btn-primary" href="#">Explore the Framework</a>
 
 </div>
 
-</div>
+<div>
 
-<div class="quote">
+<img src="photo7.jpg">
 
-Engagement isn’t just about happiness.
-
-It’s about the level to which employees are willing to spend their energy going the distance for the mission.
-
-<br><br>
-
-— Ben Hawes
-
-</div>
-
-</section>
-
-<!-- TESTIMONIALS -->
-
-<section class="container fade">
-
-<h2 style="text-align:center;">What Leaders Say</h2>
-
-<div class="testimonials">
-
-<div class="testimonial">
-<p>Ben is a natural leader whose enthusiasm energizes entire teams.</p>
-<strong>Payal Kadakia — Founder, ClassPass</strong>
-</div>
-
-<div class="testimonial">
-<p>Ben brings humor, passion, and incredible energy to engagement programs.</p>
-<strong>Susan Loh — HR Consultant</strong>
-</div>
-
-<div class="testimonial">
-<p>I've never seen someone bring people together the way Ben does.</p>
-<strong>Hollen Spatz Hellman — Operations Leader</strong>
-</div>
-
-<div class="testimonial">
-<p>Ben builds cultures where employees feel valued and invested.</p>
-<strong>Petra Townsend — People & Culture Leadership</strong>
 </div>
 
 </div>
 
 </section>
 
-<footer id="contact">
 
-<div class="container footer-grid">
+<!-- FOOTER -->
 
-<div>
-<div class="logo">Ben Hawes<span>.</span></div>
-<p>Team Activation Speaker</p>
-</div>
+<footer class="footer">
 
-<div>
-<h4>Speaking</h4>
-<a href="#">Keynotes</a>
-<a href="#">Workshops</a>
-<a href="#">Programs</a>
-</div>
-
-<div>
-<h4>Resources</h4>
-<a href="#">Articles</a>
-<a href="#">Ideas</a>
-<a href="#">Frameworks</a>
-</div>
-
-<div>
-<h4>Connect</h4>
-<a href="#">LinkedIn</a>
-<a href="#">Email Ben</a>
-</div>
-
-</div>
+<p>© Ben Hawes</p>
 
 </footer>
-
-<script>
-
-const faders = document.querySelectorAll('.fade')
-
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show')
-}
-})
-})
-
-faders.forEach(el=>{
-observer.observe(el)
-})
-
-</script>
 
 </body>
 </html>
