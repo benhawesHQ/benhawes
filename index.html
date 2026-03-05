@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ben Hawes | Team Engagement & Activation Speaker</title>
+<title>Ben Hawes | Team Activation Speaker</title>
 
-<link rel="icon" href="favicon.png">
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+<text y=%22.9em%22 font-size=%2290%22>⚡</text>
+</svg>">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
-/* ------------------- */
-/* VARIABLES */
-/* ------------------- */
-
 :root{
 --orange:#F94501;
---green:#1DB954;
 --black:#111;
---light:#f6f6f6;
 --max:1200px;
 }
-
-/* ------------------- */
-/* RESET */
-/* ------------------- */
 
 *{
 margin:0;
@@ -36,245 +29,265 @@ box-sizing:border-box;
 }
 
 body{
-font-family:"Open Sans",sans-serif;
-color:var(--black);
-line-height:1.7;
+font-family:Inter,sans-serif;
+color:#111;
 background:white;
-overflow-x:hidden;
+line-height:1.6;
 }
-
-/* ------------------- */
-/* TYPOGRAPHY */
-/* ------------------- */
-
-h1,h2,h3{
-font-family:"Poppins";
-font-weight:700;
-}
-
-h1{
-font-size:64px;
-line-height:1.05;
-}
-
-h2{
-font-size:40px;
-margin-bottom:30px;
-}
-
-h3{
-font-size:22px;
-}
-
-p{
-font-size:18px;
-margin-bottom:20px;
-}
-
-.orange{
-color:var(--orange);
-}
-
-/* ------------------- */
-/* LAYOUT */
-/* ------------------- */
 
 .container{
 max-width:var(--max);
 margin:auto;
-padding:90px 24px;
+padding:0 30px;
 }
 
-.section{
-padding:80px 0;
+section{
+padding:120px 0;
 }
 
-/* ------------------- */
-/* NAV */
-/* ------------------- */
+h1{
+font-size:64px;
+font-weight:900;
+line-height:1.05;
+margin-bottom:20px;
+}
+
+h2{
+font-size:42px;
+font-weight:800;
+margin-bottom:25px;
+}
+
+p{
+font-size:19px;
+margin-bottom:20px;
+}
+
+a{
+text-decoration:none;
+}
+
+/* TOP BAR */
+
+.topbar{
+background:#111;
+color:white;
+text-align:center;
+padding:10px;
+font-size:14px;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+background:white;
+border-bottom:1px solid #eee;
+z-index:10;
+}
 
 .nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 24px;
-max-width:var(--max);
-margin:auto;
+height:80px;
 }
 
 .logo{
-font-family:"Poppins";
-font-size:22px;
-font-weight:700;
+font-weight:900;
+font-size:26px;
 }
 
 .logo span{
 color:var(--orange);
 }
 
-.nav-links{
-display:flex;
-gap:30px;
-align-items:center;
-}
-
-.nav-links a{
-text-decoration:none;
-color:var(--black);
-font-weight:600;
+nav a{
+margin-left:30px;
+font-weight:500;
+color:#111;
 }
 
 .cta{
 background:var(--orange);
 color:white;
-padding:12px 20px;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
+padding:12px 22px;
+border-radius:8px;
 }
 
-/* ------------------- */
 /* HERO */
-/* ------------------- */
 
 .hero{
-padding:80px 24px 100px;
-max-width:var(--max);
-margin:auto;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:70px;
 align-items:center;
+padding-top:80px;
 }
 
-.hero-text p{
-font-size:20px;
+.hero-sub{
+font-size:21px;
+margin-top:10px;
+}
+
+.activate{
+color:var(--orange);
+font-weight:700;
 }
 
 .hero-buttons{
 margin-top:30px;
-display:flex;
-gap:20px;
-flex-wrap:wrap;
 }
 
-.btn-primary{
+.hero-buttons a{
+padding:14px 28px;
+border-radius:8px;
+font-weight:600;
+margin-right:15px;
+}
+
+.primary{
 background:var(--orange);
 color:white;
-padding:14px 26px;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
 }
 
-.btn-outline{
-border:2px solid var(--black);
-padding:12px 26px;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
-color:var(--black);
+.secondary{
+border:2px solid #111;
+color:#111;
+}
+
+.hero-video{
+position:relative;
+padding-bottom:56.25%;
+height:0;
+overflow:hidden;
+border-radius:16px;
 }
 
 .hero-video iframe{
+position:absolute;
+top:0;
+left:0;
 width:100%;
-height:340px;
-border-radius:10px;
+height:100%;
 border:none;
 }
 
-/* ------------------- */
-/* ORANGE PANEL */
-/* ------------------- */
+/* HAND UNDERLINE */
 
-.orange-panel{
-background:var(--orange);
-color:white;
-padding:80px 24px;
-text-align:center;
+.people{
+position:relative;
+display:inline-block;
 }
 
-.orange-panel h2{
-color:white;
-}
-
-/* ------------------- */
-/* CLIENTS */
-/* ------------------- */
-
-.clients{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:40px;
-font-weight:600;
-}
-
-/* ------------------- */
-/* IMAGE GRID */
-/* ------------------- */
-
-.image-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-margin-top:40px;
-}
-
-.image-card{
-height:260px;
-overflow:hidden;
-border-radius:10px;
-}
-
-.image-card img{
+.people:after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
 width:100%;
-height:100%;
-object-fit:cover;
+height:12px;
+background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 15 Q 100 5 195 15' stroke='%23F94501' stroke-width='5' fill='none'/%3E%3C/svg%3E") no-repeat center;
+background-size:contain;
 }
 
-/* ------------------- */
-/* STRATEGY SECTION */
-/* ------------------- */
+/* CREDIBILITY */
 
-.strategy{
+.cred{
+text-align:center;
+max-width:900px;
+margin:auto;
+font-size:21px;
+}
+
+/* ABOUT */
+
+.about{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:70px;
 align-items:center;
 }
 
-.strategy img{
+.about img{
 width:100%;
-border-radius:10px;
+border-radius:16px;
 }
 
-/* ------------------- */
-/* FOOTER */
-/* ------------------- */
+/* BIG QUOTE PANEL */
 
-.footer{
-background:var(--black);
+.bigquote{
+background:var(--orange);
 color:white;
+padding:90px 70px;
+font-size:32px;
+font-weight:700;
 text-align:center;
-padding:40px 20px;
+border-radius:18px;
+margin-top:80px;
+line-height:1.4;
 }
 
-/* ------------------- */
+/* TESTIMONIALS */
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:35px;
+margin-top:50px;
+}
+
+.card{
+background:#fafafa;
+padding:35px;
+border-radius:14px;
+}
+
+.card strong{
+display:block;
+margin-top:18px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+padding:100px 0;
+margin-top:120px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+}
+
+footer a{
+color:white;
+display:block;
+margin-bottom:10px;
+}
+
 /* MOBILE */
-/* ------------------- */
 
 @media(max-width:900px){
 
 .hero{
 grid-template-columns:1fr;
+gap:50px;
 }
 
-.strategy{
+.about{
 grid-template-columns:1fr;
 }
 
-.image-grid{
+.testimonials{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
 grid-template-columns:1fr 1fr;
 }
 
@@ -282,16 +295,8 @@ h1{
 font-size:44px;
 }
 
-}
-
-@media(max-width:600px){
-
-.image-grid{
-grid-template-columns:1fr;
-}
-
-.hero-video iframe{
-height:240px;
+h2{
+font-size:34px;
 }
 
 }
@@ -301,150 +306,150 @@ height:240px;
 
 <body>
 
-
-<!-- NAV -->
-
-<nav class="nav">
-
-<div class="logo">Ben Hawes<span>.</span></div>
-
-<div class="nav-links">
-<a href="#">Framework</a>
-<a href="#">Programs</a>
-<a href="#">About</a>
-<a class="cta" href="#">Bring Ben In</a>
+<div class="topbar">
+Now booking Q2 & Q3 keynotes — Check availability
 </div>
 
+<header>
+
+<div class="container nav">
+
+<div class="logo">
+Ben Hawes<span>.</span>
+</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#testimonials">Testimonials</a>
+<a href="#contact">Contact</a>
+<a href="#contact" class="cta">Bring Ben In</a>
 </nav>
 
+</div>
 
-<!-- HERO -->
+</header>
 
-<section class="hero">
+<section class="container hero">
 
-<div class="hero-text">
+<div>
 
 <h1>
 Strategy doesn’t go the distance.<br>
-People do.
+<span class="people">People do.</span>
 </h1>
 
-<p>
-The most powerful strategy in the world is enabled by people who believe in it. Ben helps organizations <span class="orange">activate their people</span> so momentum follows the plan.
+<p class="hero-sub">
+The most powerful strategy in the world is enabled by people who believe in it.
+
+Ben helps organizations <span class="activate">activate their people</span> so momentum follows the plan.
 </p>
 
 <div class="hero-buttons">
-
-<a class="btn-primary" href="#">Bring Ben to Your Team</a>
-
-<a class="btn-outline" href="#">See the Framework</a>
-
+<a href="#contact" class="primary">Bring Ben to Your Team</a>
+<a href="#about" class="secondary">Learn More</a>
 </div>
 
 </div>
-
 
 <div class="hero-video">
-
-<iframe src="https://www.youtube.com/embed/Ca3coU2oqT4"></iframe>
-
+<iframe src="https://www.youtube.com/embed/Ca3coU2oqT4"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
 </div>
 
 </section>
 
+<section>
 
-<!-- CLIENTS -->
-
-<section class="container">
-
-<h2 style="text-align:center">Where Ben Has Built Engagement Programs</h2>
-
-<div class="clients">
-
-<span>LifeLabs Learning</span>
-<span>ClassPass</span>
-<span>Rocket Money</span>
-<span>NYC Tech Community</span>
-<span>Scaling Startups</span>
-
-</div>
-
-</section>
-
-
-<!-- ORANGE PANEL -->
-
-<section class="orange-panel">
-
-<h2>Activation in Action</h2>
+<div class="container cred">
 
 <p>
-Strategy is only as powerful as the people who bring it to life.
+With leadership and engagement roles at companies like <b>ClassPass, LifeLabs Learning, and Rocket Money</b>, Ben Hawes has helped activate the passion and commitment of thousands of employees across fast-growing teams.
 </p>
 
-</section>
-
-
-<!-- IMAGE GRID -->
-
-<section class="container">
-
-<div class="image-grid">
-
-<div class="image-card">
-<img src="photo1.jpg">
-</div>
-
-<div class="image-card">
-<img src="photo2.jpg">
-</div>
-
-<div class="image-card">
-<img src="photo3.jpg">
-</div>
-
-<div class="image-card">
-<img src="photo4.jpg">
-</div>
-
-<div class="image-card">
-<img src="photo5.jpg">
-</div>
-
-<div class="image-card">
-<img src="photo6.jpg">
-</div>
-
 </div>
 
 </section>
 
+<section id="about">
 
-<!-- STRATEGY SECTION -->
+<div class="container about">
 
-<section class="container">
-
-<div class="strategy">
+<img src="headshot.jpg">
 
 <div>
 
-<h2>The Strategy Activation Framework</h2>
+<h2>About Ben</h2>
 
 <p>
-Strategy is not a slide deck. It’s a shared commitment. Ben’s work helps teams connect the plan to real human behavior so execution becomes natural.
+Ben Hawes is a <b>team activation and engagement speaker</b> who believes the most powerful driver of execution is emotional connection to the mission.
 </p>
 
 <p>
-Through storytelling, humor, and clear frameworks, teams leave energized, aligned, and ready to move.
+His work focuses on aligning strategy with energy across teams through clarity, communication, and commitment.
 </p>
 
-<a class="btn-primary" href="#">Explore the Framework</a>
+<p>
+After leading learning and development initiatives at ClassPass and supporting global culture and engagement programs at LifeLabs Learning, Ben developed frameworks that help teams align around purpose and execute together.
+</p>
+
+<p>
+Today he works with organizations to activate teams around strategy through storytelling, shared experiences, and practical frameworks that leaders and team members can apply immediately.
+</p>
 
 </div>
 
-<div>
+</div>
 
-<img src="photo7.jpg">
+<div class="container bigquote">
+
+“Engagement isn’t just about having fun or being happy.
+
+It’s about the level to which employees are willing to spend their energy going the distance for the mission.”
+
+<br><br>
+
+— Ben Hawes
+
+</div>
+
+</section>
+
+<section id="testimonials">
+
+<div class="container">
+
+<h2>What Leaders Say</h2>
+
+<div class="testimonials">
+
+<div class="card">
+<p>
+Ben is a natural leader and a central part of the ClassPass culture. His enthusiasm lights up the room and helps employees truly understand the mission and vision of the company.
+</p>
+<strong>Payal Kadakia Pujji — Founder, ClassPass</strong>
+</div>
+
+<div class="card">
+<p>
+Ben has built an impressive catalog of learning programs and brings passion and humor that energizes the entire organization.
+</p>
+<strong>Susan Loh — People & HR Consultant</strong>
+</div>
+
+<div class="card">
+<p>
+I've never seen someone bring people together the way Ben does. His commitment to creating authentic learning environments is rare.
+</p>
+<strong>Hollen Spatz Hellman — Operations & CX Leader</strong>
+</div>
+
+<div class="card">
+<p>
+Ben brings incredible energy to every initiative and is deeply committed to building cultures where people feel valued and invested.
+</p>
+<strong>Petra Townsend — People & Culture Leadership</strong>
+</div>
 
 </div>
 
@@ -452,12 +457,36 @@ Through storytelling, humor, and clear frameworks, teams leave energized, aligne
 
 </section>
 
+<footer id="contact">
 
-<!-- FOOTER -->
+<div class="container footer-grid">
 
-<footer class="footer">
+<div>
+<h3>Ben Hawes</h3>
+<p>Team Activation Speaker</p>
+</div>
 
-<p>© Ben Hawes</p>
+<div>
+<h4>Speaking</h4>
+<a href="#">Keynotes</a>
+<a href="#">Workshops</a>
+<a href="#">Programs</a>
+</div>
+
+<div>
+<h4>Resources</h4>
+<a href="#">Articles</a>
+<a href="#">Insights</a>
+<a href="#">Frameworks</a>
+</div>
+
+<div>
+<h4>Contact</h4>
+<a href="#">Email Ben</a>
+<a href="#">LinkedIn</a>
+</div>
+
+</div>
 
 </footer>
 
