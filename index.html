@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ben Hawes | Team Activation Keynote Speaker</title>
+<title>Ben Hawes | Team Activation Keynote</title>
 
 <link rel="icon" href="data:image/svg+xml,
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
@@ -17,11 +18,12 @@
 
 :root{
 --orange:#F94501;
+--lightorange:#fde6dc;
 --black:#111;
---linkedin:#0A66C2;
---light:#fafafa;
 --max:1200px;
 }
+
+/* GLOBAL */
 
 *{
 margin:0;
@@ -36,20 +38,18 @@ background:white;
 line-height:1.7;
 }
 
-/* GLOBAL */
-
 .container{
 max-width:var(--max);
 margin:auto;
-padding:0 32px;
+padding:0 40px;
 }
 
 section{
-padding:140px 0;
+padding:150px 0;
 }
 
 h1{
-font-size:64px;
+font-size:68px;
 font-weight:900;
 line-height:1.05;
 margin-bottom:30px;
@@ -61,17 +61,10 @@ font-weight:800;
 margin-bottom:30px;
 }
 
-h3{
-font-size:22px;
-margin-bottom:10px;
-}
-
 p{
 font-size:20px;
 margin-bottom:20px;
 }
-
-a{text-decoration:none}
 
 /* TOP BAR */
 
@@ -97,12 +90,12 @@ z-index:10;
 display:flex;
 justify-content:space-between;
 align-items:center;
-height:80px;
+height:110px;
 }
 
 .logo{
 font-weight:900;
-font-size:26px;
+font-size:28px;
 }
 
 .logo span{color:var(--orange)}
@@ -111,16 +104,16 @@ nav a{
 margin-left:30px;
 font-weight:500;
 color:#111;
+text-decoration:none;
 }
 
 /* BUTTONS */
 
 .btn{
 display:inline-block;
-padding:14px 30px;
+padding:15px 32px;
 border-radius:10px;
 font-weight:600;
-transition:.2s;
 }
 
 .btn-primary{
@@ -133,21 +126,78 @@ border:2px solid #111;
 color:#111;
 }
 
-.btn:hover{
-transform:translateY(-2px);
-}
-
 /* HERO */
 
 .hero{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:80px;
+gap:90px;
 align-items:center;
+padding-top:120px;
+position:relative;
 }
 
-.hero-sub{
-font-size:22px;
+/* drifting shapes */
+
+.hero:before{
+content:"";
+position:absolute;
+width:220px;
+height:220px;
+background:var(--lightorange);
+border-radius:40px;
+left:-80px;
+top:-60px;
+opacity:.4;
+}
+
+.hero:after{
+content:"";
+position:absolute;
+width:160px;
+height:160px;
+background:var(--lightorange);
+border-radius:30px;
+right:0;
+bottom:-50px;
+opacity:.4;
+}
+
+/* underline */
+
+.people{
+position:relative;
+display:inline-block;
+}
+
+.people:after{
+content:"";
+position:absolute;
+left:0;
+bottom:-10px;
+width:100%;
+height:14px;
+background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 15 Q 100 5 195 15' stroke='%23F94501' stroke-width='7' fill='none'/%3E%3C/svg%3E") no-repeat center;
+background-size:contain;
+}
+
+/* video */
+
+.hero-video{
+position:relative;
+padding-bottom:56.25%;
+height:0;
+border-radius:20px;
+overflow:hidden;
+}
+
+.hero-video iframe{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+border:0;
 }
 
 .activate{
@@ -162,87 +212,59 @@ gap:20px;
 flex-wrap:wrap;
 }
 
-/* video */
+/* OKR SECTION */
 
-.hero-video{
-position:relative;
-padding-bottom:56.25%;
-height:0;
-border-radius:18px;
-overflow:hidden;
-}
-
-.hero-video iframe{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-border:0;
-}
-
-/* HAND UNDERLINE */
-
-.people{
-position:relative;
-display:inline-block;
-}
-
-.people:after{
-content:"";
-position:absolute;
-left:0;
-bottom:-8px;
-width:100%;
-height:12px;
-background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 15 Q 100 5 195 15' stroke='%23F94501' stroke-width='6' fill='none'/%3E%3C/svg%3E") no-repeat center;
-background-size:contain;
-}
-
-/* STATEMENT PANELS */
-
-.panel{
+.statement{
 text-align:center;
-padding:120px 40px;
-font-size:40px;
-font-weight:800;
-line-height:1.3;
+max-width:900px;
+margin:auto;
 }
 
-.panel.orange{
-background:var(--orange);
-color:white;
+.statement h2{
+font-size:48px;
 }
 
-.panel.dark{
-background:#111;
-color:white;
-}
-
-.panel.light{
-background:var(--light);
-}
-
-/* KEYNOTE FLOW */
-
-.flow{
-display:grid;
-grid-template-columns:1fr 120px 1fr 120px 1fr;
-align-items:center;
-text-align:center;
-gap:20px;
+.stat-number{
+font-size:60px;
+font-weight:900;
 margin-top:40px;
 }
 
-.step{
+/* KEYNOTE MODEL */
+
+.model{
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:50px;
+}
+
+.model-card{
 background:#fafafa;
 padding:40px;
 border-radius:16px;
 }
 
-.arrow{
-font-size:40px;
-color:var(--orange);
+.model-card h3{
+font-size:24px;
+margin-bottom:10px;
+}
+
+/* PERFECT FIT */
+
+.fit{
+background:#fafafa;
+padding:100px;
+border-radius:20px;
+}
+
+.fit ul{
+margin-top:30px;
+}
+
+.fit li{
+margin-bottom:20px;
+font-size:20px;
 }
 
 /* ABOUT */
@@ -250,57 +272,13 @@ color:var(--orange);
 .about{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:80px;
+gap:90px;
 align-items:center;
 }
 
 .about img{
 width:100%;
-border-radius:18px;
-}
-
-/* QUOTE */
-
-.bigquote{
-background:var(--orange);
-color:white;
-padding:90px;
-border-radius:18px;
-text-align:center;
-font-size:30px;
-font-weight:700;
-line-height:1.4;
-margin-top:80px;
-}
-
-/* TESTIMONIALS */
-
-.testimonials{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:40px;
-margin-top:60px;
-}
-
-.card{
-background:#fafafa;
-padding:35px;
-border-radius:16px;
-}
-
-.card strong{
-display:block;
-margin-top:18px;
-color:var(--linkedin);
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:white;
-padding:100px 0;
-margin-top:120px;
+border-radius:20px;
 }
 
 /* MOBILE */
@@ -311,19 +289,9 @@ margin-top:120px;
 
 .about{grid-template-columns:1fr}
 
-.flow{
-grid-template-columns:1fr;
-}
-
-.arrow{display:none}
-
-.testimonials{
-grid-template-columns:1fr;
-}
+.model{grid-template-columns:1fr}
 
 h1{font-size:44px}
-
-h2{font-size:32px}
 
 }
 
@@ -347,15 +315,12 @@ Ben Hawes<span>.</span>
 <nav>
 <a href="#about">About</a>
 <a href="#keynote">Keynote</a>
-<a href="#testimonials">Testimonials</a>
 <a href="#contact" class="btn btn-primary">Bring Ben In</a>
 </nav>
 
 </div>
 
 </header>
-
-<!-- HERO -->
 
 <section class="container hero">
 
@@ -366,7 +331,7 @@ Strategy doesn’t go the distance.<br>
 <span class="people">People do.</span>
 </h1>
 
-<p class="hero-sub">
+<p>
 
 The most powerful strategy in the world is enabled by people who believe in it.
 
@@ -387,65 +352,82 @@ Ben helps organizations <span class="activate">activate their people</span> so m
 <div class="hero-video">
 
 <iframe src="https://www.youtube.com/embed/Ca3coU2oqT4"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 
 </div>
 
 </section>
 
-<!-- PANEL 1 -->
+<section class="container statement">
 
-<section class="panel light">
-The best strategy in the world deserves a team that believes in it.
-</section>
+<h2>
+You have the strategy.<br>
+You have the OKRs.<br><br>
 
-<!-- PANEL 2 -->
-
-<section class="panel orange">
-Employee activation turns strategy into momentum.
-</section>
-
-<!-- PANEL 3 -->
-
-<section class="panel dark">
-When people connect emotionally to the mission, execution follows.
-</section>
-
-<!-- KEYNOTE PRODUCT -->
-
-<section id="keynote">
-
-<div class="container">
-
-<h2 style="text-align:center">
-The Employee Activation Keynote
+Do you have the team activated to deliver it?
 </h2>
 
-<p style="text-align:center;max-width:800px;margin:auto">
-A high-energy keynote experience designed to reconnect teams to the mission and activate the energy needed to move strategy forward.
+</section>
+
+<section class="container statement">
+
+<h2>In moments of change, engagement matters most.</h2>
+
+<p>
+When companies grow, shift strategy, or face uncertainty, teams often lose connection to why their work matters.
 </p>
 
-<div class="flow">
-
-<div class="step">
-<h3>1️⃣ Clarify the Mission</h3>
-<p>Teams reconnect to why the strategy matters and what success really looks like.</p>
+<div class="stat-number">
+4.6×
 </div>
 
-<div class="arrow">➜</div>
+<p>
+Employees who feel their work connects to company mission are dramatically more engaged.
+</p>
 
-<div class="step">
-<h3>2️⃣ Connect the People</h3>
-<p>Stories and shared experiences build emotional commitment to the mission.</p>
+<p style="font-size:14px">
+Source: Gallup State of the Global Workplace Report
+</p>
+
+</section>
+
+<section id="keynote" class="container">
+
+<h2>The Activation Model</h2>
+
+<p style="font-size:24px">
+Clarity + Communication = Commitment
+</p>
+
+<div class="model">
+
+<div class="model-card">
+
+<h3>Clarity</h3>
+
+<p>
+Employees connect their roles, tasks, and goals to the mission through reflection and alignment.
+</p>
+
 </div>
 
-<div class="arrow">➜</div>
+<div class="model-card">
 
-<div class="step">
-<h3>3️⃣ Activate the Energy</h3>
-<p>Leaders and teams leave with momentum and practical ways to move forward together.</p>
+<h3>Communication</h3>
+
+<p>
+Teams learn how to talk openly about motivation, engagement, and alignment with leadership.
+</p>
+
 </div>
+
+<div class="model-card">
+
+<h3>Commitment</h3>
+
+<p>
+Employees reflect on their level of commitment and set intentions for how they show up at work.
+</p>
 
 </div>
 
@@ -453,13 +435,46 @@ A high-energy keynote experience designed to reconnect teams to the mission and 
 
 </section>
 
-<!-- PANEL 4 -->
+<section class="container">
 
-<section class="panel light">
-Engagement is not about perks. It’s about energy for the mission.
+<div class="fit">
+
+<h2>
+Ben is perfect for your team if...
+</h2>
+
+<ul>
+
+<li>
+Your company is growing quickly and you want your team aligned, motivated, and committed to the mission ahead.
+</li>
+
+<li>
+You are a tech-forward or strategy-driven organization with roughly 20–150 employees where engagement and alignment directly impact performance.
+</li>
+
+<li>
+You care deeply about people and culture but may not yet have a full-time engagement strategist guiding these conversations.
+</li>
+
+</ul>
+
+<p style="margin-top:40px">
+
+Ben’s talk helps teams reconnect to purpose, boost alignment across the organization, and equip managers and employees to have the honest conversations needed when engagement begins to drift.
+
+</p>
+
+<p style="font-weight:700">
+
+Because when engagement drops, growth slows.<br>
+When teams reconnect to purpose, momentum returns.
+
+</p>
+
+</div>
+
 </section>
-
-<!-- ABOUT -->
 
 <section id="about">
 
@@ -473,129 +488,27 @@ Engagement is not about perks. It’s about energy for the mission.
 
 <p>
 
-Ben Hawes is a <b>team activation keynote speaker</b> who believes the most powerful driver of execution is emotional connection to the mission.
+Ben Hawes is a team activation keynote speaker who helps organizations reconnect strategy with the human energy required to execute it.
 
 </p>
 
 <p>
 
-After leading learning and development initiatives at ClassPass and supporting global culture and engagement programs at LifeLabs Learning, Ben developed frameworks that help teams align around purpose, clarity, and commitment.
+After leading learning initiatives at ClassPass and supporting global culture and engagement programs at LifeLabs Learning, Ben developed frameworks that help teams align around clarity, communication, and commitment.
 
 </p>
 
 <p>
 
-Today he works with organizations to activate teams around strategy through storytelling, shared experiences, and practical frameworks leaders and team members can apply immediately.
+Today he works with organizations to activate teams around strategy through storytelling, shared experiences, and practical frameworks that leaders and employees can apply immediately.
 
 </p>
-
-</div>
-
-</div>
-
-<div class="container bigquote">
-
-“Engagement isn’t just about happiness.
-
-It’s about the level to which employees are willing to spend their energy going the distance for the mission.”
-
-<br><br>
-
-— Ben Hawes
-
-</div>
-
-</section>
-
-<!-- PANEL 5 -->
-
-<section class="panel orange">
-When teams believe in the mission, strategy moves faster.
-</section>
-
-<!-- TESTIMONIALS -->
-
-<section id="testimonials">
-
-<div class="container">
-
-<h2>What Leaders Say on LinkedIn</h2>
-
-<div class="testimonials">
-
-<div class="card">
-
-<p>
-
-Ben is a natural leader and cultural center of our team. His passion, personality, and humor bring joy to the company every day, and he’s the go-to MC for team meetings and events.
-
-</p>
-
-<strong>Payal Kadakia Pujji — Founder, ClassPass</strong>
-
-</div>
-
-<div class="card">
-
-<p>
-
-As the driver and owner of L&D for our team, Ben built an impressive catalog of learning programs for new hires, managers, and employees. He takes a pragmatic and thoughtful approach by leveraging internal resources and constantly collecting feedback to improve each program.
-
-Beyond his work product, Ben is the cultural center of our team. His passion, personality, and humor bring joy to the company every day.
-
-</p>
-
-<strong>Susan Loh — People & HR Consultant</strong>
-
-</div>
-
-<div class="card">
-
-<p>
-
-I've never seen someone bring people together the way Ben does. His commitment to authentic learning environments is rare.
-
-</p>
-
-<strong>Hollen Spatz Hellman — Operations & CX Leader</strong>
-
-</div>
-
-<div class="card">
-
-<p>
-
-Ben brings incredible energy to every initiative and builds cultures where people feel valued and invested.
-
-</p>
-
-<strong>Petra Townsend — People & Culture Leadership</strong>
-
-</div>
 
 </div>
 
 </div>
 
 </section>
-
-<footer id="contact">
-
-<div class="container">
-
-<h2>Bring Ben to Your Team</h2>
-
-<p>
-Keynotes • Leadership Programs • Team Activation Experiences
-</p>
-
-<br>
-
-<a href="#" class="btn btn-primary">Check Availability</a>
-
-</div>
-
-</footer>
 
 </body>
 </html>
